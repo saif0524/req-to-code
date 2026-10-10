@@ -1,4 +1,4 @@
-# mechanistic-analysis-llm
+# req-to-code-reasoning
 
 Reasoning-level analysis of LLM code generation: what small models say when prompted to reason before writing C++ under secure vs. general prompts.
 
