@@ -1,0 +1,15 @@
+services:
+  pipeline:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: reasoning-pipeline
+    gpus: all
+    volumes:
+      - ollama_models:/root/.ollama
+      - ../results:/app/results
+      - ../generated_code:/app/generated_code
+    # command: ["--models", "deepcoder:1.5b", "--samples", "3"]
+
+volumes:
+  ollama_models:

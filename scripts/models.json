@@ -1,0 +1,40 @@
+[
+  {
+    "tag": "qwen2.5-coder:1.5b",
+    "label": "Qwen2.5-Coder-1.5B",
+    "max_tokens": 1536,
+    "num_ctx": 4096,
+    "temperature": 0.0
+  },
+  {
+    "tag": "qwen2.5-coder:3b",
+    "label": "Qwen2.5-Coder-3B",
+    "max_tokens": 1536,
+    "num_ctx": 4096,
+    "temperature": 0.0
+  },
+  {
+    "tag": "deepcoder:1.5b",
+    "label": "DeepCoder-1.5B",
+    "max_tokens": 8192,
+    "num_ctx": 12288,
+    "temperature": 0.6,
+    "note": "Native <think> trace; greedy decoding loops on R1-style models, so 0.6 is used. Needs a larger token budget."
+  },
+  {
+    "tag": "opencoder:1.5b",
+    "label": "OpenCoder-1.5B",
+    "max_tokens": 1536,
+    "num_ctx": 4096,
+    "temperature": 0.0,
+    "note": "4K context window."
+  },
+  {
+    "tag": "codegemma:2b",
+    "label": "CodeGemma-2B",
+    "max_tokens": 1536,
+    "num_ctx": 4096,
+    "temperature": 0.0,
+    "note": "Pretrained completion model, not instruction-tuned; expect poor format following. codegemma:instruct is the chat variant."
+  }
+]

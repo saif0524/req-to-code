@@ -1,0 +1,6 @@
+*
+!scripts/
+!data/requirements_units.jsonl
+!docker/entrypoint.sh
+scripts/__pycache__
+scripts/.ipynb_checkpoints

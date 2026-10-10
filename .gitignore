@@ -1,0 +1,26 @@
+.env
+env/
+*.odt
+*.pdf
+
+# Results and large artifacts
+results/
+*.pkl
+
+# Figures and papers
+figs/
+*.pdf
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# System
+__pycache__/
+
+
+# Earlier residual-stream work (kept locally, not published)
+archive/
+
+# Raw dataset archives and source PDFs
+data/raw/
+data/requirements/
