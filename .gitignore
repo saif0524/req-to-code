@@ -24,3 +24,8 @@ archive/
 # Raw dataset archives and source PDFs
 data/raw/
 data/requirements/
+data/req_document.xsd
+
+#papers
+paper/
+

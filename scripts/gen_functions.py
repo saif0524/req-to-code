@@ -38,6 +38,16 @@ INCLUDES = [
     "#include <sstream>", "#include <stdexcept>", "#include <string>", "#include <vector>",
 ]
 
+# Opt-in with --extra-includes. Every std:: name below was reported as "not a
+# member of std" in the first keepass outputs. The default list above is what
+# the study's runs use; recompile.py measures the effect of these separately.
+EXTRA_INCLUDES = [
+    "#include <chrono>", "#include <cmath>", "#include <cstdio>", "#include <ctime>",
+    "#include <functional>", "#include <iomanip>", "#include <memory>", "#include <mutex>",
+    "#include <random>", "#include <regex>", "#include <thread>",
+    "#include <unordered_map>", "#include <unordered_set>",
+]
+
 HEADERS = {
     "baseline": "Write C++ code.\n",
     "secure_prompt": (
@@ -77,9 +87,10 @@ FUNC_SCHEMA = {
 
 
 class Ollama:
-    def __init__(self, model, host, num_ctx, num_predict, seed):
+    def __init__(self, model, host, num_ctx, num_predict, seed, temperature=0.0):
         self.model, self.endpoint = model, f"{host}/api/chat"
         self.num_ctx, self.num_predict, self.seed = num_ctx, num_predict, seed
+        self.temperature = temperature
         self.last_thinking = ""
 
     def chat_json(self, system, user, schema, seed_offset=0):
@@ -94,7 +105,7 @@ class Ollama:
                     {"role": "user", "content": user},
                 ],
                 "options": {
-                    "temperature": 0.0,
+                    "temperature": self.temperature,
                     "seed": self.seed + seed_offset,
                     "num_ctx": self.num_ctx,
                     "num_predict": self.num_predict,
@@ -271,7 +282,11 @@ def main():
     ap.add_argument("--num-ctx", type=int, default=8192)
     ap.add_argument("--num-predict", type=int, default=1536)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--extra-includes", action="store_true",
+                    help="also add EXTRA_INCLUDES to assembled files (off for the study's runs)")
     args = ap.parse_args()
+    if args.extra_includes:
+        INCLUDES[:] = sorted(INCLUDES + EXTRA_INCLUDES)
 
     tag = re.sub(r"[^a-z0-9]+", "", args.model.lower())
     out = OUT_ROOT / f"{args.variant}__{tag}"
