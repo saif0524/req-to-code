@@ -1,21 +1,75 @@
 # req-to-code-reasoning
 
-Reasoning-level analysis of LLM code generation: what small models say when prompted to reason before writing C++ under secure vs. general prompts.
+Code and scripts for a study of small language models generating C++ from software requirements. The models plan the functions for a requirements section, then write each function with a short rationale. Each section is run under a general and a secure prompt. The scripts compare the rationales, the code, and what a compiler-feedback repair loop recovers.
 
-Run the pipeline from the repository root; the scripts resolve paths from their own location.
+Run everything from the repository root. The scripts resolve paths from their own location.
 
-## Pipeline
+## Requirements
 
-Requirements specifications (`data/requirements-xml`) to C++ code, per model and prompt variant. Models are listed in `scripts/models.json` (Qwen2.5-Coder 1.5B and 3B, DeepCoder 1.5B, OpenCoder 1.5B, CodeGemma 2B), each with its own token budget, context size and temperature.
+- Python 3 with `requests`, `numpy`, `matplotlib`
+- [Ollama](https://ollama.com) serving the models in `scripts/models.json`
+- `g++` with C++17 (compile check) and `cppcheck` (static analysis in `verify.py`)
+- ESBMC is optional. `verify.py` writes `not_installed` in that column when it is missing, and a rerun with `--force` fills it in.
+
+## Data
+
+`data/requirements-xml/` holds the XML versions of the PURE requirements corpus (Ferrari et al., RE 2017). The study uses 11 of its 18 documents, chosen to balance company or public-body sources (I) and university sources (U) while keeping runs feasible on one laptop GPU. `data/requirements_units.jsonl` holds the 166 requirement sections derived from them, with one JSON object per section (`req_extract.py` builds it).
+
+## Models
+
+Four instruction-capable code models are analysed: Qwen2.5-Coder 1.5B and 3B, OpenCoder 1.5B and DeepCoder 1.5B. `scripts/models.json` also lists CodeGemma 2B. It fails the JSON plan/implement format (about 60% invalid plans, no usable sections), so `reasoning_analysis.py` excludes it by default (`--include-all` keeps it) and the repair scripts do not run it. Each model has its own token budget, context size and temperature in `models.json`. First-generation runs are greedy (temperature 0, seed 0); DeepCoder uses 0.6 because greedy decoding loops on it.
+
+## Workflow
+
+### 1. Generate (round R0)
+
+For each section, one plan call returns up to five functions (name, signature, purpose) and shared declarations. One function call per planned function then returns JSON with 3 to 6 reasoning steps and the code. `--variant baseline` is the general prompt and `--variant secure_prompt` is the secure one.
 
 ```bash
-python scripts/pipeline.py                                  # pull, run, analyze
-python scripts/pipeline.py --models deepcoder:1.5b --samples 3
-python scripts/pipeline.py --limit 1 --stages run           # smoke test
-python scripts/pipeline.py --stages analyze                 # figures and table only
+python scripts/gen_functions.py --model qwen2.5-coder:3b --variant baseline --doc keepass
+python scripts/gen_functions.py --model qwen2.5-coder:3b --variant secure_prompt --doc keepass
+python scripts/migrate_r0.py        # results/generation/... -> results/runs/R0/<arm>__<model>/s0/
+python scripts/verify.py --round R0 # compile check, cppcheck, ESBMC if installed
 ```
 
-Runs resume from `results/<tag>_reasoning.json`. Each record stores the verbalized reasoning, the native `<think>` trace (`thinking`), the code, `done_reason`, `truncated`, token count and wall time.
+Runs are resumable. Each unit is skipped once it appears in `units.jsonl`. A run directory holds `records.jsonl` (one line per function, with reasoning and code), `units.jsonl` (plan, status, errors), `code/<unit>.cpp` and `manifest.json`.
+
+### 2. Repair rounds
+
+`repair.py` reads a stored round and writes a full snapshot of the next one under `results/runs/<round>/`.
+
+```bash
+bash scripts/run_compile_repair.sh   # R0 -> C1 -> C2, compile repair for the paper's models
+bash scripts/run_rounds.sh           # R0 -> C1 -> C2 -> S1 -> S2, verify after each, then metrics
+python scripts/repair.py --parent R0 --round C1 --kind compile --model qwen25coder3b --limit 5
+```
+
+- Compile repair (`C1`, `C2`) covers sections that are not usable. A function with compiler errors gets the errors (line numbers relative to the function) and its code. A missing or empty function gets the original implement prompt. A section with no plan is planned again.
+- Security repair (`S1`, `S2`) covers usable sections with cppcheck findings. Each flagged function gets "Secure it." with its code. A repair that stops a section compiling, or removes a function body, is reverted.
+- Repair calls use temperature 0.2 with seeds derived from section, prompt, round and function.
+
+### 3. Analyse
+
+| Script | Output |
+|---|---|
+| `reasoning_analysis.py` | Content tags, echo of the secure prompt, form measures and requirement relevance of the reasoning steps (RQ1, RQ2) and follow-through of promised checks in code (RQ4). Reasoning is capped at the first six steps per function. |
+| `stub_analysis.py` | Classes of function bodies: empty, output or trivial only, placeholder, minimal, logic (RQ3). |
+| `repair_analysis.py` | Compiles, usable and stub shares per round and prompt, with bootstrap intervals over sections (RQ5). |
+| `metrics.py` | compile@k, usable@k, secure@k, arm differences and round transitions from `verify.py` output. |
+| `robustness_docs.py` | Leave-one-document-out check of the two headline results. |
+| `source_split.py` | Headline results split by PURE source tag (I or U). |
+| `recompile.py` | Compile results with and without the extra standard headers added by `gen_functions.py`. |
+
+Rates are reported as pooled secure-minus-general differences with 95% percentile bootstrap intervals that resample requirement sections.
+
+### 4. Human labels
+
+The tags and classes above are lexical heuristics. `label_functions.py` draws blind samples for hand labelling: 150 reasoning steps and 100 functions (20 per heuristic class). The sheets are written to `results/labels/`. Model, prompt and automatic label are in separate key files that annotators must not open. Agreement is computed with:
+
+```bash
+python scripts/label_functions.py --per-class 20
+python scripts/label_functions.py --agreement results/labels/function_sheet_filled.csv
+```
 
 ## Docker
 
@@ -26,16 +80,14 @@ docker run --rm --gpus all \
   reasoning-pipeline --doc keepass
 ```
 
-The image bundles the Ollama server and the Python pipeline; container arguments go to `pipeline.py`. `--gpus all` needs the NVIDIA Container Toolkit on the host. `docker/docker-compose.yml` does the same with `docker compose up`.
+The image bundles the Ollama server, `g++` and the Python dependencies, and container arguments go to `scripts/pipeline.py`. That script is the earlier single-stage pipeline (one reasoning-plus-code call per problem, `--stages pull generate analyze`). The plan, repair and verification workflow above is not in the image, and `cppcheck` is not installed there. `--gpus all` needs the NVIDIA Container Toolkit on the host. `docker/docker-compose.yml` does the same with `docker compose up`.
 
-| Directory | Contents |
+## Layout
+
+| Path | Contents |
 |---|---|
-| `scripts/` | `pipeline.py` (pull, run, analyze), `models.json`, `ollama_reasoning.py` (collect reasoning + code via Ollama), `analyze_reasoning_patterns.py` (vocabulary/pattern analysis, figures), `req_extract.py` and `gen_functions.py` (requirements to per-function generation) |
+| `scripts/` | Generation, repair, verification, analysis and labelling scripts, `models.json`, and the shell drivers |
 | `docker/` | Dockerfile, entrypoint, compose file |
-| `data/` | Problem sets (`*.json`), requirements (`requirements/`, `requirements-xml/`), derived `requirements_units.jsonl`; original archives in `data/raw/` |
-| `results/` | `*_reasoning.json`, reasoning figures and vocabulary table, `generation/` runs (gitignored) |
-| `generated_code/ollama/` | C++ produced by `ollama_reasoning.py` |
-| `slides/` | Presentation of reasoning findings |
-| `docs/papers/` | Reference papers and the VulBench-CPP draft |
-| `docs/notes/` | Project status and working notes |
-| `archive/residual_stream/` | Earlier residual-stream / teacher-forcing work (TransformerLens scripts, notebooks, report, results, generated code). Not part of the current project; kept for reference. Its `../data` paths were rewritten to `../../../data` |
+| `data/` | `requirements-xml/` (PURE XML), `requirements_units.jsonl` (derived sections) |
+| `results/` | Runs, metrics, figures and label sheets. Gitignored, regenerated by the scripts. |
+| `generated_code/ollama/` | C++ from the earlier single-stage pipeline |
