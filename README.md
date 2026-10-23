@@ -9,7 +9,7 @@ Run everything from the repository root. The scripts resolve paths from their ow
 - Python 3 with `requests`, `numpy`, `matplotlib`
 - [Ollama](https://ollama.com) serving the models in `scripts/models.json`
 - `g++` with C++17 (compile check) and `cppcheck` (static analysis in `verify.py`)
-- ESBMC is optional. `verify.py` writes `not_installed` in that column when it is missing, and a rerun with `--force` fills it in.
+- ESBMC 8.0.0 is optional. `verify.py` writes `not_installed` in that column when it is missing, and `ESBMC_DIR=/path/to/esbmc/bin bash scripts/run_esbmc.sh` fills it in for the chosen rounds.
 
 ## Data
 
@@ -58,13 +58,14 @@ python scripts/repair.py --parent R0 --round C1 --kind compile --model qwen25cod
 | `metrics.py` | compile@k, usable@k, secure@k, arm differences and round transitions from `verify.py` output. |
 | `robustness_docs.py` | Leave-one-document-out check of the two headline results. |
 | `source_split.py` | Headline results split by PURE source tag (I or U). |
+| `run_esbmc.sh`, `esbmc_analysis.py` | ESBMC (bounded model checking) of usable sections, one function at a time, per round. `esbmc_analysis.py` writes verdict counts, violated properties, the location of each violation (generated code or ESBMC's library models) and the first frontend error of unsupported functions to `results/esbmc/`. Tested with ESBMC 8.0.0. |
 | `recompile.py` | Compile results with and without the extra standard headers added by `gen_functions.py`. |
 
 Rates are reported as pooled secure-minus-general differences with 95% percentile bootstrap intervals that resample requirement sections.
 
 ### 4. Human labels
 
-The tags and classes above are lexical heuristics. `label_functions.py` draws blind samples for hand labelling: 150 reasoning steps and 100 functions (20 per heuristic class). The sheets are written to `results/labels/`. Model, prompt and automatic label are in separate key files that annotators must not open. Agreement is computed with:
+The tags and classes above are lexical heuristics. `label_functions.py` draws blind samples for hand labelling: 150 reasoning steps and 100 functions (20 per heuristic class). The sheets are written to `results/labels/`. Model, prompt and automatic label are in separate key files that annotators must not open. The full protocol for two annotators is in `docs/labeling_guideline.md`. `label_agreement.py` computes agreement between the annotators and checks the automatic labels against the adjudicated ones. The older single-sheet check is:
 
 ```bash
 python scripts/label_functions.py --per-class 20

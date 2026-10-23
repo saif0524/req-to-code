@@ -30,6 +30,7 @@ import json
 import re
 import shutil
 import subprocess
+import tempfile
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -45,9 +46,10 @@ PARSE_IDS = {"syntaxError", "internalAstError", "cppcheckError"}
 CPPCHECK_FLAGS = ["--enable=warning,portability", "--inconclusive", "--xml",
                   "--library=std", "--suppress=missingIncludeSystem",
                   "--suppress=missingInclude", "--inline-suppr"]
-ESBMC_FLAGS = ["--bounds-check", "--pointer-check", "--memory-leak-check",
-               "--overflow-check", "--unwind", "8", "--no-unwinding-assertions",
-               "--timeout", "30s"]
+# ESBMC 8 checks array bounds and pointers by default (only --no-bounds-check and
+# --no-pointer-check exist), so the flags below add the two checks that are off by default.
+ESBMC_FLAGS = ["--memory-leak-check", "--overflow-check", "--unwind", "8",
+               "--no-unwinding-assertions", "--timeout", "30s"]
 
 # Crude lexicon for security-oriented reasoning steps. A proxy, not a classifier.
 SEC_TERMS = re.compile(
@@ -96,16 +98,23 @@ def run_cppcheck(path):
 
 
 def run_esbmc(path, func):
+    # ESBMC's C++ frontend cannot parse <optional> next to its own header models, so the
+    # check runs on a copy without that include. Code that really uses std::optional then
+    # fails to parse and is recorded as unsupported.
+    src = re.sub(r"^\s*#include\s*<optional>\s*$", "", Path(path).read_text(encoding="utf-8"), flags=re.M)
     try:
-        r = subprocess.run(["esbmc", str(path), "--function", func, *ESBMC_FLAGS],
-                           capture_output=True, text=True, timeout=90)
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp) / Path(path).name
+            tmp_path.write_text(src, encoding="utf-8")
+            r = subprocess.run(["esbmc", str(tmp_path), "--function", func, *ESBMC_FLAGS],
+                               capture_output=True, text=True, timeout=90)
     except subprocess.TimeoutExpired:
         return "timeout"
     out = r.stdout + r.stderr
     if "VERIFICATION SUCCESSFUL" in out:
         return "ok"
     if "VERIFICATION FAILED" in out:
-        m = re.search(r"Violated property:.*?\n\s*(.+?)\n", out, re.S)
+        m = re.search(r"Violated property:\s*\n\s*file[^\n]*\n\s*([^\n]+)", out)
         prop = re.sub(r"\s+", "_", m.group(1).strip())[:60] if m else "unknown"
         return f"fail:{prop}"
     if "Timed out" in out or "timeout" in out.lower():
