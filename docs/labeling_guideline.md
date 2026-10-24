@@ -14,7 +14,7 @@ Do not change any other column. Do not add or delete rows.
 ## 2. Rules for working
 
 1. **Stay blind.** Never open `step_key.csv`, `function_key.csv`, or anything under `results/` other than your own copy of the sheets. The key files hold the model, the prompt and the automatic label. You must not know which prompt produced an item.
-2. **Work alone.** Each annotator copies the sheet to their own file (`A_steps.csv`, `B_steps.csv`, and the same for functions) and labels it without talking to the other annotator, apart from the calibration step below.
+2. **Work alone.** Each annotator copies the sheet to their own file (`H1_steps.csv`, `H2_steps.csv`, and the same for functions) and labels it without talking to the other annotator, apart from the calibration step below.
 3. **Judge the text, not the keywords.** The automatic method looks for words such as "validate" or "ensure". Your task is to decide what the text says. A step can use the word and mean nothing, or mean it without the word.
 4. **Fill every cell.** Use only the allowed values. A blank cell is treated as missing and left out of the statistics.
 5. **Judge each item on its own.** Do not compare it with earlier items or try to guess the model.
@@ -68,8 +68,8 @@ Mark 0 when the body does the work, even if it is short, calls a helper you cann
 3. **Agreement.** After both sheets are complete, compute agreement before looking at any disagreement:
 
    ```bash
-   python3 scripts/label_agreement.py steps A_steps.csv B_steps.csv --skip 10
-   python3 scripts/label_agreement.py functions A_functions.csv B_functions.csv --skip 10
+   python3 scripts/label_agreement.py steps H1_steps.csv H2_steps.csv --skip 10
+   python3 scripts/label_agreement.py functions H1_functions.csv H2_functions.csv --skip 10
    ```
 
    This prints Cohen's kappa and percent agreement per column and writes the disagreements (item id and both labels, nothing else) to `results/labels/disagreements_<kind>.csv`. Save the printed numbers. They are the figures to report.

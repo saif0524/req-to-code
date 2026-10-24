@@ -83,8 +83,8 @@ Output: `results/`.
 
 ```bash
 python3 scripts/label_functions.py --per-class 20
-python3 scripts/label_agreement.py steps A_steps.csv B_steps.csv --skip 10
-python3 scripts/label_agreement.py functions A_functions.csv B_functions.csv --skip 10
+python3 scripts/label_agreement.py steps H1_steps.csv H2_steps.csv --skip 10
+python3 scripts/label_agreement.py functions H1_functions.csv H2_functions.csv --skip 10
 python3 scripts/label_agreement.py steps --truth adjudicated_steps.csv
 python3 scripts/label_agreement.py functions --truth adjudicated_functions.csv
 ```

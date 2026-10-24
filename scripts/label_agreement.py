@@ -7,7 +7,7 @@ Agreement for the two-annotator labelling of the blind sheets in results/labels/
   heuristic check   precision, recall and kappa of the automatic labels (the key files) against
                     the adjudicated sheet, per tag (steps) or for the stub flag (functions).
 
-    python3 scripts/label_agreement.py steps A_steps.csv B_steps.csv --skip 10
+    python3 scripts/label_agreement.py steps H1_steps.csv H2_steps.csv --skip 10
     python3 scripts/label_agreement.py functions A_functions.csv B_functions.csv
     python3 scripts/label_agreement.py steps --truth adjudicated_steps.csv
     python3 scripts/label_agreement.py functions --truth adjudicated_functions.csv
