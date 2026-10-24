@@ -43,9 +43,8 @@ IGNORED_IDS = {"missingInclude", "missingIncludeSystem", "checkersReport",
                "normalCheckLevelMaxBranches", "toomanyconfigs", "unmatchedSuppression"}
 PARSE_IDS = {"syntaxError", "internalAstError", "cppcheckError"}
 
-CPPCHECK_FLAGS = ["--enable=warning,portability", "--inconclusive", "--xml",
-                  "--library=std", "--suppress=missingIncludeSystem",
-                  "--suppress=missingInclude", "--inline-suppr"]
+CPPCHECK_FLAGS = ["--enable=warning,style,performance,portability", "--std=c++17", "--xml"]
+CPPCHECK_TIMEOUT = 30  # seconds per file
 # ESBMC 8 checks array bounds and pointers by default (only --no-bounds-check and
 # --no-pointer-check exist), so the flags below add the two checks that are off by default.
 ESBMC_FLAGS = ["--memory-leak-check", "--overflow-check", "--unwind", "8",
@@ -76,7 +75,7 @@ def run_cppcheck(path):
     """Return (list of (id, severity, line), parse_error)."""
     try:
         r = subprocess.run(["cppcheck", *CPPCHECK_FLAGS, str(path)],
-                           capture_output=True, text=True, timeout=300)
+                           capture_output=True, text=True, timeout=CPPCHECK_TIMEOUT)
     except subprocess.TimeoutExpired:
         return [], True
     try:

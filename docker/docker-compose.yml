@@ -1,15 +1,24 @@
+# Ollama server plus the analysis toolchain.
+#   docker compose -f docker/docker-compose.yml run --rm tools bash
+# Pull a model once:  docker compose -f docker/docker-compose.yml exec ollama ollama pull qwen2.5-coder:3b
 services:
-  pipeline:
+  ollama:
+    image: ollama/ollama:latest
+    gpus: all            # remove on a machine without the NVIDIA Container Toolkit
+    environment:
+      OLLAMA_MAX_LOADED_MODELS: "1"
+    volumes:
+      - ollama_models:/root/.ollama
+
+  tools:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    image: reasoning-pipeline
-    gpus: all
+    image: req-to-code
+    depends_on:
+      - ollama
     volumes:
-      - ollama_models:/root/.ollama
       - ../results:/app/results
-      - ../generated_code:/app/generated_code
-    # command: ["--models", "deepcoder:1.5b", "--samples", "3"]
 
 volumes:
   ollama_models:

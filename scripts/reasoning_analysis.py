@@ -95,6 +95,9 @@ def tag_step(text):
     tags["echo"] = bool(ECHO.search(text))
     tags["sec_core"] = any(tags[k] for k in CORE)
     tags["sec_core_noecho"] = any(CAT_RE[k].search(ne) for k in CORE)
+    # prevention over-flags in the hand check (ensure/avoid without a stated threat), so the core
+    # shift is also reported without it
+    tags["sec_core_noecho_noprev"] = any(CAT_RE[k].search(ne) for k in CORE if k != "prevention")
     for k, r in FORM_RE.items():
         tags[k] = bool(r.search(text))
     return tags
@@ -161,6 +164,7 @@ def build_pairs(recs, units):
 METRICS = {  # name: (numerator key, denominator key)
     **{f"cat_{k}": (k, "steps") for k in CATEGORIES},
     "sec_core": ("sec_core", "steps"), "sec_core_noecho": ("sec_core_noecho", "steps"),
+    "sec_core_noecho_noprev": ("sec_core_noecho_noprev", "steps"),
     "echo": ("echo", "steps"),
     "words_per_step": ("words", "steps"), "steps_per_function": ("steps", "functions"),
     **{k: (k, "steps") for k in FORM},

@@ -1,6 +1,7 @@
 *
 !scripts/
 !data/requirements_units.jsonl
-!docker/entrypoint.sh
+!data/requirements-xml/XMLZIPFile/
+!docs/labeling_guideline.md
 scripts/__pycache__
 scripts/.ipynb_checkpoints

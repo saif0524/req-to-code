@@ -27,6 +27,7 @@ manifest.json with `parent`, `kind`, temperature and the prompt hash.
     python3 scripts/repair.py --parent C1 --round C2 --kind compile --verify
     python3 scripts/repair.py --parent C2 --round S1 --kind secure --arm secure
 """
+import os
 import argparse
 import csv
 import hashlib
@@ -521,7 +522,7 @@ def main():
     ap.add_argument("--seed-base", type=int, default=0, help="logged only; seeds are derived")
     ap.add_argument("--show-findings", action="store_true", help="secure: include cppcheck classes")
     ap.add_argument("--limit", type=int, help="first N units per run, for smoke tests")
-    ap.add_argument("--host", default="http://localhost:11434")
+    ap.add_argument("--host", default=os.environ.get("OLLAMA_HOST_URL", "http://localhost:11434"))
     ap.add_argument("--verify", action="store_true", help="run verify.py on the new round after")
     args = ap.parse_args()
 

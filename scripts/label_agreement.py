@@ -12,8 +12,7 @@ Agreement for the two-annotator labelling of the blind sheets in results/labels/
     python3 scripts/label_agreement.py steps --truth adjudicated_steps.csv
     python3 scripts/label_agreement.py functions --truth adjudicated_functions.csv
 
-Steps use the columns validation, memory_resource, error_handling, threat, secrets_access,
-prevention, echo (0/1). Functions use is_stub (0/1) and implements_purpose (yes/partial/no).
+Steps use the columns validation, memory_resource, threat, prevention, echo (0/1). Functions use is_stub (0/1) and implements_purpose (yes/partial/no).
 Rows with an empty or invalid label in either sheet are listed and left out of that column.
 """
 import argparse
@@ -27,8 +26,7 @@ import label_functions  # noqa: E402
 
 LABELS = Path(__file__).resolve().parent.parent / "results" / "labels"
 COLS = {
-    "steps": {"id": "step_id", "cols": ["validation", "memory_resource", "error_handling", "threat",
-                                        "secrets_access", "prevention", "echo"],
+    "steps": {"id": "step_id", "cols": ["validation", "memory_resource", "threat", "prevention", "echo"],
               "valid": {"0", "1"}},
     "functions": {"id": "id", "cols": ["is_stub", "implements_purpose"], "valid": None},
 }

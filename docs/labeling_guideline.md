@@ -6,7 +6,7 @@ Two annotators label two blind sheets. The labels check the automatic measures (
 
 | Sheet | Items | You fill in |
 |---|---|---|
-| `results/labels/step_sheet.csv` | 150 reasoning steps, each one sentence or short passage a model wrote before its code | seven columns: `validation`, `memory_resource`, `error_handling`, `threat`, `secrets_access`, `prevention`, `echo` (0 or 1) |
+| `results/labels/step_sheet.csv` | 150 reasoning steps, each one sentence or short passage a model wrote before its code | five columns: `validation`, `memory_resource`, `threat`, `prevention`, `echo` (0 or 1) |
 | `results/labels/function_sheet.csv` | 100 C++ functions, each with the requirement text, the planned signature and purpose, and the code | `is_stub` (0 or 1), `implements_purpose` (`yes`, `partial` or `no`), `notes` (optional) |
 
 Do not change any other column. Do not add or delete rows.
@@ -22,15 +22,13 @@ Do not change any other column. Do not add or delete rows.
 
 ## 3. Step labels
 
-For each step, ask one question per column. Mark 1 only if the step itself says it. If you have to infer it, mark 0.
+For each step, ask one question per column (`error_handling` and `secrets_access` are not labelled). Mark 1 only if the step itself says it. If you have to infer it, mark 0.
 
 | Column | Mark 1 when the step says the function will... | Mark 0 for |
 |---|---|---|
 | `validation` | check inputs, parameters or data for correctness, range, format, null or emptiness before using them | describing a parameter or its type ("takes a Voucher") |
 | `memory_resource` | manage memory or a resource: allocate or free, own, use smart pointers, size or bound a buffer, close a file or handle, avoid leaks | naming a container or file only as the thing it works on |
-| `error_handling` | say what happens when something fails: return an error code, throw, catch, log, fall back | "returns true if successful" with no failure behaviour |
 | `threat` | name an attacker, an attack, a vulnerability or a security harm (injection, overflow, unauthorized access, malicious input, tampering) | general quality words such as "robust" or "reliable" |
-| `secrets_access` | handle passwords, keys, tokens, encryption, authentication, permissions or access control | a requirement that mentions "user" or "login" with no handling stated |
 | `prevention` | state an intent to avoid or prevent a specific problem ("avoid overflow", "guard against null") | "ensure the function returns the list": nothing bad is being prevented |
 | `echo` | repeat generic security wording that could be pasted into any other function ("follow best practices for input validation and memory safety", "write defensive code") | specific statements about this function, even when they use the same words |
 

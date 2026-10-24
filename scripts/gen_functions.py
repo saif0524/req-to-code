@@ -18,6 +18,7 @@ Examples:
   python gen_functions.py --limit 3 --variant baseline
   python gen_functions.py --variant secure_prompt --doc keepass
 """
+import os
 import argparse
 import hashlib
 import json
@@ -270,7 +271,7 @@ def select_units(args):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="qwen2.5-coder:7b")
-    ap.add_argument("--host", default="http://localhost:11434")
+    ap.add_argument("--host", default=os.environ.get("OLLAMA_HOST_URL", "http://localhost:11434"))
     ap.add_argument("--variant", default="baseline", choices=sorted(HEADERS))
     ap.add_argument("--units", default=str(UNITS_PATH))
     ap.add_argument("--doc", help="substring filter on document name")

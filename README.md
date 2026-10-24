@@ -1,94 +1,92 @@
-# req-to-code-reasoning
+# SLM Reasoning for code generation
 
-Code and scripts for a study of small language models generating C++ from software requirements. The models plan the functions for a requirements section, then write each function with a short rationale. Each section is run under a general and a secure prompt. The scripts compare the rationales, the code, and what a compiler-feedback repair loop recovers.
+## Setup
 
-Run everything from the repository root. The scripts resolve paths from their own location.
+### Docker (recommended)
 
-## Requirements
+The image holds Python 3, g++ 13, cppcheck 2.19.0 and ESBMC 8.0. Ollama runs as a second service.
 
-- Python 3 with `requests`, `numpy`, `matplotlib`
-- [Ollama](https://ollama.com) serving the models in `scripts/models.json`
-- `g++` with C++17 (compile check) and `cppcheck` (static analysis in `verify.py`)
-- ESBMC 8.0.0 is optional. `verify.py` writes `not_installed` in that column when it is missing, and `ESBMC_DIR=/path/to/esbmc/bin bash scripts/run_esbmc.sh` fills it in for the chosen rounds.
+```bash
+docker compose -f docker/docker-compose.yml up -d ollama
+for m in qwen2.5-coder:1.5b qwen2.5-coder:3b opencoder:1.5b deepcoder:1.5b; do
+  docker compose -f docker/docker-compose.yml exec ollama ollama pull $m
+done
+docker compose -f docker/docker-compose.yml run --rm tools bash
+```
+
+Run the commands below inside the `tools` shell. Results are written to `./results` on the host. Remove `gpus: all` from the compose file if the host has no GPU.
+
+### Local
+
+Python 3 with `requests`, `numpy`, `matplotlib`, `lxml`; `g++` with C++17; `cppcheck` 2.19.0; ESBMC 8.0.0; Ollama on `localhost:11434` with the four models above pulled. Run every command from the repository root.
 
 ## Data
 
-`data/requirements-xml/` holds the XML versions of the PURE requirements corpus (Ferrari et al., RE 2017). The study uses 11 of its 18 documents, chosen to balance company or public-body sources (I) and university sources (U) while keeping runs feasible on one laptop GPU. `data/requirements_units.jsonl` holds the 166 requirement sections derived from them, with one JSON object per section (`req_extract.py` builds it).
+`data/requirements_units.jsonl` holds the 166 requirement sections from the 11 PURE documents in `data/requirements-xml/`. Use it as provided.
 
-## Models
-
-Four instruction-capable code models are analysed: Qwen2.5-Coder 1.5B and 3B, OpenCoder 1.5B and DeepCoder 1.5B. `scripts/models.json` also lists CodeGemma 2B. It fails the JSON plan/implement format (about 60% invalid plans, no usable sections), so `reasoning_analysis.py` excludes it by default (`--include-all` keeps it) and the repair scripts do not run it. Each model has its own token budget, context size and temperature in `models.json`. First-generation runs are greedy (temperature 0, seed 0); DeepCoder uses 0.6 because greedy decoding loops on it.
-
-## Workflow
-
-### 1. Generate (round R0)
-
-For each section, one plan call returns up to five functions (name, signature, purpose) and shared declarations. One function call per planned function then returns JSON with 3 to 6 reasoning steps and the code. `--variant baseline` is the general prompt and `--variant secure_prompt` is the secure one.
+## 1. First generation (R0)
 
 ```bash
-python scripts/gen_functions.py --model qwen2.5-coder:3b --variant baseline --doc keepass
-python scripts/gen_functions.py --model qwen2.5-coder:3b --variant secure_prompt --doc keepass
-python scripts/migrate_r0.py        # results/generation/... -> results/runs/R0/<arm>__<model>/s0/
-python scripts/verify.py --round R0 # compile check, cppcheck, ESBMC if installed
+for v in baseline secure_prompt; do      # baseline is the general prompt
+  for m in qwen2.5-coder:1.5b qwen2.5-coder:3b opencoder:1.5b; do
+    python3 scripts/gen_functions.py --model $m --variant $v --num-ctx 4096 --num-predict 1536
+  done
+  python3 scripts/gen_functions.py --model deepcoder:1.5b --variant $v --num-ctx 12288 --num-predict 8192
+done
+python3 scripts/migrate_r0.py            # results/generation/ -> results/runs/R0/<prompt>__<model>/s0/
+python3 scripts/verify.py --round R0 --no-esbmc
 ```
 
-Runs are resumable. Each unit is skipped once it appears in `units.jsonl`. A run directory holds `records.jsonl` (one line per function, with reasoning and code), `units.jsonl` (plan, status, errors), `code/<unit>.cpp` and `manifest.json`.
+Greedy decoding (temperature 0, seed 0). Runs resume where they stopped.
 
-### 2. Repair rounds
-
-`repair.py` reads a stored round and writes a full snapshot of the next one under `results/runs/<round>/`.
+## 2. Compile repair (C1, C2)
 
 ```bash
-bash scripts/run_compile_repair.sh   # R0 -> C1 -> C2, compile repair for the paper's models
-bash scripts/run_rounds.sh           # R0 -> C1 -> C2 -> S1 -> S2, verify after each, then metrics
-python scripts/repair.py --parent R0 --round C1 --kind compile --model qwen25coder3b --limit 5
+bash scripts/run_compile_repair.sh       # C1 and C2 for Qwen 1.5B, Qwen 3B and OpenCoder; C1 for DeepCoder
+python3 scripts/repair.py --parent C1 --round C2 --kind compile --model deepcoder15b
+python3 scripts/verify.py --round C2 --no-esbmc
 ```
 
-- Compile repair (`C1`, `C2`) covers sections that are not usable. A function with compiler errors gets the errors (line numbers relative to the function) and its code. A missing or empty function gets the original implement prompt. A section with no plan is planned again.
-- Security repair (`S1`, `S2`) covers usable sections with cppcheck findings. Each flagged function gets "Secure it." with its code. A repair that stops a section compiling, or removes a function body, is reverted.
-- Repair calls use temperature 0.2 with seeds derived from section, prompt, round and function.
+Each round reads its parent and writes a full snapshot to `results/runs/<round>/<prompt>__<model>/s0/`.
 
-### 3. Analyse
-
-| Script | Output |
-|---|---|
-| `reasoning_analysis.py` | Content tags, echo of the secure prompt, form measures and requirement relevance of the reasoning steps (RQ1, RQ2) and follow-through of promised checks in code (RQ4). Reasoning is capped at the first six steps per function. |
-| `stub_analysis.py` | Classes of function bodies: empty, output or trivial only, placeholder, minimal, logic (RQ3). |
-| `repair_analysis.py` | Compiles, usable and stub shares per round and prompt, with bootstrap intervals over sections (RQ5). |
-| `metrics.py` | compile@k, usable@k, secure@k, arm differences and round transitions from `verify.py` output. |
-| `robustness_docs.py` | Leave-one-document-out check of the two headline results. |
-| `source_split.py` | Headline results split by PURE source tag (I or U). |
-| `run_esbmc.sh`, `esbmc_analysis.py` | ESBMC (bounded model checking) of usable sections, one function at a time, per round. `esbmc_analysis.py` writes verdict counts, violated properties, the location of each violation (generated code or ESBMC's library models) and the first frontend error of unsupported functions to `results/esbmc/`. Tested with ESBMC 8.0.0. |
-| `recompile.py` | Compile results with and without the extra standard headers added by `gen_functions.py`. |
-
-Rates are reported as pooled secure-minus-general differences with 95% percentile bootstrap intervals that resample requirement sections.
-
-### 4. Human labels
-
-The tags and classes above are lexical heuristics. `label_functions.py` draws blind samples for hand labelling: 150 reasoning steps and 100 functions (20 per heuristic class). The sheets are written to `results/labels/`. Model, prompt and automatic label are in separate key files that annotators must not open. The full protocol for two annotators is in `docs/labeling_guideline.md`. `label_agreement.py` computes agreement between the annotators and checks the automatic labels against the adjudicated ones. The older single-sheet check is:
+## 3. cppcheck
 
 ```bash
-python scripts/label_functions.py --per-class 20
-python scripts/label_functions.py --agreement results/labels/function_sheet_filled.csv
+bash scripts/run_cppcheck.sh R0 C1 C2
 ```
 
-## Docker
+Output: `results/cppcheck/`.
+
+## 4. ESBMC
 
 ```bash
-docker build -f docker/Dockerfile -t reasoning-pipeline .
-docker run --rm --gpus all \
-  -v ollama_models:/root/.ollama -v "$PWD/results:/app/results" -v "$PWD/generated_code:/app/generated_code" \
-  reasoning-pipeline --doc keepass
+bash scripts/run_esbmc.sh R0 C1 C2       # ESBMC_DIR=/path/to/esbmc/bin if esbmc is not on PATH
+python3 scripts/esbmc_analysis.py --rounds R0 C1 C2 --causes --locate
 ```
 
-The image bundles the Ollama server, `g++` and the Python dependencies, and container arguments go to `scripts/pipeline.py`. That script is the earlier single-stage pipeline (one reasoning-plus-code call per problem, `--stages pull generate analyze`). The plan, repair and verification workflow above is not in the image, and `cppcheck` is not installed there. `--gpus all` needs the NVIDIA Container Toolkit on the host. `docker/docker-compose.yml` does the same with `docker compose up`.
+Output: `results/esbmc/`.
 
-## Layout
+## 5. Analysis
 
-| Path | Contents |
-|---|---|
-| `scripts/` | Generation, repair, verification, analysis and labelling scripts, `models.json`, and the shell drivers |
-| `docker/` | Dockerfile, entrypoint, compose file |
-| `data/` | `requirements-xml/` (PURE XML), `requirements_units.jsonl` (derived sections) |
-| `results/` | Runs, metrics, figures and label sheets. Gitignored, regenerated by the scripts. |
-| `generated_code/ollama/` | C++ from the earlier single-stage pipeline |
+```bash
+python3 scripts/reasoning_analysis.py
+python3 scripts/stub_analysis.py
+python3 scripts/repair_analysis.py
+python3 scripts/robustness_docs.py
+python3 scripts/source_split.py
+python3 scripts/metrics.py --k 1
+```
+
+Output: `results/`.
+
+## 6. Human labels
+
+```bash
+python3 scripts/label_functions.py --per-class 20
+python3 scripts/label_agreement.py steps A_steps.csv B_steps.csv --skip 10
+python3 scripts/label_agreement.py functions A_functions.csv B_functions.csv --skip 10
+python3 scripts/label_agreement.py steps --truth adjudicated_steps.csv
+python3 scripts/label_agreement.py functions --truth adjudicated_functions.csv
+```
+
+Blind sheets are written to `results/labels/`. The protocol is in `docs/labeling_guideline.md`.
