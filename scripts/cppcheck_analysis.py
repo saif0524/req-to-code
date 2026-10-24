@@ -31,7 +31,6 @@ import verify  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "results" / "runs"
 OUT = ROOT / "results" / "cppcheck"
-EXCLUDE = {"codegemma2b"}
 FIELDS = ["round", "arm", "model", "unit_id", "usable", "func", "id", "severity", "line", "message"]
 
 
@@ -61,8 +60,6 @@ def jobs_for(rounds):
     for rnd in rounds:
         for d in sorted((RUNS / rnd).glob("*__*/s0")):
             arm, model = d.parent.name.split("__", 1)
-            if model in EXCLUDE:
-                continue
             usable = {r["unit_id"]: r["usable"] == "1"
                       for r in csv.DictReader(open(d / "verify_units.csv", encoding="utf-8"))}
             spans = {}
@@ -137,8 +134,7 @@ def main():
 
     (OUT / "meta.json").write_text(json.dumps({
         "cppcheck": verify.tool_version(["cppcheck", "--version"]),
-        "flags": verify.CPPCHECK_FLAGS, "rounds": args.rounds, "files": len(jobs),
-        "models_excluded": sorted(EXCLUDE)}, indent=2), encoding="utf-8")
+        "flags": verify.CPPCHECK_FLAGS, "rounds": args.rounds, "files": len(jobs)}, indent=2), encoding="utf-8")
 
     print(f"{'round':5s} {'arm':8s} {'files':>6s} {'w/find':>7s} {'parse':>6s} {'finds':>6s} {'usable':>7s} {'u+find':>7s}")
     for rnd, arm in keys:

@@ -30,15 +30,12 @@ import verify  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "results" / "runs"
 OUT = ROOT / "results" / "esbmc"
-EXCLUDE = {"codegemma2b"}
 KINDS = ["ok", "fail", "timeout", "unsupported"]
 
 
 def rows(rnd):
     for d in sorted((RUNS / rnd).glob("*__*/s0")):
         arm, model = d.parent.name.split("__", 1)
-        if model in EXCLUDE:
-            continue
         for r in csv.DictReader(open(d / "verify_functions.csv", encoding="utf-8")):
             yield arm, model, d, r
 

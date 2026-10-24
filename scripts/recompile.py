@@ -130,7 +130,7 @@ def main():
                 total_units[(doc, variant, model)] += 1
                 total_units[("ALL", variant, model)] += 1
         # Only the five models in models.json; skip earlier qwen25coder7b trial dirs.
-        if model not in {"qwen25coder15b", "qwen25coder3b", "deepcoder15b", "opencoder15b", "codegemma2b"}:
+        if model not in {"qwen25coder15b", "qwen25coder3b", "deepcoder15b", "opencoder15b"}:
             continue
         for p in sorted((run / "code").glob("*.cpp")):
             if time.time() - p.stat().st_mtime < 60:  # may still be written by a running job

@@ -57,7 +57,7 @@ def boot_rate(rows, pred, rng, n=2000):
 
 
 def main():
-    rows = [r for r in load() if r["model"] != "codegemma2b"]
+    rows = list(load())
     rng = np.random.default_rng(0)
     out = []
     for scope in ["all"] + sorted({r["model"] for r in rows}):

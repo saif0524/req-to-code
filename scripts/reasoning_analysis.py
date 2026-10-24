@@ -45,23 +45,37 @@ OUT = ROOT / "results" / "reasoning"
 ECHO = re.compile(r"input validation|memory safety|safe resource handling|resource handling|"
                   r"best practices|defensive|secure,? robust|robust,? and", re.I)
 
+# Keyword lists were revised after the hand check (labels/ sheets): generic words that annotators
+# did not accept were removed. LEGACY_CORE keeps the original four core lists for a sensitivity row.
 CATEGORIES = {
+    "validation": r"\bvalidat\w*|\bsanitiz\w*|\binvalid\b|\bmalformed\b|\bwell-formed\b|"
+                  r"\bverif(?:y|ies|ied|ication)\b|\bnon-empty\b|\bmust not be empty\b|\bnull(?:ptr)?\b",
+    "memory_resource": r"\bmemory\b|\bleak\w*|\bbuffer\w*|\boverflow\w*|\bunderflow\w*|"
+                       r"\bdangling\b|\bsmart pointers?\b|\braii\b|\bbounds?\b|out[- ]of[- ]range|"
+                       r"\bdealloc\w*|\bfree[sd]?\b|\bresource (?:handling|management|leaks?|cleanup)\b|"
+                       r"\brelease[sd]? (?:the )?resources?\b",
+    "error_handling": r"\berrors?\b|\bexceptions?\b|\bthrow\w*|\bcatch\w*|\bfail(?:s|ed|ure|ures|ing)?\b|"
+                      r"\bgracefully\b|\bfallback\b|\bedge cases?\b|\brecover\w*",
+    "threat": r"\binjection\b|\bxss\b|cross-site|\bmalicious\b|\battacks?\b|\bvulnerab\w*|\bexploit\w*|"
+              r"\buntrusted\b|\bthreats?\b|\bsecurity\b|\bunauthori[sz]ed\b|\bsafeguard\w*",
+    "secrets_access": r"\bpasswords?\b|\bhash\w*|\bencrypt\w*|\bdecrypt\w*|\bcrypto\w*|\bauthenticat\w*|"
+                      r"\bauthori[sz]\w*|\bpermissions?\b|\bcredentials?\b|\btokens?\b|\bsalt\w*|\bsecrets?\b|"
+                      r"\bprivileg\w*|\baccess control\b",
+    "prevention": r"\bavoid\w*|\bprevent\w*|\bguard\w*|\bprotect\w*",
+}
+LEGACY_CORE = {
     "validation": r"\bvalidat\w*|\bsanitiz\w*|\binvalid\b|\bmalformed\b|\bwell-formed\b|"
                   r"\bverif(?:y|ies|ied|ication)\b|\bnon-empty\b|\bmust not be empty\b",
     "memory_resource": r"\bmemory\b|\bleak\w*|\bbuffer\w*|\boverflow\w*|\bunderflow\w*|\bnull(?:ptr)?\b|"
                        r"\bdangling\b|\bpointers?\b|\braii\b|\bbounds?\b|out[- ]of[- ]range|"
                        r"\bdealloc\w*|\bfree[sd]?\b|\bresources?\b",
-    "error_handling": r"\berrors?\b|\bexceptions?\b|\bthrow\w*|\bcatch\w*|\bfail(?:s|ed|ure|ures|ing)?\b|"
-                      r"\bgracefully\b|\bfallback\b|\bedge cases?\b|\brecover\w*",
     "threat": r"\binjection\b|\bxss\b|cross-site|\bmalicious\b|\battacks?\b|\bvulnerab\w*|\bexploit\w*|"
               r"\buntrusted\b|\bthreats?\b|\bsecurity\b|\bsecure[sd]?\b|\bsecurely\b|\bunauthori[sz]ed\b|"
               r"\bsafe(?:ly|ty)?\b|\bsafeguard\w*",
-    "secrets_access": r"\bpasswords?\b|\bhash\w*|\bencrypt\w*|\bdecrypt\w*|\bcrypto\w*|\bauthenticat\w*|"
-                      r"\bauthori[sz]\w*|\bpermissions?\b|\bcredentials?\b|\btokens?\b|\bsalt\w*|\bsecrets?\b|"
-                      r"\bprivileg\w*|\baccess control\b",
     "prevention": r"\bavoid\w*|\bprevent\w*|\bensur\w*|\bguard\w*|\bprotect\w*|\bmake sure\b|"
                   r"\bguarantee\w*|\brobust\w*",
 }
+LEGACY_RE = {k: re.compile(v, re.I) for k, v in LEGACY_CORE.items()}
 CAT_RE = {k: re.compile(v, re.I) for k, v in CATEGORIES.items()}
 CORE = ("validation", "memory_resource", "threat", "prevention")  # error handling and secrets are often task-driven
 
@@ -95,17 +109,12 @@ def tag_step(text):
     tags["echo"] = bool(ECHO.search(text))
     tags["sec_core"] = any(tags[k] for k in CORE)
     tags["sec_core_noecho"] = any(CAT_RE[k].search(ne) for k in CORE)
-    # prevention over-flags in the hand check (ensure/avoid without a stated threat), so the core
-    # shift is also reported without it
-    tags["sec_core_noecho_noprev"] = any(CAT_RE[k].search(ne) for k in CORE if k != "prevention")
+    tags["sec_core_noecho_legacy"] = any(LEGACY_RE[k].search(ne) for k in CORE)
     for k, r in FORM_RE.items():
         tags[k] = bool(r.search(text))
     return tags
 
 
-# CodeGemma 2B is a completion model and fails the JSON workflow (few plans, empty bodies); it is
-# reported separately, not in this analysis. Pass --include-all to keep it.
-EXCLUDE = {"codegemma2b"}
 # The prompt asks for 3 to 6 steps. Under greedy decoding DeepCoder sometimes loops and writes
 # hundreds; only the first MAX_STEPS steps of a function are analysed (0 = no cap, --max-steps).
 MAX_STEPS = 6
@@ -115,8 +124,6 @@ def load_records():
     recs = []
     for d in sorted(RUNS.glob("R0/*__*/s0")):
         arm, model = d.parent.name.split("__", 1)
-        if model in EXCLUDE:
-            continue
         for l in (d / "records.jsonl").read_text(encoding="utf-8").splitlines():
             if l.strip():
                 r = json.loads(l)
@@ -164,7 +171,7 @@ def build_pairs(recs, units):
 METRICS = {  # name: (numerator key, denominator key)
     **{f"cat_{k}": (k, "steps") for k in CATEGORIES},
     "sec_core": ("sec_core", "steps"), "sec_core_noecho": ("sec_core_noecho", "steps"),
-    "sec_core_noecho_noprev": ("sec_core_noecho_noprev", "steps"),
+    "sec_core_noecho_legacy": ("sec_core_noecho_legacy", "steps"),
     "echo": ("echo", "steps"),
     "words_per_step": ("words", "steps"), "steps_per_function": ("steps", "functions"),
     **{k: (k, "steps") for k in FORM},
@@ -364,7 +371,7 @@ def make_figures(main_rows, model_rows):
     ax.plot([], [], "o", color=blue, label="general prompt")
     ax.plot([], [], "o", color=orange, label="secure prompt")
     ax.legend(frameon=False, loc="lower right", fontsize=9)
-    ax.set_title("By model (CodeGemma omitted: 5 usable pairs)", loc="left", fontsize=10.5)
+    ax.set_title("By model", loc="left", fontsize=10.5)
     ax.grid(axis="x", color=grid, lw=0.6); ax.set_axisbelow(True)
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
@@ -436,13 +443,10 @@ def main():
     ap.add_argument("--boot", type=int, default=2000)
     ap.add_argument("--label-sheet", type=int, metavar="N")
     ap.add_argument("--agreement", type=Path, metavar="FILLED_CSV")
-    ap.add_argument("--include-all", action="store_true", help="also analyse models in EXCLUDE")
     ap.add_argument("--max-steps", type=int, default=6, help="analyse only the first N steps per function (0 = all)")
     args = ap.parse_args()
     global MAX_STEPS
     MAX_STEPS = args.max_steps
-    if args.include_all:
-        EXCLUDE.clear()
     if args.label_sheet:
         label_sheet(args.label_sheet)
     elif args.agreement:

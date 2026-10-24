@@ -148,7 +148,6 @@
 [22/24] 0000_gamma_j__5_7: ok, 5 functions, compiles=False, 11s
 [23/24] 0000_gamma_j__5_9: ok, 4 functions, compiles=True, 6s
 [24/24] 0000_gamma_j__6: ok, 5 functions, compiles=False, 8s
-[INFO] codegemma:2b / baseline: 24 units to run (142 already done) -> /home/saif/Documents/req-to-code/results/generation/baseline__codegemma2b
 [1/24] 0000_gamma_j__2_1: ok, 5 functions, compiles=False, 7s
 [2/24] 0000_gamma_j__2_3: plan_error, 0 functions, compiles=None, 25s
 [3/24] 0000_gamma_j__2_4: ok, 5 functions, compiles=False, 4s
@@ -173,7 +172,6 @@
 [22/24] 0000_gamma_j__5_7: ok, 5 functions, compiles=False, 3s
 [23/24] 0000_gamma_j__5_9: ok, 3 functions, compiles=False, 6s
 [24/24] 0000_gamma_j__6: ok, 5 functions, compiles=False, 4s
-[INFO] codegemma:2b / secure_prompt: 24 units to run (142 already done) -> /home/saif/Documents/req-to-code/results/generation/secure_prompt__codegemma2b
 [1/24] 0000_gamma_j__2_1: plan_error, 0 functions, compiles=None, 6s
 [2/24] 0000_gamma_j__2_3: plan_error, 0 functions, compiles=None, 26s
 [3/24] 0000_gamma_j__2_4: ok, 5 functions, compiles=False, 3s
@@ -207,9 +205,6 @@
 [GENERATE] opencoder:1.5b / baseline / gamma j
 [GENERATE] opencoder:1.5b / secure_prompt / gamma j
 [INFO] Using Ollama model opencoder:1.5b at http://localhost:11434
-[GENERATE] codegemma:2b / baseline / gamma j
-[GENERATE] codegemma:2b / secure_prompt / gamma j
-[INFO] Using Ollama model codegemma:2b at http://localhost:11434
 === fast models done 12:39:11
 [INFO] deepcoder:1.5b / baseline: 24 units to run (142 already done) -> /home/saif/Documents/req-to-code/results/generation/baseline__deepcoder15b
 [1/24] 0000_gamma_j__2_1: ok, 5 functions, compiles=False, 82s

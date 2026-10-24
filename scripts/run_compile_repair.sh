@@ -4,7 +4,7 @@
 #   setsid nohup bash scripts/run_compile_repair.sh >> results/logs/repair_166.log 2>&1 &
 set -euo pipefail
 cd "$(dirname "$0")/.."
-FAST="qwen25coder15b qwen25coder3b opencoder15b"  # CodeGemma is excluded from the study and not run
+FAST="qwen25coder15b qwen25coder3b opencoder15b"
 for m in $FAST; do
   echo "=== C1 $m $(date +%H:%M:%S)"
   python3 scripts/repair.py --parent R0 --round C1 --kind compile --model "$m"

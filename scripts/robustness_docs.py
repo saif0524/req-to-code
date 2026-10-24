@@ -21,7 +21,6 @@ from sample_functions import classify  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 STUB = {"empty", "output/trivial only", "placeholder-marked"}
-EXCLUDE = {"codegemma2b"}
 
 
 def main():
@@ -34,8 +33,6 @@ def main():
     # (model, unit, arm) -> [steps, core]
     steps = defaultdict(lambda: [0, 0])
     for r in csv.DictReader(open(ROOT / "results" / "reasoning" / "steps_tagged.csv", encoding="utf-8")):
-        if r["model"] in EXCLUDE:
-            continue
         a = steps[(r["model"], r["unit_id"], r["arm"])]
         a[0] += 1
         a[1] += int(r["sec_core_noecho"])
@@ -44,8 +41,6 @@ def main():
     funcs = []
     for f in sorted((ROOT / "results" / "runs" / "R0").glob("*__*/s0/records.jsonl")):
         arm, model = f.parent.parent.name.split("__", 1)
-        if model in EXCLUDE:
-            continue
         for l in f.read_text(encoding="utf-8").splitlines():
             if l.strip():
                 r = json.loads(l)

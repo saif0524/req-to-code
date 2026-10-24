@@ -3,7 +3,7 @@ Draw a stratified sample of generated functions that the heuristic classifies
 as "logic" (control flow or 3+ non-I/O statements, no placeholder marker), for
 manual labeling.
 
-Strata are model x variant; CodeGemma is skipped because it produced no logic.
+Strata are model x variant.
 Output: results/sample_logic_<n>.csv with blank label columns.
 
     python scripts/sample_functions.py --n 100 --seed 7

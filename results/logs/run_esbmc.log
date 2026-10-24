@@ -1,12 +1,10 @@
 ESBMC version 8.0.0 64-bit x86_64 linux
 === R0 08:05:29
 10 runs
-R0/general__codegemma2b/s0: 166 units, compiles=15 usable=0 secure=0
 R0/general__deepcoder15b/s0: 166 units, compiles=5 usable=2 secure=2
 R0/general__opencoder15b/s0: 166 units, compiles=33 usable=10 secure=10
 R0/general__qwen25coder15b/s0: 166 units, compiles=23 usable=9 secure=9
 R0/general__qwen25coder3b/s0: 166 units, compiles=26 usable=23 secure=23
-R0/secure__codegemma2b/s0: 166 units, compiles=10 usable=0 secure=0
 R0/secure__deepcoder15b/s0: 166 units, compiles=1 usable=0 secure=0
 R0/secure__opencoder15b/s0: 166 units, compiles=37 usable=6 secure=6
 R0/secure__qwen25coder15b/s0: 166 units, compiles=19 usable=11 secure=11

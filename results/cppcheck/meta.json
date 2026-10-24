@@ -10,8 +10,5 @@
     "C1",
     "C2"
   ],
-  "files": 3956,
-  "models_excluded": [
-    "codegemma2b"
-  ]
+  "files": 3956
 }

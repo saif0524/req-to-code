@@ -25,7 +25,6 @@ SOURCE = {"0000 - cctns": "I", "1999 - dii": "I", "1998 - themas": "I", "2005 - 
           "2008 - peering": "U", "0000 - gamma j": "U", "2007 - get real 0.2": "U",
           "2009 - video search": "U", "2003 - qheadache": "U"}
 STUB = {"empty", "output/trivial only", "placeholder-marked"}
-EXCLUDE = {"codegemma2b"}
 
 
 def main(boot=2000):
@@ -37,8 +36,6 @@ def main(boot=2000):
                 doc[u["unit_id"]] = u["doc"]
     steps = defaultdict(lambda: [0, 0])
     for r in csv.DictReader(open(ROOT / "results" / "reasoning" / "steps_tagged.csv", encoding="utf-8")):
-        if r["model"] in EXCLUDE:
-            continue
         a = steps[(r["model"], r["unit_id"], r["arm"])]
         a[0] += 1
         a[1] += int(r["sec_core_noecho"])
@@ -46,8 +43,6 @@ def main(boot=2000):
     funcs = []
     for f in sorted((ROOT / "results" / "runs" / "R0").glob("*__*/s0/records.jsonl")):
         arm, model = f.parent.parent.name.split("__", 1)
-        if model in EXCLUDE:
-            continue
         for l in f.read_text(encoding="utf-8").splitlines():
             if l.strip():
                 r = json.loads(l)

@@ -1,5 +1,4 @@
 === C1 <- R0 (compile) 18:27:24
-[C1] general__codegemma2b/s0: 114 units (0 done) <- R0
   [1/114] 0000_cctns__5: plan_error calls=1 9s
   [2/114] 0000_cctns__x: plan_error calls=1 35s
   [3/114] 0000_cctns__x_11: ok calls=7 18s

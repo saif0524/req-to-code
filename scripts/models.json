@@ -28,13 +28,5 @@
     "num_ctx": 4096,
     "temperature": 0.0,
     "note": "4K context window."
-  },
-  {
-    "tag": "codegemma:2b",
-    "label": "CodeGemma-2B",
-    "max_tokens": 1536,
-    "num_ctx": 4096,
-    "temperature": 0.0,
-    "note": "Pretrained completion model, not instruction-tuned; expect poor format following. codegemma:instruct is the chat variant."
   }
 ]

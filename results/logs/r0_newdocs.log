@@ -230,7 +230,6 @@
 [26/28] 2005_microcare__design_constraints_826: ok, 5 functions, compiles=False, 15s
 [27/28] 2005_microcare__6: ok, 5 functions, compiles=False, 15s
 [28/28] 2005_microcare__design_constraints_830: ok, 5 functions, compiles=False, 17s
-[INFO] codegemma:2b / baseline: 28 units to run (114 already done) -> /home/saif/Documents/req-to-code/results/generation/baseline__codegemma2b
 [1/28] 2005_microcare__the_concept_of_output_based_aid_oba: plan_error, 0 functions, compiles=None, 4s
 [2/28] 2005_microcare__1_3_2: plan_error, 0 functions, compiles=None, 2s
 [3/28] 2005_microcare__2_1: plan_error, 0 functions, compiles=None, 3s
@@ -259,7 +258,6 @@
 [26/28] 2005_microcare__design_constraints_826: plan_error, 0 functions, compiles=None, 4s
 [27/28] 2005_microcare__6: ok, 3 functions, compiles=True, 2s
 [28/28] 2005_microcare__design_constraints_830: plan_error, 0 functions, compiles=None, 3s
-[INFO] codegemma:2b / secure_prompt: 28 units to run (114 already done) -> /home/saif/Documents/req-to-code/results/generation/secure_prompt__codegemma2b
 [1/28] 2005_microcare__the_concept_of_output_based_aid_oba: plan_error, 0 functions, compiles=None, 1s
 [2/28] 2005_microcare__1_3_2: plan_error, 0 functions, compiles=None, 2s
 [3/28] 2005_microcare__2_1: plan_error, 0 functions, compiles=None, 3s
@@ -300,6 +298,3 @@
 [GENERATE] opencoder:1.5b / baseline / microcare
 [GENERATE] opencoder:1.5b / secure_prompt / microcare
 [INFO] Using Ollama model opencoder:1.5b at http://localhost:11434
-[GENERATE] codegemma:2b / baseline / microcare
-[GENERATE] codegemma:2b / secure_prompt / microcare
-[INFO] Using Ollama model codegemma:2b at http://localhost:11434

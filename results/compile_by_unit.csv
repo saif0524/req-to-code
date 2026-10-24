@@ -1,60 +1,4 @@
 doc,variant,model,unit_id,ok_before,errors_before,ok_after,errors_after,first_error_before,first_error_after
-0000 - cctns,baseline,codegemma2b,0000_cctns__x_13,False,23,False,23,variable or field ‘audit_trail_create’ declared void,variable or field ‘audit_trail_create’ declared void
-1998 - themas,baseline,codegemma2b,1998_themas__2_5_3,True,0,True,0,,
-1998 - themas,baseline,codegemma2b,1998_themas__3_1_1_3_3,True,0,True,0,,
-1998 - themas,baseline,codegemma2b,1998_themas__3_1_4_1_3,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
-1998 - themas,baseline,codegemma2b,1998_themas__3_1_5_1_3,False,2,False,2,‘HEATING_COOLING_UNIT_STATE’ does not name a type,‘HEATING_COOLING_UNIT_STATE’ does not name a type
-1998 - themas,baseline,codegemma2b,1998_themas__3_1_5_2_3,False,1,False,1,"expected constructor, destructor, or type conversion before ‘(’ token","expected constructor, destructor, or type conversion before ‘(’ token"
-1999 - dii,baseline,codegemma2b,1999_dii__2_1,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
-1999 - dii,baseline,codegemma2b,1999_dii__4_14_2,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
-1999 - dii,baseline,codegemma2b,1999_dii__4_14_7_1_1,True,0,True,0,,
-1999 - dii,baseline,codegemma2b,1999_dii__4_14_7_3_1,False,2,False,2,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-1999 - dii,baseline,codegemma2b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
-2003 - qheadache,baseline,codegemma2b,2003_qheadache__3_1,False,1,False,1,expected ‘}’ at end of input,expected ‘}’ at end of input
-2003 - qheadache,baseline,codegemma2b,2003_qheadache__3_2_4_3_3,True,0,True,0,,
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__2_1,True,0,True,0,,
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__2_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__2_4,True,0,True,0,,
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_1,False,15,False,15,‘Section’ was not declared in this scope,‘Section’ was not declared in this scope
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_10,True,0,True,0,,
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_3_1,True,0,True,0,,
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_8,True,0,True,0,,
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__5_1,False,2,False,3,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__5_3,True,0,True,0,,
-2008 - keepass,baseline,codegemma2b,2008_keepass__2_4,False,2,False,2,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_10_2_2_1,False,12,False,12,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_10_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_11_1,False,6,False,6,‘KeePassEntry’ does not name a type,‘KeePassEntry’ does not name a type
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_11_2_2_1,False,9,False,9,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_11_3,False,1,False,1,expected initializer before ‘repeat_password’,expected initializer before ‘repeat_password’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_14_2_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_15_2,False,2,False,2,expected initializer before ‘void’,expected initializer before ‘void’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_1_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_5_3,False,3,False,3,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_6_1,False,21,False,21,‘QString’ does not name a type,‘QString’ does not name a type
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_8_1,False,7,False,7,‘QString’ does not name a type,‘QString’ does not name a type
-2008 - keepass,baseline,codegemma2b,2008_keepass__3_9_2_1,False,1,False,1,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2008 - keepass,baseline,codegemma2b,2008_keepass__5_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2008 - peering,baseline,codegemma2b,2008_peering__2_4,True,0,True,0,,
-2008 - peering,baseline,codegemma2b,2008_peering__2_5,True,0,True,0,,
-2008 - peering,baseline,codegemma2b,2008_peering__3_6,False,2,False,2,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2009 - video search,baseline,codegemma2b,2009_video_search__2_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,baseline,codegemma2b,2009_video_search__3_1_2,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,baseline,codegemma2b,2009_video_search__4_3,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,baseline,codegemma2b,2009_video_search__5_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,baseline,codegemma2b,2009_video_search__5_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2009 - video search,baseline,codegemma2b,2009_video_search__5_4,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_10,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_12,False,65,False,65,‘QString’ does not name a type,‘QString’ does not name a type
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_19,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_9,True,0,True,0,,
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_4_1_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_5_2_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_6_3_4,False,1,False,1,two or more data types in declaration of ‘functionName’,two or more data types in declaration of ‘functionName’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_2,False,2,False,3,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_3,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_8,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
 0000 - cctns,baseline,deepcoder15b,0000_cctns__5,False,5,False,5,expected primary-expression before ‘filter_data’,expected primary-expression before ‘filter_data’
 0000 - cctns,baseline,deepcoder15b,0000_cctns__x,False,11,False,11,"missing terminating "" character","missing terminating "" character"
 0000 - cctns,baseline,deepcoder15b,0000_cctns__x_11,False,72,False,28,"missing terminating "" character","missing terminating "" character"
@@ -502,52 +446,6 @@ doc,variant,model,unit_id,ok_before,errors_before,ok_after,errors_after,first_er
 2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_2,True,0,True,0,,
 2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_3,True,0,True,0,,
 2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_8,True,0,True,0,,
-1998 - themas,secure_prompt,codegemma2b,1998_themas__3_1_4_1_3,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
-1999 - dii,secure_prompt,codegemma2b,1999_dii__2_1,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
-1999 - dii,secure_prompt,codegemma2b,1999_dii__4_14_2,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
-1999 - dii,secure_prompt,codegemma2b,1999_dii__4_14_7_1_1,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-1999 - dii,secure_prompt,codegemma2b,1999_dii__4_14_7_3_1,False,2,False,2,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-1999 - dii,secure_prompt,codegemma2b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
-2003 - qheadache,secure_prompt,codegemma2b,2003_qheadache__3_1,True,0,True,0,,
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__2_1,True,0,True,0,,
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__2_2,False,2,False,2,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__2_4,True,0,True,0,,
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_1,False,15,False,15,‘Section’ was not declared in this scope,‘Section’ was not declared in this scope
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_10,True,0,True,0,,
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_3_1,True,0,True,0,,
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_8,True,0,True,0,,
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__5_1,False,2,False,3,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__5_3,True,0,True,0,,
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__2_4,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_10_2_2_1,False,4,False,4,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_10_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_11_2_2_1,False,5,False,5,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_11_3,False,11,False,11,‘QString’ does not name a type,‘QString’ does not name a type
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_14_2_1,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_15_2,False,2,False,2,expected initializer before ‘void’,expected initializer before ‘void’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_1_1,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_5_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_6_1,False,21,False,21,‘QString’ does not name a type,‘QString’ does not name a type
-2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_9_2_1,False,1,False,1,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2008 - peering,secure_prompt,codegemma2b,2008_peering__2_4,True,0,True,0,,
-2008 - peering,secure_prompt,codegemma2b,2008_peering__2_5,True,0,True,0,,
-2008 - peering,secure_prompt,codegemma2b,2008_peering__3_6,False,6,False,6,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2009 - video search,secure_prompt,codegemma2b,2009_video_search__2_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,secure_prompt,codegemma2b,2009_video_search__3_1_2,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,secure_prompt,codegemma2b,2009_video_search__4_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2009 - video search,secure_prompt,codegemma2b,2009_video_search__5_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
-2009 - video search,secure_prompt,codegemma2b,2009_video_search__5_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_10,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_12,False,65,False,65,‘QString’ does not name a type,‘QString’ does not name a type
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_19,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_9,True,0,True,0,,
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_4_1_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_5_2_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_6_3_4,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
-2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_8,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
 0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__5,False,9,False,9,expected unqualified-id before ‘bool’,expected unqualified-id before ‘bool’
 0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x,False,9,False,9,‘process_complaint_number’ function with trailing return type not declared with ‘auto’ type specifier,‘process_complaint_number’ function with trailing return type not declared with ‘auto’ type specifier
 0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_11,False,37,False,37,stray ‘\’ in program,stray ‘\’ in program

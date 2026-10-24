@@ -23,7 +23,6 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "results" / "labels"
 ORDER = ["empty", "output/trivial only", "placeholder-marked", "minimal", "logic"]
 STUB = {"empty", "output/trivial only", "placeholder-marked"}
-EXCLUDE = {"codegemma2b"}
 
 
 def sheet(per_class, seed):
@@ -35,8 +34,6 @@ def sheet(per_class, seed):
     pool = defaultdict(list)
     for f in sorted((ROOT / "results" / "runs" / "R0").glob("*__*/s0/records.jsonl")):
         arm, model = f.parent.parent.name.split("__", 1)
-        if model in EXCLUDE:
-            continue
         for l in f.read_text(encoding="utf-8").splitlines():
             if l.strip():
                 r = json.loads(l)
