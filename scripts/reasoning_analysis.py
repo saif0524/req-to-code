@@ -110,6 +110,9 @@ def tag_step(text):
     tags["sec_core"] = any(tags[k] for k in CORE)
     tags["sec_core_noecho"] = any(CAT_RE[k].search(ne) for k in CORE)
     tags["sec_core_noecho_legacy"] = any(LEGACY_RE[k].search(ne) for k in CORE)
+    # memory and threat are rare and could not be validated by hand, so the core is also
+    # reported on validation and prevention alone
+    tags["sec_core_noecho_valprev"] = any(CAT_RE[k].search(ne) for k in ("validation", "prevention"))
     for k, r in FORM_RE.items():
         tags[k] = bool(r.search(text))
     return tags
@@ -172,6 +175,7 @@ METRICS = {  # name: (numerator key, denominator key)
     **{f"cat_{k}": (k, "steps") for k in CATEGORIES},
     "sec_core": ("sec_core", "steps"), "sec_core_noecho": ("sec_core_noecho", "steps"),
     "sec_core_noecho_legacy": ("sec_core_noecho_legacy", "steps"),
+    "sec_core_noecho_valprev": ("sec_core_noecho_valprev", "steps"),
     "echo": ("echo", "steps"),
     "words_per_step": ("words", "steps"), "steps_per_function": ("steps", "functions"),
     **{k: (k, "steps") for k in FORM},

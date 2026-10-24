@@ -1,0 +1,9 @@
+model,arm,sections,shared_types,shared_share,failing,undeclared_first_error,undeclared_share
+deepcoder15b,general,166,40,0.241,150,29,0.193
+opencoder15b,general,166,0,0.0,133,68,0.511
+qwen25coder15b,general,166,0,0.0,143,100,0.699
+qwen25coder3b,general,166,0,0.0,140,72,0.514
+deepcoder15b,secure,166,45,0.271,158,28,0.177
+opencoder15b,secure,166,3,0.018,129,50,0.388
+qwen25coder15b,secure,166,0,0.0,147,100,0.68
+qwen25coder3b,secure,166,0,0.0,138,74,0.536

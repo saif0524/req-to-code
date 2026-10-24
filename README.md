@@ -22,16 +22,16 @@ Python 3 with `requests`, `numpy`, `matplotlib`, `lxml`; `g++` with C++17; `cppc
 
 ## Data
 
-`data/requirements_units.jsonl` holds the 166 requirement sections from the 11 PURE documents in `data/requirements-xml/`. Use it as provided.
+`data/requirements_units.jsonl` holds the requirement sections of all 18 PURE documents in `data/requirements-xml/`. `data/study_units.txt` lists the 166 sections from the 11 documents used in the study; pass it with `--unit-ids`.
 
 ## 1. First generation (R0)
 
 ```bash
 for v in baseline secure_prompt; do      # baseline is the general prompt
   for m in qwen2.5-coder:1.5b qwen2.5-coder:3b opencoder:1.5b; do
-    python3 scripts/gen_functions.py --model $m --variant $v --num-ctx 4096 --num-predict 1536
+    python3 scripts/gen_functions.py --model $m --variant $v --unit-ids data/study_units.txt --num-ctx 4096 --num-predict 1536
   done
-  python3 scripts/gen_functions.py --model deepcoder:1.5b --variant $v --num-ctx 12288 --num-predict 8192
+  python3 scripts/gen_functions.py --model deepcoder:1.5b --variant $v --unit-ids data/study_units.txt --num-ctx 12288 --num-predict 8192
 done
 python3 scripts/migrate_r0.py            # results/generation/ -> results/runs/R0/<prompt>__<model>/s0/
 python3 scripts/verify.py --round R0 --no-esbmc
@@ -71,6 +71,7 @@ Output: `results/esbmc/`.
 ```bash
 python3 scripts/reasoning_analysis.py
 python3 scripts/stub_analysis.py
+python3 scripts/domain_model.py
 python3 scripts/repair_analysis.py
 python3 scripts/robustness_docs.py
 python3 scripts/source_split.py
