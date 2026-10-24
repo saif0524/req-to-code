@@ -27,3 +27,5 @@ data/req_document.xsd
 
 #papers
 paper/
+
+*.loc
