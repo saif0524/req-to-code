@@ -4,7 +4,6 @@ env/
 *.pdf
 
 # Results and large artifacts
-results/
 *.pkl
 
 # Figures and papers

@@ -1,0 +1,85 @@
+#include <algorithm>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <optional>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void set_user_access(const std::string& user_id, const std::vector<std::string>& groups);
+void set_group_access(const std::string& group_id, const std::vector<std::string>& users);
+void remove_user_from_group(const std::string& user_id, const std::string& group_id);
+void remove_group_from_user(const std::string& user_id, const std::string& group_id);
+void set_user_password(const std::string& user_id, const std::string& password);
+
+void set_user_access(const std::string& user_id, const std::vector<std::string>& groups) {
+   // Find the user and groups
+   User* user = find_user(user_id);
+   Group* group = find_group(group_id);
+
+   // Set the access rights for the user to the list of groups
+   user->set_groups(groups);
+
+   // Log the operation in the audit trail
+   log_operation(user_id, group_id, "set_user_access");
+}
+
+void set_group_access(const std::string& group_id, const std::vector<std::string>& users) {
+    // Find the group and users
+    Group* group = find_group(group_id);
+    User* user = find_user(users);
+
+    // Set the access rights for the group to the list of users
+    group->set_users(users);
+
+    // Log the operation in the audit trail
+    log_operation(group_id, users, "set_group_access");
+}
+
+void remove_user_from_group(const std::string& user_id, const std::string& group_id) {
+   // Find the user and group
+   User* user = find_user(user_id);
+   Group* group = find_group(group_id);
+
+   // Remove the user from the group
+   group->remove_user(user);
+
+   // Log the operation in the audit trail
+   log_operation(user_id, group_id, "remove_user_from_group");
+}
+
+void remove_group_from_user(const std::string& user_id, const std::string& group_id) {
+    // Find the user and group
+    User* user = find_user(user_id);
+    Group* group = find_group(group_id);
+
+    // Remove the user from the group
+    group->remove_user(user);
+
+    // Log the operation in the audit trail
+    log_operation(user_id, group_id, "remove_group_from_user");
+}
+
+void set_user_password(const std::string& user_id, const std::string& password) {
+    // Find the user
+    User* user = find_user(user_id);
+
+    // Check if the user exists
+    if (user == nullptr) {
+        return_error("User does not exist.");
+    }
+
+    // Set the password for the user
+    user->set_password(password);
+
+    // Log the operation in the audit trail
+    log_operation(user_id, "", "set_user_password");
+}
+

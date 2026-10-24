@@ -1,0 +1,17 @@
+{
+  "cppcheck": "Cppcheck 2.19.0",
+  "flags": [
+    "--enable=warning,style,performance,portability",
+    "--std=c++17",
+    "--xml"
+  ],
+  "rounds": [
+    "R0",
+    "C1",
+    "C2"
+  ],
+  "files": 3956,
+  "models_excluded": [
+    "codegemma2b"
+  ]
+}

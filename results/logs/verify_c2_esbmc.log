@@ -1,0 +1,9 @@
+8 runs
+C2/general__deepcoder15b/s0: 166 units, compiles=6 usable=5 secure=5
+C2/general__opencoder15b/s0: 166 units, compiles=24 usable=18 secure=18
+C2/general__qwen25coder15b/s0: 166 units, compiles=25 usable=22 secure=21
+C2/general__qwen25coder3b/s0: 166 units, compiles=53 usable=47 secure=47
+C2/secure__deepcoder15b/s0: 166 units, compiles=1 usable=1 secure=1
+C2/secure__opencoder15b/s0: 166 units, compiles=25 usable=12 secure=12
+C2/secure__qwen25coder15b/s0: 166 units, compiles=21 usable=19 secure=19
+C2/secure__qwen25coder3b/s0: 166 units, compiles=39 usable=38 secure=38

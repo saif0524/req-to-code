@@ -1,0 +1,167 @@
+round,arm,model,sample,unit_id,status,has_code,n_planned,n_records,n_bodies,compiles,n_compile_errors,first_error,usable,loc,cppcheck_findings,cppcheck_unmapped,cppcheck_parse_error,cppcheck_classes,secure
+C1,general,opencoder15b,0,0000_cctns__5,ok,1,5,4,4,1,0,,0,73,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x,ok,1,5,5,5,0,12,"no matching function for call to ‘Complaint::Complaint(const std::string&, const std::string&, const std::string&)’",0,117,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x_11,ok,1,5,0,0,0,16,‘QWidget’ has not been declared,0,21,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x_12,ok,1,5,5,5,0,36,‘Defect’ was not declared in this scope; did you mean ‘select’?,0,59,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x_13,ok,1,5,2,2,0,5,"expected constructor, destructor, or type conversion before ‘;’ token",0,43,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x_14,ok,1,5,5,5,0,11,‘is_user_in_group’ was not declared in this scope; did you mean ‘add_user_to_group’?,0,72,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x_16,ok,1,5,5,5,1,0,,1,47,0,0,0,{},1
+C1,general,opencoder15b,0,0000_cctns__x_18,ok,1,1,1,1,0,1,"expected constructor, destructor, or type conversion before ‘;’ token",0,24,0,0,0,{},0
+C1,general,opencoder15b,0,0000_cctns__x_19,ok,1,1,1,1,0,11,‘Case’ was not declared in this scope,0,28,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__2_1,ok,1,5,5,5,0,15,variable or field ‘add_product’ declared void,0,57,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__2_3,ok,1,5,5,5,0,16,"expected constructor, destructor, or type conversion before ‘;’ token",0,72,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__2_4,ok,1,5,5,5,0,5,‘executeQuery’ was not declared in this scope,0,68,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__2_5,ok,1,5,5,5,0,16,‘Retailer’ was not declared in this scope,0,85,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__2_6,ok,1,1,1,1,0,1,"expected constructor, destructor, or type conversion before ‘;’ token",0,33,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__2_7,ok,1,5,5,5,0,10,‘isFrozen’ was not declared in this scope,0,79,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_1_1,ok,1,5,5,5,0,25,‘account_exists’ was not declared in this scope,0,107,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_1_3,ok,1,5,5,5,0,18,expected primary-expression before ‘)’ token,0,78,0,0,1,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_2_3,ok,1,5,5,5,0,7,‘categories’ was not declared in this scope; did you mean ‘category’?,0,89,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_3_3,ok,1,5,5,5,0,29,variable or field ‘add_to_cart’ declared void,0,99,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_4_3,ok,1,1,1,1,0,6,variable or field ‘confirmOrder’ declared void,0,28,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_5_1,ok,1,5,3,3,0,9,"expected constructor, destructor, or type conversion before ‘;’ token",0,65,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_5_3,ok,1,5,5,5,0,10,‘categories’ was not declared in this scope; did you mean ‘category’?,0,65,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_6_1,ok,1,5,5,5,0,10,"expected constructor, destructor, or type conversion before ‘;’ token",0,104,0,0,1,{},0
+C1,general,opencoder15b,0,0000_gamma_j__3_6_3,ok,1,5,5,5,0,26,‘PlugIn’ was not declared in this scope,0,98,0,0,1,{},0
+C1,general,opencoder15b,0,0000_gamma_j__4_4,ok,1,1,1,1,0,2,‘json’ was not declared in this scope,0,26,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__5_1,ok,1,5,5,5,0,57,‘thread’ is not a member of ‘std’,0,154,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__5_3,ok,1,5,4,4,0,12,‘encrypt’ was not declared in this scope,0,78,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__5_5,ok,1,5,3,3,0,7,‘compress’ was not declared in this scope,0,77,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__5_6,ok,1,5,5,5,0,6,‘JSON’ was not declared in this scope,0,62,0,0,1,{},0
+C1,general,opencoder15b,0,0000_gamma_j__5_7,ok,1,5,5,5,0,11,"missing terminating "" character",0,86,0,0,1,{},0
+C1,general,opencoder15b,0,0000_gamma_j__5_9,ok,1,4,3,3,1,0,,0,62,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__6,ok,1,5,4,4,1,0,,0,51,0,0,0,{},0
+C1,general,opencoder15b,0,0000_gamma_j__x,ok,1,5,4,4,0,12,variable or field ‘placeOrder’ declared void,0,73,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__2_3,ok,1,5,5,5,0,12,"expected constructor, destructor, or type conversion before ‘;’ token",0,72,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__2_4,ok,1,4,4,4,0,20,"expected constructor, destructor, or type conversion before ‘;’ token",0,54,0,0,1,{},0
+C1,general,opencoder15b,0,1998_themas__2_5_1,ok,1,1,0,0,0,1,"expected constructor, destructor, or type conversion before ‘;’ token",0,17,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__2_5_3,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_10_3,ok,1,5,3,3,0,7,‘reportMonth’ was not declared in this scope,0,57,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_1_1_3,ok,1,3,3,3,0,3,variable ‘std::ifstream file’ has initializer but incomplete type,0,37,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_1_2_3,ok,1,5,5,5,0,20,"expected constructor, destructor, or type conversion before ‘;’ token",0,60,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_1_3_3,ok,1,1,1,1,0,3,"expected constructor, destructor, or type conversion before ‘;’ token",0,32,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_1_4_3,ok,1,3,3,3,0,19,extended character ‘ is not valid in an identifier,0,150,1,0,0,"{""unhandledChar"": 1}",0
+C1,general,opencoder15b,0,1998_themas__3_1_1_5_3,ok,1,1,1,1,0,3,"expected constructor, destructor, or type conversion before ‘;’ token",0,26,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_1_6_3,ok,1,1,1,1,0,3,"expected constructor, destructor, or type conversion before ‘;’ token",0,26,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_2_3,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_3_3,ok,1,1,1,1,1,0,,1,31,0,0,0,{},1
+C1,general,opencoder15b,0,1998_themas__3_1_4_1_3,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_4_2_3,ok,1,2,0,0,1,0,,0,18,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_5_1_3,ok,1,4,4,4,0,28,‘maxUnitsRunning’ does not name a type,0,101,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_5_2_3,ok,1,1,1,1,1,0,,1,25,0,0,0,{},1
+C1,general,opencoder15b,0,1998_themas__3_1_5_3_3,ok,1,5,5,5,1,0,,1,55,0,0,0,{},1
+C1,general,opencoder15b,0,1998_themas__3_1_6_3,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_7_3,ok,1,3,3,3,0,7,‘beep’ was not declared in this scope,0,65,0,0,0,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_8_3,ok,1,5,5,5,0,19,"missing terminating "" character",0,106,0,0,1,{},0
+C1,general,opencoder15b,0,1998_themas__3_1_9_4,ok,1,1,1,1,0,2,‘getThermostats’ was not declared in this scope; did you mean ‘thermostats’?,0,30,0,0,0,{},0
+C1,general,opencoder15b,0,1999_dii__1_500,ok,1,5,5,5,0,10,‘DII’ has not been declared,0,41,0,0,0,{},0
+C1,general,opencoder15b,0,1999_dii__2_1,ok,1,5,4,4,0,2,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,54,1,0,0,"{""containerOutOfBounds"": 1}",0
+C1,general,opencoder15b,0,1999_dii__4_14_2,ok,1,5,4,4,0,9,"expected constructor, destructor, or type conversion before ‘;’ token",0,57,0,0,0,{},0
+C1,general,opencoder15b,0,1999_dii__4_14_7_1_1,ok,1,5,5,5,0,15,‘ExternalInterface’ does not name a type,0,47,0,0,0,{},0
+C1,general,opencoder15b,0,1999_dii__4_14_7_3_1,ok,1,5,5,5,0,10,"expected constructor, destructor, or type conversion before ‘;’ token",0,59,6,0,0,"{""danglingTemporaryLifetime"": 3, ""iterators3"": 3}",0
+C1,general,opencoder15b,0,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,ok,1,5,5,5,0,26,‘mutex’ in namespace ‘std’ does not name a type,0,77,0,0,0,{},0
+C1,general,opencoder15b,0,2003_qheadache__3_1,ok,1,5,5,5,1,0,,1,66,0,0,0,{},1
+C1,general,opencoder15b,0,2003_qheadache__3_2_4_3_3,ok,1,1,1,1,0,5,variable ‘std::ofstream file’ has initializer but incomplete type,0,33,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__1,ok,1,5,2,2,0,9,"missing terminating "" character",0,34,0,0,1,{},0
+C1,general,opencoder15b,0,2005_microcare__1_3_2,ok,1,5,2,2,0,7,"expected constructor, destructor, or type conversion before ‘;’ token",0,39,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__2_1,ok,1,5,5,5,0,36,"expected constructor, destructor, or type conversion before ‘;’ token",0,81,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__2_1_1,ok,1,5,5,5,0,54,variable or field ‘create_voucher’ declared void,0,88,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__3,ok,1,5,5,5,0,54,extended character ‘ is not valid in an identifier,0,156,1,0,0,"{""unhandledChar"": 1}",0
+C1,general,opencoder15b,0,2005_microcare__4,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__5,ok,1,2,1,1,0,3,"expected constructor, destructor, or type conversion before ‘;’ token",0,24,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__6,ok,1,1,1,1,0,14,‘Claim’ does not name a type,0,32,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__assumptions,ok,1,4,4,4,0,23,‘split’ was not declared in this scope,0,129,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints,ok,1,4,4,4,0,25,"expected constructor, destructor, or type conversion before ‘;’ token",0,88,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_804,ok,1,5,5,5,0,27,‘json_string’ was not declared in this scope,0,92,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_806,ok,1,5,5,5,0,1,redefinition of ‘std::vector<std::__cxx11::basic_string<char> > salesmanNames’,0,106,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_808,ok,1,5,3,3,0,9,‘generateUniqueInvoiceNumber’ was not declared in this scope,0,61,0,0,1,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_815,ok,1,3,3,3,0,3,"redefinition of ‘bool validateFormSubmission(const std::string&, const std::string&, const std::string&)’",0,78,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_824,ok,1,5,5,5,0,8,conversion from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to non-scalar type ‘std::vector<std::__cxx11::basic_string<char> >’ requested,0,82,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_826,ok,1,5,5,5,0,88,variable or field ‘populateDetails’ declared void,0,65,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__design_constraints_830,ok,1,5,3,3,0,16,‘JSON’ was not declared in this scope,0,65,0,0,1,{},0
+C1,general,opencoder15b,0,2005_microcare__design_contraints,ok,1,5,4,4,0,16,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,56,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__details_about_masters_information_required_for_claim_processing,ok,1,5,5,5,0,23,‘drugs’ was not declared in this scope,0,147,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__for_second_follow_up,ok,1,5,5,5,0,25,variable or field ‘addVoucher’ declared void,0,73,0,0,1,{},0
+C1,general,opencoder15b,0,2005_microcare__i,ok,1,5,5,5,0,6,expected unqualified-id before ‘}’ token,0,81,0,0,1,{},0
+C1,general,opencoder15b,0,2005_microcare__i_810,ok,1,5,5,5,0,12,‘nlohmann’ has not been declared,0,57,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__ii,ok,1,5,4,4,0,23,‘Salesman’ was not declared in this scope; did you mean ‘salesmanCode’?,0,101,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__ii_812,ok,1,5,1,1,0,9,"expected constructor, destructor, or type conversion before ‘;’ token",0,31,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__iii,ok,1,5,4,4,0,5,‘sales_details_vector’ was not declared in this scope; did you mean ‘sales_details’?,0,70,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__iii_814,ok,1,5,4,4,0,7,too many arguments to function ‘std::string get_claim_details()’,0,56,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__iv,ok,1,5,3,3,0,9,‘TreatmentForm’ does not name a type,0,44,0,0,0,{},0
+C1,general,opencoder15b,0,2005_microcare__the_concept_of_output_based_aid_oba,ok,1,5,4,4,0,4,cannot bind non-const lvalue reference of type ‘std::string&’ {aka ‘std::__cxx11::basic_string<char>&’} to an rvalue of type ‘std::string’ {aka ‘std::__cxx11::b,0,55,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__2_1,ok,1,5,5,5,0,15,"expected constructor, destructor, or type conversion before ‘;’ token",0,94,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__2_2,ok,1,5,1,1,0,5,‘Json’ has not been declared,0,26,0,0,1,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__2_4,ok,1,5,5,5,0,19,‘rapidjson’ does not name a type,0,65,0,0,1,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__3_1,ok,1,1,1,1,0,10,"expected constructor, destructor, or type conversion before ‘;’ token",0,28,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__3_10,ok,1,1,1,1,0,5,stray ‘\’ in program,0,24,0,0,1,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__3_3_1,ok,1,5,5,5,0,2,‘fetchProfilesFromAPI’ was not declared in this scope,0,84,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__3_8,ok,1,1,1,1,0,2,"expected constructor, destructor, or type conversion before ‘;’ token",0,22,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__5_1,ok,1,1,1,1,0,18,‘std::chrono’ has not been declared,0,38,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__5_3,ok,1,5,5,5,0,2,aggregate ‘std::ofstream log_file’ has incomplete type and cannot be defined,0,68,0,0,0,{},0
+C1,general,opencoder15b,0,2007_get_real_0_2__5_3_1,ok,1,1,1,1,0,2,"expected constructor, destructor, or type conversion before ‘;’ token",0,19,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__2_4,ok,1,5,5,5,0,14,expected primary-expression before ‘)’ token,0,90,0,0,1,{},0
+C1,general,opencoder15b,0,2008_keepass__3_10_1,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_10_2_2_1,ok,1,1,1,1,0,6,‘json’ does not name a type,0,27,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_10_3,ok,1,1,1,1,1,0,,1,24,0,0,0,{},1
+C1,general,opencoder15b,0,2008_keepass__3_11_1,ok,1,5,3,3,0,22,variable or field ‘modifyEntry’ declared void,0,52,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_11_2_2_1,ok,1,1,1,1,1,0,,1,24,0,0,0,{},1
+C1,general,opencoder15b,0,2008_keepass__3_11_3,ok,1,2,2,2,0,4,‘QString’ does not name a type,0,28,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_14_1,ok,1,2,2,2,0,8,stray ‘\’ in program,0,40,0,0,1,{},0
+C1,general,opencoder15b,0,2008_keepass__3_14_2_1,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_14_3,ok,1,4,4,4,0,6,‘selectedLanguage’ was not declared in this scope; did you mean ‘setSelectedLanguage’?,0,61,4,0,0,"{""iterators3"": 4}",0
+C1,general,opencoder15b,0,2008_keepass__3_15_1,ok,1,5,5,5,0,5,"missing terminating "" character",0,60,0,0,1,{},0
+C1,general,opencoder15b,0,2008_keepass__3_15_2,ok,1,4,3,3,0,7,conversion from ‘std::basic_string_view<char>’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested,0,45,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_16_2,ok,1,1,1,1,1,0,,1,24,0,0,0,{},1
+C1,general,opencoder15b,0,2008_keepass__3_17_1,ok,1,5,5,5,0,13,"expected constructor, destructor, or type conversion before ‘;’ token",0,77,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_17_2,ok,1,5,3,3,0,4,‘std::filesystem’ has not been declared,0,46,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_1_1,ok,1,5,5,5,0,33,non-member function ‘std::string getMasterPassword()’ cannot have cv-qualifier,0,55,0,0,1,{},0
+C1,general,opencoder15b,0,2008_keepass__3_1_3,ok,1,5,4,4,0,34,stray ‘\’ in program,0,154,0,0,1,{},0
+C1,general,opencoder15b,0,2008_keepass__3_21_1,ok,1,5,5,5,0,8,"expected constructor, destructor, or type conversion before ‘;’ token",0,71,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_21_2,ok,1,3,3,3,0,24,‘Entry’ does not name a type,0,46,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_2_1,ok,1,5,4,4,0,19,"expected constructor, destructor, or type conversion before ‘;’ token",0,54,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_5_1,ok,1,2,2,2,0,3,‘searchTexts’ was not declared in this scope; did you mean ‘searchText’?,0,50,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_5_3,ok,1,5,5,5,0,48,‘database’ was not declared in this scope,0,125,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_6_1,ok,1,5,5,5,0,25,use of enum ‘ErrorType’ without previous declaration,0,94,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_8_1,ok,1,1,1,1,0,6,variable or field ‘delete_group_subgroup’ declared void,0,30,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__3_9_2_1,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__5_1,ok,1,5,5,5,0,9,‘this_thread’ in namespace ‘std’ does not name a type,0,67,0,0,0,{},0
+C1,general,opencoder15b,0,2008_keepass__5_3,ok,1,5,5,5,0,24,‘Entry’ was not declared in this scope,0,86,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__2_3,ok,1,5,5,5,0,15,"expected constructor, destructor, or type conversion before ‘;’ token",0,61,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__2_4,ok,1,5,5,5,0,6,"expected constructor, destructor, or type conversion before ‘;’ token",0,83,0,0,1,{},0
+C1,general,opencoder15b,0,2008_peering__2_5,ok,1,5,5,5,0,20,‘sin’ was not declared in this scope,0,111,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__3_1_2,ok,1,5,5,5,0,15,‘Service’ was not declared in this scope,0,64,0,0,1,{},0
+C1,general,opencoder15b,0,2008_peering__3_1_7,ok,1,1,0,0,0,1,"expected constructor, destructor, or type conversion before ‘;’ token",0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__3_2_7,ok,1,5,5,5,1,0,,1,66,0,0,0,{},1
+C1,general,opencoder15b,0,2008_peering__3_4_7,ok,1,5,5,5,0,10,"expected constructor, destructor, or type conversion before ‘;’ token",0,71,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__3_5_7,ok,1,5,3,3,0,5,"expected constructor, destructor, or type conversion before ‘;’ token",0,46,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__3_6,ok,1,2,2,2,1,0,,1,40,0,0,0,{},1
+C1,general,opencoder15b,0,2008_peering__3_6_7,ok,1,5,5,5,0,17,expected ‘}’ before ‘:’ token,0,73,0,0,0,{},0
+C1,general,opencoder15b,0,2008_peering__4_1,ok,1,5,5,5,0,15,"missing terminating "" character",0,56,0,0,1,{},0
+C1,general,opencoder15b,0,2008_peering__4_2,ok,1,5,5,5,0,193,use of enum ‘MyEnum’ without previous declaration,0,207,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__2_1,ok,1,5,4,4,0,69,"missing terminating "" character",0,183,0,0,1,{},0
+C1,general,opencoder15b,0,2009_video_search__2_2,ok,1,5,2,2,0,12,"expected constructor, destructor, or type conversion before ‘;’ token",0,44,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__2_3,ok,1,5,5,5,0,35,"expected constructor, destructor, or type conversion before ‘(’ token",0,79,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__2_4,ok,1,5,5,5,0,49,‘Video’ was not declared in this scope,0,63,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__3_1_1,ok,1,5,5,5,0,3,‘result’ was not declared in this scope,0,72,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__3_1_2,ok,1,4,3,3,0,5,‘getCurrentPage’ was not declared in this scope; did you mean ‘currentPage’?,0,39,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__3_1_3,ok,1,5,5,5,0,80,‘TorrentResult’ was not declared in this scope,0,104,0,0,1,{},0
+C1,general,opencoder15b,0,2009_video_search__3_2_2,ok,1,5,5,5,0,33,stray ‘\’ in program,0,102,0,0,1,{},0
+C1,general,opencoder15b,0,2009_video_search__3_2_3,ok,1,5,0,0,0,6,‘VideoHost’ was not declared in this scope,0,21,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__4_1,ok,1,5,5,5,0,13,‘get_current_search_query’ was not declared in this scope,0,82,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__4_3,ok,1,5,4,4,0,33,stray ‘\’ in program,0,77,0,0,1,{},0
+C1,general,opencoder15b,0,2009_video_search__5_1,ok,1,5,5,5,0,53,‘chrono’ in namespace ‘std’ does not name a type,0,97,0,0,0,{},0
+C1,general,opencoder15b,0,2009_video_search__5_2,ok,1,5,5,5,0,12,conversion from ‘void’ to non-scalar type ‘std::vector<std::__cxx11::basic_string<char> >’ requested,0,77,0,0,1,{},0
+C1,general,opencoder15b,0,2009_video_search__5_4,ok,1,2,2,2,0,1,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,28,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_1_1_2_1_10,ok,1,1,1,1,1,0,,1,28,0,0,0,{},1
+C1,general,opencoder15b,0,2010_blitdraft__2_1_1_2_1_12,ok,1,5,4,4,0,12,variable or field ‘createUser’ declared void,0,59,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_1_1_2_1_19,ok,1,3,3,3,0,34,‘User’ does not name a type,0,67,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_1_1_2_1_9,ok,1,1,1,1,0,11,‘User’ was not declared in this scope,0,28,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_4_1_2,ok,1,1,0,0,0,1,"expected constructor, destructor, or type conversion before ‘;’ token",0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_5_2_2,ok,1,5,5,5,0,5,variable ‘std::ofstream log_file’ has initializer but incomplete type,0,61,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_6_3_4,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_7_1,ok,1,5,5,5,0,61,‘QPushButton’ was not declared in this scope,0,108,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_7_1_1,ok,1,1,1,1,1,0,,1,23,0,0,0,{},1
+C1,general,opencoder15b,0,2010_blitdraft__2_7_1_2,ok,1,1,1,1,1,0,,1,22,0,0,0,{},1
+C1,general,opencoder15b,0,2010_blitdraft__2_7_1_3,ok,1,5,5,5,0,13,‘helpWindow’ was not declared in this scope,0,83,0,0,0,{},0
+C1,general,opencoder15b,0,2010_blitdraft__2_7_1_8,ok,1,5,4,4,0,4,‘BlitDraft’ has not been declared,0,76,0,0,0,{},0

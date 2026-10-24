@@ -1,0 +1,11 @@
+scope,arm,functions_mentioning_check,code_has_check_when_mentioned,mentioned_ci_lo,mentioned_ci_hi,functions_not_mentioning,code_has_check_when_not_mentioned,gap,gap_ci_lo,gap_ci_hi
+all,general,966,0.335,0.29,0.383,1016,0.129,0.206,0.159,0.254
+all,secure,1372,0.499,0.461,0.538,648,0.167,0.333,0.287,0.379
+deepcoder15b,general,213,0.376,0.306,0.45,137,0.073,0.303,0.219,0.389
+deepcoder15b,secure,300,0.577,0.503,0.646,68,0.176,0.4,0.281,0.501
+opencoder15b,general,141,0.376,0.256,0.496,273,0.165,0.211,0.087,0.336
+opencoder15b,secure,163,0.497,0.394,0.613,190,0.168,0.329,0.214,0.452
+qwen25coder15b,general,276,0.29,0.213,0.372,295,0.136,0.154,0.076,0.236
+qwen25coder15b,secure,317,0.338,0.267,0.408,255,0.149,0.189,0.106,0.272
+qwen25coder3b,general,336,0.33,0.268,0.398,311,0.116,0.215,0.142,0.288
+qwen25coder3b,secure,592,0.547,0.493,0.6,135,0.193,0.355,0.271,0.437

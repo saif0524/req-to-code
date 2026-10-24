@@ -1,0 +1,1000 @@
+doc,variant,model,unit_id,ok_before,errors_before,ok_after,errors_after,first_error_before,first_error_after
+0000 - cctns,baseline,codegemma2b,0000_cctns__x_13,False,23,False,23,variable or field ‘audit_trail_create’ declared void,variable or field ‘audit_trail_create’ declared void
+1998 - themas,baseline,codegemma2b,1998_themas__2_5_3,True,0,True,0,,
+1998 - themas,baseline,codegemma2b,1998_themas__3_1_1_3_3,True,0,True,0,,
+1998 - themas,baseline,codegemma2b,1998_themas__3_1_4_1_3,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,codegemma2b,1998_themas__3_1_5_1_3,False,2,False,2,‘HEATING_COOLING_UNIT_STATE’ does not name a type,‘HEATING_COOLING_UNIT_STATE’ does not name a type
+1998 - themas,baseline,codegemma2b,1998_themas__3_1_5_2_3,False,1,False,1,"expected constructor, destructor, or type conversion before ‘(’ token","expected constructor, destructor, or type conversion before ‘(’ token"
+1999 - dii,baseline,codegemma2b,1999_dii__2_1,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
+1999 - dii,baseline,codegemma2b,1999_dii__4_14_2,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1999 - dii,baseline,codegemma2b,1999_dii__4_14_7_1_1,True,0,True,0,,
+1999 - dii,baseline,codegemma2b,1999_dii__4_14_7_3_1,False,2,False,2,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+1999 - dii,baseline,codegemma2b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
+2003 - qheadache,baseline,codegemma2b,2003_qheadache__3_1,False,1,False,1,expected ‘}’ at end of input,expected ‘}’ at end of input
+2003 - qheadache,baseline,codegemma2b,2003_qheadache__3_2_4_3_3,True,0,True,0,,
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__2_1,True,0,True,0,,
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__2_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__2_4,True,0,True,0,,
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_1,False,15,False,15,‘Section’ was not declared in this scope,‘Section’ was not declared in this scope
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_10,True,0,True,0,,
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_3_1,True,0,True,0,,
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__3_8,True,0,True,0,,
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__5_1,False,2,False,3,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2007 - get real 0.2,baseline,codegemma2b,2007_get_real_0_2__5_3,True,0,True,0,,
+2008 - keepass,baseline,codegemma2b,2008_keepass__2_4,False,2,False,2,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_10_2_2_1,False,12,False,12,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_10_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_11_1,False,6,False,6,‘KeePassEntry’ does not name a type,‘KeePassEntry’ does not name a type
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_11_2_2_1,False,9,False,9,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_11_3,False,1,False,1,expected initializer before ‘repeat_password’,expected initializer before ‘repeat_password’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_14_2_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_15_2,False,2,False,2,expected initializer before ‘void’,expected initializer before ‘void’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_1_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_5_3,False,3,False,3,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_6_1,False,21,False,21,‘QString’ does not name a type,‘QString’ does not name a type
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_8_1,False,7,False,7,‘QString’ does not name a type,‘QString’ does not name a type
+2008 - keepass,baseline,codegemma2b,2008_keepass__3_9_2_1,False,1,False,1,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2008 - keepass,baseline,codegemma2b,2008_keepass__5_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2008 - peering,baseline,codegemma2b,2008_peering__2_4,True,0,True,0,,
+2008 - peering,baseline,codegemma2b,2008_peering__2_5,True,0,True,0,,
+2008 - peering,baseline,codegemma2b,2008_peering__3_6,False,2,False,2,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2009 - video search,baseline,codegemma2b,2009_video_search__2_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,baseline,codegemma2b,2009_video_search__3_1_2,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,baseline,codegemma2b,2009_video_search__4_3,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,baseline,codegemma2b,2009_video_search__5_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,baseline,codegemma2b,2009_video_search__5_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2009 - video search,baseline,codegemma2b,2009_video_search__5_4,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_10,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_12,False,65,False,65,‘QString’ does not name a type,‘QString’ does not name a type
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_19,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_1_1_2_1_9,True,0,True,0,,
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_4_1_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_5_2_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_6_3_4,False,1,False,1,two or more data types in declaration of ‘functionName’,two or more data types in declaration of ‘functionName’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_2,False,2,False,3,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_3,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2010-blitdraft,baseline,codegemma2b,2010_blitdraft__2_7_1_8,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+0000 - cctns,baseline,deepcoder15b,0000_cctns__5,False,5,False,5,expected primary-expression before ‘filter_data’,expected primary-expression before ‘filter_data’
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x,False,11,False,11,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_11,False,72,False,28,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_12,False,5,False,5,expected initializer before ‘void’,expected initializer before ‘void’
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_13,False,7,False,7,expected initializer before ‘event_time’,expected initializer before ‘event_time’
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_14,False,32,False,32,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_16,False,9,False,9,"wrong number of template arguments (1, should be 2)","wrong number of template arguments (1, should be 2)"
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_18,False,2,False,2,expected unqualified-id before ‘.’ token,expected unqualified-id before ‘.’ token
+0000 - cctns,baseline,deepcoder15b,0000_cctns__x_19,False,50,False,50,‘case_type’ was not declared in this scope,‘case_type’ was not declared in this scope
+1998 - themas,baseline,deepcoder15b,1998_themas__2_3,False,10,False,10,"missing terminating "" character","missing terminating "" character"
+1998 - themas,baseline,deepcoder15b,1998_themas__2_4,False,9,False,9,‘SensorType’ was not declared in this scope,‘SensorType’ was not declared in this scope
+1998 - themas,baseline,deepcoder15b,1998_themas__2_5_1,False,6,False,6,invalid preprocessing directive #Get,invalid preprocessing directive #Get
+1998 - themas,baseline,deepcoder15b,1998_themas__2_5_3,True,0,True,0,,
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_10_3,False,28,False,28,‘Event’ was not declared in this scope,‘Event’ was not declared in this scope
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_1_1_3,False,7,False,7,"could not convert ‘{{type, power}, {temp}}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<std::pair<std::__cxx11::basic_string<char>, std::__cxx11::b","could not convert ‘{{type, power}, {temp}}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<std::pair<std::__cxx11::basic_string<char>, std::__cxx11::b"
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_1_2_3,False,13,False,13,‘ReadInitializationFile’ function with trailing return type not declared with ‘auto’ type specifier,‘ReadInitializationFile’ function with trailing return type not declared with ‘auto’ type specifier
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_1_3_3,False,1,False,1,"expected ‘,’ or ‘;’ before ‘const’","expected ‘,’ or ‘;’ before ‘const’"
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_1_4_3,False,26,False,26,stray ‘\’ in program,stray ‘\’ in program
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_1_5_3,False,129,False,129,missing terminating ' character,missing terminating ' character
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_1_6_3,False,20,False,20,"missing terminating "" character","missing terminating "" character"
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_2_3,False,23,False,23,‘Unit’ was not declared in this scope,‘Unit’ was not declared in this scope
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_3_3,False,1,False,1,expected unqualified-id before ‘[’ token,expected unqualified-id before ‘[’ token
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_4_1_3,False,2,False,2,expected unqualified-id before ‘[’ token,expected unqualified-id before ‘[’ token
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_4_2_3,False,2,False,2,mixing declarations and function-definitions is forbidden,mixing declarations and function-definitions is forbidden
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_5_1_3,False,12,False,12,expected unqualified-id before ‘[’ token,expected unqualified-id before ‘[’ token
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_5_2_3,False,6,False,6,‘get_heating_state’ function with trailing return type not declared with ‘auto’ type specifier,‘get_heating_state’ function with trailing return type not declared with ‘auto’ type specifier
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_6_3,False,2,False,2,expected primary-expression before ‘handle_status_change’,expected primary-expression before ‘handle_status_change’
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_7_3,False,3,False,3,expected unqualified-id before ‘double’,expected unqualified-id before ‘double’
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_8_3,False,10,False,10,"missing terminating "" character","missing terminating "" character"
+1998 - themas,baseline,deepcoder15b,1998_themas__3_1_9_4,False,1148,False,1148,stray ‘`’ in program,stray ‘`’ in program
+1999 - dii,baseline,deepcoder15b,1999_dii__1_500,False,5,False,5,reference to ‘string’ is ambiguous,reference to ‘string’ is ambiguous
+1999 - dii,baseline,deepcoder15b,1999_dii__2_1,False,4,False,4,expected unqualified-id before ‘return’,expected unqualified-id before ‘return’
+1999 - dii,baseline,deepcoder15b,1999_dii__4_14_7_1_1,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+1999 - dii,baseline,deepcoder15b,1999_dii__4_14_7_3_1,False,9,False,9,‘file_pointer’ is not a member of ‘std’; did you mean ‘is_pointer’?,‘file_pointer’ is not a member of ‘std’; did you mean ‘is_pointer’?
+1999 - dii,baseline,deepcoder15b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,10,False,10,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘int’ in initialization,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘int’ in initialization
+2003 - qheadache,baseline,deepcoder15b,2003_qheadache__3_1,False,9,False,9,‘menu_item’ does not name a type,‘menu_item’ does not name a type
+2003 - qheadache,baseline,deepcoder15b,2003_qheadache__3_2_4_3_3,True,0,True,0,,
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__2_1,False,7,False,7,cannot convert ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘int’ in return,cannot convert ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘int’ in return
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__2_2,False,27,False,27,‘job_offer’ does not name a type,‘job_offer’ does not name a type
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__2_4,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__3_10,False,21,False,21,only constructors take member initializers,only constructors take member initializers
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__3_3_1,False,21,False,21,stray ‘`’ in program,stray ‘`’ in program
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__3_8,False,20,False,20,"missing terminating "" character","missing terminating "" character"
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__5_1,False,4,False,4,two or more data types in declaration of ‘measure_response_time’,two or more data types in declaration of ‘measure_response_time’
+2007 - get real 0.2,baseline,deepcoder15b,2007_get_real_0_2__5_3_1,False,6,False,6,expected identifier before ‘long’,expected identifier before ‘long’
+2008 - keepass,baseline,deepcoder15b,2008_keepass__2_4,False,7,False,7,‘initialize_keepass’ does not name a type,‘initialize_keepass’ does not name a type
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_10_2_2_1,False,18,False,18,variable or field ‘savePassword’ declared void,variable or field ‘savePassword’ declared void
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_10_3,False,9,False,9,expected primary-expression before ‘)’ token,expected primary-expression before ‘)’ token
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_11_1,False,20,False,20,‘entry’ was not declared in this scope,‘entry’ was not declared in this scope
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_11_2_2_1,False,2,False,2,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_11_3,True,0,True,0,,
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_14_2_1,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_14_3,False,3,False,3,expected initializer before ‘internetConnection’,expected initializer before ‘internetConnection’
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_15_1,False,10,False,10,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_15_2,False,4,False,4,expected initializer before ‘const’,expected initializer before ‘const’
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_16_2,False,5,False,5,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_17_2,True,0,True,0,,
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_1_1,False,14,False,14,‘reference’ in namespace ‘std’ does not name a template type; did you mean ‘is_reference’?,‘reference’ in namespace ‘std’ does not name a template type; did you mean ‘is_reference’?
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_1_3,False,8,False,8,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_21_1,False,17,False,17,‘shared_tan_db_t’ is not a member of ‘std’,‘shared_tan_db_t’ is not a member of ‘std’
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_21_2,False,5,False,5,expected unqualified-id before ‘.’ token,expected unqualified-id before ‘.’ token
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_2_1,False,14,False,14,‘stream’ does not name a type,‘stream’ does not name a type
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_5_1,False,55,False,55,expected initializer before ‘vector’,expected initializer before ‘vector’
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_5_3,False,17,False,17,expected unqualified-id before ‘bool’,expected unqualified-id before ‘bool’
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_6_1,False,70,False,70,‘Group’ was not declared in this scope,‘Group’ was not declared in this scope
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_8_1,False,3,False,3,‘Group’ does not name a type,‘Group’ does not name a type
+2008 - keepass,baseline,deepcoder15b,2008_keepass__3_9_2_1,False,12,False,12,missing terminating ' character,missing terminating ' character
+2008 - keepass,baseline,deepcoder15b,2008_keepass__5_1,False,1,False,1,expected unqualified-id before ‘.’ token,expected unqualified-id before ‘.’ token
+2008 - keepass,baseline,deepcoder15b,2008_keepass__5_3,False,14,False,11,‘random_device’ is not a member of ‘std’,‘randomigit’ is not a member of ‘std’
+2008 - peering,baseline,deepcoder15b,2008_peering__2_3,False,6,False,6,‘UserRole’ does not name a type,‘UserRole’ does not name a type
+2008 - peering,baseline,deepcoder15b,2008_peering__2_4,False,24,False,23,stray ‘\’ in program,stray ‘\’ in program
+2008 - peering,baseline,deepcoder15b,2008_peering__2_5,False,10,False,8,‘find_index’ was not declared in this scope,‘find_index’ was not declared in this scope
+2008 - peering,baseline,deepcoder15b,2008_peering__3_1_2,False,7,False,7,‘ResourceType’ was not declared in this scope,‘ResourceType’ was not declared in this scope
+2008 - peering,baseline,deepcoder15b,2008_peering__3_1_7,False,26,False,26,‘object’ is not a member of ‘std’,‘object’ is not a member of ‘std’
+2008 - peering,baseline,deepcoder15b,2008_peering__3_2_7,False,7,False,7,"missing terminating "" character","missing terminating "" character"
+2008 - peering,baseline,deepcoder15b,2008_peering__3_4_7,False,10,False,10,"missing terminating "" character","missing terminating "" character"
+2008 - peering,baseline,deepcoder15b,2008_peering__3_5_7,False,10,False,10,‘peer_object’ does not name a type,‘peer_object’ does not name a type
+2008 - peering,baseline,deepcoder15b,2008_peering__3_6,False,3,False,3,empty character constant,empty character constant
+2008 - peering,baseline,deepcoder15b,2008_peering__3_6_7,False,6,False,13,‘function’ in namespace ‘std’ does not name a template type,template argument 1 is invalid
+2008 - peering,baseline,deepcoder15b,2008_peering__4_1,False,13,False,13,‘pointer’ is not a member of ‘std’,‘pointer’ is not a member of ‘std’
+2008 - peering,baseline,deepcoder15b,2008_peering__4_2,False,18,False,18,‘message’ does not name a type,‘message’ does not name a type
+2009 - video search,baseline,deepcoder15b,2009_video_search__2_1,False,17,False,17,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,deepcoder15b,2009_video_search__2_2,False,17,False,17,expected initializer before ‘Video’,expected initializer before ‘Video’
+2009 - video search,baseline,deepcoder15b,2009_video_search__2_3,False,17,False,17,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,deepcoder15b,2009_video_search__2_4,False,14,False,14,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,deepcoder15b,2009_video_search__3_1_1,False,15,False,15,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,deepcoder15b,2009_video_search__3_1_2,False,39,False,39,stray ‘`’ in program,stray ‘`’ in program
+2009 - video search,baseline,deepcoder15b,2009_video_search__3_1_3,False,32,False,32,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,deepcoder15b,2009_video_search__3_2_2,False,33,False,33,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,deepcoder15b,2009_video_search__3_2_3,False,26,False,26,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,deepcoder15b,2009_video_search__4_1,False,8,False,8,expected primary-expression before ‘>’ token,expected primary-expression before ‘>’ token
+2009 - video search,baseline,deepcoder15b,2009_video_search__4_3,False,20,False,20,"wrong number of template arguments (1, should be 2)","wrong number of template arguments (1, should be 2)"
+2009 - video search,baseline,deepcoder15b,2009_video_search__5_2,False,4,False,4,‘exists’ was not declared in this scope; did you mean ‘exit’?,‘exists’ was not declared in this scope; did you mean ‘exit’?
+2009 - video search,baseline,deepcoder15b,2009_video_search__5_4,False,18,False,18,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_1_1_2_1_10,False,18,False,18,stray ‘\’ in program,stray ‘\’ in program
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_1_1_2_1_12,False,8,False,8,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_1_1_2_1_9,False,4,False,4,‘User’ was not declared in this scope; did you mean ‘userId’?,‘User’ was not declared in this scope; did you mean ‘userId’?
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_4_1_2,False,6,False,6,‘getAllProcessIds’ was not declared in this scope,‘getAllProcessIds’ was not declared in this scope
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_5_2_2,False,15,False,27,‘shared_ptr’ in namespace ‘std’ does not name a template type,‘file_t’ is not a member of ‘std’; did you mean ‘time_t’?
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_6_3_4,False,19,False,19,declaration does not declare anything [-fpermissive],declaration does not declare anything [-fpermissive]
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_7_1,False,14,False,14,missing terminating ' character,missing terminating ' character
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_7_1_1,False,12,False,12,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_7_1_2,False,9,False,9,stray ‘\’ in program,stray ‘\’ in program
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_7_1_3,False,3,False,3,‘getClickPosition’ was not declared in this scope,‘getClickPosition’ was not declared in this scope
+2010-blitdraft,baseline,deepcoder15b,2010_blitdraft__2_7_1_8,False,6,False,6,missing terminating ' character,missing terminating ' character
+0000 - cctns,baseline,opencoder15b,0000_cctns__5,True,0,True,0,,
+0000 - cctns,baseline,opencoder15b,0000_cctns__x,False,8,False,8,‘Complaint’ was not declared in this scope; did you mean ‘complaint’?,‘Complaint’ was not declared in this scope; did you mean ‘complaint’?
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_11,False,47,False,47,‘QWidget’ has not been declared,‘QWidget’ has not been declared
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_12,False,10,False,10,‘Defect’ was not declared in this scope; did you mean ‘select’?,‘Defect’ was not declared in this scope; did you mean ‘select’?
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_13,False,9,False,9,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_14,False,8,False,8,"redefinition of ‘void set_user_access(int, int, int)’","redefinition of ‘void set_user_access(int, int, int)’"
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_16,True,0,True,0,,
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_18,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+0000 - cctns,baseline,opencoder15b,0000_cctns__x_19,False,11,False,11,‘Case’ was not declared in this scope,‘Case’ was not declared in this scope
+1998 - themas,baseline,opencoder15b,1998_themas__2_3,False,8,False,8,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__2_4,False,20,False,20,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__2_5_1,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__2_5_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_10_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_1_1_3,False,3,False,3,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_1_2_3,False,19,False,19,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_1_3_3,False,3,False,3,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_1_4_3,False,6,False,6,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_1_5_3,False,2,False,2,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_1_6_3,False,3,False,3,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_2_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_3_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_4_1_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_4_2_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_5_1_3,False,15,False,15,‘maxUnitsRunning’ was not declared in this scope,‘maxUnitsRunning’ was not declared in this scope
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_5_2_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_5_3_3,False,2,False,2,‘status_map’ was not declared in this scope,‘status_map’ was not declared in this scope
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_6_3,True,0,True,0,,
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_7_3,False,8,False,8,‘beep’ was not declared in this scope,‘beep’ was not declared in this scope
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_8_3,False,18,False,18,"missing terminating "" character","missing terminating "" character"
+1998 - themas,baseline,opencoder15b,1998_themas__3_1_9_4,False,2,False,2,‘getThermostats’ was not declared in this scope; did you mean ‘thermostats’?,‘getThermostats’ was not declared in this scope; did you mean ‘thermostats’?
+1999 - dii,baseline,opencoder15b,1999_dii__1_500,False,10,False,10,‘DII’ has not been declared,‘DII’ has not been declared
+1999 - dii,baseline,opencoder15b,1999_dii__2_1,True,0,True,0,,
+1999 - dii,baseline,opencoder15b,1999_dii__4_14_2,False,7,False,7,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1999 - dii,baseline,opencoder15b,1999_dii__4_14_7_1_1,False,17,False,17,‘ExternalInterface’ does not name a type,‘ExternalInterface’ does not name a type
+1999 - dii,baseline,opencoder15b,1999_dii__4_14_7_3_1,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1999 - dii,baseline,opencoder15b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,25,False,5,‘lock_guard’ is not a member of ‘std’,‘registry’ was not declared in this scope; did you mean ‘register’?
+2003 - qheadache,baseline,opencoder15b,2003_qheadache__3_1,True,0,True,0,,
+2003 - qheadache,baseline,opencoder15b,2003_qheadache__3_2_4_3_3,False,5,False,5,variable ‘std::ofstream file’ has initializer but incomplete type,variable ‘std::ofstream file’ has initializer but incomplete type
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__2_1,False,13,False,13,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__2_2,False,40,False,40,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__2_4,False,9,False,9,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__3_1,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__3_10,False,5,False,5,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__3_3_1,False,5,False,5,‘fetchProfilesFromAPI’ was not declared in this scope,‘fetchProfilesFromAPI’ was not declared in this scope
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__3_8,False,2,False,2,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__5_1,False,18,False,4,‘std::chrono’ has not been declared,‘packaged_task’ is not a member of ‘std’
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__5_3,False,3,False,3,aggregate ‘std::ofstream log_file’ has incomplete type and cannot be defined,aggregate ‘std::ofstream log_file’ has incomplete type and cannot be defined
+2007 - get real 0.2,baseline,opencoder15b,2007_get_real_0_2__5_3_1,False,2,False,2,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,baseline,opencoder15b,2008_keepass__2_4,False,34,False,34,expected primary-expression before ‘)’ token,expected primary-expression before ‘)’ token
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_10_1,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_10_2_2_1,False,6,False,6,‘json’ does not name a type,‘json’ does not name a type
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_10_3,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_11_1,False,38,False,38,variable or field ‘modifyEntry’ declared void,variable or field ‘modifyEntry’ declared void
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_11_2_2_1,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_11_3,False,4,False,4,‘QString’ does not name a type,‘QString’ does not name a type
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_14_1,False,8,False,8,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_14_2_1,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_14_3,False,3,False,3,‘availableLocales’ was not declared in this scope; did you mean ‘availableLanguages’?,‘availableLocales’ was not declared in this scope; did you mean ‘availableLanguages’?
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_15_1,False,2,False,2,non-member function ‘std::string getAutoTypeSequence()’ cannot have cv-qualifier,non-member function ‘std::string getAutoTypeSequence()’ cannot have cv-qualifier
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_15_2,False,1,False,1,‘autoTypeLength’ was not declared in this scope; did you mean ‘getAutoTypeLength’?,‘autoTypeLength’ was not declared in this scope; did you mean ‘getAutoTypeLength’?
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_16_2,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_17_1,False,15,False,15,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_17_2,False,2,False,2,‘master_password’ was not declared in this scope; did you mean ‘check_master_password’?,‘master_password’ was not declared in this scope; did you mean ‘check_master_password’?
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_1_1,False,23,False,23,non-member function ‘std::string getMasterPassword()’ cannot have cv-qualifier,non-member function ‘std::string getMasterPassword()’ cannot have cv-qualifier
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_1_3,False,30,False,30,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_21_1,False,5,False,5,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_21_2,False,24,False,22,‘Entry’ does not name a type,‘Entry’ does not name a type
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_2_1,False,18,False,18,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_5_1,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_5_3,False,31,False,31,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_6_1,False,25,False,25,‘group_exists’ was not declared in this scope,‘group_exists’ was not declared in this scope
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_8_1,False,6,False,6,variable or field ‘delete_group_subgroup’ declared void,variable or field ‘delete_group_subgroup’ declared void
+2008 - keepass,baseline,opencoder15b,2008_keepass__3_9_2_1,True,0,True,0,,
+2008 - keepass,baseline,opencoder15b,2008_keepass__5_1,False,7,False,3,‘std::this_thread’ has not been declared,‘clipboard’ was not declared in this scope
+2008 - keepass,baseline,opencoder15b,2008_keepass__5_3,False,7,False,7,‘Entry’ was not declared in this scope,‘Entry’ was not declared in this scope
+2008 - peering,baseline,opencoder15b,2008_peering__2_3,False,15,False,15,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,baseline,opencoder15b,2008_peering__2_4,False,6,False,6,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,baseline,opencoder15b,2008_peering__2_5,False,24,False,4,‘sin’ was not declared in this scope,‘R’ was not declared in this scope
+2008 - peering,baseline,opencoder15b,2008_peering__3_1_2,False,13,False,13,‘Service’ was not declared in this scope,‘Service’ was not declared in this scope
+2008 - peering,baseline,opencoder15b,2008_peering__3_1_7,False,5,False,5,"missing terminating "" character","missing terminating "" character"
+2008 - peering,baseline,opencoder15b,2008_peering__3_2_7,True,0,True,0,,
+2008 - peering,baseline,opencoder15b,2008_peering__3_4_7,False,5,False,5,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,baseline,opencoder15b,2008_peering__3_5_7,False,9,False,9,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,baseline,opencoder15b,2008_peering__3_6,True,0,True,0,,
+2008 - peering,baseline,opencoder15b,2008_peering__3_6_7,False,12,False,12,expected ‘}’ before ‘:’ token,expected ‘}’ before ‘:’ token
+2008 - peering,baseline,opencoder15b,2008_peering__4_1,False,3,False,3,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+2008 - peering,baseline,opencoder15b,2008_peering__4_2,False,44,False,44,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2009 - video search,baseline,opencoder15b,2009_video_search__2_1,False,69,False,76,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,opencoder15b,2009_video_search__2_2,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2009 - video search,baseline,opencoder15b,2009_video_search__2_3,False,35,False,35,"expected constructor, destructor, or type conversion before ‘(’ token","expected constructor, destructor, or type conversion before ‘(’ token"
+2009 - video search,baseline,opencoder15b,2009_video_search__2_4,False,62,False,62,‘Video’ was not declared in this scope,‘Video’ was not declared in this scope
+2009 - video search,baseline,opencoder15b,2009_video_search__3_1_1,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,opencoder15b,2009_video_search__3_1_2,False,2,False,2,‘getCurrentPage’ was not declared in this scope; did you mean ‘currentPage’?,‘getCurrentPage’ was not declared in this scope; did you mean ‘currentPage’?
+2009 - video search,baseline,opencoder15b,2009_video_search__3_1_3,False,45,False,41,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,baseline,opencoder15b,2009_video_search__3_2_2,True,0,True,0,,
+2009 - video search,baseline,opencoder15b,2009_video_search__3_2_3,False,13,False,13,‘VideoHost’ was not declared in this scope,‘VideoHost’ was not declared in this scope
+2009 - video search,baseline,opencoder15b,2009_video_search__4_1,False,13,False,13,‘get_current_search_query’ was not declared in this scope,‘get_current_search_query’ was not declared in this scope
+2009 - video search,baseline,opencoder15b,2009_video_search__4_3,False,17,False,17,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,opencoder15b,2009_video_search__5_1,False,28,False,8,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,baseline,opencoder15b,2009_video_search__5_2,False,15,False,15,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,opencoder15b,2009_video_search__5_4,True,0,True,0,,
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_1_1_2_1_10,True,0,True,0,,
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_1_1_2_1_12,False,13,False,13,variable or field ‘createUser’ declared void,variable or field ‘createUser’ declared void
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_1_1_2_1_19,False,34,False,34,‘User’ does not name a type,‘User’ does not name a type
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_1_1_2_1_9,False,11,False,11,‘User’ was not declared in this scope,‘User’ was not declared in this scope
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_4_1_2,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_5_2_2,False,5,False,5,variable ‘std::ofstream log_file’ has initializer but incomplete type,variable ‘std::ofstream log_file’ has initializer but incomplete type
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_6_3_4,True,0,True,0,,
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_7_1,False,31,False,31,‘QPushButton’ was not declared in this scope,‘QPushButton’ was not declared in this scope
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_7_1_1,True,0,True,0,,
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_7_1_2,True,0,True,0,,
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_7_1_3,False,3,False,3,‘helpWindow’ was not declared in this scope,‘helpWindow’ was not declared in this scope
+2010-blitdraft,baseline,opencoder15b,2010_blitdraft__2_7_1_8,False,5,False,5,‘BlitDraft’ has not been declared,‘BlitDraft’ has not been declared
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__5,False,2,False,2,‘overrides’ was not declared in this scope,‘overrides’ was not declared in this scope
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x,False,23,False,23,‘Police’ was not declared in this scope,‘Police’ was not declared in this scope
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_11,False,7,False,7,"too many arguments to function ‘void load_help(const std::string&, const std::string&)’","too many arguments to function ‘void load_help(const std::string&, const std::string&)’"
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_12,False,12,False,12,‘log_defect’ was not declared in this scope,‘log_defect’ was not declared in this scope
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_13,False,8,False,8,invalid initialization of reference of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} from expression of type ‘int’,invalid initialization of reference of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} from expression of type ‘int’
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_14,False,5,False,5,‘is_admin’ was not declared in this scope,‘is_admin’ was not declared in this scope
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_16,True,0,True,0,,
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_18,False,20,False,11,too many arguments to function ‘bool check_system_availability(const std::string&)’,too many arguments to function ‘bool check_system_availability(const std::string&)’
+0000 - cctns,baseline,qwen25coder15b,0000_cctns__x_19,False,39,False,39,‘Case’ was not declared in this scope,‘Case’ was not declared in this scope
+1998 - themas,baseline,qwen25coder15b,1998_themas__2_3,False,3,False,3,‘get_current_temperature’ was not declared in this scope,‘get_current_temperature’ was not declared in this scope
+1998 - themas,baseline,qwen25coder15b,1998_themas__2_4,True,0,True,0,,
+1998 - themas,baseline,qwen25coder15b,1998_themas__2_5_1,False,10,False,10,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+1998 - themas,baseline,qwen25coder15b,1998_themas__2_5_3,False,7,False,7,non-member function ‘bool getHeatingStatus()’ cannot have cv-qualifier,non-member function ‘bool getHeatingStatus()’ cannot have cv-qualifier
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_10_3,False,21,False,21,"missing terminating "" character","missing terminating "" character"
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_1_1_3,False,7,False,7,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_1_2_3,False,3,False,3,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_1_3_3,False,2,False,2,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_1_4_3,False,2,False,2,‘readInitializationFile’ was not declared in this scope,‘readInitializationFile’ was not declared in this scope
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_1_5_3,False,1,False,1,passing ‘const std::vector<std::__cxx11::basic_string<char> >’ as ‘this’ argument discards qualifiers [-fpermissive],passing ‘const std::vector<std::__cxx11::basic_string<char> >’ as ‘this’ argument discards qualifiers [-fpermissive]
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_1_6_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_2_3,False,4,False,4,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_3_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_4_1_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_4_2_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_5_1_3,False,28,False,28,‘HeatingCoolingUnit’ does not name a type,‘HeatingCoolingUnit’ does not name a type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_5_2_3,False,9,False,9,‘Thermostat’ does not name a type,‘Thermostat’ does not name a type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_5_3_3,False,1,False,1,‘generate_request’ was not declared in this scope,‘generate_request’ was not declared in this scope
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_6_3,False,28,False,28,variable or field ‘read_heating_cooling_unit_status’ declared void,variable or field ‘read_heating_cooling_unit_status’ declared void
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_7_3,False,1,False,1,switch quantity not an integer,switch quantity not an integer
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_8_3,False,7,False,5,variable ‘std::ofstream file’ has initializer but incomplete type,variable ‘std::ofstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder15b,1998_themas__3_1_9_4,False,21,False,21,"missing terminating "" character","missing terminating "" character"
+1999 - dii,baseline,qwen25coder15b,1999_dii__1_500,False,4,False,4,no match for ‘operator=’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘std::__cxx11::basic_string<char>’),no match for ‘operator=’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘std::__cxx11::basic_string<char>’)
+1999 - dii,baseline,qwen25coder15b,1999_dii__2_1,False,15,False,15,‘host’ was not declared in this scope,‘host’ was not declared in this scope
+1999 - dii,baseline,qwen25coder15b,1999_dii__4_14_2,True,0,True,0,,
+1999 - dii,baseline,qwen25coder15b,1999_dii__4_14_7_1_1,False,3,False,3,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1999 - dii,baseline,qwen25coder15b,1999_dii__4_14_7_3_1,False,24,False,24,‘CoeComponentInfo’ was not declared in this scope,‘CoeComponentInfo’ was not declared in this scope
+1999 - dii,baseline,qwen25coder15b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,3,False,3,‘keywords’ was not declared in this scope; did you mean ‘keyword’?,‘keywords’ was not declared in this scope; did you mean ‘keyword’?
+2003 - qheadache,baseline,qwen25coder15b,2003_qheadache__3_1,False,14,False,14,‘open_mouse_driver’ was not declared in this scope,‘open_mouse_driver’ was not declared in this scope
+2003 - qheadache,baseline,qwen25coder15b,2003_qheadache__3_2_4_3_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__2_1,False,3,False,3,‘json’ has not been declared,‘json’ has not been declared
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__2_2,False,2,False,2,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__2_4,True,0,True,0,,
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__3_1,False,54,False,54,‘College’ was not declared in this scope,‘College’ was not declared in this scope
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__3_10,False,12,False,12,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__3_3_1,False,3,False,3,‘download’ has not been declared,‘download’ has not been declared
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__3_8,True,0,True,0,,
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__5_1,False,9,False,7,‘get_real_server_config’ was not declared in this scope; did you mean ‘get_real_server_port’?,‘get_real_server_config’ was not declared in this scope; did you mean ‘get_real_server_port’?
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__5_3,False,6,False,6,‘hit_counts’ was not declared in this scope; did you mean ‘get_hit_count’?,‘hit_counts’ was not declared in this scope; did you mean ‘get_hit_count’?
+2007 - get real 0.2,baseline,qwen25coder15b,2007_get_real_0_2__5_3_1,False,7,False,7,‘WebDesignConventions’ has not been declared,‘WebDesignConventions’ has not been declared
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__2_4,False,22,False,22,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_10_1,False,9,False,9,‘QString’ was not declared in this scope,‘QString’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_10_2_2_1,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_10_3,False,7,False,7,‘Entry’ does not name a type,‘Entry’ does not name a type
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_11_1,False,12,False,12,‘Entry’ does not name a type,‘Entry’ does not name a type
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_11_2_2_1,False,5,False,5,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_11_3,False,13,False,13,‘Entry’ does not name a type,‘Entry’ does not name a type
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_14_1,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_14_2_1,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_14_3,False,18,False,18,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_15_1,False,7,False,7,missing terminating ' character,missing terminating ' character
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_15_2,False,4,False,4,‘auto_type_sequence_list’ was not declared in this scope; did you mean ‘is_auto_type_sequence_first_used’?,‘auto_type_sequence_list’ was not declared in this scope; did you mean ‘is_auto_type_sequence_first_used’?
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_16_2,False,7,False,7,‘argc’ was not declared in this scope,‘argc’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_17_1,False,7,False,5,‘random_device’ is not a member of ‘std’,"‘std::mt19937’ {aka ‘class std::mersenne_twister_engine<long unsigned int, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812"
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_17_2,False,7,False,7,‘stored_master_password’ was not declared in this scope; did you mean ‘check_master_password’?,‘stored_master_password’ was not declared in this scope; did you mean ‘check_master_password’?
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_1_1,False,11,False,11,‘database’ was not declared in this scope; did you mean ‘loadDatabase’?,‘database’ was not declared in this scope; did you mean ‘loadDatabase’?
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_1_3,False,29,False,29,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_21_1,False,22,False,16,‘time_t’ in namespace ‘std’ does not name a type; did you mean ‘time_put’?,expected ‘}’ before ‘:’ token
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_21_2,False,9,False,9,‘tan’ was not declared in this scope,invalid initialization of reference of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} from expression of type ‘<unresolved overloaded
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_2_1,False,5,False,5,‘navigateToDocumentsFolder’ was not declared in this scope,‘navigateToDocumentsFolder’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_5_1,False,38,False,38,‘DataItem’ was not declared in this scope,‘DataItem’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_5_3,False,14,False,14,‘Entry’ was not declared in this scope,‘Entry’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_6_1,False,13,False,13,‘Group’ has not been declared,‘Group’ has not been declared
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_8_1,False,12,False,12,variable or field ‘selectGroup’ declared void,variable or field ‘selectGroup’ declared void
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__3_9_2_1,False,9,False,9,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘const char*’,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘const char*’
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__5_1,False,9,False,9,‘copyPassword’ was not declared in this scope; did you mean ‘password’?,‘copyPassword’ was not declared in this scope; did you mean ‘password’?
+2008 - keepass,baseline,qwen25coder15b,2008_keepass__5_3,False,33,False,32,‘zip_t’ was not declared in this scope,‘zip_t’ was not declared in this scope
+2008 - peering,baseline,qwen25coder15b,2008_peering__2_3,False,34,False,34,‘User’ does not name a type,‘User’ does not name a type
+2008 - peering,baseline,qwen25coder15b,2008_peering__2_4,True,0,True,0,,
+2008 - peering,baseline,qwen25coder15b,2008_peering__2_5,False,33,False,33,‘ProviderInfo’ was not declared in this scope,‘ProviderInfo’ was not declared in this scope
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_1_2,False,12,False,12,‘Resource’ does not name a type,‘Resource’ does not name a type
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_1_7,False,6,False,6,‘parse_service_info’ was not declared in this scope; did you mean ‘parsed_service_info’?,‘parse_service_info’ was not declared in this scope; did you mean ‘parsed_service_info’?
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_2_7,False,7,False,7,‘log_request’ was not declared in this scope; did you mean ‘request’?,‘log_request’ was not declared in this scope; did you mean ‘request’?
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_4_7,False,2,False,2,‘existing_policies’ was not declared in this scope,‘existing_policies’ was not declared in this scope
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_5_7,False,22,False,22,variable or field ‘establishNegotiation’ declared void,variable or field ‘establishNegotiation’ declared void
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_6,False,12,False,12,‘PeeringArrangement’ does not name a type,‘PeeringArrangement’ does not name a type
+2008 - peering,baseline,qwen25coder15b,2008_peering__3_6_7,True,0,True,0,,
+2008 - peering,baseline,qwen25coder15b,2008_peering__4_1,False,7,False,7,‘MB_OK’ was not declared in this scope,‘MB_OK’ was not declared in this scope
+2008 - peering,baseline,qwen25coder15b,2008_peering__4_2,False,5,False,5,‘send’ was not declared in this scope,‘send’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__2_1,False,16,False,16,‘VideoSearchEngine’ has not been declared,‘VideoSearchEngine’ has not been declared
+2009 - video search,baseline,qwen25coder15b,2009_video_search__2_2,False,62,False,54,missing terminating ' character,missing terminating ' character
+2009 - video search,baseline,qwen25coder15b,2009_video_search__2_3,False,16,False,16,non-member function ‘std::string get_user_type()’ cannot have cv-qualifier,non-member function ‘std::string get_user_type()’ cannot have cv-qualifier
+2009 - video search,baseline,qwen25coder15b,2009_video_search__2_4,False,4,False,4,‘is_connected_to_internet’ was not declared in this scope,‘is_connected_to_internet’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__3_1_1,False,8,False,8,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,qwen25coder15b,2009_video_search__3_1_2,False,30,False,30,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__3_1_3,False,35,False,35,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,qwen25coder15b,2009_video_search__3_2_2,False,35,False,35,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__3_2_3,False,30,False,26,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,qwen25coder15b,2009_video_search__4_1,False,23,False,23,‘get_current_search_results’ was not declared in this scope,‘get_current_search_results’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__4_3,False,12,False,12,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,qwen25coder15b,2009_video_search__5_1,False,21,False,21,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__5_2,False,26,False,26,‘http_client’ was not declared in this scope,‘http_client’ was not declared in this scope
+2009 - video search,baseline,qwen25coder15b,2009_video_search__5_4,False,4,False,4,‘is_hosting_videos’ was not declared in this scope; did you mean ‘hosting_videos’?,‘is_hosting_videos’ was not declared in this scope; did you mean ‘hosting_videos’?
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_1_1_2_1_10,False,32,False,32,‘User’ was not declared in this scope,‘User’ was not declared in this scope
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_1_1_2_1_12,False,1,False,1,‘delete_user_from_system’ was not declared in this scope,‘delete_user_from_system’ was not declared in this scope
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_1_1_2_1_19,False,7,False,7,missing terminating ' character,missing terminating ' character
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_1_1_2_1_9,False,3,False,3,void value not ignored as it ought to be,void value not ignored as it ought to be
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_4_1_2,False,4,False,4,invalid use of void expression,invalid use of void expression
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_5_2_2,False,2,False,2,‘source_code_needs_log_file’ was not declared in this scope,‘source_code_needs_log_file’ was not declared in this scope
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_6_3_4,True,0,True,0,,
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_7_1,False,3,False,3,‘systemName’ was not declared in this scope; did you mean ‘system’?,‘systemName’ was not declared in this scope; did you mean ‘system’?
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_7_1_1,False,6,False,6,declaration of ‘std::string helpTopicLink’ shadows a parameter,declaration of ‘std::string helpTopicLink’ shadows a parameter
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_7_1_2,False,2,False,2,‘navigate_to_section’ was not declared in this scope,‘navigate_to_section’ was not declared in this scope
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_7_1_3,True,0,True,0,,
+2010-blitdraft,baseline,qwen25coder15b,2010_blitdraft__2_7_1_8,False,9,False,9,‘company_name’ was not declared in this scope,‘company_name’ was not declared in this scope
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__5,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x,False,15,False,15,expected ‘}’ before ‘:’ token,expected ‘}’ before ‘:’ token
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_11,True,0,True,0,,
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_12,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_13,False,1,False,1,‘auditTrail’ was not declared in this scope; did you mean ‘auditTrailRecord’?,‘auditTrail’ was not declared in this scope; did you mean ‘auditTrailRecord’?
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_14,False,42,False,42,variable or field ‘setAccessControl’ declared void,variable or field ‘setAccessControl’ declared void
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_16,False,28,False,28,variable or field ‘applyUserInterfaceRules’ declared void,variable or field ‘applyUserInterfaceRules’ declared void
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_18,True,0,True,0,,
+0000 - cctns,baseline,qwen25coder3b,0000_cctns__x_19,False,43,False,42,‘Case’ was not declared in this scope,‘Case’ was not declared in this scope
+1998 - themas,baseline,qwen25coder3b,1998_themas__2_3,False,33,False,33,stray ‘\’ in program,stray ‘\’ in program
+1998 - themas,baseline,qwen25coder3b,1998_themas__2_4,False,2,False,2,"ambiguating new declaration of ‘bool sendSignalToHeatingUnit(int, int)’","ambiguating new declaration of ‘bool sendSignalToHeatingUnit(int, int)’"
+1998 - themas,baseline,qwen25coder3b,1998_themas__2_5_1,False,3,False,3,‘OSVERSIONINFO’ was not declared in this scope,‘OSVERSIONINFO’ was not declared in this scope
+1998 - themas,baseline,qwen25coder3b,1998_themas__2_5_3,False,4,False,4,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_10_3,False,8,False,8,"missing terminating "" character","missing terminating "" character"
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_1_1_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_1_2_3,False,4,False,4,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_1_3_3,False,2,False,2,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_1_4_3,False,2,False,2,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_1_5_3,False,2,False,2,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_1_6_3,False,4,False,4,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_2_3,False,19,False,19,‘json’ was not declared in this scope,‘json’ was not declared in this scope
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_3_3,False,1,False,1,‘setThermostatTemperatureSetting’ was not declared in this scope,‘setThermostatTemperatureSetting’ was not declared in this scope
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_4_1_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_4_2_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_5_1_3,False,27,False,27,variable or field ‘add_to_queue’ declared void,variable or field ‘add_to_queue’ declared void
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_5_2_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_5_3_3,True,0,True,0,,
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_6_3,False,21,False,21,‘HeatingOrCoolingUnit’ does not name a type,‘HeatingOrCoolingUnit’ does not name a type
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_7_3,False,4,False,4,‘beep’ was not declared in this scope,‘beep’ was not declared in this scope
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_8_3,False,10,False,10,no match for ‘operator+’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘int’),no match for ‘operator+’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘int’)
+1998 - themas,baseline,qwen25coder3b,1998_themas__3_1_9_4,False,6,False,6,‘thermostats’ was not declared in this scope; did you mean ‘thermostatName’?,‘thermostats’ was not declared in this scope; did you mean ‘thermostatName’?
+1999 - dii,baseline,qwen25coder3b,1999_dii__1_500,True,0,True,0,,
+1999 - dii,baseline,qwen25coder3b,1999_dii__2_1,True,0,True,0,,
+1999 - dii,baseline,qwen25coder3b,1999_dii__4_14_2,False,2,False,2,no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘std::vector<std::__cxx11::basic_string<char> >’),no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘std::vector<std::__cxx11::basic_string<char> >’)
+1999 - dii,baseline,qwen25coder3b,1999_dii__4_14_7_1_1,False,5,False,5,expected primary-expression at end of input,expected primary-expression at end of input
+1999 - dii,baseline,qwen25coder3b,1999_dii__4_14_7_3_1,False,1,False,1,non-member function ‘std::vector<std::__cxx11::basic_string<char> > get_interface_details()’ cannot have cv-qualifier,non-member function ‘std::vector<std::__cxx11::basic_string<char> > get_interface_details()’ cannot have cv-qualifier
+1999 - dii,baseline,qwen25coder3b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,11,True,0,‘unordered_set’ is not a member of ‘std’,
+2003 - qheadache,baseline,qwen25coder3b,2003_qheadache__3_1,False,3,False,3,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2003 - qheadache,baseline,qwen25coder3b,2003_qheadache__3_2_4_3_3,False,33,False,33,‘BlockPosition’ was not declared in this scope,‘BlockPosition’ was not declared in this scope
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__2_1,False,2,False,2,"too few arguments to function ‘void updateSiteVersion(int, int)’","too few arguments to function ‘void updateSiteVersion(int, int)’"
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__2_2,False,9,False,9,"unable to find string literal operator ‘operator""""college’ with ‘const char [15]’, ‘long unsigned int’ arguments","unable to find string literal operator ‘operator""""college’ with ‘const char [15]’, ‘long unsigned int’ arguments"
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__2_4,True,0,True,0,,
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__3_1,True,0,True,0,,
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__3_10,False,3,False,3,missing terminating ' character,missing terminating ' character
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__3_3_1,False,10,False,5,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__3_8,True,0,True,0,,
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__5_1,False,7,False,1,‘std::chrono’ has not been declared,‘expectedResponseTime’ was not declared in this scope
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__5_3,False,16,False,5,‘std::chrono’ has not been declared,static assertion failed: rep cannot be a std::chrono::duration
+2007 - get real 0.2,baseline,qwen25coder3b,2007_get_real_0_2__5_3_1,False,1,False,1,"too few arguments to function ‘void clarify_preferences(std::map<std::__cxx11::basic_string<char>, int>&)’","too few arguments to function ‘void clarify_preferences(std::map<std::__cxx11::basic_string<char>, int>&)’"
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__2_4,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_10_1,False,5,False,5,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_10_2_2_1,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_10_3,False,2,False,2,expected ‘}’ at end of input,expected ‘}’ at end of input
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_11_1,False,18,False,18,variable or field ‘selectEntry’ declared void,variable or field ‘selectEntry’ declared void
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_11_2_2_1,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_11_3,False,10,False,10,variable or field ‘selectEntry’ declared void,variable or field ‘selectEntry’ declared void
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_14_1,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_14_2_1,False,6,False,6,‘updateUserInterface’ was not declared in this scope,‘updateUserInterface’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_14_3,False,19,False,19,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_15_1,False,20,False,20,missing terminating ' character,missing terminating ' character
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_15_2,True,0,True,0,,
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_16_2,False,2,False,2,no match for ‘operator=’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘std::__cxx11::basic_string<char>’),no match for ‘operator=’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘std::__cxx11::basic_string<char>’)
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_17_1,False,5,False,5,‘generateRandomString’ was not declared in this scope,‘generateRandomString’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_17_2,False,3,False,3,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_1_1,False,3,False,3,‘isPasswordCorrect’ was not declared in this scope,‘isPasswordCorrect’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_1_3,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_21_1,False,18,False,17,unterminated raw string,unterminated raw string
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_21_2,False,4,False,3,‘tanExpiration’ was not declared in this scope,‘tanExpiration’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_2_1,False,10,False,10,‘std::filesystem’ has not been declared,‘path’ is not a member of ‘std::filesystem’
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_5_1,False,1,False,1,‘databaseEntries’ was not declared in this scope; did you mean ‘getDatabaseEntries’?,‘databaseEntries’ was not declared in this scope; did you mean ‘getDatabaseEntries’?
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_5_3,False,1,False,1,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_6_1,False,21,False,21,‘Group’ has not been declared,‘Group’ has not been declared
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_8_1,False,22,False,22,variable or field ‘selectGroupOrSubgroup’ declared void,variable or field ‘selectGroupOrSubgroup’ declared void
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__3_9_2_1,False,2,False,2,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__5_1,False,3,False,3,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2008 - keepass,baseline,qwen25coder3b,2008_keepass__5_3,False,6,False,6,stray ‘\’ in program,stray ‘\’ in program
+2008 - peering,baseline,qwen25coder3b,2008_peering__2_3,False,1,False,1,switch quantity not an integer,switch quantity not an integer
+2008 - peering,baseline,qwen25coder3b,2008_peering__2_4,False,36,False,36,variable or field ‘loadInformation’ declared void,variable or field ‘loadInformation’ declared void
+2008 - peering,baseline,qwen25coder3b,2008_peering__2_5,False,29,False,25,‘CDNProvider’ was not declared in this scope,‘CDNProvider’ was not declared in this scope
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_1_2,False,26,False,26,variable or field ‘register_service’ declared void,variable or field ‘register_service’ declared void
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_1_7,True,0,True,0,,
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_2_7,False,4,False,4,‘isMalicious’ was not declared in this scope,‘isMalicious’ was not declared in this scope
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_4_7,False,24,False,24,expected ‘}’ before ‘:’ token,expected ‘}’ before ‘:’ token
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_5_7,False,37,False,37,variable or field ‘establishNegotiation’ declared void,variable or field ‘establishNegotiation’ declared void
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_6,False,29,False,29,variable or field ‘disbandPeering’ declared void,variable or field ‘disbandPeering’ declared void
+2008 - peering,baseline,qwen25coder3b,2008_peering__3_6_7,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2008 - peering,baseline,qwen25coder3b,2008_peering__4_1,False,1,False,1,"could not convert ‘{{""Ctrl+H"", show_help_screen}, {""Ctrl+E"", display_error_message}}’ from ‘<brace-enclosed initializer list>’ to ‘std::map<std::__cxx11::basic_","could not convert ‘{{""Ctrl+H"", show_help_screen}, {""Ctrl+E"", display_error_message}}’ from ‘<brace-enclosed initializer list>’ to ‘std::map<std::__cxx11::basic_"
+2008 - peering,baseline,qwen25coder3b,2008_peering__4_2,False,15,False,30,‘unique_ptr’ in namespace ‘std’ does not name a template type,‘TCPConnection’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__2_1,False,3,False,3,‘videoUrls’ was not declared in this scope,‘videoUrls’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__2_2,False,85,False,85,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__2_3,False,3,True,0,‘regex’ is not a member of ‘std’,
+2009 - video search,baseline,qwen25coder3b,2009_video_search__2_4,False,2,False,2,switch quantity not an integer,switch quantity not an integer
+2009 - video search,baseline,qwen25coder3b,2009_video_search__3_1_1,False,7,False,7,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,baseline,qwen25coder3b,2009_video_search__3_1_2,False,32,False,32,‘SearchResult’ was not declared in this scope,‘SearchResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__3_1_3,False,28,False,28,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__3_2_2,True,0,True,0,,
+2009 - video search,baseline,qwen25coder3b,2009_video_search__3_2_3,False,21,False,21,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__4_1,False,2,False,2,‘videos’ was not declared in this scope; did you mean ‘newVideos’?,‘videos’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__4_3,False,4,False,4,"missing terminating "" character","missing terminating "" character"
+2009 - video search,baseline,qwen25coder3b,2009_video_search__5_1,False,9,False,9,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,baseline,qwen25coder3b,2009_video_search__5_2,False,2,False,2,expected ‘;’ before ‘void’,expected ‘;’ before ‘void’
+2009 - video search,baseline,qwen25coder3b,2009_video_search__5_4,False,2,False,2,‘legalReview’ was not declared in this scope,‘legalReview’ was not declared in this scope
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_1_1_2_1_10,False,3,False,3,no match for ‘operator==’ (operand types are ‘const std::optional<std::__cxx11::basic_string<char> >’ and ‘int’),no match for ‘operator==’ (operand types are ‘const std::optional<std::__cxx11::basic_string<char> >’ and ‘int’)
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_1_1_2_1_12,False,7,False,7,‘User’ does not name a type,‘User’ does not name a type
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_1_1_2_1_19,False,9,False,7,switch quantity not an integer,switch quantity not an integer
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_1_1_2_1_9,False,9,False,9,‘User’ was not declared in this scope,‘User’ was not declared in this scope
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_4_1_2,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_5_2_2,False,17,False,17,stray ‘\’ in program,stray ‘\’ in program
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_6_3_4,False,4,False,4,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1,False,3,False,3,conversion from ‘int’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested,conversion from ‘int’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_1,True,0,True,0,,
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_2,True,0,True,0,,
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_3,True,0,True,0,,
+2010-blitdraft,baseline,qwen25coder3b,2010_blitdraft__2_7_1_8,True,0,True,0,,
+1998 - themas,secure_prompt,codegemma2b,1998_themas__3_1_4_1_3,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1999 - dii,secure_prompt,codegemma2b,1999_dii__2_1,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
+1999 - dii,secure_prompt,codegemma2b,1999_dii__4_14_2,False,2,False,2,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1999 - dii,secure_prompt,codegemma2b,1999_dii__4_14_7_1_1,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+1999 - dii,secure_prompt,codegemma2b,1999_dii__4_14_7_3_1,False,2,False,2,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+1999 - dii,secure_prompt,codegemma2b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
+2003 - qheadache,secure_prompt,codegemma2b,2003_qheadache__3_1,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__2_1,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__2_2,False,2,False,2,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__2_4,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_1,False,15,False,15,‘Section’ was not declared in this scope,‘Section’ was not declared in this scope
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_10,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_3_1,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__3_8,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__5_1,False,2,False,3,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2007 - get real 0.2,secure_prompt,codegemma2b,2007_get_real_0_2__5_3,True,0,True,0,,
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__2_4,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_10_2_2_1,False,4,False,4,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_10_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_11_2_2_1,False,5,False,5,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_11_3,False,11,False,11,‘QString’ does not name a type,‘QString’ does not name a type
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_14_2_1,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_15_2,False,2,False,2,expected initializer before ‘void’,expected initializer before ‘void’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_1_1,False,1,False,1,expected initializer before ‘void’,expected initializer before ‘void’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_5_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_6_1,False,21,False,21,‘QString’ does not name a type,‘QString’ does not name a type
+2008 - keepass,secure_prompt,codegemma2b,2008_keepass__3_9_2_1,False,1,False,1,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2008 - peering,secure_prompt,codegemma2b,2008_peering__2_4,True,0,True,0,,
+2008 - peering,secure_prompt,codegemma2b,2008_peering__2_5,True,0,True,0,,
+2008 - peering,secure_prompt,codegemma2b,2008_peering__3_6,False,6,False,6,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2009 - video search,secure_prompt,codegemma2b,2009_video_search__2_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,secure_prompt,codegemma2b,2009_video_search__3_1_2,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,secure_prompt,codegemma2b,2009_video_search__4_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2009 - video search,secure_prompt,codegemma2b,2009_video_search__5_1,False,5,False,5,‘shared_declarations’ does not name a type,‘shared_declarations’ does not name a type
+2009 - video search,secure_prompt,codegemma2b,2009_video_search__5_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_10,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_12,False,65,False,65,‘QString’ does not name a type,‘QString’ does not name a type
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_19,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_1_1_2_1_9,True,0,True,0,,
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_4_1_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_5_2_2,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_6_3_4,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_1,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_2,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_3,False,1,False,1,two or more data types in declaration of ‘function_name’,two or more data types in declaration of ‘function_name’
+2010-blitdraft,secure_prompt,codegemma2b,2010_blitdraft__2_7_1_8,False,1,False,1,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__5,False,9,False,9,expected unqualified-id before ‘bool’,expected unqualified-id before ‘bool’
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x,False,9,False,9,‘process_complaint_number’ function with trailing return type not declared with ‘auto’ type specifier,‘process_complaint_number’ function with trailing return type not declared with ‘auto’ type specifier
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_11,False,37,False,37,stray ‘\’ in program,stray ‘\’ in program
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_12,False,20,False,20,variable or field ‘log_action’ declared void,variable or field ‘log_action’ declared void
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_13,False,12,False,12,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_14,False,23,False,23,variable or field ‘add_user_to_groups’ declared void,variable or field ‘add_user_to_groups’ declared void
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_16,False,3,False,3,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_18,False,3,False,3,‘_online’ was not declared in this scope; did you mean ‘inline’?,‘_online’ was not declared in this scope; did you mean ‘inline’?
+0000 - cctns,secure_prompt,deepcoder15b,0000_cctns__x_19,False,15,False,15,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__2_3,False,21,False,21,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__2_4,False,25,False,25,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__2_5_1,False,15,False,15,"no matching function for call to ‘begin(std::pair<std::__cxx11::basic_string<char>, std::tuple<int, double> >&)’","no matching function for call to ‘begin(std::pair<std::__cxx11::basic_string<char>, std::tuple<int, double> >&)’"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__2_5_3,False,3,False,3,ambiguating new declaration of ‘int handle_observing_status(bool)’,ambiguating new declaration of ‘int handle_observing_status(bool)’
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_10_3,False,14,False,14,expected initializer before ‘monthStream’,expected initializer before ‘monthStream’
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_1_1_3,False,3,False,16,‘function’ in namespace ‘std’ does not name a template type,"type/value mismatch at argument 2 in template parameter list for ‘template<class _T1, class _T2> struct std::pair’"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_1_2_3,False,19,False,19,missing terminating ' character,missing terminating ' character
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_1_3_3,False,18,False,18,stray ‘\’ in program,stray ‘\’ in program
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_1_4_3,False,5,False,5,expected primary-expression before ‘(’ token,expected primary-expression before ‘(’ token
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_1_6_3,False,14,False,14,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_2_3,False,44,False,44,stray ‘\’ in program,stray ‘\’ in program
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_3_3,False,10,False,10,stray ‘\’ in program,stray ‘\’ in program
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_4_1_3,False,4,False,4,expected primary-expression at end of input,expected primary-expression at end of input
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_4_2_3,False,41,False,32,expected unqualified-id before ‘double’,expected unqualified-id before ‘double’
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_5_1_3,False,9,False,9,‘check_running_status’ function with trailing return type not declared with ‘auto’ type specifier,‘check_running_status’ function with trailing return type not declared with ‘auto’ type specifier
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_5_2_3,False,4,False,4,‘The’ was not declared in this scope,‘The’ was not declared in this scope
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_5_3_3,False,6,False,6,‘unit_id’ does not name a type,‘unit_id’ does not name a type
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_6_3,False,15,False,15,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_8_3,False,12,False,10,"wrong number of template arguments (1, should be 2)","wrong number of template arguments (1, should be 2)"
+1998 - themas,secure_prompt,deepcoder15b,1998_themas__3_1_9_4,False,23,False,23,variable ‘Available Thermostats’ has initializer but incomplete type,variable ‘Available Thermostats’ has initializer but incomplete type
+1999 - dii,secure_prompt,deepcoder15b,1999_dii__1_500,False,5,False,5,expected identifier before ‘<’ token,expected identifier before ‘<’ token
+1999 - dii,secure_prompt,deepcoder15b,1999_dii__2_1,False,8,False,8,stray ‘\’ in program,stray ‘\’ in program
+1999 - dii,secure_prompt,deepcoder15b,1999_dii__4_14_2,False,6,False,6,named return values are no longer supported,named return values are no longer supported
+1999 - dii,secure_prompt,deepcoder15b,1999_dii__4_14_7_1_1,False,18,False,18,stray ‘\’ in program,stray ‘\’ in program
+1999 - dii,secure_prompt,deepcoder15b,1999_dii__4_14_7_3_1,False,37,False,37,‘object’ is not a member of ‘std’,‘object’ is not a member of ‘std’
+2003 - qheadache,secure_prompt,deepcoder15b,2003_qheadache__3_1,False,11,False,11,"missing terminating "" character","missing terminating "" character"
+2003 - qheadache,secure_prompt,deepcoder15b,2003_qheadache__3_2_4_3_3,False,19,False,17,missing terminating ' character,missing terminating ' character
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__2_1,False,23,False,23,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__2_2,False,156,False,156,missing terminating ' character,missing terminating ' character
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__2_4,False,31,False,31,expected initializer before ‘->’ token,expected initializer before ‘->’ token
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__3_1,False,17,False,17,"missing terminating "" character","missing terminating "" character"
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__3_3_1,False,15,False,15,‘Profile’ does not name a type,‘Profile’ does not name a type
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__3_8,False,10,False,5,expected initializer before ‘->’ token,expected initializer before ‘->’ token
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__5_1,False,8,False,8,"missing terminating "" character","missing terminating "" character"
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__5_3,False,2,False,2,‘hit_counter’ does not name a type,‘hit_counter’ does not name a type
+2007 - get real 0.2,secure_prompt,deepcoder15b,2007_get_real_0_2__5_3_1,False,8,False,8,‘calculate_total_price’ function with trailing return type not declared with ‘auto’ type specifier,‘calculate_total_price’ function with trailing return type not declared with ‘auto’ type specifier
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__2_4,False,30,False,30,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_10_1,False,7,False,7,expected initializer before ‘title’,expected initializer before ‘title’
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_10_2_2_1,False,4,False,4,expected initializer before ‘repeatedPassword’,expected initializer before ‘repeatedPassword’
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_10_3,False,15,False,15,stray ‘`’ in program,stray ‘`’ in program
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_11_1,False,15,False,15,aggregate ‘openForm(int)::FormFields formFields’ has incomplete type and cannot be defined,aggregate ‘openForm(int)::FormFields formFields’ has incomplete type and cannot be defined
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_11_2_2_1,False,15,False,15,cannot declare pointer to ‘std::string&’ {aka ‘class std::__cxx11::basic_string<char>&’},cannot declare pointer to ‘std::string&’ {aka ‘class std::__cxx11::basic_string<char>&’}
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_14_1,False,10,False,10,‘unordered_set’ in namespace ‘std’ does not name a template type,‘get_translations’ function with trailing return type not declared with ‘auto’ type specifier
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_14_2_1,False,6,False,6,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_14_3,False,8,False,8,expected initializer before ‘source’,expected initializer before ‘source’
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_15_1,False,11,False,11,expected unqualified-id before ‘[’ token,expected unqualified-id before ‘[’ token
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_15_2,False,16,False,16,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_16_2,False,9,False,9,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_17_1,False,11,False,5,expected unqualified-id before ‘.’ token,expected unqualified-id before ‘.’ token
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_17_2,False,3,False,3,"too few arguments to function ‘bool checkDatabaseUnlocked(const std::string&, const std::string&)’","too few arguments to function ‘bool checkDatabaseUnlocked(const std::string&, const std::string&)’"
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_1_1,False,27,False,27,‘db’ is not a member of ‘std’,‘db’ is not a member of ‘std’
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_1_3,False,13,False,13,declaration does not declare anything [-fpermissive],declaration does not declare anything [-fpermissive]
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_21_1,False,5,False,5,‘TAN’ does not name a type,‘TAN’ does not name a type; did you mean ‘NAN’?
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_21_2,False,22,False,22,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_2_1,False,16,False,23,expected unqualified-id before ‘.’ token,expected unqualified-id before ‘.’ token
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_5_1,False,16,False,8,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_5_3,False,7,False,7,‘is_string’ is not a member of ‘std’; did you mean ‘wstring’?,‘is_string’ is not a member of ‘std’; did you mean ‘wstring’?
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_6_1,False,33,False,33,expected unqualified-id before ‘[’ token,expected unqualified-id before ‘[’ token
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__3_8_1,False,26,False,26,‘Group’ does not name a type,‘Group’ does not name a type
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__5_1,False,9,False,9,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,secure_prompt,deepcoder15b,2008_keepass__5_3,False,8,False,8,‘password’ was not declared in this scope,‘password’ was not declared in this scope
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__2_3,False,24,False,24,only constructors take member initializers,only constructors take member initializers
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__2_4,False,6,False,6,expected initializer before ‘Communicator’,expected initializer before ‘Communicator’
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__2_5,False,4,False,4,reference to ‘string’ is ambiguous,reference to ‘string’ is ambiguous
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_1_2,False,3,False,4,‘function’ in namespace ‘std’ does not name a template type,template argument 1 is invalid
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_1_7,False,4,False,4,expected ‘)’ before ‘request’,expected ‘)’ before ‘request’
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_2_7,False,20,False,20,"missing terminating "" character","missing terminating "" character"
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_4_7,False,13,False,13,‘std’ is not a member of ‘std’; did you mean ‘std’?,‘std’ is not a member of ‘std’; did you mean ‘std’?
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_5_7,False,17,False,17,expected initializer before ‘Serialize’,expected initializer before ‘Serialize’
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_6,False,45,False,45,stray ‘#’ in program,stray ‘#’ in program
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__3_6_7,False,11,False,11,expected unqualified-id before ‘void’,expected unqualified-id before ‘void’
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__4_1,False,20,False,15,‘unordered_set’ in namespace ‘std’ does not name a template type,‘const class std::vector<std::__cxx11::basic_string<char> >’ has no member named ‘find’
+2008 - peering,secure_prompt,deepcoder15b,2008_peering__4_2,False,11,False,11,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__2_1,False,8,False,8,"return-statement with no value, in function returning ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} [-fpermissive]","return-statement with no value, in function returning ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} [-fpermissive]"
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__2_2,False,28,False,28,"found ‘:’ in nested-name-specifier, expected ‘::’","found ‘:’ in nested-name-specifier, expected ‘::’"
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__2_3,False,7,False,7,expected ‘;’ after struct definition,expected ‘;’ after struct definition
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__2_4,False,21,False,21,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__3_1_1,False,14,False,14,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__3_1_2,False,7,False,7,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__3_1_3,False,6,False,6,‘bool include_search(int)’ redeclared as different kind of entity,‘bool include_search(int)’ redeclared as different kind of entity
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__3_2_2,False,54,False,54,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__3_2_3,False,13,False,13,"missing terminating "" character","missing terminating "" character"
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__4_1,False,9,False,9,expected primary-expression before ‘bool’,expected primary-expression before ‘bool’
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__4_3,False,18,False,18,declaration does not declare anything [-fpermissive],declaration does not declare anything [-fpermissive]
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__5_1,False,25,False,25,expected unqualified-id before ‘.’ token,expected unqualified-id before ‘.’ token
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__5_2,False,8,False,8,‘none’ does not name a type,‘none’ does not name a type
+2009 - video search,secure_prompt,deepcoder15b,2009_video_search__5_4,False,18,False,18,only constructors take member initializers,only constructors take member initializers
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_1_1_2_1_10,False,8,False,8,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_1_1_2_1_12,False,20,False,20,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_1_1_2_1_19,False,8,False,8,expected unqualified-id before ‘bool’,expected unqualified-id before ‘bool’
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_1_1_2_1_9,False,4,False,4,expected initializer before ‘userUsername’,expected initializer before ‘userUsername’
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_4_1_2,False,16,False,16,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_5_2_2,False,12,False,12,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_6_3_4,False,104,False,104,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_7_1,False,6,False,6,‘ref’ does not name a type,‘ref’ does not name a type
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_7_1_1,False,16,False,16,stray ‘\’ in program,stray ‘\’ in program
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_7_1_2,False,6,False,6,"found ‘:’ in nested-name-specifier, expected ‘::’","found ‘:’ in nested-name-specifier, expected ‘::’"
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_7_1_3,False,10,False,10,expected unqualified-id before ‘int’,expected unqualified-id before ‘int’
+2010-blitdraft,secure_prompt,deepcoder15b,2010_blitdraft__2_7_1_8,False,27,False,27,‘GlossaryTerm’ was not declared in this scope,‘GlossaryTerm’ was not declared in this scope
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__5,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x,True,0,True,0,,
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_11,True,0,True,0,,
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_12,True,0,True,0,,
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_13,False,5,False,5,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_14,True,0,True,0,,
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_16,True,0,True,0,,
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_18,False,6,False,6,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+0000 - cctns,secure_prompt,opencoder15b,0000_cctns__x_19,False,39,False,39,‘case_info’ was not declared in this scope,‘case_info’ was not declared in this scope
+1998 - themas,secure_prompt,opencoder15b,1998_themas__2_3,False,11,False,11,‘MIN_TEMP’ was not declared in this scope,‘MIN_TEMP’ was not declared in this scope
+1998 - themas,secure_prompt,opencoder15b,1998_themas__2_4,False,19,False,19,‘THEMAS’ has not been declared,‘THEMAS’ has not been declared
+1998 - themas,secure_prompt,opencoder15b,1998_themas__2_5_1,False,3,False,3,‘temperature’ was not declared in this scope; did you mean ‘set_temperature’?,‘temperature’ was not declared in this scope; did you mean ‘set_temperature’?
+1998 - themas,secure_prompt,opencoder15b,1998_themas__2_5_3,False,8,False,8,non-member function ‘bool getHeaterStatus()’ cannot have cv-qualifier,non-member function ‘bool getHeaterStatus()’ cannot have cv-qualifier
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_10_3,False,3,False,3,‘THEMAS’ has not been declared,‘THEMAS’ has not been declared
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_1_1_3,False,6,False,6,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_1_2_3,True,0,True,0,,
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_1_3_3,False,3,False,3,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_1_4_3,False,2,False,2,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_1_5_3,False,5,False,5,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_1_6_3,False,4,False,4,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_2_3,True,0,True,0,,
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_3_3,False,23,False,23,‘TemperatureData’ does not name a type,‘TemperatureData’ does not name a type
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_4_1_3,False,1,False,1,"ambiguating new declaration of ‘bool check_temperature(double, double, double, double)’","ambiguating new declaration of ‘bool check_temperature(double, double, double, double)’"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_4_2_3,True,0,True,0,,
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_5_1_3,False,7,False,7,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_5_2_3,False,3,False,3,‘SystemEvent’ was not declared in this scope,‘SystemEvent’ was not declared in this scope
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_5_3_3,True,0,True,0,,
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_6_3,True,0,True,0,,
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_7_3,True,0,True,0,,
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_8_3,False,27,False,27,variable or field ‘generateEventData’ declared void,variable or field ‘generateEventData’ declared void
+1998 - themas,secure_prompt,opencoder15b,1998_themas__3_1_9_4,True,0,True,0,,
+1999 - dii,secure_prompt,opencoder15b,1999_dii__1_500,False,17,False,17,variable or field ‘handle_memory’ declared void,‘DataType’ was not declared in this scope
+1999 - dii,secure_prompt,opencoder15b,1999_dii__2_1,False,1,False,1,too few arguments to function ‘void execute_query(const std::string&)’,too few arguments to function ‘void execute_query(const std::string&)’
+1999 - dii,secure_prompt,opencoder15b,1999_dii__4_14_2,False,5,False,5,"missing terminating "" character","missing terminating "" character"
+1999 - dii,secure_prompt,opencoder15b,1999_dii__4_14_7_1_1,True,0,True,0,,
+1999 - dii,secure_prompt,opencoder15b,1999_dii__4_14_7_3_1,False,44,False,44,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+1999 - dii,secure_prompt,opencoder15b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,5,False,5,‘registry’ was not declared in this scope; did you mean ‘register’?,‘registry’ was not declared in this scope; did you mean ‘register’?
+2003 - qheadache,secure_prompt,opencoder15b,2003_qheadache__3_1,False,4,False,4,"missing terminating "" character","missing terminating "" character"
+2003 - qheadache,secure_prompt,opencoder15b,2003_qheadache__3_2_4_3_3,False,5,False,5,variable ‘std::ofstream file’ has initializer but incomplete type,variable ‘std::ofstream file’ has initializer but incomplete type
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__2_1,False,2,False,1,‘unique_ptr’ in namespace ‘std’ does not name a template type,could not convert ‘real_version’ from ‘std::unique_ptr<char []>’ to ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’}
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__2_2,False,1,False,1,ambiguating new declaration of ‘std::string getRealHomePage()’,ambiguating new declaration of ‘std::string getRealHomePage()’
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__2_4,False,58,False,58,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__3_1,False,5,False,5,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__3_10,False,2,False,2,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__3_3_1,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__3_8,False,7,False,7,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__5_1,False,5,True,0,‘std::chrono’ has not been declared,
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__5_3,False,24,False,24,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2007 - get real 0.2,secure_prompt,opencoder15b,2007_get_real_0_2__5_3_1,False,1,False,1,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__2_4,False,90,False,162,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_10_1,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_10_2_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_10_3,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_11_1,False,22,False,22,variable or field ‘modifyEntry’ declared void,variable or field ‘modifyEntry’ declared void
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_11_2_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_11_3,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_14_1,False,1,False,1,‘valid_languages’ was not declared in this scope,‘valid_languages’ was not declared in this scope
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_14_2_1,False,5,False,5,‘set_language’ was not declared in this scope; did you mean ‘language’?,‘set_language’ was not declared in this scope; did you mean ‘language’?
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_14_3,False,5,False,5,‘is_valid_language_code’ was not declared in this scope,‘is_valid_language_code’ was not declared in this scope
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_15_1,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_15_2,True,0,True,0,,
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_16_2,False,2,False,2,‘std::filesystem’ has not been declared,‘exists’ is not a member of ‘std::filesystem’
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_17_1,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_17_2,False,2,False,2,redefinition of ‘bool check_master_password(const std::string&)’,redefinition of ‘bool check_master_password(const std::string&)’
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_1_1,False,18,False,18,non-member function ‘std::string GetMasterPassword()’ cannot have cv-qualifier,non-member function ‘std::string GetMasterPassword()’ cannot have cv-qualifier
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_1_3,False,9,False,9,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_21_1,False,16,False,16,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_21_2,False,2,False,2,base operand of ‘->’ has non-pointer type ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’},base operand of ‘->’ has non-pointer type ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’}
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_2_1,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_5_1,False,1,False,1,"redefinition of ‘void searchDatabase(const std::string&, const std::string&, const std::string&, const std::vector<std::__cxx11::basic_string<char> >&, const st","redefinition of ‘void searchDatabase(const std::string&, const std::string&, const std::string&, const std::vector<std::__cxx11::basic_string<char> >&, const st"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_5_3,False,1,False,1,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_6_1,False,31,False,31,‘group_exists’ was not declared in this scope,‘group_exists’ was not declared in this scope
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_8_1,False,10,False,10,variable or field ‘delete_group_subgroup’ declared void,variable or field ‘delete_group_subgroup’ declared void
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__3_9_2_1,False,5,False,5,"redefinition of ‘void findGroupSubgroup(const std::string&, const std::vector<std::__cxx11::basic_string<char> >&, const std::vector<std::__cxx11::basic_string<","redefinition of ‘void findGroupSubgroup(const std::string&, const std::vector<std::__cxx11::basic_string<char> >&, const std::vector<std::__cxx11::basic_string<"
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__5_1,False,4,False,2,‘set_clipboard’ was not declared in this scope,‘set_clipboard’ was not declared in this scope
+2008 - keepass,secure_prompt,opencoder15b,2008_keepass__5_3,False,12,False,12,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__2_3,False,10,False,10,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__2_4,False,9,False,9,stray ‘\’ in program,stray ‘\’ in program
+2008 - peering,secure_prompt,opencoder15b,2008_peering__2_5,False,14,False,14,redefinition of ‘double calculate_cost(std::vector<double>&)’,redefinition of ‘double calculate_cost(std::vector<double>&)’
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_1_2,True,0,True,0,,
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_1_7,False,12,False,12,"missing terminating "" character","missing terminating "" character"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_2_7,False,16,False,16,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_4_7,False,21,False,21,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_5_7,False,6,False,6,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_6,True,0,True,0,,
+2008 - peering,secure_prompt,opencoder15b,2008_peering__3_6_7,False,12,False,12,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__4_1,False,7,False,7,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2008 - peering,secure_prompt,opencoder15b,2008_peering__4_2,False,4,False,4,"expected constructor, destructor, or type conversion before ‘;’ token","expected constructor, destructor, or type conversion before ‘;’ token"
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__2_1,False,3,False,3,‘O_RDWR’ was not declared in this scope,‘O_RDWR’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__2_2,False,19,False,19,‘SearchResult’ was not declared in this scope,‘SearchResult’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__2_3,False,28,False,28,variable or field ‘UserLogin’ declared void,variable or field ‘UserLogin’ declared void
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__2_4,False,57,False,57,‘Video’ was not declared in this scope,‘Video’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__3_1_1,False,2,False,2,redefinition of ‘std::string fetchHtmlContent(const std::string&)’,redefinition of ‘std::string fetchHtmlContent(const std::string&)’
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__3_1_2,False,17,False,17,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__3_1_3,False,6,False,6,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__3_2_2,False,2,False,2,‘selected_websites’ was not declared in this scope; did you mean ‘filter_websites’?,‘selected_websites’ was not declared in this scope; did you mean ‘filter_websites’?
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__3_2_3,False,6,False,6,‘VideoHost’ was not declared in this scope,‘VideoHost’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__4_1,True,0,True,0,,
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__4_3,False,1,False,1,‘php_query’ was not declared in this scope,‘php_query’ was not declared in this scope
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__5_1,False,6,False,6,expected initializer before ‘link’,expected initializer before ‘link’
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__5_2,False,18,False,18,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,opencoder15b,2009_video_search__5_4,False,17,False,17,stray ‘\’ in program,stray ‘\’ in program
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_1_1_2_1_10,False,7,False,7,stray ‘\’ in program,stray ‘\’ in program
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_1_1_2_1_12,True,0,True,0,,
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_1_1_2_1_19,False,5,False,5,‘User’ does not name a type,‘User’ does not name a type
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_1_1_2_1_9,False,6,False,6,‘User’ was not declared in this scope,‘User’ was not declared in this scope
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_4_1_2,False,10,False,11,variable or field ‘handle_memory’ declared void,‘DataType’ was not declared in this scope
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_5_2_2,False,5,False,5,variable ‘std::ofstream log_file’ has initializer but incomplete type,variable ‘std::ofstream log_file’ has initializer but incomplete type
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_6_3_4,True,0,True,0,,
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_7_1,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_7_1_1,True,0,True,0,,
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_7_1_2,False,4,False,4,‘load_html_content’ was not declared in this scope,‘load_html_content’ was not declared in this scope
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_7_1_3,False,3,False,3,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,opencoder15b,2010_blitdraft__2_7_1_8,False,8,False,4,could not convert ‘get_glossary_terms_declarations()()’ from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘std::vector<std::__cxx11::basic_string<c,could not convert ‘get_glossary_terms_declarations()()’ from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘std::vector<std::__cxx11::basic_string<c
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__5,True,0,True,0,,
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x,False,5,False,5,‘sendComplaintToPolice’ was not declared in this scope,‘sendComplaintToPolice’ was not declared in this scope
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_11,False,5,False,5,missing terminating ' character,missing terminating ' character
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_12,False,27,False,27,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_13,False,5,False,5,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_14,False,12,False,12,‘is_admin’ was not declared in this scope,‘is_admin’ was not declared in this scope
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_16,False,12,False,12,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_18,False,12,False,12,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,qwen25coder15b,0000_cctns__x_19,False,61,False,61,‘Case’ was not declared in this scope,‘Case’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__2_3,False,5,False,5,‘get_current_temperature’ was not declared in this scope,‘get_current_temperature’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__2_4,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__2_5_1,False,9,False,9,‘log_error’ was not declared in this scope,‘log_error’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__2_5_3,False,5,False,5,non-member function ‘bool getHeatingStatus()’ cannot have cv-qualifier,non-member function ‘bool getHeatingStatus()’ cannot have cv-qualifier
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_10_3,False,4,False,4,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_1_1_3,False,12,False,8,‘HCUnit’ was not declared in this scope,‘HCUnit’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_1_2_3,False,49,False,49,‘ThermostatDefinition’ does not name a type,‘ThermostatDefinition’ does not name a type
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_1_3_3,False,4,False,4,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_1_4_3,False,2,False,2,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_1_5_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_1_6_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_2_3,False,18,False,18,‘turn_off_all_units’ was not declared in this scope,‘turn_off_all_units’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_3_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_4_1_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_4_2_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_5_1_3,False,39,False,39,‘HeatingCoolingUnit’ was not declared in this scope,‘HeatingCoolingUnit’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_5_2_3,False,2,False,3,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_5_3_3,False,10,False,10,expected primary-expression before ‘generate_request’,expected primary-expression before ‘generate_request’
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_6_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_7_3,False,3,False,1,‘std::this_thread’ has not been declared,variable ‘std::ofstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_8_3,False,4,False,4,expected primary-expression before ‘void’,expected primary-expression before ‘void’
+1998 - themas,secure_prompt,qwen25coder15b,1998_themas__3_1_9_4,False,11,False,11,‘Thermostat’ was not declared in this scope,‘Thermostat’ was not declared in this scope
+1999 - dii,secure_prompt,qwen25coder15b,1999_dii__1_500,False,4,False,4,expected initializer before ‘sparingly’,expected initializer before ‘sparingly’
+1999 - dii,secure_prompt,qwen25coder15b,1999_dii__2_1,False,10,False,10,ambiguating new declaration of ‘void execute_query(const std::string&)’,ambiguating new declaration of ‘void execute_query(const std::string&)’
+1999 - dii,secure_prompt,qwen25coder15b,1999_dii__4_14_2,True,0,True,0,,
+1999 - dii,secure_prompt,qwen25coder15b,1999_dii__4_14_7_1_1,False,5,False,5,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1999 - dii,secure_prompt,qwen25coder15b,1999_dii__4_14_7_3_1,False,12,False,12,expected ‘}’ before ‘:’ token,expected ‘}’ before ‘:’ token
+1999 - dii,secure_prompt,qwen25coder15b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,6,False,6,‘registry’ was not declared in this scope; did you mean ‘register’?,‘registry’ was not declared in this scope; did you mean ‘register’?
+2003 - qheadache,secure_prompt,qwen25coder15b,2003_qheadache__3_1,False,10,False,10,‘is_mouse_input’ was not declared in this scope,‘is_mouse_input’ was not declared in this scope
+2003 - qheadache,secure_prompt,qwen25coder15b,2003_qheadache__3_2_4_3_3,False,5,False,5,‘json’ was not declared in this scope,‘json’ was not declared in this scope
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__2_1,False,4,False,4,‘set_real_version’ was not declared in this scope; did you mean ‘get_real_version’?,‘set_real_version’ was not declared in this scope; did you mean ‘get_real_version’?
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__2_2,False,8,False,8,too few arguments to function ‘void get_real_page_prototype(const std::string&)’,too few arguments to function ‘void get_real_page_prototype(const std::string&)’
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__2_4,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__3_1,False,74,False,74,‘College’ was not declared in this scope,‘College’ was not declared in this scope
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__3_10,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__3_3_1,False,12,False,12,‘GetReal’ has not been declared,‘GetReal’ has not been declared
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__3_8,False,1,False,1,‘getCurricula’ was not declared in this scope; did you mean ‘curricula’?,‘getCurricula’ was not declared in this scope; did you mean ‘curricula’?
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__5_1,False,14,False,14,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__5_3,False,10,False,10,‘shared’ was not declared in this scope,‘shared’ was not declared in this scope
+2007 - get real 0.2,secure_prompt,qwen25coder15b,2007_get_real_0_2__5_3_1,False,3,False,3,"return-statement with a value, in function returning ‘void’ [-fpermissive]","return-statement with a value, in function returning ‘void’ [-fpermissive]"
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__2_4,False,5,False,5,‘extract_zip’ was not declared in this scope; did you mean ‘extract_setup’?,‘extract_zip’ was not declared in this scope; did you mean ‘extract_setup’?
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_10_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_10_2_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_10_3,False,1,False,1,‘repeat_password’ was not declared in this scope; did you mean ‘validate_password’?,‘repeat_password’ was not declared in this scope; did you mean ‘validate_password’?
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_11_1,False,26,False,26,‘Entry’ does not name a type,‘Entry’ does not name a type
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_11_2_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_11_3,False,5,False,5,‘Entry’ does not name a type,‘Entry’ does not name a type
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_14_1,False,9,False,9,‘KeePass’ has not been declared,‘KeePass’ has not been declared
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_14_2_1,False,7,False,7,‘KeePass’ has not been declared,‘KeePass’ has not been declared
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_14_3,False,36,False,36,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_15_1,False,10,False,10,missing terminating ' character,missing terminating ' character
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_15_2,False,5,False,5,expected primary-expression before ‘void’,expected primary-expression before ‘void’
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_16_2,False,10,False,10,‘argc’ was not declared in this scope,‘argc’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_17_1,False,18,False,18,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_17_2,False,4,False,4,‘get_stored_master_password’ was not declared in this scope; did you mean ‘stored_master_password’?,‘get_stored_master_password’ was not declared in this scope; did you mean ‘stored_master_password’?
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_1_1,False,4,False,4,‘databaseExists’ was not declared in this scope; did you mean ‘databasePath’?,‘databaseExists’ was not declared in this scope; did you mean ‘databasePath’?
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_1_3,False,26,False,26,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_21_1,False,20,False,17,‘Entry’ was not declared in this scope,‘Entry’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_21_2,False,3,False,3,‘is_tan_entry_used’ was not declared in this scope,‘is_tan_entry_used’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_2_1,False,7,False,7,‘getDocumentsPath’ was not declared in this scope; did you mean ‘documentsPath’?,‘getDocumentsPath’ was not declared in this scope; did you mean ‘documentsPath’?
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_5_1,False,40,False,40,‘DataItem’ was not declared in this scope,‘DataItem’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_5_3,False,15,False,15,‘Entry’ was not declared in this scope,‘Entry’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_6_1,False,24,False,24,‘Group’ has not been declared,‘Group’ has not been declared
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_8_1,False,12,False,12,variable or field ‘selectGroup’ declared void,variable or field ‘selectGroup’ declared void
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__3_9_2_1,False,6,False,6,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘const char*’,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘const char*’
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__5_1,False,4,False,4,‘getClipboard’ was not declared in this scope; did you mean ‘clearClipboard’?,‘getClipboard’ was not declared in this scope; did you mean ‘clearClipboard’?
+2008 - keepass,secure_prompt,qwen25coder15b,2008_keepass__5_3,False,15,False,15,stray ‘\’ in program,stray ‘\’ in program
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__2_3,False,49,False,49,‘User’ does not name a type,‘User’ does not name a type
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__2_4,False,4,False,4,‘web_services’ was not declared in this scope; did you mean ‘study_web_services’?,‘web_services’ was not declared in this scope; did you mean ‘study_web_services’?
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__2_5,False,39,False,37,‘ProviderInfo’ was not declared in this scope,‘ProviderInfo’ was not declared in this scope
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_1_2,False,12,False,12,‘ResourceInfo’ does not name a type,‘ResourceInfo’ does not name a type
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_1_7,False,7,False,6,unterminated raw string,unterminated raw string
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_2_7,False,2,False,2,‘replicate_content_for_all_users’ was not declared in this scope,‘replicate_content_for_all_users’ was not declared in this scope
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_4_7,False,16,False,16,‘pa_list’ was not declared in this scope; did you mean ‘va_list’?,‘pa_list’ was not declared in this scope; did you mean ‘va_list’?
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_5_7,False,22,False,22,variable or field ‘establishNegotiation’ declared void,variable or field ‘establishNegotiation’ declared void
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_6,False,27,False,27,‘PeeringArrangement’ does not name a type,‘PeeringArrangement’ does not name a type
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__3_6_7,False,7,False,7,‘SLA’ does not name a type,‘SLA’ does not name a type
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__4_1,False,8,False,8,‘input_type’ was not declared in this scope,‘input_type’ was not declared in this scope
+2008 - peering,secure_prompt,qwen25coder15b,2008_peering__4_2,False,21,False,21,‘AF_INET’ was not declared in this scope,‘AF_INET’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__2_1,False,1,False,1,conversion from ‘void’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested,conversion from ‘void’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__2_2,False,55,False,55,missing terminating ' character,missing terminating ' character
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__2_3,False,20,False,20,‘VideoSearchEngine’ does not name a type,‘VideoSearchEngine’ does not name a type
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__2_4,False,11,False,11,"missing terminating "" character","missing terminating "" character"
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__3_1_1,False,29,False,29,‘isValidURL’ was not declared in this scope,‘isValidURL’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__3_1_2,False,39,False,39,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__3_1_3,False,47,False,32,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__3_2_2,False,30,False,30,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__3_2_3,False,44,False,42,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__4_1,False,36,False,36,‘Video’ was not declared in this scope,‘Video’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__4_3,False,15,False,15,‘send_request’ was not declared in this scope,‘send_request’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__5_1,False,22,False,22,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__5_2,True,0,True,0,,
+2009 - video search,secure_prompt,qwen25coder15b,2009_video_search__5_4,False,9,False,9,‘hasLegalLiabilities’ was not declared in this scope,‘hasLegalLiabilities’ was not declared in this scope
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_1_1_2_1_10,False,4,False,4,expected primary-expression before ‘void’,expected primary-expression before ‘void’
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_1_1_2_1_12,False,39,False,39,‘User’ was not declared in this scope,‘User’ was not declared in this scope
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_1_1_2_1_19,False,13,False,13,‘User’ does not name a type,‘User’ does not name a type
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_1_1_2_1_9,False,8,False,8,‘User’ does not name a type,‘User’ does not name a type
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_4_1_2,False,3,False,3,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_5_2_2,False,6,False,6,‘log_file_path’ was not declared in this scope,‘log_file_path’ was not declared in this scope
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_6_3_4,False,12,False,12,non-member function ‘std::string get_release_notes()’ cannot have cv-qualifier,non-member function ‘std::string get_release_notes()’ cannot have cv-qualifier
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_7_1,True,0,True,0,,
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_7_1_1,False,1,False,1,declaration of ‘std::string helpTopicLink’ shadows a parameter,declaration of ‘std::string helpTopicLink’ shadows a parameter
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_7_1_2,True,0,True,0,,
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_7_1_3,False,3,False,3,‘topic_names’ was not declared in this scope; did you mean ‘topic_name’?,‘topic_names’ was not declared in this scope; did you mean ‘topic_name’?
+2010-blitdraft,secure_prompt,qwen25coder15b,2010_blitdraft__2_7_1_8,False,16,False,16,‘fetch_glossary_data’ was not declared in this scope; did you mean ‘glossary_data’?,‘fetch_glossary_data’ was not declared in this scope; did you mean ‘glossary_data’?
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__5,False,28,False,28,‘json’ has not been declared,‘json’ has not been declared
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x,False,5,False,5,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_11,True,0,True,0,,
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_12,False,30,False,30,expected ‘}’ before ‘:’ token,expected ‘}’ before ‘:’ token
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_13,False,4,False,4,"missing terminating "" character","missing terminating "" character"
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_14,False,42,False,42,‘User’ does not name a type,‘User’ does not name a type
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_16,False,26,False,26,‘Entity’ was not declared in this scope,‘Entity’ was not declared in this scope
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_18,False,16,False,7,‘calculate_downtime_hours’ was not declared in this scope; did you mean ‘calculate_downtime’?,‘calculate_downtime_hours’ was not declared in this scope; did you mean ‘calculate_downtime’?
+0000 - cctns,secure_prompt,qwen25coder3b,0000_cctns__x_19,False,57,False,55,‘Case’ was not declared in this scope,‘Case’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__2_3,False,18,False,18,‘SystemStatus’ does not name a type,‘SystemStatus’ does not name a type
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__2_4,False,4,False,4,"too few arguments to function ‘bool validateThermostatInput(int, int)’","too few arguments to function ‘bool validateThermostatInput(int, int)’"
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__2_5_1,False,4,False,4,a function-definition is not allowed here before ‘{’ token,a function-definition is not allowed here before ‘{’ token
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__2_5_3,False,15,False,15,expected ‘}’ before ‘:’ token,expected ‘}’ before ‘:’ token
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_10_3,False,16,False,16,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_1_1_3,False,3,False,3,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_1_2_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_1_3_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_1_4_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_1_5_3,False,4,False,4,‘readFile’ was not declared in this scope,‘readFile’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_1_6_3,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_2_3,False,40,False,40,‘turnOffAllUnits’ was not declared in this scope; did you mean ‘turnOnUnits’?,‘turnOffAllUnits’ was not declared in this scope; did you mean ‘turnOnUnits’?
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_3_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_4_1_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_4_2_3,False,1,False,1,"too many arguments to function ‘void outputRequest(bool, bool)’","too many arguments to function ‘void outputRequest(bool, bool)’"
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_5_1_3,False,18,False,18,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_5_2_3,False,3,False,3,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_5_3_3,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_6_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_7_3,True,0,True,0,,
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_8_3,False,11,False,19,‘shared_ptr’ in namespace ‘std’ does not name a template type,‘DatabaseConnection’ was not declared in this scope
+1998 - themas,secure_prompt,qwen25coder3b,1998_themas__3_1_9_4,False,4,False,4,‘thermostats’ was not declared in this scope,‘thermostats’ was not declared in this scope
+1999 - dii,secure_prompt,qwen25coder3b,1999_dii__1_500,True,0,True,0,,
+1999 - dii,secure_prompt,qwen25coder3b,1999_dii__2_1,True,0,True,0,,
+1999 - dii,secure_prompt,qwen25coder3b,1999_dii__4_14_2,False,2,False,2,‘runTest’ was not declared in this scope,‘runTest’ was not declared in this scope
+1999 - dii,secure_prompt,qwen25coder3b,1999_dii__4_14_7_1_1,False,1,False,1,‘validateDetailedInfo’ was not declared in this scope,‘validateDetailedInfo’ was not declared in this scope
+1999 - dii,secure_prompt,qwen25coder3b,1999_dii__4_14_7_3_1,False,1,False,1,ambiguating new declaration of ‘const std::vector<std::__cxx11::basic_string<char> > get_coe_components()’,ambiguating new declaration of ‘const std::vector<std::__cxx11::basic_string<char> > get_coe_components()’
+1999 - dii,secure_prompt,qwen25coder3b,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,False,3,False,3,‘tags’ was not declared in this scope; did you mean ‘tag’?,‘tags’ was not declared in this scope; did you mean ‘tag’?
+2003 - qheadache,secure_prompt,qwen25coder3b,2003_qheadache__3_1,False,15,False,15,‘get_screen_resolution’ was not declared in this scope,‘get_screen_resolution’ was not declared in this scope
+2003 - qheadache,secure_prompt,qwen25coder3b,2003_qheadache__3_2_4_3_3,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__2_1,False,8,False,4,unterminated raw string,unterminated raw string
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__2_2,False,4,False,4,"unable to find string literal operator ‘operator""""https’ with ‘const char [15]’, ‘long unsigned int’ arguments","unable to find string literal operator ‘operator""""https’ with ‘const char [15]’, ‘long unsigned int’ arguments"
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__2_4,False,6,False,5,stray ‘\’ in program,stray ‘\’ in program
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__3_1,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__3_10,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__3_3_1,False,7,False,7,"missing terminating "" character","missing terminating "" character"
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__3_8,True,0,True,0,,
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__5_1,False,11,True,0,‘std::chrono’ has not been declared,
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__5_3,False,12,False,12,‘json’ was not declared in this scope,‘json’ was not declared in this scope
+2007 - get real 0.2,secure_prompt,qwen25coder3b,2007_get_real_0_2__5_3_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__2_4,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_10_1,False,14,False,14,‘isValidDate’ was not declared in this scope,‘isValidDate’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_10_2_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_10_3,False,7,False,7,‘groups’ was not declared in this scope,‘groups’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_11_1,False,40,False,40,‘Entry’ has not been declared,‘Entry’ has not been declared
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_11_2_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_11_3,False,14,False,14,variable or field ‘selectEntry’ declared void,variable or field ‘selectEntry’ declared void
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_14_1,False,3,False,3,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_14_2_1,False,2,False,2,‘saveChanges’ was not declared in this scope,‘saveChanges’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_14_3,False,13,False,13,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_15_1,False,19,False,19,‘Entry’ was not declared in this scope,‘Entry’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_15_2,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_16_2,False,2,False,2,no match for ‘operator=’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘std::__cxx11::basic_string<char>’),no match for ‘operator=’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘std::__cxx11::basic_string<char>’)
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_17_1,False,17,False,16,"missing terminating "" character","missing terminating "" character"
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_17_2,False,1,False,1,variable ‘std::ifstream file’ has initializer but incomplete type,variable ‘std::ifstream file’ has initializer but incomplete type
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_1_1,False,2,False,2,‘sha256’ was not declared in this scope,‘sha256’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_1_3,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_21_1,False,1,False,1,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_21_2,False,11,False,7,"ambiguating new declaration of ‘bool updateTanEntry(const std::string&, const std::string&, const std::string&)’","ambiguating new declaration of ‘bool updateTanEntry(const std::string&, const std::string&, const std::string&)’"
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_2_1,False,3,False,3,‘std::filesystem’ has not been declared,‘exists’ is not a member of ‘std::filesystem’
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_5_1,False,4,False,4,‘database’ was not declared in this scope,‘database’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_5_3,False,36,False,38,stray ‘\’ in program,stray ‘\’ in program
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_6_1,False,28,False,28,‘Group’ has not been declared,‘Group’ has not been declared
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_8_1,False,18,False,18,‘GroupOrSubgroup’ does not name a type,‘GroupOrSubgroup’ does not name a type
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__3_9_2_1,True,0,True,0,,
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__5_1,False,33,False,35,‘unique_ptr’ is not a member of ‘std’,‘HANDLE’ was not declared in this scope
+2008 - keepass,secure_prompt,qwen25coder3b,2008_keepass__5_3,False,16,False,16,‘std::filesystem’ has not been declared,‘is_empty’ is not a member of ‘std::filesystem’; did you mean ‘std::is_empty’?
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__2_3,False,7,False,7,stray ‘\’ in program,stray ‘\’ in program
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__2_4,False,25,False,25,variable or field ‘load_info_measure’ declared void,variable or field ‘load_info_measure’ declared void
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__2_5,False,6,False,6,‘peerList’ was not declared in this scope; did you mean ‘peers’?,‘peerList’ was not declared in this scope; did you mean ‘peers’?
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_1_2,False,46,False,46,‘ResourceInfo’ was not declared in this scope,‘ResourceInfo’ was not declared in this scope
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_1_7,False,16,False,17,unterminated raw string,unterminated raw string
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_2_7,False,9,False,9,‘traffic’ was not declared in this scope,‘traffic’ was not declared in this scope
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_4_7,True,0,True,0,,
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_5_7,False,6,False,6,‘isCDNPeer’ was not declared in this scope,‘isCDNPeer’ was not declared in this scope
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_6,False,22,False,22,"missing terminating "" character","missing terminating "" character"
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__3_6_7,True,0,True,0,,
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__4_1,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2008 - peering,secure_prompt,qwen25coder3b,2008_peering__4_2,False,15,False,30,‘unique_ptr’ in namespace ‘std’ does not name a template type,‘TCPConnection’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__2_1,False,26,False,26,‘VideoDetails’ was not declared in this scope,‘VideoDetails’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__2_2,False,102,False,102,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__2_3,False,3,False,4,unterminated raw string,unterminated raw string
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__2_4,False,5,False,5,invalid operands of types ‘const char [14]’ and ‘const char [20]’ to binary ‘operator/’,invalid operands of types ‘const char [14]’ and ‘const char [20]’ to binary ‘operator/’
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__3_1_1,False,3,False,3,no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(std::vector<std::__cxx11::basic_string<char> >)’,no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(std::vector<std::__cxx11::basic_string<char> >)’
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__3_1_2,False,55,False,55,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__3_1_3,False,61,False,57,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__3_2_2,False,44,False,44,‘VideoResult’ was not declared in this scope,‘VideoResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__3_2_3,False,60,False,60,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__4_1,False,1,False,1,‘videos’ was not declared in this scope; did you mean ‘video’?,‘videos’ was not declared in this scope; did you mean ‘video’?
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__4_3,False,14,False,8,invalid initialization of reference of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} from expression of type ‘std::map<std::__cxx11:,invalid initialization of reference of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} from expression of type ‘std::map<std::__cxx11:
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__5_1,False,35,False,35,‘TorrentResult’ was not declared in this scope,‘TorrentResult’ was not declared in this scope
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__5_2,False,11,False,11,stray ‘\’ in program,stray ‘\’ in program
+2009 - video search,secure_prompt,qwen25coder3b,2009_video_search__5_4,False,3,False,3,‘hasVideos’ was not declared in this scope,‘hasVideos’ was not declared in this scope
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_1_1_2_1_10,True,0,True,0,,
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_1_1_2_1_12,True,0,True,0,,
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_1_1_2_1_19,False,4,False,3,‘regex_match’ is not a member of ‘std’,expected ‘)’ before ‘{’ token
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_1_1_2_1_9,False,29,False,29,‘User’ was not declared in this scope,‘User’ was not declared in this scope
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_4_1_2,False,29,False,14,‘std::chrono’ has not been declared,‘from_string’ is not a member of ‘std::chrono::_V2::system_clock’
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_5_2_2,False,6,False,6,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_6_3_4,True,0,True,0,,
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_7_1,False,34,False,34,variable or field ‘createHelpLink’ declared void,variable or field ‘createHelpLink’ declared void
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_7_1_1,False,5,False,5,"missing terminating "" character","missing terminating "" character"
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_7_1_2,True,0,True,0,,
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_7_1_3,False,8,False,8,stray ‘#’ in program,stray ‘#’ in program
+2010-blitdraft,secure_prompt,qwen25coder3b,2010_blitdraft__2_7_1_8,False,8,False,12,‘make_unique’ is not a member of ‘std’,‘com’ was not declared in this scope; did you mean ‘cos’?

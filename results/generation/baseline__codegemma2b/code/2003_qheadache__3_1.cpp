@@ -1,0 +1,27 @@
+#include <algorithm>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <optional>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main(int argc, char *argv[]);
+void initialize();
+void update();
+void draw();
+void cleanup();
+
+int main(int argc, char *argv[]) {  // Starts the game  initialize();  update();  draw();  cleanup();  return 0;}
+
+
+
+
+

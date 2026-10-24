@@ -1,0 +1,167 @@
+round,arm,model,sample,unit_id,status,has_code,n_planned,n_records,n_bodies,compiles,n_compile_errors,first_error,usable,loc,cppcheck_findings,cppcheck_unmapped,cppcheck_parse_error,cppcheck_classes,secure
+R0,general,deepcoder15b,0,2008_keepass__2_4,func_error,1,4,3,3,0,7,‘initialize_keepass’ does not name a type,0,82,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_1_1,func_error,1,3,2,2,0,14,‘reference’ in namespace ‘std’ does not name a template type; did you mean ‘is_reference’?,0,38,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_1_3,func_error,1,5,4,2,0,8,stray ‘\’ in program,0,55,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_2_1,ok,1,5,5,4,0,14,‘stream’ does not name a type,0,67,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_5_1,ok,1,5,5,5,0,55,expected initializer before ‘vector’,0,80,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_5_3,ok,1,5,5,5,0,17,expected unqualified-id before ‘bool’,0,63,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_6_1,func_error,1,5,4,4,0,70,‘Group’ was not declared in this scope,0,49,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_8_1,ok,1,2,2,2,0,3,‘Group’ does not name a type,0,37,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_9_2_1,func_error,1,3,2,1,0,12,missing terminating ' character,0,77,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_10_1,no_code,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_10_2_2_1,ok,1,3,3,2,0,18,variable or field ‘savePassword’ declared void,0,34,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_10_3,func_error,1,5,2,2,0,9,expected primary-expression before ‘)’ token,0,26,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_11_1,func_error,1,5,3,1,0,20,‘entry’ was not declared in this scope,0,57,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_11_2_2_1,ok,1,3,3,3,0,2,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,36,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_11_3,func_error,1,3,1,1,1,0,,0,21,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_14_1,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_14_2_1,func_error,1,5,2,1,0,2,a function-definition is not allowed here before ‘{’ token,0,38,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_14_3,ok,1,1,1,0,0,3,expected initializer before ‘internetConnection’,0,19,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_15_1,ok,1,5,5,5,0,10,"missing terminating "" character",0,57,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_15_2,ok,1,3,3,3,0,4,expected initializer before ‘const’,0,40,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_16_2,func_error,1,5,4,4,0,5,"missing terminating "" character",0,59,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_17_1,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_17_2,ok,1,4,4,4,1,0,,1,36,0,0,0,{},1
+R0,general,deepcoder15b,0,2008_keepass__3_21_1,func_error,1,5,3,3,0,17,‘shared_tan_db_t’ is not a member of ‘std’,0,40,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__3_21_2,func_error,1,3,1,1,0,5,expected unqualified-id before ‘.’ token,0,25,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__5_1,func_error,1,3,1,1,0,1,expected unqualified-id before ‘.’ token,0,27,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_keepass__5_3,ok,1,5,5,5,0,14,‘random_device’ is not a member of ‘std’,0,93,0,0,1,{},0
+R0,general,deepcoder15b,0,2003_qheadache__3_1,ok,1,5,5,4,0,9,‘menu_item’ does not name a type,0,58,0,0,0,{},0
+R0,general,deepcoder15b,0,2003_qheadache__3_2_4_3_3,func_error,1,4,3,3,1,0,,0,37,0,0,0,{},0
+R0,general,deepcoder15b,0,1999_dii__4_14_2,no_code,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,1999_dii__1_500,func_error,1,5,4,1,0,5,reference to ‘string’ is ambiguous,0,38,0,0,1,{},0
+R0,general,deepcoder15b,0,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,ok,1,5,5,5,0,10,cannot convert ‘std::__cxx11::basic_string<char>’ to ‘int’ in initialization,0,91,0,0,0,{},0
+R0,general,deepcoder15b,0,1999_dii__4_14_7_1_1,func_error,1,5,3,2,0,6,"missing terminating "" character",0,38,0,0,1,{},0
+R0,general,deepcoder15b,0,1999_dii__4_14_7_3_1,func_error,1,5,3,3,0,9,‘file_pointer’ is not a member of ‘std’; did you mean ‘is_pointer’?,0,46,0,0,0,{},0
+R0,general,deepcoder15b,0,1999_dii__2_1,ok,1,2,2,1,0,4,expected unqualified-id before ‘return’,0,35,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x,func_error,1,4,3,3,0,11,"missing terminating "" character",0,77,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_11,ok,1,5,5,5,0,72,"missing terminating "" character",0,57,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_12,func_error,1,5,1,0,0,5,expected initializer before ‘void’,0,22,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_13,func_error,1,5,2,0,0,7,expected initializer before ‘event_time’,0,28,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_14,func_error,1,5,4,4,0,32,"missing terminating "" character",0,80,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_16,func_error,1,5,1,1,0,9,"wrong number of template arguments (1, should be 2)",0,27,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_18,func_error,1,5,1,1,0,2,expected unqualified-id before ‘.’ token,0,29,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__x_19,func_error,1,5,3,3,0,50,‘case_type’ was not declared in this scope,0,65,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_cctns__5,ok,1,5,5,4,0,5,expected primary-expression before ‘filter_data’,0,59,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__2_1,ok,1,5,5,5,0,7,cannot convert ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘int’ in return,0,31,0,0,0,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__2_2,ok,1,5,5,5,0,27,‘job_offer’ does not name a type,0,92,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__2_4,func_error,1,5,3,2,0,6,"missing terminating "" character",0,46,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__3_1,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__3_3_1,func_error,1,4,2,1,0,21,stray ‘`’ in program,0,117,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__3_8,func_error,1,5,4,2,0,20,"missing terminating "" character",0,55,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__3_10,ok,1,3,3,1,0,21,only constructors take member initializers,0,39,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__5_1,func_error,1,5,3,2,0,4,two or more data types in declaration of ‘measure_response_time’,0,36,0,0,1,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__5_3,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2007_get_real_0_2__5_3_1,ok,1,5,5,5,0,6,expected identifier before ‘long’,0,57,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__2_3,ok,1,3,3,2,0,6,‘UserRole’ does not name a type,0,34,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__2_4,ok,1,5,5,5,0,24,stray ‘\’ in program,0,62,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__2_5,func_error,1,5,3,3,0,10,‘find_index’ was not declared in this scope,0,81,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_peering__3_1_2,func_error,1,4,3,3,0,7,‘ResourceType’ was not declared in this scope,0,47,0,0,0,{},0
+R0,general,deepcoder15b,0,2008_peering__3_1_7,ok,1,5,5,5,0,26,‘object’ is not a member of ‘std’,0,87,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__3_2_7,func_error,1,5,3,2,0,7,"missing terminating "" character",0,76,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__3_4_7,ok,1,4,4,3,0,10,"missing terminating "" character",0,43,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__3_5_7,ok,1,4,4,4,0,10,‘peer_object’ does not name a type,0,56,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__3_6,func_error,1,4,3,3,0,3,empty character constant,0,49,1,1,0,"{""internalError"": 1}",0
+R0,general,deepcoder15b,0,2008_peering__3_6_7,func_error,1,5,4,3,0,6,‘function’ in namespace ‘std’ does not name a template type,0,58,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__4_1,func_error,1,5,4,3,0,13,‘pointer’ is not a member of ‘std’,0,99,0,0,1,{},0
+R0,general,deepcoder15b,0,2008_peering__4_2,func_error,1,5,4,3,0,18,‘message’ does not name a type,0,49,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_1_1_2_1_9,ok,1,1,1,1,0,4,‘User’ was not declared in this scope; did you mean ‘userId’?,0,25,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_1_1_2_1_10,ok,1,4,4,1,0,18,stray ‘\’ in program,0,36,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_1_1_2_1_12,func_error,1,4,3,3,0,8,"missing terminating "" character",0,51,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_1_1_2_1_19,no_code,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_4_1_2,func_error,1,5,4,4,0,6,‘getAllProcessIds’ was not declared in this scope,0,67,0,0,0,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_5_2_2,func_error,1,5,3,3,0,15,‘shared_ptr’ in namespace ‘std’ does not name a template type,0,41,0,0,0,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_6_3_4,func_error,1,5,3,2,0,19,declaration does not declare anything [-fpermissive],0,38,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_7_1,ok,1,5,5,2,0,14,missing terminating ' character,0,46,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_7_1_1,func_error,1,5,4,4,0,12,"missing terminating "" character",0,40,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_7_1_2,ok,1,4,4,2,0,9,stray ‘\’ in program,0,35,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_7_1_3,func_error,1,5,3,3,0,3,‘getClickPosition’ was not declared in this scope,0,52,0,0,1,{},0
+R0,general,deepcoder15b,0,2010_blitdraft__2_7_1_8,ok,1,3,3,2,0,6,missing terminating ' character,0,45,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__2_1,func_error,1,3,2,2,0,17,stray ‘\’ in program,0,59,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__2_2,func_error,1,4,3,3,0,17,expected initializer before ‘Video’,0,82,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__2_3,func_error,1,5,4,4,0,17,"missing terminating "" character",0,62,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__2_4,func_error,1,5,4,4,0,14,"missing terminating "" character",0,84,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__3_1_1,func_error,1,5,3,3,0,15,stray ‘\’ in program,0,64,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__3_1_2,ok,1,5,5,4,0,39,stray ‘`’ in program,0,63,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__3_1_3,func_error,1,5,4,4,0,32,"missing terminating "" character",0,233,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__3_2_2,ok,1,5,5,5,0,33,"missing terminating "" character",0,78,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__3_2_3,func_error,1,5,4,1,0,26,stray ‘\’ in program,0,61,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__4_1,ok,1,3,3,3,0,8,expected primary-expression before ‘>’ token,0,36,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__4_3,func_error,1,5,4,4,0,20,"wrong number of template arguments (1, should be 2)",0,104,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__5_1,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2009_video_search__5_2,func_error,1,5,2,1,0,4,‘exists’ was not declared in this scope; did you mean ‘exit’?,0,35,0,0,1,{},0
+R0,general,deepcoder15b,0,2009_video_search__5_4,func_error,1,5,4,2,0,18,"missing terminating "" character",0,37,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__2_3,ok,1,5,5,1,0,10,"missing terminating "" character",0,49,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__2_4,func_error,1,5,4,4,0,9,‘SensorType’ was not declared in this scope,0,46,0,0,0,{},0
+R0,general,deepcoder15b,0,1998_themas__2_5_1,func_error,1,4,3,2,0,6,invalid preprocessing directive #Get,0,49,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__2_5_3,ok,1,3,3,3,1,0,,1,31,0,0,0,{},1
+R0,general,deepcoder15b,0,1998_themas__3_1_1_1_3,ok,1,5,5,5,0,7,"could not convert ‘{{type, power}, {temp}}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<std::pair<std::__cxx11::basic_string<char>, std::__cxx11::b",0,171,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_1_2_3,ok,1,5,5,5,0,13,‘ReadInitializationFile’ function with trailing return type not declared with ‘auto’ type specifier,0,121,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_1_3_3,func_error,1,2,1,1,0,1,"expected ‘,’ or ‘;’ before ‘const’",0,32,0,0,0,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_1_4_3,func_error,1,4,2,0,0,26,stray ‘\’ in program,0,28,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_1_5_3,ok,1,5,5,5,0,129,missing terminating ' character,0,87,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_1_6_3,func_error,1,5,3,3,0,20,"missing terminating "" character",0,87,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_2_3,ok,1,5,5,4,0,23,‘Unit’ was not declared in this scope,0,54,0,0,0,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_3_3,ok,1,3,3,3,0,1,expected unqualified-id before ‘[’ token,0,43,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_4_1_3,func_error,1,4,2,2,0,2,expected unqualified-id before ‘[’ token,0,28,0,0,0,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_4_2_3,func_error,1,5,3,2,0,2,mixing declarations and function-definitions is forbidden,0,50,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_5_1_3,ok,1,5,5,5,0,12,expected unqualified-id before ‘[’ token,0,68,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_5_2_3,ok,1,2,2,2,0,6,‘get_heating_state’ function with trailing return type not declared with ‘auto’ type specifier,0,41,0,0,0,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_5_3_3,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_6_3,ok,1,3,3,2,0,2,expected primary-expression before ‘handle_status_change’,0,37,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_7_3,func_error,1,5,1,1,0,3,expected unqualified-id before ‘double’,0,30,1,1,0,"{""unknownMacro"": 1}",0
+R0,general,deepcoder15b,0,1998_themas__3_1_8_3,func_error,1,5,4,4,0,10,"missing terminating "" character",0,40,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_9_4,ok,1,4,4,3,0,1148,stray ‘`’ in program,0,99,0,0,1,{},0
+R0,general,deepcoder15b,0,1998_themas__3_1_10_3,func_error,1,5,4,4,0,28,‘Event’ was not declared in this scope,0,68,1,0,0,"{""legacyUninitvar"": 1}",0
+R0,general,deepcoder15b,0,2005_microcare__the_concept_of_output_based_aid_oba,ok,1,5,5,4,0,327,"missing terminating "" character",0,335,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__1_3_2,ok,1,5,5,1,0,19,missing terminating ' character,0,48,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__2_1,ok,1,5,5,5,0,54,stray ‘`’ in program,0,73,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__2_1_1,func_error,1,5,4,2,0,7,declaration does not declare anything [-fpermissive],0,34,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__1,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints,func_error,1,4,3,2,0,6,‘user’ does not name a type,0,31,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__i,func_error,1,5,4,3,0,54,stray ‘`’ in program,0,96,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_804,func_error,1,5,3,3,0,35,stray ‘`’ in program,0,68,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__ii,ok,1,3,3,1,0,8,"type/value mismatch at argument 2 in template parameter list for ‘template<class _Tp, long unsigned int _Nm> struct std::array’",0,36,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_806,func_error,1,5,4,4,0,24,‘unordered_set’ has not been declared,0,67,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__iii,ok,1,5,5,5,0,17,expected unqualified-id before string constant,0,89,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_808,func_error,1,5,1,1,0,11,‘stringvoucher_validity_date’ is not a member of ‘std’,0,58,0,0,0,{},0
+R0,general,deepcoder15b,0,2005_microcare__3,func_error,1,5,3,3,0,22,template argument 1 is invalid,0,54,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__i_810,ok,1,1,1,1,0,3,duplicate cv-qualifier,0,33,0,0,0,{},0
+R0,general,deepcoder15b,0,2005_microcare__ii_812,func_error,1,5,3,3,0,5,"no matching function for call to ‘getline(std::stringstream&, std::string&, int)’",0,40,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_contraints,func_error,1,5,4,4,0,8,ISO C++ forbids declaration of ‘createstaff_code’ with no type [-fpermissive],0,48,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__iii_814,ok,1,4,4,4,0,4,declaration does not declare anything [-fpermissive],0,54,0,0,0,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_815,func_error,1,5,3,2,0,1,expected unqualified-id before string constant,0,40,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__iv,func_error,1,3,1,1,0,2,‘is_string’ was not declared in this scope,0,34,0,0,0,{},0
+R0,general,deepcoder15b,0,2005_microcare__for_second_follow_up,ok,1,5,5,4,0,21,"expected constructor, destructor, or type conversion before ‘;’ token",0,68,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__details_about_masters_information_required_for_claim_processing,func_error,1,5,4,0,0,19,expected unqualified-id before ‘[’ token,0,30,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__assumptions,func_error,1,3,2,2,1,0,,0,44,0,0,0,{},0
+R0,general,deepcoder15b,0,2005_microcare__4,func_error,1,4,2,1,0,4,"missing terminating "" character",0,28,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_824,func_error,1,5,4,3,0,8,stray ‘`’ in program,0,106,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__5,func_error,1,5,4,4,0,5,expected primary-expression before ‘labTestResults’,0,57,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_826,func_error,1,5,2,1,0,8,expected initializer before ‘string’,0,27,1,0,0,"{""unknownMacro"": 1}",0
+R0,general,deepcoder15b,0,2005_microcare__6,func_error,1,5,4,3,0,37,"missing terminating "" character",0,66,0,0,1,{},0
+R0,general,deepcoder15b,0,2005_microcare__design_constraints_830,func_error,1,5,3,0,0,8,‘UserGroup’ does not name a type,0,28,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__2_1,ok,1,5,5,4,0,7,‘get_input’ function with trailing return type not declared with ‘auto’ type specifier,0,71,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__2_3,func_error,1,5,4,1,0,4,"missing terminating "" character",0,33,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__2_4,func_error,1,5,4,4,0,10,too few arguments to function ‘int system(const char*)’,0,38,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__2_5,func_error,1,4,3,3,0,10,expected unqualified-id before ‘->’ token,0,33,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__2_6,ok,1,5,5,1,0,26,stray ‘\’ in program,0,61,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__2_7,func_error,1,5,4,4,0,2,no matching function for call to ‘std::__cxx11::basic_string<char>::basic_string(int&)’,0,46,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_1_1,func_error,1,5,3,1,0,39,conversion from ‘int’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested,0,36,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_1_3,func_error,1,5,4,3,0,7,missing terminating ' character,0,48,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_2_3,func_error,1,4,2,2,0,88,"missing terminating "" character",0,133,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_3_3,func_error,1,4,2,2,0,18,‘item’ was not declared in this scope; did you mean ‘tm’?,0,43,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_4_3,func_error,1,5,4,3,0,20,expected unqualified-id before ‘.’ token,0,50,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_5_1,func_error,1,5,3,3,0,8,conflicting declaration ‘std::vector<std::__cxx11::basic_string<char> > data’,0,46,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_5_3,func_error,1,5,2,2,0,1,expected initializer before ‘vector’,0,36,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_6_1,ok,1,2,2,2,0,3,‘function’ in namespace ‘std’ does not name a template type,0,26,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__3_6_3,func_error,1,5,3,3,0,14,‘std::stream’ has not been declared,0,61,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__x,func_error,1,5,3,3,0,20,a function-definition is not allowed here before ‘{’ token,0,40,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__4_4,func_error,1,5,4,4,0,32,stray ‘\’ in program,0,74,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__5_1,func_error,1,5,3,3,0,6,stray ‘\’ in program,0,52,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__5_3,func_error,1,4,2,1,0,3,expected initializer before ‘encrypt_data’,0,36,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__5_5,func_error,1,5,2,2,0,10,‘email_address’ was not declared in this scope,0,66,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__5_6,func_error,1,5,4,2,0,6,‘products’ was not declared in this scope,0,61,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__5_7,plan_error,0,0,0,0,0,0,,0,0,0,0,0,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__5_9,func_error,1,4,3,0,0,11,expected unqualified-id before ‘int’,0,33,0,0,1,{},0
+R0,general,deepcoder15b,0,0000_gamma_j__6,func_error,1,4,3,2,0,9,stray ‘\’ in program,0,60,0,0,1,{},0

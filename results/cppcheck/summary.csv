@@ -1,0 +1,7 @@
+round,arm,files,files_with_findings,parse_errors,findings,usable_files,usable_with_findings,usable_findings
+C1,general,661,208,207,790,74,21,45
+C1,secure,662,191,262,731,58,20,63
+C2,general,661,217,214,980,92,25,65
+C2,secure,662,205,268,894,70,25,75
+R0,general,653,170,236,563,44,7,16
+R0,secure,657,178,256,580,38,10,31

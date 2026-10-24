@@ -1,0 +1,791 @@
+id,requirement,signature,purpose,code,is_stub,implements_purpose,notes
+1,"The user can select between a number of translations that are available at KeePass website. There are available translations in Arabic, Brazilian, Bulgarian, Catalan, Chinese (Simplified and Traditional), Czech, Danish, Dutch, English, Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hungarian, Italian, Japanese, Korean, Lithuanian, Macedonian, Malay, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Spanish, Swedish, Turkish and Ukrainian. All the user has to do is to select change language from the view menu and then the language he wants. If he already has download languages packets he can choose one of them. If he wants another language pack he can select get more language. Doing this he will be transferred at KeePass website and choose the language he wants for downloading.","void handleLanguageSelection(const std::vector<std::string>& languages, std::string& selectedLanguage)",Handle user input for selecting a language and store the selected language.,"void handleLanguageSelection(const std::vector<std::string>& languages, std::string& selectedLanguage) {
+  displayLanguageSelectionMenu(languages);
+  std::cout << ""Enter the language you want to select: "" << std::endl;
+  std::cin >> selectedLanguage;
+}",0,yes,
+2,The user will give a search-term that will search through a database of compatible torrent websites that are added by the development team. The results of this search will be displayed as web links in a tab on the program’s main window. This is one of the main features of the software and therefore has a high priority for development.,std::vector<std::string> parseResults(const std::string& htmlContent),Parses the HTML content of the search results and returns a list of web links.,"std::vector<std::string> parseResults(const std::string& htmlContent) {
+    std::vector<std::string> links;
+    // Your implementation here
+    return links;
+}",1,no,
+3,"KeePass is a small and light project so it does not need to be installed. All it takes is unpacking from the Zip package. It can be transferred also in a USB stick with no additional configuration needed. KeePass is a project that once uninstalled from a computer, leaves no trace behind. So there is no way passwords and other data in the database to be found later. KeePass is developed under GNU General Public License version 2 or later (copy from http://www.gnu.org/licenses/gpl.html) and can be distributed under those terms. KeePass can be found and downloaded from www.sourceforge.com and the project’s official website at http://keepass.info/ for free.",bool isUninstallTraceless(const std::string& path),Check if KeePass leaves no trace behind after uninstallation.,"bool isUninstallTraceless(const std::string& path) {
+  if (std::filesystem::is_empty(path)) {
+    return true;
+  }
+  return false;
+}",0,partial,"Checks only whether the supplied path is empty, not other possible traces."
+4,Allow above information are mandatory while creating a new User Group. The system admin only can able to create User Groups The system should have the provision to create any number of individual user under any user group. Each Individual User should have the following information Group Name (Selecting from User Group) User Name Password Verify Password All the above are mandatory entry The system should save the user information only if the Password and Verify password values are equal The system should not allow the user to create a User Group and Individual User with existing names,"void create_user_group(const std::string& name, const std::string& user_name, const std::string& password)",Create a new user group.,"void create_user_group(const std::string& name, const std::string& user_name, const std::string& password) {
+  if (!validate_user_group_name(name)) {
+    return;
+  }
+  if (!validate_user_name(user_name)) {
+    return;
+  }
+  if (!validate_password(password)) {
+    return;
+  }
+  if (!validate_verify_password(password, verify_password)) {
+    return;
+  }
+  // Insert the user group name, user name, and password into the database.
+  // For simplicity, we assume the user group name, user name, and password are unique.
+  // This can be done by querying the database or using a set.
+  // For example:
+  // insert_user_group(name, user_name, password);
+  return;
+}",1,no,
+5,"There will be two levels of user for our system. The first will be the general user that will be using our software to find their videos. They will only see the front end of the system. The second level will be the system developers. They will be able to edit which sites the system will search, depending on whether they think the site is safe, compatible with our software, the speed at which the site can be searched, and how useful the site is to us, i.e. how many results have come back from that site.",int assessSiteUsefulness(const std::string& siteUrl),Assesses the usefulness of a site to the system.,"int assessSiteUsefulness(const std::string& siteUrl) {
+  std::vector<std::string> results;
+  // Simulate fetching results from the site
+  // For demonstration purposes, we'll use a fixed set of results
+  results = {""Result 1"", ""Result 2"", ""Result 3"", ""Result 4"", ""Result 5"", ""Result 6"", ""Result 7"", ""Result 8"", ""Result 9"", ""Result 10""};
+
+  int totalRelevance = 0;
+  int numResults = 0;
+
+  for (const auto& result : results) {
+    if (numResults >= 100) {
+      break;
+    }
+    // Simulate relevance score calculation
+    int relevanceScore = 100 - numResults;
+    totalRelevance += relevanceScore;
+    numResults++;
+  }
+
+  if (numResults >= 100 && totalRelevance / numResults > 80) {
+    return 1;
+  } else {
+    return 0;
+  }
+}",1,no,
+6,The system shall perform a search on the [system name] user display name and user name columns in the user tables to find the user and verify the user’s existence.,"void searchUser(const string& searchDisplayName, int* userId, const string& name, int count)",Searches for a user by their display name and verifies their existence in the database.,"void searchUser(const string& searchDisplayName, int* userId, const string& name, int count) {
+    static map<string, User*> userMap;
+    
+    // Populate the map with all possible display names
+    // For example, if the system has a list of display names:
+    // map<string, User*> userMap = {
+    //     {",1,no,
+7,Interaction protocols between PAs are identified. Malicious requests are identified and acted upon. There are existing policies for long-term peering arrangement. There is procedure to perform short-term negotiation.,void identify_interaction_protocols(const std::vector<std::string>& pa_list),Identifies interaction protocols between PAs.,"void identify_interaction_protocols(const std::vector<std::string>& pa_list) {
+  std::map<std::string, std::string> interaction_protocols;
+  for (const auto& pa : pa_list) {
+    interaction_protocols[pa] = ""ProtocolX""; // Placeholder for actual protocol identification logic
+  }
+  return {""reasoning"": ""Identifies interaction protocols between PAs"", ""code"": ""...""};
+}",1,no,
+8,"All error messages produced by the System must be meaningful, so that they can be appropriately acted upon by the users who are likely to see them. Ideally, each error message will be accompanied by explanatory text and an indication of the action(s) which the user can take in response to the error. The System must employ a single set of user interface rules, or a small number of sets to provide a familiar and common look and feel for the application. The System must be able to display several entities (cases, suspects) simultaneously. The interfaces must be made customizable or user-configurable to the extent possible. (e.g., the displayed columns in the table, move, resize, modify the appearance). Such configurations must be saved in the user profile. The System user interface must be suitable for users with special needs; that is, compatible with specialist software that may be used and with appropriate interface guidelines The System must provide End User and Administrator functions which are easy to use and intuitive throughout. The System must allow persistent defaults for data entry where desirable. These defaults should include: user-definable values; values same as previous item; values derived from context, e.g. date, file reference, user identifier; Frequently-executed System transactions must be designed so that they can be completed with a small number of interactions (e.g. mouse clicks). Where the System employs a graphical user interface, it must allow users to",void set_user_interface(const std::string& ui_config),Sets the user interface configuration.,"void set_user_interface(const std::string& ui_config) {
+  // Implementation goes here
+}",1,no,
+9,"There are two conditions for each individual thermostat that shall be tested for: 1) the thermostat’s settings are satisfied and 2) the thermostat’s temperature indica tes it requires a heating or cooling unit to be turned on. To clarify these conditions, the following definitions will be used: LT : Lower Trigger Value = TSET - TD UT : Upper Trigger Value = TSET + TD Condition 1: LT = T = UT This condition indicates the thermostat’s current temperature setting is satisfied. If this condition is true, then the module shall output a request to turn off both the heating unit and the cooling unit. Condition 2: LO = LT or UT T = UO This condition the need for a heating or cooling unit to be turned on. If this condition is true, then this module shall output a request to turn on the heating unit if LO = T LT or the cooling unit if UT T = UO.","void turn_on_heating(std::double temperature, std::double set_point)",Turn on the heating unit when the temperature is above the set point.,"pair<bool, bool> turn_on_heating(double temperature, double set_point, lock) { pair<bool, bool> result = check_condition_2_above(temperature, set_point, lock); return result; }",0,partial,Calls a condition-check helper but does not clearly activate the heating unit.
+10,The system will have the facility to capture the details of VSP staff details and the necessary master information while entering the claim into the system. VSP Name Staff Code Staff Name Staff Type Qualification,"void logVSPStaffDetails(const std::string& vspName, const std::string& staffCode, const std::string& staffName, const std::string& staffType, const std::string& qualification)",Logs the VSP staff details for audit and debugging purposes.,"void logVSPStaffDetails(const std::string& vspName, const std::string& staffCode, const std::string& staffName, const std::string& staffType, const std::string& qualification) {
+  std::cout << ""VSP Name: "" << vspName << "", Staff Code: "" << staffCode << "", Staff Name: "" << staffName << "", Staff Type: "" << staffType << "", Qualification: "" << qualification << std::endl;
+}",1,no,
+11,This system is intended to be used by people that maintain the heating and cooling systems in a building. The system should not need intervention from outside users other than the supervisor to maintain operation of THEMAS. The system should provide warnings to the supervisor about faulty temperatures. The displaying of the current status of the system to the supervisor should not contain excessive information which could confuse the supervisor. The system should provide information in the form of reports to the supervisor so that the system can be run efficiently.,void display_status(),Display the current system status to the supervisor.,"void display_status() {
+  double temperature = read_temperature();
+  bool heating_status = check_heating_status();
+  bool cooling_status = check_cooling_status();
+  std::string report = ""Current temperature: "" + std::to_string(temperature) + "", Heating status: "" + (heating_status ? ""running"" : ""not running"") + "", Cooling status: "" + (cooling_status ? ""running"" : ""not running"");
+  std::cout << report << std::endl;
+}",0,yes,
+12,"This procedure shall realize the thermostat and heating or cooling information and use this information to generate a specific system event. This system event shall consist of a description of the event type (a request denied event), a designation of the thermostat that made the request, and a designation of the heating or cooling unit that was not turned on.","std::string constructEventDescription(const std::string& thermostatInfo, const std::string& unitStatus)",Constructs the description of the event based on the thermostat and unit information.,"std::string constructEventDescription(const std::string& thermostatInfo, const std::string& unitStatus) { return ""request denied: thermostat "" + thermostatInfo + "" unit "" + unitStatus; }",0,yes,
+13,"The product generally requires a mouse and a keyboard for input. Other pointing and input devices are allowable, provided they provide similar functions to a mouse and keyboard, namely the ability to move a cursor onscreen to select buttons and the ability to type names. The product uses menus, graphics and sounds. The hardware and operating system must provide an 800x600 screen resolution. Sound is not required to play the game.",bool check_screen_resolution(),Check if the screen resolution is 800x600,bool check_screen_resolution() { return true; },1,no,
+14,The system shall generate a standard error/warning message after the user attempts to save data without associating one of each of the following criteria—xxx—and/or without filling in the required fields in the User Information section.,"void handleUserCreation(const std::string& username, const std::string& email, const std::string& password, const std::string& firstName, const std::string& lastName)","Handles the creation of a user, validating input and generating error messages if necessary.","void handleUserCreation(const std::string& username, const std::string& email, const std::string& password, const std::string& firstName, const std::string& lastName) {
+  std::string error = validateUserInput(username, email, password, firstName, lastName);
+
+  if (!error.empty()) {
+    std::cout << error;
+    return;
+  }
+
+  // Proceed with user creation logic here
+  std::cout << ""User created successfully!"" << std::endl;
+}",1,no,
+15,"The System must be available to users: from <xx:00> to <xx:00>; on <all weekdays/xxx days per year>. The planned downtime for the System must not exceed <xx> hours per <rolling three month period>. The System is considered to be down if any user is unable to perform any normal System function and if this failure is attributed to any component of the System other than the workstation. Unplanned downtime for the System must not exceed <xx hours/minutes> per <rolling three month period>. The number of incidents of unplanned downtime for the System must not exceed <x> per <rolling three month period>. In the event of any software or hardware failure, it must be possible to restore the System (with inline synchronization) within no more than <xx> hours.",void update_system_status(bool is_available),Update the system status based on the availability check.,"void update_system_status(bool is_available) {
+  if (!is_available) {
+    log_system_event(""System down"", ""System is not available from ",0,partial,"Handles only the unavailable branch, and the supplied code is truncated."
+16,"When a user wants to delete an existing group/subgroup he can do this by selecting Delete group/subgroup from the edit menu. In order for that to happen, he must have chosen first a group/subgroup.",void executeDeletion(GroupOrSubgroup& groupOrSubgroup),Executes the deletion of the group or subgroup,"void executeDeletion(GroupOrSubgroup& groupOrSubgroup) {
+  deleteGroupOrSubgroup(groupOrSubgroup);
+}",0,yes,
+17,"Must use a SQL based database. SQL standard is the most widely used database format. Restricting to SQL allows easy of use and compatibility for Web Store. Compatibility is only tested and verified for Microsoft Internet Explorer version 6 and 7, Netscape Communicator Version 4 and 5. Other versions may not be 100% compatible. Also other browsers such as Mozilla or Firefox may not be 100% compatible.",void connectToDatabase(const std::string& connectionString),Establishes a connection to the SQL database using the provided connection string.,void connectToDatabase(const std::string& connectionString) { // Implementation logic here },1,no,
+18,The Get Real site runs as an extension of the OUS site e.g. ~getreal.ous.edu~ Being part of the OUS domain will maximize Google and other search engine hits. The site runs on OSU servers.,std::string get_real_site_url(),Returns the URL of the Get Real site.,std::string get_real_site_url() { return get_real_ous_domain() + get_real_site_extension(); },0,yes,
+19,"Past experiences with development aid showed, that financing inputs, e.g. facilities and equipment, does not result in the necessary improvement of health outcomes. Thus as a change of paradigm, the OBA concept finances agreed outputs with predefined quality rather than pre-defined inputs by selling vouchers for STD services at subsidised prices to patients. These vouchers will be refunded to service providers in the private sector (medical doctors, qualified nurses and midwives), government hospitals, NGOs, and faith-based organisations. The major advantages of the OBA approach are, that it allows To target resources to address selected health problems, To target the provision of services to specific parts of the population and To stimulate private market initiative and competition. The approach was successfully applied in the sixties/seventies in South Korea and Taiwan. In recent years also a programme was run in Nicaragua but the OBA has not been implemented in larger scale programs.","int voucher_id, int status",Track the status of a voucher.,int voucher_id(int ID) { return voucher_id; },1,no,
+20,"An audit trail is a record of actions taken by either the user or the system triggers. This includes actions taken by users or Administrators, or actions initiated automatically by the system as a result of system parameters. The System must keep an unalterable audit trail capable of automatically capturing and storing information about: All the actions (create/read/update/delete) that are taken upon the critical entities (case, suspect, property,...) in the system The user initiating and or carrying out the action; The date and time of the event. Administrative parameters The word “unalterable” is to mean that the audit trail data cannot be modified in any way or deleted by any user; it may be subject to re-department and copying to removable media if required, so long as its contents remain unchanged. Once the audit trail functionality has been activated, the System must track events without manual intervention, and store in the audit trail information about them. The System must maintain the audit trail for as long as required, which will be at least for the life of the case to which it refers. The System must ensure that audit trail data is available for inspection on request, so that a specific event can be identified and all related data made accessible, and that this can be achieved by authorised external personnel who have little or no familiarity with the system. The System must be able to export audit trails for specified cases (without affecting the audit trail sto",export_audit_trail(const std::string& case_id),Exports the audit trail for a specified case.,"void audit_trail(const std::string& action, const std::string& user, const std::string& timestamp) {
+   // Code to capture and store an audit trail for the given action taken by the user or system.
+}",1,no,
+21,"The program is a new self-contained product. It has come about due to the demand for such a product being identified in a series of Ethnography studies. From these studies we saw that the main activity people used video for was the watch content found online. These people would regularly spend periods of time searching websites to try and find the videos they wanted to watch, either somewhere to stream the video from or the files to download the video. This was especially true of the studies by Alan Woosnam, Irshad Qabool and Will Josephy. Our system will aim to speed up this process.",std::vector<VideoDetails> fetchVideoDetails(const std::vector<std::string>& videoIds),Fetches detailed information about the videos with the given IDs.,"std::vector<VideoDetails> fetchVideoDetails(const std::vector<std::string>& videoIds) {
+  if (videoIds.empty()) {
+    return {};
+  }
+  // Placeholder implementation: return a vector of VideoDetails objects based on the video IDs
+  return {{""video1"", ""details1""}, {""video2"", ""details2""}, {""video3"", ""details3""}};
+}",1,no,
+22,The Internal Interfaces for the XS SRS are defined as interfaces to COE components. Detailed information (as specified in paragraph 3.4 of the Data Item Description DI-IPSC-81433) defining these interfaces will be specified during the design phase of the COE XS architecture. At this time such detailed information is unavailable.The COE components identified to-date are listed below.,std::string get_data_item_description(),Retrieve the detailed information about the interfaces as specified in paragraph 3.4 of the Data Item Description DI-IPSC-81433.,"std::string get_data_item_description() { return ""Detailed information about the interfaces as specified in paragraph 3.4 of the Data Item Description DI-IPSC-81433.""; }",1,no,
+23,"The supervisor’s interface to the THEMAS system shall provide a mechanism to select between an operational history report or a statistical summary report. Either report shall consist of an ASCII file whose location and name shall be selectable by the operator. If the operational history report is selected, the THEMAS system shall select all the events from the event database, sort the events by date and time, and create the ASCII report file. If the statistical report is selected, the THEMAS system shall present the operator with a list of available months from which to make a selection. After selecting one of the months, the system shall generate the ASCII report file. The statistical reports shall consist of the following statistics: The percentage of time each heating and cooling unit was on for each day of that month. For each thermometer, the ratio of the number of requests for a heating and cooling unit that was granted to the number of requests for a heating or cooling unit that was denied.","string generateStatisticalReport(string month, string databaseHandle): string",Generate a statistical report from selected month.,"string generateStatisticalReport(string month, string databaseHandle) {
+  if (databaseHandle == null || databaseHandle.empty()) {
+    return ""Error: Database handle must not be null or empty.\n""
+  }
+
+  vector<string> events;
+  if (databaseHandle != null) {
+    events = getDatabaseEvents(databaseHandle);
+  }
+
+  if (events.empty()) {
+    return ""Error: No events found in the database.\n""
+  }
+
+  lock_guard<string> lock;
+  thread::lock(&lock);
+
+  sort(events.begin(), events.end(), [](const string& a, const string& b) {
+    // Compare based on date and time
+    // Assuming a is in the format ""dd-MMM-YYYY HH:mm:ss""
+    // and b is similarly formatted
+    // This is a simplified example
+    return compare_date(a, b);
+  });
+
+  // Group events by day
+  map<string, vector<string>> dayEvents;
+  for (string event : events) {
+    string time = extract_time(event);
+    string day = extract_day(time);
+    dayEvents[day].push_back(event);
+  }
+
+  // Calculate statistics
+  map<string, string> stats;
+  for (auto& day : dayEvents) {
+    int count = day.size();
+    if (count == 0) continue;
+
+    string dayName = extract_day_name(day[0]);
+    string total = count;
+
+    // Calculate percentages for heating and cooling units
+    for (size_t i = 0; i < count; ++i) {
+      string event = day[i];
+      string time = extract_time(event);
+      string dayParts = extract_day_parts(time);
+
+      // Assuming the data structure has fields like heating, cooling, etc.
+      // For example:
+      // string data[3] = { ... };
+
+      // Placeholder for actual logic
+      stats[",1,no,
+24,"Title, username or URL cannot be changed in a TAN entry. When a TAN is used, it expires automatically and can never be used again.","void updateTanEntry(const std::string& title, const std::string& username, const std::string& url)","Updates the TAN entry with the given title, username, and URL.","bool updateTanEntry(const std::string& title, const std::string& username, const std::string& url) { return false; }",1,no,
+25,User opens KeePass and selects to find something in a selected group/subgroup User types the word to search for User selects the fields which will be searched User selects OK Results appears at the database main window,void openKeePass(),Opens the KeePass application.,"void openKeePass() {
+  system(""start KeePass.exe"");
+}",0,yes,
+26,"The user can select between a number of translations that are available at KeePass website. There are available translations in Arabic, Brazilian, Bulgarian, Catalan, Chinese (Simplified and Traditional), Czech, Danish, Dutch, English, Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hungarian, Italian, Japanese, Korean, Lithuanian, Macedonian, Malay, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Spanish, Swedish, Turkish and Ukrainian. All the user has to do is to select change language from the view menu and then the language he wants. If he already has download languages packets he can choose one of them. If he wants another language pack he can select get more language. Doing this he will be transferred at KeePass website and choose the language he wants for downloading.",void displayLanguageDownloadMenu(),Display a menu to the user for downloading a language pack.,"void displayLanguageDownloadMenu() {
+  std::cout << ""Download Language Pack"" << std::endl;
+  std::cout << ""Display Available Languages"" << std::endl;
+  std::cout << ""Exit"" << std::endl;
+  std::cout << ""Enter your choice: "" << std::endl;
+}",1,no,
+27,"The voucher management system VMS is designed to atomize the process of Voucher Management Unit (VMU) to minimize the manual process to maximize the quality of the project to understand the progress and timely out come of the project to take necessary steps by the MSIU Admin team to plan for the future and to increase the quality of the STD voucher service. The system will also control the existence of fraud in claims and will help the service provider to reach their payments in time without delay. The other features and details of system will be explained in below sections in the document. The voucher management system is subdivided into following modules to make the system easy for understanding, developing, testing and to implement. Voucher Creation / Preparation Marketing / Sales Claim Entry / Processing Voucher Sales Return Client Feed back Reports (Standard and Customized) Security and User Privileges Each of the above modules are again subdivided into subsystems, those details are explained in below sections in the document",feedback_message() -> string,Generate a feedback message from the UI,function to generate feedback message based on voucher status,1,no,
+28,"The users of the software infrastructure enabling CDN peering can be differentiated by using their membership and contributions to the system. A given peering arrangement consists of explicit and implicit members. Explicit members include the primary CDN, which is the initiator of a peering relationship, and any peering CDNs who cooperate for resource sharing. Implicit members are content providers and end-users. Implicit members are transparent to a peering arrangement but they share the benefit from it. In addition, users can vary based on the purpose, size, scope and duration of peering. For instance, a short-term peering arrangement is to be automated to react within a tight time frameas it is unlikely that a human directed negotiation would occur quickly enough to satisfy the evolved niche. On the other hand, establishment of a long-term peering arrangement calls for a human-directed agent to ensure that any resulting decisions comply with participating CDNs’ strategic goals. Users can also be classified because of the preferential treatment that they may receive due to the policy that pertains to a particular provider’s business logic. Moreover, individual users (or a group of users) can have dynamic QoS requirements depending on the situations that will result in “customized” content delivery. Thus, users (or class of users) can be differentiated based on userdefined QoS specifications while accessing the service.",void transferData(int data): void,Ensure data is valid and within expected range.,"void transferData(int data): void {
+  if (data < 0 || data > 100000) {
+    return;
+  }
+  }",0,yes,
+29,"Web design conventions should be consistent with the standards and conventions used on the OUS site. ""Specify any additional quality characteristics for the product that will be important to either the customers or the developers. Some to consider are: adaptability, availability, correctness, flexibility, interoperability, maintainability, portability, reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use over ease of learning.""","bool compareConventions(const std::string& siteUrl, const std::string& conventions1, const std::string& conventions2)",Compare the web design conventions used on the OUS site with two sets of conventions.,"bool compareConventions(const std::string& siteUrl, const std::string& conventions1, const std::string& conventions2) {
+  std::string currentConventions = getConventions(siteUrl);
+  return currentConventions == conventions1 && currentConventions == conventions2;
+}",0,yes,
+30,"The user Interface will consist of one main screen, allowing all the functionally to come from this one screen. This allows the user to use the software with ease by not flicking through a number of different screens. In addition to this the user can always see the videos they are looking for. The main screen will be laid out as in Appendix: B Diagram along with the description of the diagram. We decided on this type of interface because we felt that it would be very simple for the user to navigate. From our reports we found that the simpler the interface was, the more people liked it. With all these features complied into one screen it will give the software more flexibility and allows for easy and simple usage. This will appeal to both naïve computer users and experienced computer users with a higher selling market.","string VideoSelect(const vector<string>& videos, int index)",Select a video from the list.,"string VideoSelect(const vector<string>& videos, int index) {
+  return ",1,no,
+31,"User ticks torrent tick box – system will now query the torrent websites in its database when a search is started. User enters search term and starts search – system sends queries to the torrent websites in its database based on the search term. Results for this query will then be sent to the torrent tab in the program where they will display information such as website, seeds, peers, size, date posted and a link for the webpage. User sorts the search results by clicking once on a column header – system sorts all results by descending/ascending order. User clicks on next page button – system displays the next set of results for the search.",vector<string> get_search_results(string searchTerm),Get the search results based on the search term.,"vector<string> get_search_results(string searchTerm) 
+  vector<string> results 
+  for (const torrent& t : all torrents) 
+  if (t.website == searchTerm) 
+  results.push_back( 
+    string( 
+      ",0,partial,"Contains a search loop, but the snippet ends before completing the result or returning it."
+32,"Customers will also be able to add products into the shopping cart. The shopping cart will clearly display the number of items in the cart, along with the total cost. The customer will also be able to add to or remove products from the shopping cart prior to checkout and order confirmation.",void update_cart(const ShoppingCart& cart),Updates the cart display with the current number of items and total cost.,"void update_cart(const ShoppingCart& cart) {
+  cart.update_display();
+}",0,yes,
+33,"The supervisor’s interface to the THEMAS system shall provide a mechanism to select between an operational history report or a statistical summary report. Either report shall consist of an ASCII file whose location and name shall be selectable by the operator. If the operational history report is selected, the THEMAS system shall select all the events from the event database, sort the events by date and time, and create the ASCII report file. If the statistical report is selected, the THEMAS system shall present the operator with a list of available months from which to make a selection. After selecting one of the months, the system shall generate the ASCII report file. The statistical reports shall consist of the following statistics: The percentage of time each heating and cooling unit was on for each day of that month. For each thermometer, the ratio of the number of requests for a heating and cooling unit that was granted to the number of requests for a heating or cooling unit that was denied.",void generateOperationalHistoryReport(const std::string& reportPath),Generates an ASCII file containing operational history events sorted by date and time.,"void generateOperationalHistoryReport(const std::string& reportPath) {
+  std::ofstream reportFile(reportPath);
+  if (!reportFile.is_open()) {
+    std::cerr << ""Error: Unable to open file """,1,no,
+34,The system shall provide the capability to open a pop-up window displaying information about the specific page along with links to supporting help topics upon selecting each Help link.,"void displayHelpPopup(const std::string& title, const std::string& content, const std::vector<std::string>& links)","Displays the help popup with the specified title, content, and links.","void displayHelpPopup(const std::string& title, const std::string& content, const std::vector<std::string>& links) { displayHelpPopup(title, content, links); }",0,no,"The function only calls itself recursively, so it never displays the popup."
+35,"Citizens can register their complaints with police and then based on the evidence, facts and following investigation, police shall take the complaint forward. The Registration module acts as an interface between the police and citizens and it eases the approach, interaction and information exchange between police and complainants.","void updateComplaintEvidence(const std::string& complaintId, const std::string& evidence)",Updates the evidence of a complaint.,"void updateComplaintEvidence(const std::string& complaintId, const std::string& evidence) {
+  Police police;
+  bool isComplaintRegistered = police.registerComplaint(complaintId, evidence, facts, investigation);
+  if (isComplaintRegistered) {
+    police.updateComplaintStatus(complaintId, 'pending');
+    police.sendNotification(complaintId, 'Your complaint has been updated. Please wait for the investigation to proceed.');
+  } else {
+    police.sendNotification(complaintId, 'Failed to update your complaint. Please try again later.');
+  }
+}",0,partial,"Registers the complaint and updates its status, but an evidence update is only indirect or unclear."
+36,"This section describes the logical characteristics of each interface between the intended software product and the users. For user interface design, common GUI standards will be followed along with the presence of keyboard shortcuts, error message display standards etc., and standard buttons and functions (i.e. help) will appear on every screen. Details of the user interface design are intended to be documented in a separate user interface specification.",void handle_user_input(),Handles user input from the user interface.,"void handle_user_input() {
+  // Handle user input from the user interface
+  // Implement the logic for handling user input
+  switch (input_type) {
+    case TEXT:
+      // Handle text input
+      break;
+    case NUMBER:
+      // Handle number input
+      break;
+    case COMMAND:
+      // Handle command input
+      break;
+  }
+
+  // Validate the input
+  if (input_valid) {
+    // Process the input
+  } else {
+    // Display an error message
+    display_error_message(""Invalid input"");
+  }
+
+  // Handle keyboard shortcuts
+  if (keyboard_shortcut) {
+    // Handle the keyboard shortcut
+  }
+
+  // Display help information
+  display_help();
+}",1,no,
+37,Interaction protocols between PAs are identified. Malicious requests are identified and acted upon. There are existing policies for long-term peering arrangement. There is procedure to perform short-term negotiation.,void identify_malicious_requests(),Identify and act upon malicious requests.,"void identify_malicious_requests() {
+  // Check for malicious behavior using existing policies and procedures
+  // If malicious behavior is detected, take appropriate action
+  // Example: log the malicious request, notify the administrator, and take corrective action
+}",1,no,
+38,All above information are mandatory during the sales return Distributor Name - will list from Distributor Master Sales Man Name - will list from Sales Man Master Sales Return Date – System date is default and it should be less than or equal to system date While entering return vouchers details the system will check weather the returned voucher was sold to this particular Distributor or not. If not the system won’t accept those vouchers as return.,std::string get_distributor_master_sales_man_name(const std::string& distributor_name),Retrieve the sales man name from the distributor master.,"std::string get_distributor_master_sales_man_name(const std::string& distributor_name) {
+  return distributor_master_sales_man_name;
+}",1,no,
+39,"Customers will be able to create accounts to store their customer profiles, configure contact information, view their purchase history, and confirm orders. Customers will be able to register, log in, and log out of their accounts. Furthermore, Customer profiles will also include payment information, such as the ability to store credit card information, and address information.","bool login(const std::string& username, const std::string& password)",Logs in a customer using their username and password.,"bool login(const std::string& username, const std::string& password) {
+  // Validate input
+  if (username.empty() || password.empty()) {
+    return false;
+  }
+
+  // Placeholder for actual login logic
+  // For demonstration, we assume the login is successful
+  return true;
+}",1,no,
+40,"When choosing to open a database a user is transferred to his documents where he navigates to find the database he wants. When the database is found, the master password is wanted so that the database will be unlocked. Once this is done the user is free to access his data.","bool unlock_database(const std::string& database_path, const std::string& master_password)",Unlock the database using the provided master password.,"bool unlock_database(const std::string& database_path, const std::string& master_password) {
+  std::ifstream db_file(database_path, std::ios::binary);
+  if (!db_file.is_open()) {
+    return false;
+  }
+
+  // Assuming the database file has a header that includes a hash of the master password
+  std::string stored_hash;
+  db_file.read(reinterpret_cast<char*>(&stored_hash), stored_hash.size());
+
+  // Compare the stored hash with the provided master password hash
+  if (stored_hash == hash_password(master_password)) {
+    return true;
+  }
+
+  return false;
+}
+
+// Helper function to hash the master password
+std::string hash_password(const std::string& password) {
+  // Implement a simple hash function for demonstration purposes
+  std::string hash = ""hashed"" + password;
+  return hash;
+}",0,partial,"Attempts password verification, but the file read is ineffective and no unlock state is changed."
+41,"Customers will be able to create accounts to store their profiles, contact information, purchase history, and confirm orders. This is a high priority system feature. Security methods will ensure that customer accounts remain confidential and resistant to tampering.","create_account(std::string username, std::string password, std::string email)","Create a new customer account with the given username, password, and email.","std::string create_account(std::string username, std::string password, std::string email) {
+  // Check if the account already exists
+  if (account_exists(username)) {
+    return ""Account already exists."";
+  }
+  // Create a new account
+  Customer new_account = Customer(username, password, email);
+  // Add the new account to the system
+  add_customer(new_account);
+  return ""Account created successfully."";
+}",0,yes,
+42,"TANs can be passwords that provide security because they can never be used for more than once time. They can be added to user’s database by using TAN wizard and can contain all letters and numbers. When TAN are created, they appear as typical entries which in the field title contain “TAN” so that KeePass will know it’s a TAN. In TAN entries, user cannot change the title, user name or URL but notes can be added. When a TAN is used, its expiration time is set to that current time and the entry expires automatically.",getTANInfo(const std::string& entry),Retrieves the TAN information from the given entry.,"std::string getTANInfo(const std::string& entry) { 
+    std::string tan; 
+    std::size_t found = entry.find(""TAN""); 
+    if (found != std::string::npos) { 
+        tan = entry.substr(found + 4); 
+        return tan; 
+    } 
+    return """"; 
+}",0,yes,
+43,"Web Store shall operate with the following internet browsers: Microsoft Internet Explorer version 6 and 7, Netscape Communicator Version 4 and 5. Web Store shall operate on an Intel based system with Slackware Linux 2.6 and Apache Web Server. The operating system is designed by the Yoggie Corporation. Although maintenance documentation will be supplied and the operating system will be tested, the developers of this Web Store are not responsible for the functionality of the operating system. The system shall use SQL based database to store inventory information. USB interface and divers are provided by Yoggie Corporation.",bool validateBrowser(const std::string& browserVersion),Checks if the browser version is supported.,"bool validateBrowser(const std::string& browserVersion) {
+  if (browserVersion == ""Microsoft Internet Explorer version 6"" || browserVersion == ""Microsoft Internet Explorer version 7"" || browserVersion == ""Netscape Communicator Version 4"" || browserVersion == ""Netscape Communicator Version 5"") {
+    return true;
+  }
+  return false;
+}",0,yes,
+44,"The general constraints of the THEMAS system focus on the functionality provided by the external devices connected to i t. The thermostats shall only provide temperature values and temperature settings. The heating and cooling units provide no feedback to the THEMAS system. When a signal is sent to a heating or cooling unit, no signal shall be available to allow the THEMAS system to determine if the signal sent to the unit was realized by the unit.","double calculate_heating_required(double currentTemp, double desiredTemp, double maxPossible)",Determine if heating is needed and calculate the required amount.,"double calculate_heating_required(double currentTemp, double desiredTemp, double maxPossible) {
+  if (desiredTemp > currentTemp) {
+    double required = (desiredTemp - currentTemp) / maxPossible;
+    return required;
+  } else {
+    return -1.0;
+  }
+}",0,yes,
+45,Based on the Voucher No the system will populate the following details Client Details (Address as per Claim Form will populate automatically) Details of syndromes treated (Automatically populate from the system based on Voucher No) Lab Test Details (Automatically populate from the system based on Voucher No) Drugs Details (Automatically populate from the system based on Voucher No) Success of Treatment (Automatically populate from the system based on Voucher No) Referral To Treatment (Automatically populate from the system based on Voucher No) Partner Treated (Treatment (Automatically populate from the system based on Voucher No),string get_treatment_success(int voucher_number): string,Return the success outcome of the treatment based on the voucher number.,"string get_treatment_success(int voucher_number) {
+    return success_result;
+    }",1,no,
+46,"There is a need to track and evaluate the “hits” and time spent on the student-focused website over time; and make content, design, and navigation changes as needed based on evaluation of hits.",int hit_counter(int total_hits),Increments a counter each time it's called and returns the total count.,"int hit_counter(int total_hits) {
+  if (total_hits < 0) total_hits = 0;
+  if (total_hits > INT_MAX) total_hits = INT_MAX;
+  int counter = 0;
+  while (counter < total_hits) {
+    counter++;
+  }
+  return counter;
+  }
+  ",0,partial,Counts up to the supplied total rather than maintaining a counter that increments once per call.
+47,"Depends on the payment terms (Bi-monthly / Monthly) mentioned in the VSP master the VSP should submit the Claim (Treatment form) to the MISU Field office. While submitting the Claim (Treatment Form) to MSIU, the system will have the provision to capture the following details. These information is vital and shall be used for compared with the processed claims. VSP Name Date of submission No of Mentioned Forms No of Available Forms The above as the master part and below details are the Transaction part Treatment Form No",std::string get_vsp_name(),Retrieve the name of the VSP from the system.,std::string get_vsp_name() { return vsp_name; },0,yes,
+48,"While all safety measures resulting from the site may not be fully identified, a recommendation of a full legal review of the software should be undertaken before the site is available to the public. In doing so, the site will be subject to full indemnification of liability. The system we produce will stay within all the legal requirements on our behalf, as our software is only listing links for video streams and video download, and this is not illegal. Our system will not host any videos.",bool isLegalReviewed(),"This function will return true if the software has been reviewed by a legal expert, otherwise it will return false.","bool isLegalReviewed() {
+   // Perform a legal review of the software to ensure it adheres to all legal requirements.
+   return true;
+}",1,no,
+49,"The product (i.e. prototype system) enabling CDN peering is expected to be deployed it in a realworld test bed such as PlanetLab for global testing, observations, and for performance evaluation. In this regard, existing Web services technologies will be studied in detail to examine the feasibility of leveraging them. A modular implementation stack could be developed on top of the existing standard application layer (e.g. Apache, Tomcat) and protocols (e.g. HTTP, CDI, HTPC). A modular implementation approach would be useful to perform testing on modules at different stages to ensure correct implementation. It is anticipated that a cryptographically secure auction-based framework will be used to assist content replication among peered CDNs to allow incentives for all participants. Load information could be measured and disseminated within individual CDNs and among other CDNs using distributed load indices such as Distributed Hash Table (DHT) or variations of it. Request assignment and redirection could predominantly rely on DNS-level end-user assignment combined with a rudimentary request assignment policy such as weighted round-robin or least-loaded-first, which updates the DNS records to point to the most appropriate replica server of the peers.",calculate_load(std::vector<std::string> &peers),Calculates the load information for each peer.,"std::vector<std::string> calculate_load(std::vector<std::string> &peers) {
+  std::vector<std::pair<std::string, double>> load_info;
+  for (const auto &peer : peers) {
+    double load = 0.0;
+    // Calculate load for each peer here
+    load_info.push_back(std::make_pair(peer, load));
+  }
+  // Sort load_info by load in descending order
+  std::sort(load_info.begin(), load_info.end(), [](const auto &a, const auto &b) { return a.second > b.second; });
+  return load_info;
+}",1,no,
+50,The project Team must allow a reasonable time to conduct User Acceptance Testing (UAT) against the built functionalities prior to deploying the product to the production environment.,bool check_requirements(const std::string& input),Checks if the input meets the required quality assurance criteria.,"bool validate_input(const std::string& input) {
+   if (input.empty()) {
+     return false;
+   }
+   for (char c : input) {
+     if (valid_chars.find(c) == std::string::npos) {
+       return false;
+     }
+   }
+   return true;
+}
+
+void handle_memory(std::unique_ptr<DataType>& data) {
+   // Implementation goes here
+}
+
+bool check_requirements(const std::string& input) {
+   if (validate_input(input)) {
+     return true;
+   }
+   return false;
+}",0,yes,
+51,Interaction protocols between PAs are identified. Malicious requests are identified and acted upon. There are existing policies for long-term peering arrangement. There is procedure to perform short-term negotiation.,identify_malicious_requests(std::string_view),Identify and record all the malicious requests made by the input peer.,"std::string malicious_requests = """";
+
+for (const auto& request : input_peer.malicious_requests) {
+  malicious_requests += request + "", "";
+}
+
+return malicious_requests;",0,partial,Returns requests already marked malicious but does not identify new ones or record them.
+52,"The address field will capture the geographical location of the distributor, such as District, Sub-District, County, Sub-County or Village / Town, road or street. All the level of details will have a master table in order to update as per the program requirements. The system will check the duplicated ID for the distributors. The system can allow the duplicate names of the Distributor. On capture of any duplicate name the system will give a warning message to have the duplicate name or to change the name. For better reporting purposes it is better to have a differentiating indicator on the name. System will have a provision to print the distributor master details. The distributor screen will have a provision to view the Sales History of a particular distributor with following summary details. Distributor Name as Report Header and following as the report footer Batch No Date of purchase Qty Purchase Qty Sold Qty Returned Balance Qty (any other details required by the MSIU office) There will be a provision to select a particular distributor to view the details (e.g. sales) by double clicking on the grid. Print option of above report is based on User Login Permission only. There will be an option for doing the following at every screen. New (adding new records) Edit (updating available records) Delete (deleting will be allowed only if no child records are created) Active/Deactivate (if the distributor has to be deactivated or terminated) There will also be a provision for the oth",std::string get_distributor_address(int distributor_id),Retrieve the address of a distributor by their ID.,std::string get_distributor_address(int distributor_id) { return get_distributor_address(distributor_id); },0,no,The self-recursive call never retrieves an address.
+53,"The voucher management system VMS is designed to atomize the process of Voucher Management Unit (VMU) to minimize the manual process to maximize the quality of the project to understand the progress and timely out come of the project to take necessary steps by the MSIU Admin team to plan for the future and to increase the quality of the STD voucher service. The system will also control the existence of fraud in claims and will help the service provider to reach their payments in time without delay. The other features and details of system will be explained in below sections in the document. The voucher management system is subdivided into following modules to make the system easy for understanding, developing, testing and to implement. Voucher Creation / Preparation Marketing / Sales Claim Entry / Processing Voucher Sales Return Client Feed back Reports (Standard and Customized) Security and User Privileges Each of the above modules are again subdivided into subsystems, those details are explained in below sections in the document",claim_status handle_claim(const claim_data& data),"Handle a claim entry, including validation and processing.","claim_status handle_claim(const claim_data& data) {
+  claim_status status = claim_status::INVALID;
+
+  // Validate claim data
+  if (!validate_input(data)) {
+    voucher.reasoning = ""Invalid claim data"";
+    return status;
+  }
+
+  // Process claim entry
+  // Assume claim processing logic here
+  status = claim_status::SUCCESS;
+
+  // Update voucher status and reasoning
+  voucher.status = voucher_status::CLAIMED;
+  voucher.reasoning = ""Claim processed successfully"";
+
+  return status;
+}",1,no,
+54,"The VMU will create the vouchers and sell it to clients through distributors The distributor will submit the sales details back to the VMU. Each voucher should have two portions with three tear off voucher slips each for Client and Partner. The client and/or the partner will choose the service provider and will get treatment First visit is called as Consultation and if the patient is not cured then they can go for first follow up and second follow up, If the patient is not cured then the doctor will refer the patient to some other Hospitals the hospital may be another VSP or any other. Each visit details (including Diagnosis, Lab Test and Drugs) of the patient is called a claim, The VSP will submit the claim to VMIU field office to enter those into the database, The filed office will validate the claim form manually and through system, If any of mandatory information is missed or any false information is existing then the field office will reject the claim back to VSP and the system will keep those claim in a quarantine area The quarantined forms will be sent back to the VSP for verification, if the VSP returns the claim with satisfactory details, the claims will be entered on to the system, in the following month’s batch. Based on the payment terms agreed by VSP, the field office will generate BiMonth or Monthly financial and medical report and send it to MSIU Admin team to arrange the payments for the VSP. To understand the satisfaction of client the MSIU Admin team will ge","void generate_report(const std::string& client_name, const std::string& partner_name, const std::string& service_provider, const std::string& diagnosis, const std::string& lab_test, const std::string& drugs)",Generates a report for the voucher.,"void generate_report(const std::string& client_name, const std::string& partner_name, const std::string& service_provider, const std::string& diagnosis, const std::string& lab_test, const std::string& drugs) {
+  // Validate input parameters
+  if (client_name.empty() || partner_name.empty() || service_provider.empty() || diagnosis.empty() || lab_test.empty() || drugs.empty()) {
+    return;
+  }
+
+  // Create a new Voucher object and add the specified details to the voucher object
+  Voucher voucher;
+
+  // Add the specified details to the voucher object
+  voucher.set_client_name(client_name);
+  voucher.set_partner_name(partner_name);
+  voucher.set_service_provider(service_provider);
+  voucher.set_diagnosis(diagnosis);
+  voucher.set_lab_test(lab_test);
+  voucher.set_drugs(drugs);
+
+  // Handle any potential errors that may occur during the creation of the voucher
+  try {
+    voucher.create();
+  } catch (const std::exception& e) {
+    return;
+  }
+
+  // Return a JSON object with a success message indicating that the report has been generated successfully.
+  return;
+}",0,partial,Builds and creates a Voucher object but does not produce a usable report output.
+55,Web Store is a new system designed for users new to the online E-commerce. This will be a plug and play device with its own CPU and operating system. The Web Store will be a quick and easy means to setup and operate an online Web Store. The Figure 2.1 is a context diagram showing external system interfaces.,"void setupWebStore(const std::string& cpuModel, const std::string& osVersion)",Sets up the Web Store with the specified CPU model and OS version.,"void setupWebStore(const std::string& cpuModel, const std::string& osVersion) { // Initialize the Web Store with the specified CPU model and OS version }",1,no,
+56,"The system will capture the details of voucher sales between MISU sales team and Distributors. During the distribution the system will capture the following details, to make Distribution process easily. With the below details the user can get the details of Distributor-wise and Salesman-wise and Batch No wise sales details as reports. Name of the distributor* Name of the Sales Man* Date of distribution* No of vouchers sold* According to the number of vouchers required by the distributor, the system should allocate the relevant vouchers with their numbers and batch numbers based on the stock. Invoice amount = No of vouchers x Wholesale price Mode of payment is Cash","std::struct> generate_sales_report(std::pair<std::string, std::string>sales_info, std::string& report_name)",Generates a report for sales data.,"struct sales_report {
+    string sales_name;
+    string sales_date;
+    int sales_v_sold;
+    vector<int> sales_count;
+}
+
+static struct sales_report sales_report_data[5] = {
+    {",1,no,
+57,"Customers will be presented with an unambiguous interface to assist in browsing the categories and products. Customers will be able to search for products matching their search criteria. The interface will be compatible with all major web browsers such as Internet Explorer, Mozilla Navigator, Mozilla Firefox, Opera, and Safari.",void handleCategorySelection(const std::string& category),Handles the selection of a category.,"void handleCategorySelection(const std::string& category) {
+  // Implement the logic to handle the category selection here
+  // For example, you can update the user interface to display the selected category
+  std::cout << ""Category selected: "" << category << std::endl;
+}",1,no,
+58,During submission entry all above information’s are mandatory Date of submission should be current date The system lists the VSP Name from VSP Master. Mentioned Forms and Available Forms only accept numeric values. Available forms may be less than or greater than or equal to Mentioned Forms. In the transaction part no of forms should match with No of Available Forms The system should print a receipt document based on the information entered during claim submission. The document should have the following information. VSP Name Date of Submission (with date and time) No of claims mentioned No of claims Available The above details would print in the report header and below details will print in the detailed part of the report Treatment Form No,std::string getVspName(),Retrieve the VSP Name from the VSP Master.,"std::string getVspName() { return ""VSP Name from VSP Master""; }",1,no,
+59,"KeePass should run on Operating Systems: WINE, 32-bit MS Windows (95/98), 32-bit MS Windows (NT/2000/XP), All 32-bit MS Windows (95/98/NT/2000/XP),Win2K, WinXP, Microsoft Windows Server 2003. The user interfaces used are: NET/Mono, Win32 (MS Windows) All new releases contain Filename Architecture Type KeePass-1.x-Setup.exe i386 .exe (32-bit Windows) KeePass-1.x-Src.zip Platform-Independent Source .zip KeePass-1.x.zip i386 .zip and release notes witch describe what has changed and what has been added. Nothing more than these is required for a fully functional KeePass. KeePass should run perfectly on older releases without any features limitations or data loss.","void handle_memory(std::unique_ptr<Kdb::Database>& db, std::unique_ptr<Kdb::Group>& group, std::unique_ptr<Kdb::Entry>& entry)",Handles memory safety by ensuring all unique_ptrs are properly allocated and deallocated.,"void handle_memory(std::unique_ptr<Kdb::Database>& db, std::unique_ptr<Kdb::Group>& group, std::unique_ptr<Kdb::Entry>& entry) {
+  // Ensure all unique_ptrs are properly allocated and deallocated
+  // ...
+}",1,no,
+60,"The VMU will create the vouchers and sell it to clients through distributors The distributor will submit the sales details back to the VMU. Each voucher should have two portions with three tear off voucher slips each for Client and Partner. The client and/or the partner will choose the service provider and will get treatment First visit is called as Consultation and if the patient is not cured then they can go for first follow up and second follow up, If the patient is not cured then the doctor will refer the patient to some other Hospitals the hospital may be another VSP or any other. Each visit details (including Diagnosis, Lab Test and Drugs) of the patient is called a claim, The VSP will submit the claim to VMIU field office to enter those into the database, The filed office will validate the claim form manually and through system, If any of mandatory information is missed or any false information is existing then the field office will reject the claim back to VSP and the system will keep those claim in a quarantine area The quarantined forms will be sent back to the VSP for verification, if the VSP returns the claim with satisfactory details, the claims will be entered on to the system, in the following month’s batch. Based on the payment terms agreed by VSP, the field office will generate BiMonth or Monthly financial and medical report and send it to MSIU Admin team to arrange the payments for the VSP. To understand the satisfaction of client the MSIU Admin team will ge",string,generates financial and medical reports based on payment terms,"string generateReports(string paymentTermType, double amount) {
+  string report = ""Payment report based on:\n- Payment term type: \n- Amount: $"";
+  switch (paymentTermType) {
+    case ",1,no,
+61,"When choosing to open a database a user is transferred to his documents where he navigates to find the database he wants. When the database is found, the master password is wanted so that the database will be unlocked. Once this is done the user is free to access his data.",std::function<bool(std::string)> checkDatabase(std::string database_id),Checks if the database exists and returns a boolean.,"std::function<bool(std::string)> checkDatabase(std::string database_id) {
+  std::function<std::string(std::string)> db = *this;
+  std::string result = db->checkDatabase(database_id);
+  return result;
+  }",0,partial,"Invokes a database check, but the declared and returned types do not provide the required boolean result."
+62,REQ-1: Query times will take no longer than 5 seconds to any website. REQ-2: Sending the hyperlink to the default browser will take less than 1 second. REQ-3: Loading the program will take less than 10 seconds. REQ-4: Any torrent result with 0 seeds will not be displayed. REQ-5: Sorting results should take less than 0.1 seconds. REQ-6: A results page will display 100 results. REQ-7: Any torrent result with a rating of less than 1 will not be displayed.,bool checkSortingTime(),Check if the sorting time is within the limit of 0.1 seconds.,"bool checkSortingTime() { 
+     auto start = std::chrono::high_resolution_clock::now(); 
+     // Your code here 
+     auto end = std::chrono::high_resolution_clock::now(); 
+     std::chrono::duration<double> elapsed = end - start; 
+     return elapsed.count() < 0.1; 
+ }",1,no,
+63,"This section describes the logical characteristics of each interface between the intended software product and the users. For user interface design, common GUI standards will be followed along with the presence of keyboard shortcuts, error message display standards etc., and standard buttons and functions (i.e. help) will appear on every screen. Details of the user interface design are intended to be documented in a separate user interface specification.",void update_user_interface(),Updates the user interface based on the current state.,"void update_user_interface() {
+  display_user_interface();
+  handle_user_input();
+  display_error_message();
+  show_help();
+}",0,yes,
+64,The Internal Interfaces for the XS SRS are defined as interfaces to COE components. Detailed information (as specified in paragraph 3.4 of the Data Item Description DI-IPSC-81433) defining these interfaces will be specified during the design phase of the COE XS architecture. At this time such detailed information is unavailable.The COE components identified to-date are listed below.,void startXS(),Start the XS system.,"void startXS() {
+  // Initialize the XS system
+  // Set up any necessary resources and configurations
+  // Ensure that the system is in a consistent state
+  // Call any other XS functions that need to be initialized before it starts processing data
+  // Return a JSON object with a 'success' key set to 'true' if the start operation was successful, and a 'failure' key set to 'false' if it was not.
+  return {""success"": true};
+}",1,no,
+65,"When a request to turn on or off a heating or cooling unit is made, this process shall generate the appropriate request to carry out that request. This request shall include the designation of the heating or cooling unit and a flag to indicate whether that unit is to be turned on or off.",std::string get_heating_status(const std::string& unit_id),Returns the status of a heating or cooling unit.,"std::string get_heating_status(const std::string& unit_id) {
+    // Implementation of returning the status of a heating or cooling unit
+    // This is a placeholder implementation. Actual implementation would depend on the system and the data structure used to store the status of the heating or cooling units.
+    return status_map[unit_id];
+}",1,no,
+66,"Assume the delivery of development, test and evaluate samples of the USB system from Yoggie. Assume Yoggie will freeze the baseline of the USB system after delivery.",void display_output(std::string message),Display the processed output.,"void display_output(std::string message) {
+    std::cout << message << std::endl;
+    }",1,no,
+67,MSIU team collects the client feed back from the clients who got treatment through the voucher system. The Client Feed back form should capture the following details Voucher No Client Details Details of syndromes treated Lab Test Drugs Details Success of Treatment Referral To Treatment Satisfaction of Treatment (Not at all / Moderate / Good / Completely) Satisfaction of counseling - Enter by the user Satisfaction of ensuring privacy – Enter by the user Partner Treated,std::vector<std::string> labTestResults(std::vector<std::string> testData),Analyze lab test results.,"vector<string> labTestResults(vector<string> testData) {
+  vector<string> result;
+  for (string s : testData) {
+    string value;
+    // Assuming each string in testData is a lab test result string
+    // For example, ",1,no,
+68,CI-1: The WebOrder system shall send an e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address along with tracking number. CI-2: The WebOrder system shall send an e-mail to System Administrator regarding any technical queries from customers or sales people.,"void sendEmailConfirmation(const std::string& customerEmail, const std::string& trackingNumber)",Sends an e-mail confirmation to the customer with the tracking number.,"void sendEmailConfirmation(const std::string& customerEmail, const std::string& trackingNumber) {
+  // Create the email message
+  std::string emailMessage = ""Dear Customer,\n\nYour order has been received and will be delivered to the following address:\n
+"" + customerEmail + ""
+
+Tracking Number: "" + trackingNumber + ""
+
+Thank you for your order.
+
+Best regards,
+[Your Name]"";\n\n// Send the email\nsendEmail(emailMessage);
+}",0,partial,"Builds a confirmation and calls the mail helper, but does not pass the customer address as the recipient."
+69,It is the first thing a user must do to begin using KeePass. Its main function is the determination of the master password that will unlock the database from now on,void displayWelcomeMessage(),Display a welcome message to the user,"void displayWelcomeMessage() {
+  std::cout << ""Welcome to KeePass Password Safe!\n"";
+  std::cout << ""Please enter your master password to unlock your database.\n"";
+}",1,no,
+70,"As per the MSIU Project Document named “Programme Design Study” the following reports are required Monthly after claim collection on clean claims to be paid without reservation Monthly after claim collection on claims, where payment shall be withheld until clarification Report on claims per provider Report, summarising all providers Quarterly summary reports per provider and summarising all providers Frequencies of syndromes treated, additional information on patient population (sex, age) Frequencies of primary clients and notified partners Number of correctly documented cases, cases with incorrect documentation, cases treated according to algorithms, cases with justified treatment alterations and treatment errors Summary report comparing the different providers regarding syndromes treated, documentation quality and treatment behaviour Quarterly and half yearly reports giving the time trends of the abovementioned indicators for each provider and all providers combined The system has the provision to provide various analytical, medical, financial and statistical reports. Such reports can be designed later.","void generateQuarterlySummaryReport(const std::vector<Claim>& claims, const std::vector<Provider>& providers)",Generates a quarterly summary report summarizing all providers.,"void generateQuarterlySummaryReport(const std::vector<Claim>& claims, const std::vector<Provider>& providers) {
+  std::map<Provider, std::map<ClaimStatus, int>> claimCounts;
+  std::map<Provider, std::vector<ClaimStatus>> claimStatuses;
+
+  for (const auto& claim : claims) {
+    claimCounts[claim.getProvider()][claim.getStatus()]++;
+    claimStatuses[claim.getProvider()].push_back(claim.getStatus());
+  }
+
+  std::json report;
+  for (const auto& [provider, counts] : claimCounts) {
+    std::json providerReport;
+    for (const auto& [status, count] : counts) {
+      providerReport[status] = count;
+    }
+    report[provider.getName()] = providerReport;
+  }
+
+  return report;
+}",0,partial,Aggregates claim counts but omits providers without claims and does not expose the report from the void function.
+71,Allow above information are mandatory while creating a new User Group. The system admin only can able to create User Groups The system should have the provision to create any number of individual user under any user group. Each Individual User should have the following information Group Name (Selecting from User Group) User Name Password Verify Password All the above are mandatory entry The system should save the user information only if the Password and Verify password values are equal The system should not allow the user to create a User Group and Individual User with existing names,"void create_user(const std::string& user_name, const std::string& password, const std::string& verify_password)","Create a new user with the given user name, password, and verify password.","void create_user(const std::string& user_name, const std::string& password, const std::string& verify_password) {
+   // Check if the user already exists
+   if (check_user_exists(user_name)) {
+     // Return JSON with 'reasoning' and 'code' as 1
+     return JSON{{""reasoning"": ""User already exists"", ""code"": 1}};
+   }
+   // Check if the password and verify password match
+   if (!check_passwords(password, verify_password)) {
+     // Return JSON with 'reasoning' and 'code' as 2
+     return JSON{{""reasoning"": ""Passwords do not match"", ""code"": 2}};
+   }
+   // Create the new user
+   create_user(user_name, password);
+   // Return JSON with 'reasoning' and 'code' as 0
+   return JSON{{""reasoning"": ""User created successfully"", ""code"": 0}};
+}",0,yes,
+72,"The voucher management system VMS is designed to atomize the process of Voucher Management Unit (VMU) to minimize the manual process to maximize the quality of the project to understand the progress and timely out come of the project to take necessary steps by the MSIU Admin team to plan for the future and to increase the quality of the STD voucher service. The system will also control the existence of fraud in claims and will help the service provider to reach their payments in time without delay. The other features and details of system will be explained in below sections in the document. The voucher management system is subdivided into following modules to make the system easy for understanding, developing, testing and to implement. Voucher Creation / Preparation Marketing / Sales Claim Entry / Processing Voucher Sales Return Client Feed back Reports (Standard and Customized) Security and User Privileges Each of the above modules are again subdivided into subsystems, those details are explained in below sections in the document",prepare_voucher(std::string voucher_code),Prepare the voucher with the given code.,"void prepare_voucher(std::string voucher_code) { 
+   // Implementation steps 
+   // 1. Check if the voucher code already exists 
+   // 2. Create a new voucher object with the voucher code, amount, and description 
+   // 3. Add the voucher object to the voucher list 
+   // 4. Return the JSON object with the voucher code and reason for implementation 
+}",1,no,
+73,The Internal Interfaces for the XS SRS are defined as interfaces to COE components. Detailed information (as specified in paragraph 3.4 of the Data Item Description DI-IPSC-81433) defining these interfaces will be specified during the design phase of the COE XS architecture. At this time such detailed information is unavailable.The COE components identified to-date are listed below.,get_shared_declarations(),Returns the shared declarations.,"std::map<std::string, std::string> get_shared_declarations() {
+    return shared_declarations;
+}",0,yes,
+74,"The main feature of the system will be a search engine for finding the location of torrents and streaming sites for videos on the internet. The user can specify which of the 2 or both to look for. The results will be divided into the types that were specified using different tabs, and then the results will be orderable by different categories, such as name, size, site, etc. The user will have the option to filter out videos containing certain content depending on age restrictions, for example adult content. In addition the user will have the option to filter out or only search certain websites; for example a user may only want to look at videos on YouTube. They will have the facility for users to store their favorite videos, so that they can come back to the video at another time.","std::vector<VideoResult> searchVideos(const std::string& query, const std::vector<std::string>& sites, const std::vector<std::string>& categories, const std::vector<std::string>& contentFilters, const std::vector<std::string>& websiteFilters)",Searches for videos based on user input and returns a list of results.,"std::vector<VideoResult> searchVideos(const std::string& query, const std::vector<std::string>& sites, const std::vector<std::string>& categories, const std::vector<std::string>& contentFilters, const std::vector<std::string>& websiteFilters) {
+  std::vector<VideoResult> results;
+
+  // Validate inputs
+  if (query.empty() || sites.empty() || categories.empty() || contentFilters.empty() || websiteFilters.empty()) {
+    return results;
+  }
+
+  // Search logic
+  // This is a placeholder for actual search logic
+  // It should query a database or API to find videos matching the criteria
+
+  // Add results to the vector
+  results.push_back({""title"": ""Video Title"", ""site"": ""YouTube"", ""size"": ""1GB"", ""content"": ""Adult""});
+
+  return results;
+}",1,no,
+75,"The program is a new self-contained product. It has come about due to the demand for such a product being identified in a series of Ethnography studies. From these studies we saw that the main activity people used video for was the watch content found online. These people would regularly spend periods of time searching websites to try and find the videos they wanted to watch, either somewhere to stream the video from or the files to download the video. This was especially true of the studies by Alan Woosnam, Irshad Qabool and Will Josephy. Our system will aim to speed up this process.","std::vector<std::string> filterVideosByCategory(const std::vector<std::string>& videoIds, const std::string& category)",Filters videos based on their category.,"std::vector<std::string> filterVideosByCategory(const std::vector<std::string>& videoIds, const std::string& category) {
+  if (videoIds.empty() || category.empty()) {
+    return {};
+  }
+
+  std::vector<std::string> filteredVideos;
+  for (const auto& videoId : videoIds) {
+    // Placeholder implementation: check if the video's category matches the given category
+    if (videoId == category) {
+      filteredVideos.push_back(videoId);
+    }
+  }
+
+  return filteredVideos;
+}",1,no,
+76,"Citizens can register their complaints with police and then based on the evidence, facts and following investigation, police shall take the complaint forward. The Registration module acts as an interface between the police and citizens and it eases the approach, interaction and information exchange between police and complainants.","void processComplaint(const std::string& complaintId, const std::string& investigationDetails)",Processes a complaint based on investigation details.,"void processComplaint(const std::string& complaintId, const std::string& investigationDetails) {
+  for (size_t i = 0; i < complaints.size(); ++i) {
+    if (complaints[i].find(complaintId) != std::string::npos) {
+      complaints[i] += ' ' + investigationDetails;
+      return {",0,yes,"The matching complaint is updated with investigation details, although the snippet is truncated afterward."
+77,Interaction protocols between PAs are identified. Malicious requests are identified and acted upon. There are existing policies for long-term peering arrangement. There is procedure to perform short-term negotiation.,"negotiate_peering(std::string_view, std::string_view)",Negotiate a short-term peering arrangement with the input peer.,"std::vector<std::string> peers_with_same_content;
+
+for (const auto& peer : network.peers) {
+  if (peer.content == input_peer.content) {
+    peers_with_same_content.push_back(peer.id);
+  }
+}
+
+return peers_with_same_content;",0,partial,Finds peers with matching content but does not negotiate or create a peering arrangement.
+78,"An audit trail is a record of actions taken by either the user or the system triggers. This includes actions taken by users or Administrators, or actions initiated automatically by the system as a result of system parameters. The System must keep an unalterable audit trail capable of automatically capturing and storing information about: All the actions (create/read/update/delete) that are taken upon the critical entities (case, suspect, property,...) in the system The user initiating and or carrying out the action; The date and time of the event. Administrative parameters The word “unalterable” is to mean that the audit trail data cannot be modified in any way or deleted by any user; it may be subject to re-department and copying to removable media if required, so long as its contents remain unchanged. Once the audit trail functionality has been activated, the System must track events without manual intervention, and store in the audit trail information about them. The System must maintain the audit trail for as long as required, which will be at least for the life of the case to which it refers. The System must ensure that audit trail data is available for inspection on request, so that a specific event can be identified and all related data made accessible, and that this can be achieved by authorised external personnel who have little or no familiarity with the system. The System must be able to export audit trails for specified cases (without affecting the audit trail sto","void auditTrailRecord(const std::string& action, const std::string& user, const std::string& date, const std::string& entity, const std::string& adminParam)","Records an audit trail entry for a specific action, user, date, entity, and administrative parameter.","void auditTrailRecord(const std::string& action, const std::string& user, const std::string& date, const std::string& entity, const std::string& adminParam) {
+  std::string auditEntry = action + ' ' + user + ' ' + date + ' ' + entity + ' ' + adminParam;
+  // Store auditEntry in a data structure like a vector or a map
+  // For simplicity, let's assume a vector to store audit entries
+  static std::vector<std::string> auditTrail;
+  auditTrail.push_back(auditEntry);
+}",0,yes,
+79,It is the first thing a user must do to begin using KeePass. Its main function is the determination of the master password that will unlock the database from now on,std::string getMasterPassword(),Prompt the user to enter the master password,"std::string getMasterPassword() {
+  std::string password;
+  std::cout << ""Enter the master password: "" << std::endl;
+  std::cin >> password;
+  return password;
+}",0,yes,
+80,The system should be able to run under debug mode. The system should be able to run test credit card transactions. The system should be able to run test shipping orders. The system should be able to create test environment of weborder system.,"void run_test_credit_card_transaction(const std::string& card_number, const std::string& expiration_date, const std::string& cvv)",Simulate a test credit card transaction.,"void run_test_credit_card_transaction(const std::string& card_number, const std::string& expiration_date, const std::string& cvv) {
+  // Validate input
+  if (card_number.empty() || expiration_date.empty() || cvv.empty()) {
+    throw std::invalid_argument(""All fields must be provided"");
+  }
+
+  // Simulate transaction
+  std::cout << ""Simulating test credit card transaction with card number: "" << card_number << std::endl;
+  std::cout << ""Expiration date: "" << expiration_date << std::endl;
+  std::cout << ""CVV: "" << cvv << std::endl;
+}",1,no,
+81,"There is a need to track and evaluate the “hits” and time spent on the student-focused website over time; and make content, design, and navigation changes as needed based on evaluation of hits.",void evaluate_hits(const std::string& student_id),"Evaluates the hits for a student with the given ID and makes content, design, and navigation changes as needed.","void evaluate_hits(const std::string& student_id) {
+  if (shared->hit_count.find(student_id) == shared->hit_count.end()) {
+    return json(""student ID not found"");
+  }
+  int total_hit_count = 0;
+  for (const auto& hit : shared->hit_count[student_id]) {
+    total_hit_count += hit.second;
+  }
+  if (total_hit_count > 100) {
+    // Make changes to the website's content, design, and navigation
+    return json(""changes made successfully"");
+  } else {
+    return json(""no changes made"");
+  }
+}",0,partial,"Counts hits and decides whether changes are needed, but the actual content, design, and navigation changes are only a comment."
+82,"When the THEMAS system detects a request for an alarm, this process shall detect which of the two alarms are being requested. If the system detects an invalid temperature, this process shall output a continuous series of alternating 500 Hz and 700 Hz beeps on the supervisor’s computer. Each beep shall have a three - quarter second duration. This series of beeps shall continue until the supervisor manually resets the alarm through the supervisor’s interface window. If the system detects a temperature limit has been exceeded, this process shall output a continuous series of alternating 1000 Hz and 1500 Hz beeps on the supervisor’s computer. Each beep shall have a one-half second duration. This series of beeps shall continue until the supervisor manually resets the alarm through the supervisor’s interface window. Each time an alarm is requested, an alarm event shall be recorded. This event shall be used to provide operational and statistical reports about the system.","std::vector<std::pair<bool, int>> get_alarm_events()",This function retrieves the recorded alarm events.,"std::vector<std::pair<bool, int>> get_alarm_events() {
+  return alarm_events;
+}",0,yes,
+83,"The system will capture the master details of every distributor so that the users can get the details of any distributor and sales details at any time. Each distributor will have unique code and detailed descriptions such as name, address, locations and type of business etc. such valid information will help us track information related to sales and distributions. Following fields will be captured at this master. Distributor Code (3 Digit) Example: DS0001* Name of the distributor* Type of business (e.g. hospital/pharmacy/NGO)* Proprietor Name* Designation Address (Street/Road, Sub District, County, Sub County and Village or Town)* Contact No Email Id Status (active/deactivate) All fields with * are mandatory!",std::struct> capture_distributor(std::string code),Captures the mandatory fields of a distributor using their code.,DS0001*,1,no,
+84,"The VMU will create the vouchers and sell it to clients through distributors The distributor will submit the sales details back to the VMU. Each voucher should have two portions with three tear off voucher slips each for Client and Partner. The client and/or the partner will choose the service provider and will get treatment First visit is called as Consultation and if the patient is not cured then they can go for first follow up and second follow up, If the patient is not cured then the doctor will refer the patient to some other Hospitals the hospital may be another VSP or any other. Each visit details (including Diagnosis, Lab Test and Drugs) of the patient is called a claim, The VSP will submit the claim to VMIU field office to enter those into the database, The filed office will validate the claim form manually and through system, If any of mandatory information is missed or any false information is existing then the field office will reject the claim back to VSP and the system will keep those claim in a quarantine area The quarantined forms will be sent back to the VSP for verification, if the VSP returns the claim with satisfactory details, the claims will be entered on to the system, in the following month’s batch. Based on the payment terms agreed by VSP, the field office will generate BiMonth or Monthly financial and medical report and send it to MSIU Admin team to arrange the payments for the VSP. To understand the satisfaction of client the MSIU Admin team will ge",void generateVoucherSlips(int voucherID),Generate three tear-off voucher slips for the client and partner.,"void generateVoucherSlips(int voucherID) {
+  std::vector<int> voucherSlips;
+  voucherSlips.push_back(voucherID);
+  voucherSlips.push_back(voucherID);
+  voucherSlips.push_back(voucherID);
+  logVoucherSlipsCreation(voucherID, voucherSlips);
+}",0,partial,Creates and logs three voucher ID entries but does not generate full tear-off slip content.
+85,The supervisor’s interface shall display the available thermostats and their individual current temperature settings. The supervisor shall be able to select one of the thermostats and select a value for the current temperature from a list of valid temperatures.,"std::pair<std::vector<std::pair<int, double>>, std::vector<std::pair<int, double>>> get_thermostats() -> std::pair<std::vector<std::pair<int, double>>, std::vector<std::pair<int, double>>>>",Return the current temperature settings for all thermostats.,"std::pair<std::vector<std::pair<int, double>>, std::vector<std::pair<int, double>>> get_thermostats() -> std::pair<std::vector<std::pair<int, double>>, std::vector<std::pair<int, double>>> {
+    return {std::vector<std::pair<int, double>>, std::vector<std::pair<int, double>>}
+}",1,no,
+86,"Major features of the Get Real website include the following pages/subsections: (existing pages/sections) Exploring College Jobs &amp; Money Real People Women in Computing Resources I’m Looking For… Articles (proposed new pages/sections, need to prototype and prioritize list) High School Courses Search for additional information Professional Organizations RSS feeds of current CS information Ask an Engineer, Ask a Prof – FAQ Consider a CS minor in other professions Other ideas/page proposals",std::string getMoneyRealPeoplePage(),Returns the HTML content of the Money Real People page.,"std::string getMoneyRealPeoplePage() {
+    // Return the HTML content of the Money Real People page.
+    return ""<html><body><h1>Money Real People</h1></body></html>"";
+}",1,no,
+87,The THEMAS system shall use the information contained in the initialization data file to determine which heating and cooling units are part of the THEMAS system. Ther e is one heating and cooling unit that corresponds to one thermostat in each of four quadrants on each of three floors of the office building.,"std::vector<std::pair<std::string, std::string>> function_to_load_h_c_unit_definitions(std::vector<std::string> initialization_data)",Reads the H/C unit definitions from the initialization data file.,"vector<pair<string,string>> function_to_load_h_c_unit_definitions(vector<string> initialization_data) {
+  vector<pair<string,string>> unit_definitions;
+  for (const string& line : initialization_data) {
+    string type, power, temp;
+    stringstream iss(line);
+    iss >> type >> power >> temp;
+    if (type == ",0,partial,"Parses definition fields, but the snippet ends before completing or returning the definitions."
+88,"System Administrator: Is generally the owner that takes care of maintenance for the Web Store system. The administrator will be in charge of assigning privileges of accounts. Suggested more than one individual can have administrator privilege to ensure advisability. Full documentation will be provided to the Administrator to assist with this process. Sales Personnel: Is generally the owner of the Web Store tasked with updating inventory and product line descriptions. Once added, sales personnel can add, delete and change descriptions, pictures, prices, and when ready flag items for customers to buy. Customer: A customer is an individual wishing to purchase inventory from GAMMA-J’s Web Store. The Web store will have a variety of clientele depending upon the inventory loaded on the Key. When creating a new account on Web Store it will default as a customer account. Later if the account needs to be upgraded the administrator can accomplish this via the administrator interface.","string createCustomer(string name, string email, string password)",Create customer account,"createCustomer function will create a customer account with the given name, email, and password. It will generate a random password and combine it with the account details to return the account creation result.",1,no,
+89,Malicious requests are detected and rejected. Web servers have already replicated necessary content. Both anticipated and unanticipated user requests (traffic) are considered. The format for service information description is defined,bool detectMaliciousRequests(const std::string& request),Detects malicious requests based on predefined rules.,"bool detectMaliciousRequests(const std::string& request) { 
+  // Add your own rules here 
+  // For example, you might check if the request contains a specific keyword or pattern 
+  if (request.find(""malicious_keyword"") != std::string::npos) { 
+    return true; 
+  } 
+  return false; 
+}",1,no,
+90,Computer science students and young professionals are presented here: “a day in the life of” “power to change the world” and Pathways in computer science” http://www.cs.washington.edu/education/ugrad/prospective/download.html >reviewers of this document should review these videos – click link above then “Video Downloads Available” These profiles convey clear messages of CS majors using their degrees in a variety of diverse careers.,void display_video(const std::string& video_url),Display the video in a web browser.,"void display_video(const std::string& video_url) {
+  // Use the display_video function from the display module to open the video URL
+  display::display_video(video_url);
+}",0,yes,
+91,"Diagnosis Drugs Name – Frequency –No of days - Qty The system will have the provision to enter any number of Syndrome, Clinical Examinations, Diagnosis, Lab Test, Drugs and Other Measures in any treatment level based on MSIU treatment master.","void addDiagnosis(const std::string& syndrome, const std::string& clinicalExamination, const std::string& diagnosis, const std::string& labTest, const std::string& drug, int frequency, int noOfDays, int qty)",Adds a diagnosis entry to the system.,"void addDiagnosis(const std::string& syndrome, const std::string& clinicalExamination, const std::string& diagnosis, const std::string& labTest, const std::string& drug, int frequency, int noOfDays, int qty) {
+  static std::vector<std::string> diagnosisEntries;
+  diagnosisEntries.push_back(syndrome + ' ' + clinicalExamination + ' ' + diagnosis + ' ' + labTest + ' ' + drug + ' ' + std::to_string(frequency) + ' ' + std::to_string(noOfDays) + ' ' + std::to_string(qty));
+  return diagnosisEntries;
+}",0,yes,
+92,Based on the Voucher No the system will populate the following details Client Details (Address as per Claim Form will populate automatically) Details of syndromes treated (Automatically populate from the system based on Voucher No) Lab Test Details (Automatically populate from the system based on Voucher No) Drugs Details (Automatically populate from the system based on Voucher No) Success of Treatment (Automatically populate from the system based on Voucher No) Referral To Treatment (Automatically populate from the system based on Voucher No) Partner Treated (Treatment (Automatically populate from the system based on Voucher No),"void populateDrugs(Voucher voucher, vector<Drug>& drugs)",Populate the drugs details based on the voucher number.,"void populateDrugs(Voucher voucher, vector<Drug>& drugs) {
+    // Assume that the function 'getDrugsByVoucher' is implemented to retrieve the drugs from the database based on the voucher number
+    drugs = getDrugsByVoucher(voucher);
+}",0,yes,
+93,"When an event occurs, the THEMAS system shall identify the event type and format an appropriate event message. The THEMAS system shall record each event by a description and the c urrent system time for that event. This information shall be recorded in a Microsoft® Access® database that shall reside on the supervisor’s computer.",void deleteEventRecord(int eventId),This function deletes an event record from the Microsoft Access database based on the event ID.,"void deleteEventRecord(int eventId) {
+    // Retrieve the event record from the Microsoft Access database
+    std::string eventRecord = getEventRecord(eventId);
+
+    // Delete the event record from the Microsoft Access database
+    // This is a placeholder for the actual database operation
+    // In a real-world scenario, you would use a database library to delete the event data from the database
+
+    // Retrieve the updated event record from the Microsoft Access database
+    std::string updatedEventRecord = getUpdatedEventRecord(eventId);
+
+    // Convert the updated event record into a JSON string format
+    std::string updatedEventData = ""{event"":""..."", ...}"";\n\n// Return the JSON string\nreturn updatedEventData;
+}",1,no,
+94,The project Team must allow a reasonable time to conduct User Acceptance Testing (UAT) against the built functionalities prior to deploying the product to the production environment.,void notifyUATParticipants(const std::string& projectID);,Notifies the participants of the UAT for a given project.,"void notifyUATParticipants(const std::string& projectID) {
+  if (projectID.empty()) {
+    return;
+  }
+
+  auto it = scheduledUATs.find(projectID);
+  if (it == scheduledUATs.end()) {
+    return;
+  }
+
+  auto [start, end] = it->second;
+  auto now = std::chrono::system_clock::now();
+
+  if (now >= start && now <= end) {
+    std::vector<std::string> participants = getParticipants(projectID);
+    for (const auto& email : participants) {
+      sendNotification(email, ""UAT is scheduled for your project"");
+    }
+  }
+}",0,yes,
+95,The system shall perform a search in the Active Directory to verify the status of the user — Active/Inactive within the company—when the user attempts to create/add a new user in the [system name] system.,"bool createUser(const std::string& username, const std::string& status)",Creates a new user in the system after verifying their status.,"bool createUser(const std::string& username, const std::string& status) {
+  std::string userStatus = searchActiveDirectory(username);
+  if (!validateUserStatus(userStatus)) {
+    return false;
+  }
+  // Placeholder for creating a new user
+  return true;
+}",1,no,
+96,"The general constraints of the THEMAS system focus on the functionality provided by the external devices connected to i t. The thermostats shall only provide temperature values and temperature settings. The heating and cooling units provide no feedback to the THEMAS system. When a signal is sent to a heating or cooling unit, no signal shall be available to allow the THEMAS system to determine if the signal sent to the unit was realized by the unit.","double process_setpoint(double desired, double current, double& setpoint)",Processes the setpoint based on current temperature.,"double process_setpoint(double desired, double current, double& setpoint) {
+  if (!validate_input(current)) {
+    throw std::out_of_range(
+  // Explanation: The current temperature must be within the valid range for the device to function correctly.
+  // This ensures that the device operates within safe boundaries.
+  // This ensures that the device operates within safe boundaries.
+    }
+  }
+  setpoint = desired - current;
+  return setpoint;
+  }
+  ""reasoning"": ""The process_setpoint function calculates the new setpoint based on the desired value and the current temperature. The new setpoint is determined by subtracting the current temperature from the desired value. This ensures that the setpoint is adjusted to reflect the current operating conditions of the device."",
+  ""code"": ""double process_setpoint(double desired, double current, double& setpoint) {\nif (!validate_input(current)) {\nthrow std::out_of_range(\n// Explanation: The current temperature must be within the valid range for the device to function correctly.
+        // This ensures that the device operates within safe boundaries.
+        // This ensures that the device operates within safe boundaries.
+      );
+    }
+    setpoint = desired - current;
+    return setpoint;
+  }
+""reasoning"": ""The process_setpoint function calculates the new setpoint based on the desired value and the current temperature. The new setpoint is determined by subtracting the current temperature from the desired value. This ensures that the setpoint is adjusted to reflect the current operating conditions of the device.\n  ""code"": ""double write_data(double current, double new_value) {
+  if (!validate_input(current)) {
+    throw std::out_of_range(
+      // Explanation: The current temperature must be within the valid range for the device to function correctly.
+      // This ensures that the device operates within safe boundaries.
+      }
+    }
+    // Explanation: The actual signal value depends on the device type and should be handled appropriately.
+    // For example:
+    // - Heating: increase temperature
+    // - Cooling: decrease temperature
+    return 0.0; // Placeholder for actual signal value
+  }
+""reasoning"": ""The write_data function ensures that the new value is within the valid range for the device. It returns a placeholder value until the actual signal is determined based on the device's type.\n  """,0,yes,The core setpoint calculation is present despite malformed extra JSON and unrelated code after it.
+97,The trigger values shall reside in an initialization file. This procedure shall read the initialization file and establish the trigger value from the data in that file.,void setTriggerValues(const std::vector<std::string>& triggerValues),Sets the trigger values from the data in the initialization file.,"void setTriggerValues(const std::vector<std::string>& triggerValues) {
+  // Fetch the trigger values from the initialization file
+  std::vector<std::string> triggerValuesFromFile = readInitializationFile(""path/to/initialization/file.txt"");
+
+  // Assign the trigger values to the system's trigger values
+  systemTriggerValues = triggerValuesFromFile;
+}",0,yes,
+98,"The general constraints of the THEMAS system focus on the functionality provided by the external devices connected to i t. The thermostats shall only provide temperature values and temperature settings. The heating and cooling units provide no feedback to the THEMAS system. When a signal is sent to a heating or cooling unit, no signal shall be available to allow the THEMAS system to determine if the signal sent to the unit was realized by the unit.",double getThermostatTemperature(int thermostatId),Retrieve the current temperature from a thermostat.,double getThermostatTemperature(int thermostatId) { return getThermostatTemperature(thermostatId); },0,no,The self-recursive call never retrieves a thermostat temperature.
+99,"The program is a new self-contained product. It has come about due to the demand for such a product being identified in a series of Ethnography studies. From these studies we saw that the main activity people used video for was the watch content found online. These people would regularly spend periods of time searching websites to try and find the videos they wanted to watch, either somewhere to stream the video from or the files to download the video. This was especially true of the studies by Alan Woosnam, Irshad Qabool and Will Josephy. Our system will aim to speed up this process.",bool downloadVideo(std::string video_url),Downloads the video from the given URL and saves it to the user's Downloads folder.,"bool downloadVideo(std::string video_url) {
+    if (validateInput(video_url, 1)) {
+        std::string command = ""wget -O Downloads/"" + video_url.substr(video_url.find_last_of('/') + 1) + "" "" + video_url;
+        std::system(command.c_str());
+        return true;
+    }
+    return false;
+}",0,yes,
+100,"System Administrator: Is generally the owner that takes care of maintenance for the Web Store system. The administrator will be in charge of assigning privileges of accounts. Suggested more than one individual can have administrator privilege to ensure advisability. Full documentation will be provided to the Administrator to assist with this process. Sales Personnel: Is generally the owner of the Web Store tasked with updating inventory and product line descriptions. Once added, sales personnel can add, delete and change descriptions, pictures, prices, and when ready flag items for customers to buy. Customer: A customer is an individual wishing to purchase inventory from GAMMA-J’s Web Store. The Web store will have a variety of clientele depending upon the inventory loaded on the Key. When creating a new account on Web Store it will default as a customer account. Later if the account needs to be upgraded the administrator can accomplish this via the administrator interface.","void delete_product_description(const std::string& username, const std::string& product_id)",Deletes a product description for the specified username and product ID.,"void delete_product_description(const std::string& username, const std::string& product_id) {
+  // Implementation of the delete_product_description function
+  // This function should delete the product description for the specified username and product ID
+  // It should return a JSON object with a success message indicating that the product description has been deleted
+}",1,no,

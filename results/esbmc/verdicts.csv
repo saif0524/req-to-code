@@ -1,0 +1,7 @@
+round,arm,functions,ok,fail,timeout,unsupported
+C1,general,274,94,100,18,62
+C1,secure,208,51,82,14,61
+C2,general,340,120,116,29,75
+C2,secure,261,62,108,14,77
+R0,general,155,49,68,4,34
+R0,secure,138,40,55,2,41

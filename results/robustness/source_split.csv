@@ -1,0 +1,4 @@
+group,sections,pairs,core_shift,core_lo,core_hi,stub_general,stub_general_lo,stub_general_hi,stub_secure,stub_secure_lo,stub_secure_hi
+I,104,401,0.1121,0.0897,0.133,0.2786,0.2433,0.3146,0.2935,0.2615,0.3259
+U,62,239,0.1236,0.0992,0.1527,0.277,0.2335,0.3236,0.2719,0.2345,0.3113
+all,166,640,0.1166,0.1,0.1343,0.278,0.2503,0.3045,0.2852,0.2596,0.3096

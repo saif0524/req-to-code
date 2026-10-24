@@ -1,0 +1,47 @@
+#include <algorithm>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <optional>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+std::vector<std::string> readInitializationFile(const std::string& filePath);
+std::vector<double> parseTriggerValues(const std::vector<std::string>& triggerValues);
+void setTriggerValues(const std::vector<double>& triggerValues);
+
+std::vector<std::string> readInitializationFile(const std::string& filePath) {
+  std::vector<std::string> triggerValues;
+  std::ifstream file(filePath);
+  if (file.is_open()) {
+    std::string line;
+    while (std::getline(file, line)) {
+      triggerValues.push_back(line);
+    }
+    file.close();
+  }
+  return triggerValues;
+}
+
+std::vector<double> parseTriggerValues(const std::vector<std::string>& triggerValues) {
+  std::vector<double> parsedValues;
+  for (const auto& value : triggerValues) {
+    parsedValues.push_back(std::stod(value));
+  }
+  return parsedValues;
+}
+
+void setTriggerValues(const std::vector<double>& triggerValues) {
+  for (const auto& value : triggerValues) {
+    // Assuming a system method to set trigger values
+    system->setTrigger(value);
+  }
+}
+

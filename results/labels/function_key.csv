@@ -1,0 +1,101 @@
+id,arm,model,unit_id,func,auto_class,auto_stub
+1,secure,qwen25coder3b,2008_keepass__3_14_1,handleLanguageSelection,minimal,0
+2,secure,opencoder15b,2009_video_search__3_1_1,parseResults,output/trivial only,1
+3,secure,qwen25coder3b,2008_keepass__5_3,isUninstallTraceless,logic,0
+4,secure,qwen25coder15b,2005_microcare__design_constraints_830,create_user_group,placeholder-marked,1
+5,secure,qwen25coder3b,2009_video_search__2_3,assessSiteUsefulness,placeholder-marked,1
+6,general,deepcoder15b,2010_blitdraft__2_1_1_2_1_9,searchUser,empty,1
+7,general,qwen25coder3b,2008_peering__3_4_7,identify_interaction_protocols,placeholder-marked,1
+8,secure,opencoder15b,0000_cctns__x_16,set_user_interface,empty,1
+9,secure,deepcoder15b,1998_themas__3_1_4_2_3,turn_on_heating,minimal,0
+10,secure,qwen25coder3b,2005_microcare__ii_812,logVSPStaffDetails,output/trivial only,1
+11,secure,qwen25coder15b,1998_themas__2_3,display_status,logic,0
+12,general,qwen25coder3b,1998_themas__3_1_5_2_3,constructEventDescription,minimal,0
+13,general,qwen25coder3b,2003_qheadache__3_1,check_screen_resolution,output/trivial only,1
+14,secure,qwen25coder3b,2010_blitdraft__2_1_1_2_1_19,handleUserCreation,placeholder-marked,1
+15,secure,qwen25coder15b,0000_cctns__x_18,update_system_status,empty,1
+16,general,qwen25coder3b,2008_keepass__3_8_1,executeDeletion,minimal,0
+17,secure,qwen25coder3b,0000_gamma_j__2_5,connectToDatabase,empty,1
+18,general,qwen25coder15b,2007_get_real_0_2__2_4,get_real_site_url,minimal,0
+19,general,deepcoder15b,2005_microcare__the_concept_of_output_based_aid_oba,track_voucher,output/trivial only,1
+20,general,opencoder15b,0000_cctns__x_13,export_audit_trail,empty,1
+21,secure,qwen25coder3b,2009_video_search__2_1,fetchVideoDetails,placeholder-marked,1
+22,secure,qwen25coder3b,1999_dii__4_14_7_3_1,get_data_item_description,output/trivial only,1
+23,secure,deepcoder15b,1998_themas__3_1_10_3,generateStatisticalReport,placeholder-marked,1
+24,secure,qwen25coder3b,2008_keepass__3_21_2,updateTanEntry,output/trivial only,1
+25,general,qwen25coder15b,2008_keepass__3_9_2_1,open KeePass,minimal,0
+26,secure,qwen25coder3b,2008_keepass__3_14_1,displayLanguageDownloadMenu,output/trivial only,1
+27,general,deepcoder15b,2005_microcare__1_3_2,feedback_message,empty,1
+28,secure,deepcoder15b,2008_peering__2_3,transferData,logic,0
+29,secure,qwen25coder15b,2007_get_real_0_2__5_3_1,compareConventions,minimal,0
+30,secure,deepcoder15b,2009_video_search__4_1,VideoSelect,empty,1
+31,general,deepcoder15b,2009_video_search__3_1_2,get_search_results,empty,1
+32,secure,qwen25coder15b,0000_gamma_j__3_3_3,update_cart,minimal,0
+33,general,qwen25coder3b,1998_themas__3_1_10_3,generateOperationalHistoryReport,empty,1
+34,general,qwen25coder3b,2010_blitdraft__2_7_1_1,displayHelpPopup,minimal,0
+35,general,qwen25coder15b,0000_cctns__x,updateComplaintEvidence,logic,0
+36,secure,qwen25coder15b,2008_peering__4_1,handle_user_input,logic,0
+37,general,qwen25coder15b,2008_peering__3_4_7,identify_malicious_requests,empty,1
+38,secure,qwen25coder15b,2005_microcare__design_constraints_824,get_distributor_master_sales_man_name,output/trivial only,1
+39,secure,qwen25coder3b,0000_gamma_j__3_1_3,login,placeholder-marked,1
+40,general,qwen25coder3b,2008_keepass__3_2_1,unlock_database,placeholder-marked,1
+41,secure,opencoder15b,0000_gamma_j__3_1_1,create_account,logic,0
+42,general,opencoder15b,2008_keepass__3_21_1,getTANInfo,logic,0
+43,secure,qwen25coder3b,0000_gamma_j__2_4,validateBrowser,logic,0
+44,general,deepcoder15b,1998_themas__2_4,calculate_heating_required,logic,0
+45,general,deepcoder15b,2005_microcare__design_constraints_826,get_treatment_success,output/trivial only,1
+46,secure,deepcoder15b,2007_get_real_0_2__5_3,hit_counter,logic,0
+47,secure,qwen25coder15b,2005_microcare__iii_814,get_vsp_name,output/trivial only,1
+48,general,opencoder15b,2009_video_search__5_4,isLegalReviewed,output/trivial only,1
+49,general,opencoder15b,2008_peering__2_4,calculate_load,logic,0
+50,secure,opencoder15b,2010_blitdraft__2_4_1_2,check_requirements,placeholder-marked,1
+51,secure,opencoder15b,2008_peering__3_4_7,identify_malicious_requests,minimal,0
+52,general,qwen25coder15b,2005_microcare__design_constraints_804,get_distributor_address,minimal,0
+53,secure,qwen25coder3b,2005_microcare__1_3_2,handle_claim,placeholder-marked,1
+54,secure,qwen25coder15b,2005_microcare__2_1_1,generate_report,logic,0
+55,general,qwen25coder3b,0000_gamma_j__2_1,setupWebStore,empty,1
+56,general,deepcoder15b,2005_microcare__iii,generate_sales_report,output/trivial only,1
+57,secure,qwen25coder15b,0000_gamma_j__3_5_3,handleCategorySelection,output/trivial only,1
+58,secure,qwen25coder3b,2005_microcare__design_constraints_815,getVspName,output/trivial only,1
+59,secure,opencoder15b,2008_keepass__2_4,handle_memory,empty,1
+60,general,deepcoder15b,2005_microcare__2_1_1,payment_generate,empty,1
+61,secure,deepcoder15b,2008_keepass__3_2_1,checkDatabase,minimal,0
+62,general,opencoder15b,2009_video_search__5_1,checkSortingTime,placeholder-marked,1
+63,general,qwen25coder15b,2008_peering__4_1,update_user_interface,logic,0
+64,secure,qwen25coder15b,1999_dii__4_14_7_3_1,startXS,minimal,0
+65,general,opencoder15b,1998_themas__3_1_5_3_3,get_heating_status,placeholder-marked,1
+66,general,deepcoder15b,0000_gamma_j__2_7,display_output,output/trivial only,1
+67,general,deepcoder15b,2005_microcare__5,labTestResults,empty,1
+68,secure,qwen25coder15b,0000_gamma_j__4_4,sendEmailConfirmation,minimal,0
+69,general,qwen25coder3b,2008_keepass__3_1_1,displayWelcomeMessage,output/trivial only,1
+70,general,qwen25coder3b,2005_microcare__6,generateQuarterlySummaryReport,logic,0
+71,general,opencoder15b,2005_microcare__design_constraints_830,create_user,logic,0
+72,general,opencoder15b,2005_microcare__1_3_2,prepare_voucher,empty,1
+73,general,opencoder15b,1999_dii__4_14_7_3_1,get_shared_declarations,output/trivial only,1
+74,secure,qwen25coder3b,2009_video_search__2_2,searchVideos,placeholder-marked,1
+75,secure,qwen25coder3b,2009_video_search__2_1,filterVideosByCategory,placeholder-marked,1
+76,general,qwen25coder3b,0000_cctns__x,processComplaint,empty,1
+77,secure,opencoder15b,2008_peering__3_4_7,negotiate_peering,logic,0
+78,general,qwen25coder3b,0000_cctns__x_13,auditTrailRecord,placeholder-marked,1
+79,general,qwen25coder3b,2008_keepass__3_1_1,getMasterPassword,output/trivial only,1
+80,secure,qwen25coder3b,0000_gamma_j__5_9,run_test_credit_card_transaction,placeholder-marked,1
+81,secure,qwen25coder15b,2007_get_real_0_2__5_3,evaluate_hits,logic,0
+82,general,opencoder15b,1998_themas__3_1_7_3,get_alarm_events,output/trivial only,1
+83,secure,deepcoder15b,2005_microcare__i,capture_distributor,empty,1
+84,general,qwen25coder3b,2005_microcare__2_1_1,generateVoucherSlips,logic,0
+85,general,deepcoder15b,1998_themas__3_1_9_4,Get Thermostat Data,minimal,0
+86,secure,opencoder15b,2007_get_real_0_2__2_2,getMoneyRealPeoplePage,output/trivial only,1
+87,general,deepcoder15b,1998_themas__3_1_1_1_3,function_to_load_h_c_unit_definitions,empty,1
+88,general,deepcoder15b,0000_gamma_j__2_3,create customer,empty,1
+89,general,opencoder15b,2008_peering__3_2_7,detectMaliciousRequests,placeholder-marked,1
+90,general,qwen25coder15b,2007_get_real_0_2__3_3_1,display_video,minimal,0
+91,general,qwen25coder3b,2005_microcare__for_second_follow_up,addDiagnosis,minimal,0
+92,general,opencoder15b,2005_microcare__design_constraints_826,populateDrugs,minimal,0
+93,general,opencoder15b,1998_themas__3_1_8_3,deleteEventRecord,placeholder-marked,1
+94,secure,qwen25coder3b,2010_blitdraft__2_4_1_2,notifyUATParticipants,logic,0
+95,secure,qwen25coder3b,2010_blitdraft__2_1_1_2_1_10,createUser,placeholder-marked,1
+96,secure,deepcoder15b,1998_themas__2_4,process_setpoint,placeholder-marked,1
+97,general,qwen25coder15b,1998_themas__3_1_1_4_3,setTriggerValues,minimal,0
+98,general,qwen25coder3b,1998_themas__2_4,getThermostatTemperature,minimal,0
+99,secure,opencoder15b,2009_video_search__2_1,downloadVideo,logic,0
+100,general,qwen25coder15b,0000_gamma_j__2_3,delete_product_description,empty,1

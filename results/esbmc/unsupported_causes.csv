@@ -1,0 +1,49 @@
+round,first_error,functions
+C1,error: no matching member function for call to '_',59
+C1,error: no member named '_' in namespace '_',19
+C1,error: invalid operands to binary expression ('_' and '_'),10
+C1,error: no viable overloaded operator[] for type '_' (aka '_'),7
+C1,error: no matching constructor for initialization of '_' (aka '_'),5
+C1,ERROR: unrecognized / unimplemented clang declaration Decomposition,5
+C1,error: no member named '_' in namespace '_'; did you mean '_'?,5
+C1,ERROR: main symbol not found; please set an entry point,2
+C1,ERROR: main symbol `load_plugin' is ambiguous,1
+C1,ERROR: main symbol `update_site' is ambiguous,1
+C1,ERROR: main symbol `log_change' is ambiguous,1
+C1,ERROR: main symbol `upgrade_system' is ambiguous,1
+C1,ERROR: main symbol `get_user_type' is ambiguous,1
+C1,ERROR: main symbol `get_user_class' is ambiguous,1
+C1,ERROR: main symbol `get_user_qos' is ambiguous,1
+C1,ERROR: main symbol `getDatabaseEngineNames' is ambiguous,1
+C1,ERROR: main symbol `updateSiteConfiguration' is ambiguous,1
+C1,ERROR: main symbol `useConsistentSymbolsAndColors' is ambiguous,1
+C1,ERROR: main symbol `outputRequest' is ambiguous,1
+C2,error: no matching member function for call to '_',73
+C2,error: no member named '_' in namespace '_',19
+C2,error: invalid operands to binary expression ('_' and '_'),10
+C2,error: no member named '_' in namespace '_'; did you mean '_'?,10
+C2,error: no viable overloaded operator[] for type '_' (aka '_'),9
+C2,error: no matching constructor for initialization of '_' (aka '_'),5
+C2,ERROR: unrecognized / unimplemented clang declaration Decomposition,5
+C2,error: implicit instantiation of undefined template '_',5
+C2,ERROR: main symbol not found; please set an entry point,3
+C2,ERROR: main symbol `load_plugin' is ambiguous,1
+C2,ERROR: main symbol `update_site' is ambiguous,1
+C2,ERROR: main symbol `log_change' is ambiguous,1
+C2,ERROR: main symbol `upgrade_system' is ambiguous,1
+C2,ERROR: main symbol `get_user_type' is ambiguous,1
+C2,ERROR: main symbol `get_user_class' is ambiguous,1
+C2,ERROR: main symbol `get_user_qos' is ambiguous,1
+C2,ERROR: main symbol `getDatabaseEngineNames' is ambiguous,1
+C2,ERROR: main symbol `get_coe_components' is ambiguous,1
+C2,ERROR: main symbol `updateSiteConfiguration' is ambiguous,1
+C2,ERROR: main symbol `useConsistentSymbolsAndColors' is ambiguous,1
+C2,ERROR: main symbol `handle_duplicate_name' is ambiguous,1
+C2,ERROR: main symbol `outputRequest' is ambiguous,1
+R0,error: no matching member function for call to '_',50
+R0,error: no matching constructor for initialization of '_' (aka '_'),5
+R0,ERROR: unrecognized / unimplemented clang declaration Decomposition,5
+R0,error: no member named '_' in namespace '_'; did you mean '_'?,5
+R0,error: no viable overloaded operator[] for type '_' (aka '_'),5
+R0,error: no member named '_' in namespace '_',4
+R0,ERROR: main symbol `getDatabaseEngineNames' is ambiguous,1

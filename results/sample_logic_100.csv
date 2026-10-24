@@ -1,0 +1,1322 @@
+id,model,variant,doc,unit_id,func_index,name,signature,purpose,reasoning,code,label_implements_purpose,label_calls_undefined_helper,label_defensive_checks,notes
+1,qwen25coder3b,secure_prompt,2010-blitdraft,2010_blitdraft__2_7_1,1,showHelpWindow,void showHelpWindow(QWidget* parent),Displays the Help window with the same content as the user manuals.,Use the provided `populateHelpWindow` function to load the content into the Help window. | Pass the `parent` widget to `populateHelpWindow` to ensure the window is displayed correctly. | Use `QWidget::show` to display the window after populating it.,"void showHelpWindow(QWidget* parent) {
+  QWidget* helpWindow = new QWidget(parent);
+  populateHelpWindow(helpWindow);
+  helpWindow->show();
+}",,,,
+2,qwen25coder3b,secure_prompt,2008 - keepass,2008_keepass__3_5_1,0,searchDatabase,std::vector<std::string> searchDatabase(const std::string& query),Searches the database for entries containing the query string.,"Input validation: The function takes a string query as input and processes it to handle partial matches and related data. | Memory safety: The function returns a vector of strings, which is a safe and efficient way to handle dynamic data. | Safe resource handling: The function does not allocate any new memory, so there is no need for resource management. | Defensive programming: The function processes the query string to handle partial matches and related data, which is a defensive approach to search functionality.","std::vector<std::string> searchDatabase(const std::string& query) {
+  std::vector<std::string> results;
+  // Process the query string to handle partial matches and related data
+  std::string processedQuery = processQuery(query);
+  // Search the database for entries containing the processed query string
+  for (const auto& entry : database) {
+    if (entry.contains(processedQuery)) {
+      results.push_back(entry.getId());
+    }
+  }
+  return results;
+}",,,,
+3,qwen25coder15b,baseline,0000 - cctns,0000_cctns__x_11,4,save_help,"void save_help(const std::string& action, const std::string& scenario, const std::string& help_text)",Saves help text for a specific action and scenario to a file or database on all user interfaces in the application.,"The function `save_help` is responsible for saving the help text for a specific action and scenario to a file or database on all user interfaces in the application. It is a crucial part of the help module to ensure that the help information is available and accessible to all users. | The function takes four parameters: `action`, `scenario`, `help_text`, and `file_path` or `database_name`. The `action` and `scenario` parameters are used to identify the specific help information that needs to be saved, while the `help_text` parameter contains the actual help text that needs to be saved. The `file_path` or `database_name` parameter is used to specify the location where the help text should be saved. | The function first generates the help text using the `generate_help` function. This function is responsible for creating the help text based on the `action` and `scenario` parameters. The generated help text is then loaded into the function using the `load_help` function. This function is responsible for loading the help text from a file or database into the function. Finally, the function saves the help text using the `save_help` function. This function is responsible for saving the help text to a file or database. | The function is implemented using the shared declarations, the planned functions, and your own parameters and local variables. It is a crucial part of the help module to ensure that the help information is available and accessible to all users.","void save_help(const std::string& action, const std::string& scenario, const std::string& help_text, const std::string& file_path) {
+  std::string help_text = generate_help(action, scenario);
+  load_help(action, scenario, help_text);
+  save_help(action, scenario, help_text, file_path);
+}",,,,
+4,deepcoder15b,secure_prompt,2010-blitdraft,2010_blitdraft__2_1_1_2_1_10,0,CheckUserStatus,std::string CheckUserStatus(User user) -> std::string,Perform a search in the Active Directory to verify the status of the user.,Check the user's ID to ensure it is within the valid range. | Verify the role is either 'Active' or 'Inactive' to confirm the user's status. | Return an appropriate error message if any check fails.,"std::string CheckUserStatus(User user) -> std::string {
+  int user_id = user.ID;
+  if (user_id < 1 || user_id > 99999) {
+    return ""Error: User ID is invalid. ID must be between 1 and 99999."";
+  }
+  char role[2];
+  if (user.Role != ""Active"" && user.Role != ""Inactive"") {
+    return ""Error: Role is invalid. Role must be 'Active' or 'Inactive'.\n};\nreturn ""User status verified. User is active/inactive as expected.""\n}",,,,
+5,qwen25coder15b,secure_prompt,1998 - themas,1998_themas__3_1_7_3,3,handle_alarm_request,void handle_alarm_request(double temperature),Handles an alarm request by detecting the type of alarm and generating the appropriate beeps.,The function `handle_alarm_request` is responsible for handling an alarm request by detecting the type of alarm and generating the appropriate beeps. It uses the `detect_temperature` function to check if the temperature is valid and then uses the `generate_beeps` function to generate the beeps based on the type of alarm. | The function also records the alarm event using the `record_alarm_event` function. This ensures that the system can keep track of all the alarm events and provide operational and statistical reports about the system. | The function uses the shared declarations and the planned functions to ensure that the code is robust and secure. It also uses the local variables to store the necessary information for the function.,"void handle_alarm_request(double temperature) {
+  if (!detect_temperature(temperature)) {
+    generate_beeps(500, 300); // Invalid temperature, generate 500 Hz beeps for 300 ms
+    record_alarm_event(""Invalid temperature""); // Record the alarm event
+  } else if (temperature > 100) {
+    generate_beeps(1000, 1500); // Temperature limit exceeded, generate 1000 Hz beeps for 1500 ms
+    record_alarm_event(""Temperature limit exceeded""); // Record the alarm event
+  } else {
+    generate_beeps(500, 300); // Valid temperature, generate 500 Hz beeps for 300 ms
+    record_alarm_event(""Valid temperature""); // Record the alarm event
+  }
+}",,,,
+6,qwen25coder3b,baseline,2008 - keepass,2008_keepass__3_15_1,2,getAutoTypeSequence,"std::string getAutoTypeSequence(const std::vector<Entry>& entries, const std::string& entryName)",Retrieve the auto-type sequence for a specific entry from the database.,"Iterate through the entries to find the one with the matching name. | Check if the entry has an auto-type sequence defined in its notes field. | Return the auto-type sequence if found, otherwise return an empty string.","std::string getAutoTypeSequence(const std::vector<Entry>& entries, const std::string& entryName) {
+  for (const auto& entry : entries) {
+    if (entry.name == entryName) {
+      std::string sequence = parseAutoTypeSequence(entry.notes);
+      if (!sequence.empty()) {
+        return sequence;
+      }
+    }
+  }
+  return """";
+}",,,,
+7,deepcoder15b,secure_prompt,2010-blitdraft,2010_blitdraft__2_5_2_2,2,handle_error,int handle_error() -> int,Handle any errors that occur during reading or writing.,"Check if log_file is empty | If not, read integer and write string | Handle any exceptions | Return -1 if any error occurs","if (log_file.empty()) { return -1; }
+ try { int num = read_int(); string str = write_str(); } catch (...) { return -1; }
+ return 0; ""reasoning"": ""The handle_error() function checks if the log file is empty. If it is, it returns -1. Otherwise, it attempts to read an integer and write a string, handling any exceptions that occur during these steps. If any error occurs, it returns -1."", ""reasoning"": ""3 to 6 short steps explaining how and why you implement it this way, and ""code"": the complete function definition only.",,,,
+8,qwen25coder3b,secure_prompt,2008 - peering,2008_peering__3_6,1,rearrangePeering,void rearrangePeering(PeeringArrangement& arrangement),Rearrange the peering arrangement based on the disband request.,"Check if the arrangement has any active connections. | If there are active connections, rearrange the arrangement to remove them. | Update the peering database with the new arrangement. | Notify the participants of the peering arrangement about the disband or rearrangement. | Log the disband event for auditing and tracking.","void rearrangePeering(PeeringArrangement& arrangement) {
+  if (arrangement.hasActiveConnections()) {
+    // Remove active connections
+    arrangement.removeActiveConnections();
+    // Update the peering database
+    updatePeeringDatabase(arrangement);
+    // Notify participants
+    notifyPeeringParticipants(arrangement);
+    // Log the disband event
+    logDisbandEvent(arrangement);
+  }
+}",,,,
+9,qwen25coder3b,secure_prompt,1998 - themas,1998_themas__3_1_8_3,4,closeDatabaseConnection,void closeDatabaseConnection(const std::shared_ptr<DatabaseConnection>& connection),Closes the database connection.,Use a static variable to hold the database connection | Ensure the connection is only closed once | Use a shared pointer to manage the connection lifecycle | Provide a function to close the connection,"void closeDatabaseConnection(const std::shared_ptr<DatabaseConnection>& connection) {
+  static std::shared_ptr<DatabaseConnection> connection;
+  if (connection) {
+    connection->close();
+    connection.reset();
+  }
+}",,,,
+10,qwen25coder3b,baseline,1998 - themas,1998_themas__3_1_9_4,1,getValidTemperatures,std::vector<int> getValidTemperatures(),Returns a list of valid temperatures for the thermostat settings.,"The function `getValidTemperatures` is needed to provide a list of valid temperatures for the thermostat settings. | Since the problem does not specify the range of valid temperatures, we will assume a common range for temperature settings, such as 10°C to 30°C. | We will create a vector of integers representing these valid temperatures. | This function will return this vector of valid temperatures.","std::vector<int> getValidTemperatures() {
+  std::vector<int> validTemperatures;
+  for (int temp = 10; temp <= 30; temp++) {
+    validTemperatures.push_back(temp);
+  }
+  return validTemperatures;
+}",,,,
+11,qwen25coder15b,baseline,2008 - keepass,2008_keepass__5_3,1,copy_to_usb,"void copy_to_usb(const std::string& zip_path, const std::string& usb_path)",Copies a ZIP file to a USB stick.,"The function `copy_to_usb` is responsible for copying a ZIP file to a USB stick. It uses the `extract_zip` function to extract the ZIP file to a temporary directory, then copies the extracted files to the USB stick. | The `extract_zip` function is already implemented and can be used to extract the ZIP file to a temporary directory. | The `copy_to_usb` function uses the `std::filesystem::create_directories` function to create the destination directory on the USB stick if it does not already exist. | The `copy_to_usb` function uses the `std::ofstream` class to write the extracted files to the destination directory on the USB stick. | The `copy_to_usb` function uses the `std::runtime_error` class to throw an exception if the ZIP file cannot be extracted or copied.","void copy_to_usb(const std::string& zip_path, const std::string& usb_path) {
+  try {
+    extract_zip(zip_path, ""temp_extracted"");
+    std::filesystem::create_directories(usb_path);
+    std::filesystem::copy(""temp_extracted"", usb_path, std::filesystem::copy_options::recursive);
+  } catch (const std::exception& e) {
+    throw std::runtime_error(""Failed to copy ZIP file to USB stick: "" + e.what());
+  }
+}",,,,
+12,deepcoder15b,baseline,2008 - keepass,2008_keepass__3_5_1,4,search_for_urls,"string url, returns vector<db_entry> where db_entry.url == url",Searches for database entries matching a given URL string.,"The function url searches for all database entries where the url matches the input string. It iterates through each entry, compares the url, and collects those that match. This ensures that all relevant entries are found efficiently.","vector<db_entry> url(string url) {
+    vector<db_entry> result;
+    for (const auto& db_entry : entries) {
+      if (db_entry->url == url) {
+        result.push_back(db_entry);
+      }
+    }
+    return result;
+  },
+  ",,,,
+13,qwen25coder15b,baseline,2008 - keepass,2008_keepass__3_17_1,1,load_key_file,"bool load_key_file(const std::string& key_file_path, std::string& key)",Load a key file into the database.,"The function `load_key_file` is responsible for loading a key file into the database. It takes the path to the key file and the key as parameters. The function reads the key file and stores it in the database. If the file is not found or the key does not match the master key, the function returns false. | The function uses the `std::ifstream` class to read the key file. It reads the key file line by line and stores it in the database. If the file is not found or the key does not match the master key, the function returns false. | The function uses the `std::string` class to store the key file. It reads the key file line by line and stores it in the database. If the file is not found or the key does not match the master key, the function returns false.","bool load_key_file(const std::string& key_file_path, std::string& key) {
+  std::ifstream file(key_file_path);
+  if (!file.is_open()) {
+    return false;
+  }
+  std::string line;
+  while (std::getline(file, line)) {
+    key += line;
+  }
+  return verify_key(key, master_key);
+}",,,,
+14,opencoder15b,secure_prompt,0000 - cctns,0000_cctns__x_19,1,get_recent_cases,std::vector<case_info> get_recent_cases(),Retrieves and returns the cases accessed within the last 2 months.,The function get_recent_cases() is designed to retrieve the cases accessed within the last 2 months. This is achieved by iterating through the list of case_info objects and checking if the access_date is within the last 2 months. The function returns a vector of case_info objects that meet this criteria.,"std::vector<case_info> get_recent_cases() {
+   std::vector<case_info> recent_cases;
+   for (const auto& case_info : cases) {
+      if (case_info.access_date >= std::chrono::system_clock::now() - 2 * 24 * 60 * 60) {
+         recent_cases.push_back(case_info);
+      }
+   }
+   return recent_cases;
+}",,,,
+15,qwen25coder15b,secure_prompt,0000 - cctns,0000_cctns__x_12,0,log_defect,"void log_defect(const std::string& description, const std::string& category, const std::string& status)","Log a defect or enhancement request with the given description, category, and status.","The function `log_defect` is designed to log a defect or enhancement request with the given description, category, and status. It takes three parameters: `description`, `category`, and `status`. These parameters are used to create a new defect or enhancement request object and store it in a database or a file. The function returns a JSON object with a 'success' key set to 'true' if the request is successfully logged, and a 'message' key with a success message if the request is logged. If the request fails to be logged, the function returns a JSON object with a 'success' key set to 'false' and a 'message' key with an error message. | The function uses the `std::string` class to store the description, category, and status. The `std::string` class is a standard library class that provides a way to store sequences of characters. It is a safe and efficient way to store and manipulate strings in C++. | The function uses the `std::string` class to store the description, category, and status. The `std::string` class is a standard library class that provides a way to store sequences of characters. It is a safe and efficient way to store and manipulate strings in C++. | The function uses the `std::string` class to store the description, category, and status. The `std::string` class is a standard library class that provides a way to store sequences of characters. It is a safe and efficient way to store and manipulate strings in C++. | The function uses the `std::string` class to store the description, category, and status. The `std::string` class is a standard library class that provides a way to store sequences of characters. It is a safe and efficient way to store and manipulate strings in C++. | The function uses the `std::string` class to store the description, category, and status. The `std::string` class is a standard library class that provides a way to store sequences of characters. It is a safe and efficient way to store and manipulate strings in C++.","void log_defect(const std::string& description, const std::string& category, const std::string& status) {
+  // Create a new defect or enhancement request object
+  Defect defect = Defect(description, category, status);
+
+  // Store the defect or enhancement request in a database or a file
+  // (implementation depends on the specific requirements of the application)
+
+  // Return a JSON object with a 'success' key set to 'true' if the request is successfully logged
+  // and a 'message' key with a success message if the request is logged
+  return Json::object({
+    ""success"": true,
+    ""message"": ""Defect or enhancement request logged successfully.""
+  });
+}",,,,
+16,qwen25coder3b,baseline,2010-blitdraft,2010_blitdraft__2_6_3_4,4,deployToStaging,void deployToStaging(const std::string& buildVersion),Deploys the build to the Staging environment.,"The function `deployToStaging` is designed to handle the deployment of a build to the Staging environment. | It takes a `buildVersion` as a parameter, which is used to generate the release notes. | The release notes are then composed and sent to the Project Team via email. | This function orchestrates the deployment process by calling the necessary functions in sequence.","void deployToStaging(const std::string& buildVersion) { std::string releaseNotes = generateReleaseNotes(buildVersion); std::string emailBody = composeEmail(releaseNotes); sendEmail(""Release Notes for Build Version "" + buildVersion, emailBody); notifyProjectTeam(""Release Notes for Build Version "" + buildVersion, emailBody); }",,,,
+17,qwen25coder3b,baseline,2008 - peering,2008_peering__3_6_7,1,performRenegotiation,void performRenegotiation(const std::string& negotiationType),Performs renegotiation based on the negotiation type.,"The function `performRenegotiation` is designed to handle different types of renegotiations based on the provided `negotiationType`. | It uses the `negotiationType` to determine which specific renegotiation logic to execute. | The function is implemented to be flexible and reusable, allowing for easy addition of new negotiation types in the future. | The function is designed to be self-contained, with no external dependencies or global mutable state.","void performRenegotiation(const std::string& negotiationType) {
+  if (negotiationType == ""SLAViolation"") {
+    // Logic for handling SLA violation renegotiation
+  } else if (negotiationType == ""ProblemResolution"") {
+    // Logic for handling problem resolution renegotiation
+  } else {
+    // Handle unknown negotiation type
+  }
+}",,,,
+18,deepcoder15b,baseline,2008 - keepass,2008_keepass__3_8_1,1,deleteGroup,Group deleteGroup(Group group),Delete the group by its ID when the user clicks the delete button.,"1. Call getGroup to find the ID of the group.
+        2. If the group exists, erase it from the groups vector using its ID as the position.
+        3. Return true to indicate the group was successfully deleted.
+    ],","bool deleteGroup(Group group) {
+    int groupId = getGroup(group);
+    if (groupId != -1) {
+        groups.erase(groups.begin() + groupId, groups.end() + groupId);
+    }
+    return true;
+}",,,,
+19,opencoder15b,baseline,2008 - keepass,2008_keepass__3_16_2,0,is_valid_path,bool is_valid_path(const std::string& path),Check if the path contains a space and return true if it does.,"The function is used to check if the path contains a space. If the path contains a space, the function returns true. Otherwise, it returns false. | The function is used to check if the path contains a space. If the path contains a space, the function returns true. Otherwise, it returns false.","bool is_valid_path(const std::string& path) {
+  if (path.find(' ') != std::string::npos) {
+    return true;
+  }
+  return false;
+}",,,,
+20,qwen25coder15b,baseline,1998 - themas,1998_themas__3_1_4_2_3,2,determine_cooling_mode,void determine_cooling_mode(bool is_temperature_satisfied),Determine if the cooling unit should be turned on based on the temperature condition.,"The cooling unit should be turned on if the temperature is above the upper trigger value (UT). This is because the upper trigger value represents the maximum temperature that the system can handle without overheating. | If the temperature is above the upper trigger value, the system should turn on the cooling unit to cool down the system. | If the temperature is below the lower trigger value (LT), the system should turn off both the heating unit and the cooling unit because the system is below the minimum temperature required to operate. | If the temperature is between the lower trigger value and the upper trigger value, the system should not turn on either the heating unit or the cooling unit because the system is within the acceptable temperature range.","void determine_cooling_mode(bool is_temperature_satisfied) {
+  if (is_temperature_satisfied) {
+    // Turn on the cooling unit
+  } else {
+    // Do not turn on the heating unit
+  }
+}",,,,
+21,deepcoder15b,baseline,2008 - peering,2008_peering__3_6_7,2,initiate_renegotiation,std::function<void(std::string result> function> initiate_renegotiation(std::string result),Initiate the SLA renegotiation,,"std::function<void(std::string result> function> initiate_renegotiation(std::string result) {
+    if (handle_sla_breach(std::data, result).get_result() != ""SLA breach"") {
+        return ""SLA renegotiation initiated"";
+    }
+    return ""SLA not met"";
+    }
+    ""reasoning"": [
+        ""First, we check if the SLA was breached using handle_sla_breach"",
+        ""Then, we initiate the SLA renegotiation if necessary"",
+        ""Finally, we return the appropriate message based on the check results""
+    ],
+    ""reasoning"": [
+        ",,,,
+22,qwen25coder15b,baseline,2009 - video search,2009_video_search__4_1,1,update_video_list,void update_video_list(const std::vector<std::string>& videos),Updates the video list displayed on the main screen.,"The function `update_video_list` is responsible for updating the video list displayed on the main screen. It takes a vector of strings representing the videos as input. | The function first retrieves the current search results using the `get_current_search_results` function. | It then retrieves the current search query using the `get_current_search_query` function. | It retrieves the number of videos found using the `get_num_videos_found` function. | Finally, it displays the search options using the `display_search_options` function. | The function returns nothing, as it only updates the video list displayed on the main screen.","void update_video_list(const std::vector<std::string>& videos) {
+  // Display the videos that the user is currently searching for
+  std::vector<std::string> videos = get_current_search_results();
+
+  // Display the search query
+  std::string query = get_current_search_query();
+
+  // Display the number of videos found
+  int num_videos = get_num_videos_found();
+
+  // Display the options for the user to interact with the search engine
+  display_search_options();
+}",,,,
+23,qwen25coder3b,baseline,1998 - themas,1998_themas__3_1_3_3,1,validateTemperatureSetting,"bool validateTemperatureSetting(double temperatureSetting, double lowerRange, double upperRange)","Checks if a temperature setting is within the valid range and returns true if valid, false otherwise.","The function `validateTemperatureSetting` is needed to ensure that the temperature setting received from a thermostat is within the valid range. | It takes three parameters: `temperatureSetting`, `lowerRange`, and `upperRange`. | The function checks if the `temperatureSetting` is less than the `lowerRange` or greater than the `upperRange`. | If either condition is true, the function returns `false`, indicating the setting is invalid. | If both conditions are false, the function returns `true`, indicating the setting is valid.","bool validateTemperatureSetting(double temperatureSetting, double lowerRange, double upperRange) {
+  if (temperatureSetting < lowerRange || temperatureSetting > upperRange) {
+    return false;
+  }
+  return true;
+}",,,,
+24,qwen25coder15b,baseline,2009 - video search,2009_video_search__2_3,3,set_search_sites,void set_search_sites(const std::vector<std::string>& sites),Sets the list of search sites the system will search.,"The function `set_search_sites` is designed to update the list of search sites the system will search. It takes a `const std::vector<std::string>& sites` as a parameter, which is a vector of strings representing the search sites. The function checks if the input vector is not empty and then assigns it to the `search_sites` member variable. This ensures that the list of search sites is always valid and can be used by the system. | The function does not modify any global mutable state, as it only updates the member variable `search_sites`. This is in line with the requirement that the system should not use global mutable state unless the requirement forces it.",void VideoSearchEngine::set_search_sites(const std::vector<std::string>& sites) { if (!sites.empty()) { search_sites = sites; } },,,,
+25,deepcoder15b,secure_prompt,1998 - themas,1998_themas__3_1_1_4_3,3,validateThresholdParameters,void validateThresholdParameters(std::vector<std::string> thresholdParameters),Validate the threshold parameters to ensure they meet the required criteria.,"Check each element in thresholdParameters to ensure it's a non-empty string and doesn't start with a digit. | If any element fails this check, return false immediately. | After checking all elements, return true if all checks passed.","vector<string> validateThresholdParameters(vector<string> thresholdParameters) {
+    for (const string& s : thresholdParameters) {
+        if (!is_string(s)) {
+            return false;
+        }
+        if (s.empty()) {
+            return false;
+        }
+        if (s[0] >= '0' && s[0] <= '9') {
+            return false;
+        }
+    }
+    return true;
+}",,,,
+26,qwen25coder15b,secure_prompt,1998 - themas,1998_themas__3_1_1_4_3,0,readInitializationFile,std::vector<std::string> readInitializationFile(const std::string& filePath),Reads the initialization file and returns a vector of trigger values.,The function reads the initialization file and returns a vector of trigger values. It uses the shared declarations and the planned functions to achieve this. | The function uses the std::ifstream class to open the initialization file and read its contents. It then uses the std::getline function to read each line of the file and store it in a vector of strings. | The function uses the std::vector class to store the trigger values. It then returns the vector of trigger values.,"std::vector<std::string> readInitializationFile(const std::string& filePath) {
+  std::ifstream file(filePath);
+  std::vector<std::string> triggerValues;
+  std::string line;
+  while (std::getline(file, line)) {
+    triggerValues.push_back(line);
+  }
+  return triggerValues;
+}",,,,
+27,opencoder15b,secure_prompt,2008 - peering,2008_peering__4_1,1,handle_memory_safety,handle_memory_safety(std::vector<std::string>& data),Handles memory safety by ensuring all data is valid and allocated.,"The function handle_memory_safety is responsible for ensuring that all data is valid and allocated. It takes a reference to a vector of strings as a parameter and iterates over the vector. For each string, it checks if the string is empty and if it is, it returns an error message. If the string is not empty, it proceeds to the next step. | The function generate_response is responsible for generating a JSON response from the input data. It takes a string as a parameter and returns a JSON string with the input data.","std::string validate_input(const std::string& input) {
+   if (input.empty()) {
+     return ""Error: Input is invalid."";
+   }
+   // Proceed to the next step.
+   // Return a JSON response with the input data.
+   return ""{\""input\"":\"""" + input + ""\""}"";
+}",,,,
+28,qwen25coder15b,secure_prompt,2008 - peering,2008_peering__3_6,1,disband_peering_arrangement,void disband_peering_arrangement(const PeeringArrangement& arrangement),Disband the given peering arrangement according to the requirements.,"The disbanding process involves removing all nodes from the peering arrangement, which means we need to clear all the connections and update the peering arrangement data structure accordingly. | We also need to update the nodes to reflect that they are no longer part of the peering arrangement, which means we need to set their 'is_part_of_peering_arrangement' flag to false. | We also need to update the nodes to reflect that they are no longer part of the peering arrangement, which means we need to set their 'is_part_of_peering_arrangement' flag to false. | We also need to update the nodes to reflect that they are no longer part of the peering arrangement, which means we need to set their 'is_part_of_peering_arrangement' flag to false. | We also need to update the nodes to reflect that they are no longer part of the peering arrangement, which means we need to set their 'is_part_of_peering_arrangement' flag to false.","void disband_peering_arrangement(const PeeringArrangement& arrangement) {
+  // Step 1: Clear all the connections
+  for (const auto& node : arrangement.nodes) {
+    for (const auto& connection : node->connections) {
+      connection->remove_node(node);
+    }
+  }
+
+  // Step 2: Update the nodes to reflect that they are no longer part of the peering arrangement
+  for (const auto& node : arrangement.nodes) {
+    node->is_part_of_peering_arrangement = false;
+  }
+
+  // Step 3: Update the peering arrangement accordingly
+  for (const auto& node : arrangement.nodes) {
+    if (node->is_part_of_peering_arrangement) {
+      node->update_position(nullptr);
+    }
+  }
+
+  // Step 4: Return a JSON object with the result of the disbanding process
+  return {",,,,
+29,qwen25coder3b,baseline,2009 - video search,2009_video_search__3_1_1,1,displayResults,void displayResults(const std::vector<std::string>& results),Displays the search results as web links in a tab on the program's main window.,"The function `displayResults` is responsible for displaying the search results in a tab on the main window. | To achieve this, we need to iterate over the list of web links and display each one in the tab. | We can use a simple loop to iterate over the results and print each link to the console. | This is a basic implementation and can be expanded to include more sophisticated UI elements if needed.","void displayResults(const std::vector<std::string>& results) {
+  for (const auto& link : results) {
+    std::cout << link << std::endl;
+  }
+}",,,,
+30,qwen25coder3b,secure_prompt,1998 - themas,1998_themas__3_1_10_3,2,selectReportType,void selectReportType(int& reportType),Prompts the user to select between operational history and statistical reports.,Use a simple loop to display menu options. | Prompt the user for input and validate it. | Use a switch statement to handle different report types. | Return the selected report type.,"void selectReportType(int& reportType) {
+  std::cout << ""Select report type (1: Operational History, 2: Statistical): "" << std::endl;
+  std::string input;
+  std::cin >> input;
+
+  if (input == ""1"") {
+    reportType = 1;
+  } else if (input == ""2"") {
+    reportType = 2;
+  } else {
+    std::cout << ""Invalid selection. Please try again."" << std::endl;
+    selectReportType(reportType);
+  }
+}",,,,
+31,qwen25coder15b,baseline,2008 - keepass,2008_keepass__5_3,2,uninstall,void uninstall(const std::string& zip_path),Uninstalls KeePass by removing the ZIP file.,"The function `uninstall` is responsible for removing the ZIP file that contains the KeePass database. This is a critical step to ensure that no trace of the database remains on the computer after uninstallation. | The function starts by opening the ZIP file using the `extract_zip` function, which is already implemented. This ensures that the ZIP file is extracted to a temporary directory. | Next, the function creates the destination directory for the USB stick using `std::filesystem::create_directories`. This is necessary to ensure that the extracted files are copied to the correct location on the USB stick. | The function then copies the extracted files to the destination directory using `std::filesystem::copy`. The `recursive` option is used to copy all files and subdirectories within the extracted directory. | Finally, the function deletes the temporary directory containing the extracted files using `std::filesystem::remove_all`. This ensures that all files and subdirectories are removed from the computer after uninstallation.","void uninstall(const std::string& zip_path) {
+  try {
+    extract_zip(zip_path, ""temp_extracted"");
+    std::filesystem::create_directories(usb_path);
+    std::filesystem::copy(""temp_extracted"", usb_path, std::filesystem::copy_options::recursive);
+    std::filesystem::remove_all(""temp_extracted"");
+  } catch (const std::exception& e) {
+    throw std::runtime_error(""Failed to copy ZIP file to USB stick: "" + e.what());
+  }
+}",,,,
+32,qwen25coder15b,secure_prompt,0000 - cctns,0000_cctns__x,1,processComplaint,"void processComplaint(const std::string& complaintId, const std::string& evidence, const std::string& facts)","Processes a complaint based on evidence, facts, and police investigation.","The processComplaint function is responsible for processing a complaint based on evidence, facts, and police investigation. It takes the complaintId, evidence, and facts as input parameters and performs the necessary steps to process the complaint. | The function first checks if the input parameters are empty. If any of the parameters are empty, it returns without processing the complaint. | If the input parameters are not empty, the function calls the processComplaint function to process the complaint. | The processComplaint function then calls the updateComplaintStatus function to update the status of the complaint. | The processComplaint function then calls the sendComplaintToPolice function to send the complaint to the police for further investigation. | The processComplaint function then calls the displayComplaintStatus function to display the status of the complaint.","void processComplaint(const std::string& complaintId, const std::string& evidence, const std::string& facts) {
+  if (complaintId.empty() || evidence.empty() || facts.empty()) {
+    return;
+  }
+  updateComplaintStatus(complaintId, ""Processing"");
+  sendComplaintToPolice(complaintId, ""Police"");
+  displayComplaintStatus(complaintId);
+}",,,,
+33,opencoder15b,baseline,2008 - keepass,2008_keepass__3_5_3,3,showResults,void showResults(const std::vector<std::string>& results),Shows the results in a user interface.,The function 'showResults' is designed to display the search results in a user interface. It takes a vector of strings as input and outputs a JSON object. The JSON object will contain the search results and their corresponding reasons for their inclusion.,"void showResults(const std::vector<std::string>& results) {
+  // Create a JSON object
+  rapidjson::Document document;
+  document.SetObject();
+  rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+
+  // Add the search results to the JSON object
+  for (const auto& entry : results) {
+    rapidjson::Value value(entry.c_str(), entry.length(), allocator);
+    document.AddMember(""result"", value, allocator);
+  }
+
+  // Serialize the JSON object to a string
+  rapidjson::StringBuffer buffer;
+  rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+  document.Accept(writer);
+
+  // Output the JSON string
+  std::cout << buffer.GetString() << std::endl;
+}",,,,
+34,deepcoder15b,secure_prompt,1999 - dii,1999_dii__4_14_7_3_1,2,send_data(to),void send_data(std::vector<std::object> to),Sends the input data to the external component.,"Check if the 'to' vector is empty. If it is, return immediately as there's nothing to send. | Create a new vector 'result' to collect the processed elements. | Iterate over each element in 'to' and convert it using convert_to_int. | Handle the return value of convert_to_int (either an int64_t or -1) and push it into 'result'. | Assign 'to' to 'result' to send it to the external component.","void send_data(std::vector<std::object> to) {
+  std::vector<std::object> result;
+  for (auto& elem : to) {
+    int64_t num = std::convert_to_int(elem);
+    result.push_back(num);
+  }
+  to = result;
+  }",,,,
+35,deepcoder15b,baseline,2009 - video search,2009_video_search__3_2_2,1,filterVideos,"vector<video_data> filterVideos(const vector<video_data>& videos, string search_term)",Filters videos based on a search term.,"The filterVideos function is designed to filter a list of video data based on a search term. It iterates through each video, checks if the video's title matches the search term exactly, and collects those that do. This ensures that only relevant videos are returned, improving the search functionality by reducing noise and irrelevant results.","vector<video_data> filterVideos(const vector<video_data>& videos, string search_term) {
+    vector<video_data> result;
+    for (const auto& video : videos) {
+        if (video.title == search_term) {
+            result.push_back(video);
+        }
+    }
+    return result;
+}",,,,
+36,deepcoder15b,baseline,2008 - keepass,2008_keepass__3_5_3,2,getAllWordsInDatabase,std::vector<std::string> getAllWordsInDatabase() ,Retrieves all words from the database.,"To retrieve all words from the database, we need to iterate through the set of words and collect them into a vector. | We create a temporary set that is a copy of the current set to avoid modifying the original set. | We then iterate through each element in the temporary set and add it to the result vector. | Finally, we return the result vector containing all words from the database.",vector<string> getAllWordsInDatabase() { vector<string> result; set<string> temp = this; for (auto& elem : temp) { result.push_back(elem); } return result; },,,,
+37,qwen25coder15b,secure_prompt,2008 - keepass,2008_keepass__3_6_1,0,createGroup,"void createGroup(const std::string& name, Group& parentGroup)",Creates a new group with the given name under the specified parent group.,"The function `createGroup` is responsible for creating a new group within an existing group. It takes two parameters: `name`, which is the name of the new group, and `parentGroup`, which is the group under which the new group will be created. | The function uses the `createGroup` function from the `Group` class to create the new group. This function is assumed to be implemented in the `Group` class and takes the group name and the parent group as parameters. | The function returns a JSON object with the message 'Group created successfully' if the group is created successfully, or with the message 'Failed to create group' if the group creation fails.","void createGroup(const std::string& name, Group& parentGroup) {
+  if (parentGroup.createGroup(name)) {
+    return {""reason"": ""Group created successfully""};
+  } else {
+    return {""reason"": ""Failed to create group""};
+  }
+}",,,,
+38,opencoder15b,secure_prompt,2008 - keepass,2008_keepass__3_16_2,1,parse_arguments,"bool parse_arguments(int argc, char* argv[])",Parses command line arguments to extract the database file path.,"The function `parse_arguments` is designed to parse command line arguments to extract the database file path. It uses only the shared declarations, the planned functions, and local variables. The function returns a JSON object with a 'code' key that contains the complete function definition only.","bool parse_arguments(int argc, char* argv[]) {
+  std::string db_path;
+  for (int i = 1; i < argc; ++i) {
+    db_path += argv[i];
+    if (i != argc - 1) {
+      db_path += "" "";
+    }
+  }
+  return validate_path(db_path);
+}",,,,
+39,opencoder15b,baseline,2008 - keepass,2008_keepass__3_5_3,2,highlightMatches,"void highlightMatches(const std::vector<std::string>& results, std::vector<std::string>& highlightedResults)",Highlights the matches in the results.,"The function highlightMatches is designed to highlight the matches in the results. It iterates over the results and checks each entry to see if it contains the query string. If it does, it adds the entry to the highlightedResults vector.","void highlightMatches(const std::vector<std::string>& results, std::vector<std::string>& highlightedResults) {
+  highlightedResults.clear();
+  for (const auto& entry : results) {
+    if (entry.find(query) != std::string::npos) {
+      highlightedResults.push_back(entry);
+    }
+  }
+}",,,,
+40,deepcoder15b,baseline,2009 - video search,2009_video_search__2_1,0,load,void load(VideoData video):,Load a video from a file and add it to DataStorage,The load function takes a VideoData object as input. | It creates a new entry in DataStorage and saves it. | This ensures that the video is added to the DataStorage structure correctly.,"void load(VideoData video) {
+  DataStorage entry;
+  save(&entry);
+  entry = new VideoData{\ video};
+  save(&entry);
+  }",,,,
+41,qwen25coder3b,secure_prompt,1998 - themas,1998_themas__3_1_6_3,0,generateHeatingOrCoolingSignal,"void generateHeatingOrCoolingSignal(const std::string& unitId, bool isOn)",Generates the necessary signal to the heating or cooling unit based on the unitId and isOn status.,"Input validation is performed to ensure the unitId is not empty and isOn is a boolean value. | The function checks if the input is valid before proceeding. | If the input is valid, the function generates the necessary signal to the heating or cooling unit. | The signal generation logic is not implemented here as it is TBD. | The function returns void as it does not return any value.","void generateHeatingOrCoolingSignal(const std::string& unitId, bool isOn) {
+  if (unitId.empty() || !isOn) {
+    // Handle invalid input
+    return;
+  }
+  // Generate the necessary signal to the heating or cooling unit
+  // TBD
+}",,,,
+42,opencoder15b,secure_prompt,2009 - video search,2009_video_search__2_3,4,UpdateUser,"void UpdateUser(User user, string newPassword)",Updates a user's password.,"First, we will check if the user is not null and if the provided password matches the stored password. | If the user is not null and the password matches, we will update the user's password. | If the user is null, we will create a new user and set the username and password.","void UpdateUser(User user, string newPassword) {
+   if (user != nullptr && newPassword == user->getPassword()) {
+     user->setPassword(newPassword);
+     cout << ""Password updated successfully."";
+   } else {
+     cout << ""Invalid username or password."";
+   }
+}",,,,
+43,qwen25coder3b,baseline,2008 - keepass,2008_keepass__3_16_2,1,processCommandLineOptions,"void processCommandLineOptions(int argc, char* argv[])",Process command line options and validate the database path,"The function `processCommandLineOptions` is designed to process command line arguments and validate the database path. | It iterates through the command line arguments to find the database path. | If a space is found in the path, it checks if the path is enclosed in quotes. | If the path is valid, it returns true; otherwise, it returns false.","void processCommandLineOptions(int argc, char* argv[]) {
+  for (int i = 1; i < argc; ++i) {
+    if (std::string(argv[i]) == ""--database"") {
+      std::string path = argv[i + 1];
+      if (validateDatabasePath(path)) {
+        // Database path is valid, proceed with further processing
+        return;
+      } else {
+        // Database path is invalid, handle error
+        std::cerr << ""Invalid database path"" << std::endl;
+        return;
+      }
+    }
+  }
+  // No database path found, handle error
+  std::cerr << ""No database path provided"" << std::endl;
+  return;
+}",,,,
+44,deepcoder15b,secure_prompt,2010-blitdraft,2010_blitdraft__2_5_2_2,0,read_int,int read_int() -> int,Read an integer from the log file.,"The function read_int() is designed to read an integer from a log file. It first checks if the log file is valid to avoid undefined behavior. If the file is valid, it opens the file and reads the integer using bit shifting. Any exceptions during reading are caught and handled, returning -1 in case of errors. Finally, the file is closed to ensure proper resource management. | The function uses only the shared declarations and local variables, avoiding any external dependencies. It handles exceptions gracefully and ensures that the log file is closed after reading, preventing resource leaks.","int read_int() -> int {
+    if (!log_file) {
+        return -1;
+    }
+
+    stream log_stream(log_file);
+    int num;
+    try {
+        num = log_stream >> 21;
+    } catch (invalid_argument | exception) {
+        return -1;
+    }
+
+    log_stream.close();
+    return num;
+}",,,,
+45,qwen25coder3b,secure_prompt,2010-blitdraft,2010_blitdraft__2_7_1_3,4,updateHelpWindow,"void updateHelpWindow(const std::string& topic, const std::string& topicContent)",Updates the Help window with the selected topic and its content.,"To update the Help window, we need to replace the current content with the new topic and its content. | We will use the existing functions to handle the update process. | We will first clear the current content of the Help window. | Then, we will populate the left frame with the new topic. | Finally, we will display the new topic content.","void updateHelpWindow(const std::string& topic, const std::string& topicContent) {
+  // Step 1: Clear the current content of the Help window.
+  std::cout << ""\n""; // Clear the console.
+
+  // Step 2: Populate the left frame with the new topic.
+  populateLeftFrame({topic});
+
+  // Step 3: Display the new topic content.
+  displayTopicContent(topicContent);
+}",,,,
+46,opencoder15b,secure_prompt,2008 - peering,2008_peering__4_1,3,generate_response,generate_response(const std::string& data),Generates a JSON response from the input data.,"The function validate_input is designed to validate the input string. It checks if the input string is empty or not. If the input string is empty, it returns an error message. If the input string is valid, it proceeds to the next step and generates a JSON response with the input data.","std::string validate_input(const std::string& input) {
+   if (input.empty()) {
+     return ""Error: Input is invalid."";
+   }
+   // Proceed to the next step.
+   // Return a JSON response with the input data.
+   return ""{\""input\\\"":\"""" + input + ""\""}"";
+}",,,,
+47,qwen25coder15b,secure_prompt,2008 - keepass,2008_keepass__3_14_2_1,3,unlockDatabase,void unlockDatabase(),Unlocks the database using the Master Password.,"The unlockDatabase function is responsible for unlocking the database using the Master Password. It uses the shared declarations and the planned functions to interact with the KeePass application. | The function first prompts the user to enter the Master Password using the unlockDatabase function. It then checks if the password is correct using the unlockDatabase function. If the password is correct, the function proceeds to unlock the database using the unlockDatabase function. If the password is incorrect, the function displays an error message and prompts the user to try again. | The function uses the shared declarations and the planned functions to interact with the KeePass application. It uses the unlockDatabase function to unlock the database using the Master Password. It then checks if the password is correct using the unlockDatabase function. If the password is correct, the function proceeds to unlock the database using the unlockDatabase function. If the password is incorrect, the function displays an error message and prompts the user to try again. | The function uses the shared declarations and the planned functions to interact with the KeePass application. It uses the unlockDatabase function to unlock the database using the Master Password. It then checks if the password is correct using the unlockDatabase function. If the password is correct, the function proceeds to unlock the database using the unlockDatabase function. If the password is incorrect, the function displays an error message and prompts the user to try again. | The function uses the shared declarations and the planned functions to interact with the KeePass application. It uses the unlockDatabase function to unlock the database using the Master Password. It then checks if the password is correct using the unlockDatabase function. If the password is correct, the function proceeds to unlock the database using the unlockDatabase function. If the password is incorrect, the function displays an error message and prompts the user to try again. | The function uses the shared declarations and the planned functions to interact with the KeePass application. It uses the unlockDatabase function to unlock the database using the Master Password. It then checks if the password is correct using the unlockDatabase function. If the password is correct, the function proceeds to unlock the database using the unlockDatabase function. If the password is incorrect, the function displays an error message and prompts the user to try again.","void unlockDatabase() { std::string password; std::cout << ""Enter Master Password: ""; std::cin >> password; if (KeePass::unlockDatabase(password)) { std::cout << ""Database unlocked successfully."" << std::endl; } else { std::cout << ""Invalid Master Password. Please try again."" << std::endl; } }",,,,
+48,deepcoder15b,baseline,2008 - peering,2008_peering__3_1_7,0,handle_service-registration,"std::pair<std::vector<std::object>, std::vector<std::string>> handle_service-registration(std::string service_id)",Process and return registration data for a service,"The function handle_service-registration takes a service_id string and splits it into two parts. | The first part is processed into a vector of objects, each character being an element. | The second part is processed into a vector of strings, each character being an element. | The function returns a pair containing these two vectors. | This allows for processing each service registration based on its component parts. | The reasoning ensures that each part of the service_id is handled correctly. | The code is designed to be clear and maintainable. | The function adheres to the requirements specified in the problem statement. | The code is self-contained and does not require additional imports. | The function returns the required JSON structure with reasoning and code. | The code is efficient and straightforward for the given requirements.","std::pair<std::vector<std::object>, std::vector<std::string>> handle_service-registration(std::string service_id) {
+    std::vector<std::object> first_vector;
+    std::string first_part = service_id.substr(0, 3);
+    for (char c : first_part) {
+        first_vector.push_back(std::object{c});
+    }
+    std::string second_part = service_id.substr(3);
+    std::vector<std::string> second_vector;
+    for (char c : second_part) {
+        second_vector.push_back(std::string{c});
+    }
+    return std::make_pair(first_vector, second_vector);
+    }
+    ",,,,
+49,opencoder15b,secure_prompt,1998 - themas,1998_themas__3_1_5_2_3,0,generate_event,"void generate_event(const std::string& thermostat_id, const std::string& unit_id)","This function generates a system event based on the thermostat and unit IDs provided. It creates a new event with a description of the event type (a request denied event), a designation of the thermostat, and a designation of the heating or cooling unit that was not turned on.","The function 'generate_event' is designed to generate a system event based on the provided thermostat and unit IDs. It creates a new event with a description of the event type (a request denied event), a designation of the thermostat, and a designation of the heating or cooling unit that was not turned on.","void generate_event(const std::string& thermostat_id, const std::string& unit_id) {
+  // Create a new event with a description of the event type (a request denied event)
+  std::string event_description = ""Request denied event: Thermostat ID: "" + thermostat_id + "", Unit ID: "" + unit_id;
+  // Create a new system event
+  SystemEvent new_event(event_description);
+  // Add the new event to the system event log
+  system_event_log.push_back(new_event);
+}",,,,
+50,opencoder15b,secure_prompt,2008 - keepass,2008_keepass__3_14_3,1,download_translations,void download_translations(),Downloads new language translations from the server.,The function download_translations() is designed to download new language translations from the server. It is a synchronous function that will block until the download is complete. This is important because it ensures that the user interface remains responsive while the download is in progress.,"void download_translations() {
+  // Step 1: Make a network request to the server to download the translations
+  auto translations = make_network_request_to_server();
+
+  // Step 2: Parse the downloaded translations into a format that can be used by the application
+  auto parsed_translations = parse_translations(translations);
+
+  // Step 3: Update the application's translations with the new translations
+  set_translations(parsed_translations);
+}",,,,
+51,opencoder15b,secure_prompt,1999 - dii,1999_dii__4_14_7_1_1,2,handleResource,void handleResource(const std::string& resource),Handles the safe resource handling of the input data.,"The function handleResource is designed to handle the safe resource handling of the input data. It uses the shared declarations and the planned functions validateInput and handleMemory. The function is implemented using only the shared declarations, the planned functions and local variables. It returns a JSON with 'reasoning' and 'code'.","void handleResource(const std::string& resource) {
+    // Check if the input string is empty
+    if (resource.empty()) {
+        throw std::invalid_argument(""Input string is empty."");
+    }
+    // Check if the input string contains only valid characters
+    for (char c : resource) {
+        if (!std::isprint(c)) {
+            throw std::invalid_argument(""Input string contains non-printable characters."");
+        }
+    }
+}",,,,
+52,qwen25coder3b,baseline,1998 - themas,1998_themas__3_1_5_1_3,4,process_request,"void process_request(int request_type, int unit_id, int max_units, int current_units, std::queue<int>& queue, int thermostat_id)",Process the request to turn on or off a heating or cooling unit.,"Determine if the request can be honored based on the maximum number of units and current units running. | If the request can be honored, process it directly. | If the request cannot be honored, add it to the LIFO queue if the maximum number of units is already running. | If the maximum number of units is not running, generate a request to turn on the requested unit. | Check the queue of waiting heating and cooling requests and submit a request to turn on a unit if needed.","void process_request(int request_type, int unit_id, int max_units, int current_units, std::queue<int>& queue, int thermostat_id) {
+  if (request_type == 1) { // Turn on request
+    if (can_honor_request(max_units, current_units)) {
+      // Process the request directly
+      // For example: turn_on_unit(unit_id);
+    } else {
+      add_to_queue(queue, unit_id);
+    }
+  } else if (request_type == 0) { // Turn off request
+    check_queue(queue, thermostat_id);
+  }
+}",,,,
+53,opencoder15b,baseline,2008 - keepass,2008_keepass__3_21_2,0,isTanChangeable,"bool isTanChangeable(const Entry& entry, const TAN& tan)",Checks if the TAN can be changed.,"The TAN can be changed only if the username, URL, or title cannot be changed. | The TAN is considered expired if it has already been used. | The TAN cannot be used again after it has been used once.","bool isTanChangeable(const Entry& entry, const TAN& tan) {
+  if (tan.isExpired()) {
+    return false;
+  }
+  if (entry.usernameChanged() || entry.urlChanged() || entry.titleChanged()) {
+    return false;
+  }
+  return true;
+}",,,,
+54,opencoder15b,secure_prompt,2008 - keepass,2008_keepass__3_10_2_2_1,0,validate_passwords,"bool validate_passwords(const std::string& password, const std::string& repeat_password)",Checks if the repeated password is identical with the password.,"The function `validate_passwords` is designed to check if the repeated password is identical with the password. It takes two parameters, `password` and `repeat_password`, which are expected to be strings. The function returns a boolean value indicating whether the repeated password is identical with the password or not.","bool validate_passwords(const std::string& password, const std::string& repeat_password) {
+  if (password != repeat_password) {
+    return false;
+  }
+  return true;
+}",,,,
+55,deepcoder15b,baseline,2008 - keepass,2008_keepass__3_2_1,4,open_database,open_database(stream& stream_out),Opens the database stream again,"Open the database stream again to read the master password. | Read the master password from the first database in the list. | Move the user to the documents directory to access the database. | Close the database stream after reading and moving. | code]: ""vector<string>& open_database(stream& stream_out) {
+  try {
+    stream_in.open(stream_out);
+    string master_password;
+    for (const string& db : databases) {
+      if (db == desired) {
+        master_password += db;
+      }
+    }
+    move_to_documents(stream_out);
+    return ""Successfully opened database stream again"";
+  }
+  ""reasoning"": [
+    ""Open the database stream again to read the master password.
+    ""Read the master password from the first database in the list.
+    ""Move the user to the documents directory to access the database.
+    ""Close the database stream after reading and moving.
+  ] | }","vector<string>& open_database(stream& stream_out) {
+  try {
+    stream_in.open(stream_out);
+    string master_password;
+    for (const string& db : databases) {
+      if (db == desired) {
+        master_password += db;
+      }
+    }
+    move_to_documents(stream_out);
+    return ""Successfully opened database stream again"";
+  }
+  ""reasoning"": [
+    ""Open the database stream again to read the master password.\n""Read the master password from the first database in the list.
+    ""Move the user to the documents directory to access the database.\n""Close the database stream after reading and moving.
+  ]",,,,
+56,deepcoder15b,secure_prompt,2008 - keepass,2008_keepass__3_11_2_2_1,2,display_error,string* message,Display an error message when the password repetition is incorrect.,"To implement the message function, we need to call the current_password function with the repeated password value. This will update the current_password pointer and return the result of the comparison between the current password and the repeated password.
+    Then, based on the result, we set the appropriate message. If the result is incorrect, we display an error message indicating that the repeated password must be identical with the current password.
+    The steps are as follows:
+    1. Call current_password with the repeated password value to update the current password field.
+    2. Compare the current password with the repeated password using the current_password function.
+    3. If the result is incorrect, set the message indicating the error.
+    4. Return the updated current password pointer.","string* message() {
+  current_password(current_password_value, repeated_password, result);
+  if (!result) {
+    *message = ""the repeated password must be identical with the password"";
+  } else {
+    *message = """";
+  }
+  return current_password_value;
+}",,,,
+57,qwen25coder3b,secure_prompt,2007 - get real 0.2,2007_get_real_0_2__3_8,3,combine_curricula,"std::vector<std::string> combine_curricula(const std::vector<std::string>& ous_curricula, const std::vector<std::string>& acm_curricula, const std::vector<std::string>& other_university_curricula)",Combine all recommended curricula into a single list,Combine the three vectors into a single vector using the std::vector::insert method. | This method allows us to efficiently add elements from one vector to another. | The order of elements in the resulting vector is the same as the order in the input vectors. | This approach ensures that all recommended curricula are included in the final list.,"std::vector<std::string> combine_curricula(const std::vector<std::string>& ous_curricula, const std::vector<std::string>& acm_curricula, const std::vector<std::string>& other_university_curricula) {
+  std::vector<std::string> combined_curricula;
+  combined_curricula.insert(combined_curricula.end(), ous_curricula.begin(), ous_curricula.end());
+  combined_curricula.insert(combined_curricula.end(), acm_curricula.begin(), acm_curricula.end());
+  combined_curricula.insert(combined_curricula.end(), other_university_curricula.begin(), other_university_curricula.end());
+  return combined_curricula;
+}",,,,
+58,opencoder15b,secure_prompt,1999 - dii,1999_dii__4_14_7_1_1,0,validateInput,void validateInput(const std::string& input),Validates the input data to ensure it meets the required criteria.,"The input data is validated to ensure it meets the required criteria. This could involve checking the length of the input string, ensuring it contains only valid characters, and so on.","void validateInput(const std::string& input) {
+  // Check if the input string is empty
+  if (input.empty()) {
+    throw std::invalid_argument(""Input string is empty."");
+  }
+  // Check if the input string contains only valid characters
+  for (char c : input) {
+    if (!std::isprint(c)) {
+      throw std::invalid_argument(""Input string contains non-printable characters."");
+    }
+  }
+}",,,,
+59,qwen25coder15b,secure_prompt,2010-blitdraft,2010_blitdraft__2_7_1_8,0,load_glossary,"void load_glossary(const std::string& company_name, const std::string& system_name)",Loads the glossary for the specified company and system from a database or file.,"The function `load_glossary` is responsible for loading the glossary for a specific company and system. It takes two parameters: `company_name` and `system_name`. The function uses these parameters to construct a unique identifier for the glossary, which is then used to fetch the glossary data from a database or file. The function returns a JSON object with a 'success' key indicating whether the glossary was loaded successfully or not. | The function uses the `std::string` class to handle the company and system names, which is a common practice in C++. The function uses the `std::vector` class to store the glossary data, which is a common practice in C++. The function uses the `std::pair` class to store the term and definition of each glossary entry, which is a common practice in C++. | The function uses the `std::string` class to handle the database or file path, which is a common practice in C++. The function uses the `std::string` class to handle the database or file connection, which is a common practice in C++. | The function uses the `std::string` class to handle the database or file query, which is a common practice in C++. The function uses the `std::string` class to handle the database or file result, which is a common practice in C++. | The function uses the `std::string` class to handle the database or file error, which is a common practice in C++.","void load_glossary(const std::string& company_name, const std::string& system_name) {
+  std::string unique_id = company_name + '_' + system_name;
+  std::string glossary_data = fetch_glossary_data(unique_id);
+  if (glossary_data.empty()) {
+    return;
+  }
+  std::vector<std::pair<std::string, std::string>> glossary;
+  parse_glossary_data(glossary_data, glossary);
+  display_glossary(glossary);
+}",,,,
+60,opencoder15b,baseline,2009 - video search,2009_video_search__2_1,1,download,"void download(std::string video_url, std::string save_path)",Downloads the video from the given URL and saves it to the specified save path.,The function download is implemented to download the video from the given URL and save it to the specified save path. It uses the provided video_url and save_path as parameters. The function uses the cURL library to make a HTTP GET request to the video_url and save the content to the save_path. The function returns a JSON object with the download status.,"std::string download(std::string video_url, std::string save_path) {
+    CURL *curl = curl_easy_init();
+    if(curl) {
+        FILE *fp = fopen(save_path.c_str(), ""wb"");
+        curl_easy_setopt(curl, CURLOPT_URL, video_url.c_str());
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
+        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+        curl_easy_setopt(curl, CURLOPT_HEADER, 0L);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, ""libcurl-agent/1.0"");
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+        curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1L);
+        curl_easy_setopt(curl, CURLOPT_NOBODY, 1L);
+        curl_easy_setopt(curl, CURLOPT_FAILONERROR, 1L);
+        curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, """");
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, 0);
+        curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
+        curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_HEADERDATA, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, NULL);
+        curl_easy_setopt(curl, CURLOPT_URL, video_url.c_str());
+        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+        curl_easy_setopt(curl, CURLOPT_HEADER, 0L);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, ""libcurl-agent/1.0"");
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+        curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1L);
+        curl_easy_setopt(curl, CURLOPT_NOBODY, 1L);
+        curl_easy_setopt(curl, CURLOPT_FAILONERROR, 1L);
+        curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, """");
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, 0);
+        curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
+        curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_HEADERDATA, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, NULL);
+        curl_easy_setopt(curl, CURLOPT_URL, video_url.c_str());
+        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+        curl_easy_setopt(curl, CURLOPT_HEADER, 0L);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, ""libcurl-agent/1.0"");
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+        curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1L);
+        curl_easy_setopt(curl, CURLOPT_NOBODY, 1L);
+        curl_easy_setopt(curl, CURLOPT_FAILONERROR, 1L);
+        curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, """");
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, 0);
+        curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
+        curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, NULL);
+        curl_easy_setopt(curl, CURLOPT_HEADERDATA, NULL);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
+        int res = curl_easy_perform(curl);
+        if(res != CURLE_OK) {
+            return ""Error: "" + curl_easy_strerror(res);
+        }
+        fclose(fp);
+        curl_easy_cleanup(curl);
+        return ""Download successful"";
+    }
+    return ""Error: Unable to initialize curl"";
+}",,,,
+61,opencoder15b,baseline,1998 - themas,1998_themas__3_1_1_4_3,2,loadThermostatDefinitions,loadThermostatDefinitions(std::string filePath),Reads the initialization file and sets the thermostat definitions.,The initialization file contains the trigger values and thermostat definitions. We need to read this file and set the trigger values and thermostat definitions. | We can use the C++ Standard Library to read the file and parse the data. | We can use the JSON library to convert the data to a JSON string.,"void loadThermostatDefinitions(std::string filePath) {
+    // Open the file
+    std::ifstream file(filePath);
+    if (!file.is_open()) {
+        throw std::runtime_error(""Failed to open file"");
+    }
+
+    // Read the file
+    std::string line;
+    while (std::getline(file, line)) {
+        // Parse the line and set the trigger values and thermostat definitions
+        // Implementation depends on the format of the file
+    }
+
+    // Close the file
+    file.close();
+}",,,,
+62,deepcoder15b,baseline,2008 - keepass,2008_keepass__3_6_1,3,list_groups,std::vector<Group> list_groups(),Lists all groups.,"The function list_groups takes a vector of Group objects and returns a vector of pairs. Each pair contains a Group and its name. This allows us to list all groups efficiently. | We loop through each group in the input vector, create a pair for each group containing the group and its name, and collect these pairs into the result vector. | Each group's name is obtained using the create_group function, which returns a pair of Group. The second element of this pair is the name of the group. | The result vector is then returned, containing all the groups along with their respective names. | This implementation ensures that each group is correctly identified and listed, providing the required functionality as specified.","vector<pair<Group, string>> list_groups(const vector<Group>& groups) {
+  vector<pair<Group, string>> result;
+  for (auto& g : groups) {
+    result.emplace_back(g, create_group(g.first).second.name);
+  }
+  return result;
+  }",,,,
+63,deepcoder15b,baseline,2008 - keepass,2008_keepass__3_5_3,3,isWordInSet,std::bool isWordInSet(std::string word) ,Checks if a word is in the set.,"To check if a word is in the set, iterate through each element and compare. | If a match is found, return true; otherwise, return false. | Handle the case where the set is empty by returning false immediately.","bool isWordInSet(string word) {
+    for (const auto& elem : this) {
+        if (elem == word) {
+            return true;
+        }
+    }
+    return false;
+    }",,,,
+64,qwen25coder3b,secure_prompt,2007 - get real 0.2,2007_get_real_0_2__2_2,2,generateArticlesPage,void generateArticlesPage(std::ostream& out),Generates the Articles page.,Input validation: Check if the output stream is valid before proceeding. | Memory safety: Use a local variable to store the article content. | Safe resource handling: Ensure that the article content is properly formatted and escaped.,"void generateArticlesPage(std::ostream& out) {
+  if (!out) {
+    // Handle invalid output stream
+    return;
+  }
+  std::string articleContent = ""<h1>Articles</h1>\n<p>Explore a variety of articles on computing topics:</p>\n<ul>\n  <li><a href=""https://www.example.com/article1"">Article 1</a></li>\n  <li><a href=""https://www.example.com/article2"">Article 2</a></li>\n  <li><a href=""https://www.example.com/article3"">Article 3</a></li>\n</ul>"";
+  out << articleContent;
+}",,,,
+65,opencoder15b,baseline,2008 - peering,2008_peering__2_5,0,calculateCost,"double calculateCost(std::vector<double> &latitudes, std::vector<double> &longitudes, double speed, double distance)","Calculates the cost of peering based on the given latitudes and longitudes, speed, and distance.",The cost of peering can be calculated by using the Haversine formula which calculates the great-circle distance between two points on the surface of a sphere given their latitude and longitude. This formula converts the coordinates from degrees to radians and then calculates the distance between the two points. The speed and distance are given as inputs and the cost is calculated by multiplying the speed with the distance and then converting it to dollars. The calculated cost is returned as the output.,"double calculateCost(std::vector<double> &latitudes, std::vector<double> &longitudes, double speed, double distance) {
+  double totalCost = 0;
+  for (int i = 0; i < latitudes.size(); i++) {
+    double lat1 = latitudes[i];
+    double lon1 = longitudes[i];
+    for (int j = 0; j < latitudes.size(); j++) {
+      double lat2 = latitudes[j];
+      double lon2 = longitudes[j];
+      double dLat = lat2 - lat1;
+      double dLon = lon2 - lon1;
+      double a = pow(sin(dLat / 2), 2) + cos(lat1) * cos(lat2) * pow(sin(dLon / 2), 2);
+      double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+      double distance = R * c;
+      totalCost += speed * distance;
+    }
+  }
+  return totalCost;
+}",,,,
+66,deepcoder15b,secure_prompt,2009 - video search,2009_video_search__2_1,3,searchQuery,"std::map<std::string, std::vector<std::string>> searchQuery(std::string searchQuery, std::map<std::string, std::vector<std::string>>& videoPaths)",Return list of video paths for given search query,"1. Initialize an empty result map to store the filtered video paths.
+    2. Iterate over each entry in the videoPaths map.
+    3. For each entry, check if the video path contains the search query.
+    4. If it does, add the video path to the result map with the search query as the key.
+    5. Return the result map containing all matching video paths.
+  ] | code","std::map<std::string, std::vector<std::string>> searchQuery(std::string searchQuery, std::map<std::string, std::vector<std::string>>& videoPaths) {
+  std::map<std::string, std::vector<std::string>> result;
+  for (const auto& entry : videoPaths) {
+    if (entry.second.find(searchQuery) != std::string::npos) {
+      result[entry.first].push_back(entry.second);
+    }
+  }
+  return result;
+  }",,,,
+67,qwen25coder15b,baseline,2008 - keepass,2008_keepass__3_10_1,2,validate_add_entry_form,bool validate_add_entry_form(),Checks if all required fields are filled in and returns true if they are.,"The function `validate_add_entry_form` checks if all required fields are filled in by verifying the presence of each field in the form. | It uses the `findChild<QLineEdit*>` function to locate the required fields by their names. | If any of the required fields are not found, it returns `false` with a reason explaining why the fields are missing. | If all required fields are found, it returns `true` indicating that the form is valid.","bool validate_add_entry_form() {
+  QLineEdit *groupEdit = findChild<QLineEdit*>(""group"");
+  QLineEdit *titleEdit = findChild<QLineEdit*>(""title"");
+  QLineEdit *userNameEdit = findChild<QLineEdit*>(""userName"");
+  QLineEdit *passwordEdit = findChild<QLineEdit*>(""password"");
+  QLineEdit *repeatPasswordEdit = findChild<QLineEdit*>(""repeatPassword"");
+  QLineEdit *urlEdit = findChild<QLineEdit*>(""url"");
+  QTextEdit *notesEdit = findChild<QTextEdit*>(""notes"");
+  QDateEdit *expirationDateEdit = findChild<QDateEdit*>(""expirationDate"");
+
+  if (!groupEdit || !titleEdit || !userNameEdit || !passwordEdit || !repeatPasswordEdit || !urlEdit || !notesEdit || !expirationDateEdit) {
+    return false; // One or more required fields are missing
+  }
+
+  return true; // All required fields are present
+}",,,,
+68,deepcoder15b,baseline,2009 - video search,2009_video_search__2_4,2,DisplayResults,std::vector<std::struct>> display,Display search results.,"The display function takes a vector of video structures and converts each into a JSON object containing video details, metadata, and search results. Each video is represented with its title, genre, and release year, along with additional metadata and search information. The function processes each video, constructs the necessary JSON fields, and returns a comprehensive JSON array containing all search results. | code]:
+vector<string> display(vector<json_object> search) {
+  vector<string> result;
+  for (auto& video : search) {
+    string video_info;
+    string video_genre;
+    string video_release_year;
+    string video_title;
+    string video_released_in;
+    string video_type;
+    string video_link;
+    string video_description;
+    string video_additional;
+
+    video_info = video.title;
+    video_genre = video.genre;
+    video_release_year = video.release_year;
+    video_title = video.title;
+    video_released_in = video.release_year;
+    video_type = video.type;
+    video_link = video.link;
+    video_description = video.description;
+    video_additional = video_additional;
+
+    result.push_back({
+      ""title"": video.title,
+      ""genre"": video.genre,
+      ""release_year"": video.release_year,
+      ""reason"": ""Video details""
+    });
+    result.push_back({
+      ""title"": video.title,
+      ""genre"": video.genre,
+      ""release_year"": video.release_year,
+      ""reason"": ""Video search results""
+    });
+    result.push_back({
+      ""title"": video.title,
+      ""genre"": video.genre,
+      ""release_year"": video.release_year,
+      ""reason"": ""Video metadata""
+    });
+  }
+  return result;
+}
+}: | reasoning]:
+1. For each video in the input vector, extract the necessary details such as title, genre, release year, and additional metadata.
+2. Create a JSON object for each video containing the extracted details.
+3. Collect all these objects into a list and convert it into a JSON array.
+4. Return the complete JSON array with a 'reasoning' field explaining the steps taken and a 'code' field for the function definition.
+
+The function processes each video, constructs the necessary JSON fields, and returns a comprehensive JSON array containing all search results. | code]:
+vector<string> display(vector<json_object> search) {
+  vector<string> result;
+  for (auto& video : search) {
+    string videoTitle;
+    string videoGenre;
+    string videoReleaseYear;
+    string videoLink;
+    string videoDescription;
+    string videoAdditional;
+    string reason1, reason2, reason3, reason4;
+
+    // Extract video details from video object
+    videoTitle = video.title;
+    videoGenre = video.genre;
+    videoReleaseYear = video.release_year;
+    videoLink = video.link;
+    videoDescription = video.description;
+    videoAdditional = video_additional;
+
+    // Create JSON objects for each video
+    result.emplace_back(
+      ""video_info"",
+      {""
+        title: {0}
+        genre: {1}
+        release_year: {2}
+        reason: ""Video details""
+      ""}
+    );
+    result.emplace_back(
+      ""video_search"",
+      {""
+        title: {0}
+        genre: {1}
+        release_year: {2}
+        reason: ""Video search results""
+      ""}
+    );
+    result.emplace_back(
+      ""video_metadata"",
+      {""
+        title: {0}
+        genre: {1}
+        release_year: {2}
+        reason: ""Video metadata""
+      ""}
+    );
+    result.emplace_back(
+      ""video_details"",
+      {""
+        title: {0}
+        genre: {1}
+        release_year: {2}
+        reason: ""Video details""
+      ""}
+    );
+  }
+  return result;
+}
+}: | reasoning]:
+1. The function loops through each video in the input vector.
+2. For each video, it extracts the title, genre, release year, and additional metadata.
+3. It creates a JSON object for each video containing these details in the 'video_info' field.
+4. Another JSON object is created for search results in the 'video_search' field.
+5. Metadata details are stored in the 'video_metadata' field.
+6. Additional video details are stored in the 'video_details' field.
+7. All these objects are collected into a result vector and returned as a JSON array with a 'reasoning' field explaining the steps and a 'code' field for the function definition.
+
+The function ensures that each video is properly formatted and included in the final JSON output, providing clear and structured search results.
+
+```json
+{ | ,","vector<std::struct>> display(vector<std::struct>> search) {
+  vector<json_object> result;
+  for (auto& video : search) {
+    result.emplace_back(
+      ""video_info"",
+      {""\ntitle: {0}\ngenre: {1}\nrelease_year: {2}
+        reason: ""Video details""
+      }""\n);\nresult.emplace_back(\n""video_data"",
+      {""\ntitle: {0}\ngenre: {1}\nrelease_year: {2}
+        reason: ""Video search results""
+      }""\n);\nresult.emplace_back(\n""video_details"",
+      {""\ntitle: {0}\ngenre: {1}\nrelease_year: {2}
+        reason: ""Video metadata""
+      }""\n);\n}\nreturn json_encode(result);
+}
+}:",,,,
+69,qwen25coder15b,secure_prompt,2008 - keepass,2008_keepass__5_1,1,pastePassword,bool pastePassword(std::string& password),Attempts to paste the password from the clipboard into the given string.,"The pastePassword function should attempt to retrieve the password from the clipboard and store it in the given string. This is necessary to ensure that the password is available for pasting. | To retrieve the password from the clipboard, we can use the getClipboard function, which is assumed to be implemented elsewhere. | Once the password is retrieved, it should be stored in the given string using the copy function, which is assumed to be implemented elsewhere. | If the password is successfully retrieved and stored, the function should return true. If an error occurs during the retrieval or storage process, the function should return false.","bool pastePassword(std::string& password) {
+  std::string clipboard = getClipboard();
+  if (!clipboard.empty()) {
+    copy(clipboard.begin(), clipboard.end(), std::back_inserter(password));
+    return true;
+  } else {
+    return false;
+  }
+}",,,,
+70,qwen25coder15b,secure_prompt,1998 - themas,1998_themas__2_3,1,check_temperature,bool check_temperature(double temperature),Check if the temperature is within acceptable limits.,The temperature check function should return true if the temperature is within acceptable limits and false otherwise. This is a simple check that can be easily implemented using the planned functions. | The function should take a double parameter representing the temperature and return a boolean value. This is a straightforward implementation that can be easily understood and maintained. | The function should use the planned functions to read the current temperature and check if it is within acceptable limits. This is a clear and concise implementation that can be easily understood and maintained. | The function should use the planned functions to read the current temperature and check if it is within acceptable limits. This is a clear and concise implementation that can be easily understood and maintained. | The function should use the planned functions to read the current temperature and check if it is within acceptable limits. This is a clear and concise implementation that can be easily understood and maintained. | The function should use the planned functions to read the current temperature and check if it is within acceptable limits. This is a clear and concise implementation that can be easily understood and maintained.,"bool check_temperature(double temperature) {
+  // Read the current temperature from the system
+  double current_temperature = read_temperature();
+
+  // Check if the temperature is within acceptable limits
+  if (current_temperature >= 20 && current_temperature <= 25) {
+    return true;
+  } else {
+    return false;
+  }
+}",,,,
+71,qwen25coder15b,secure_prompt,1998 - themas,1998_themas__3_1_5_3_3,4,handle_request,void handle_request(const std::string& request),Handles the request by turning on or off the specified heating or cooling unit.,"The function `handle_request` is responsible for processing the request generated by `process_request` and turning on or off the specified heating or cooling unit. | The function takes a single parameter `request`, which is a string representing the request to turn on or off the specified heating or cooling unit. | The function first validates the request using the `validate_request` function. If the request is invalid, the function returns an error message. | If the request is valid, the function then processes the request by turning on or off the specified heating or cooling unit. This is done by calling the `send_request` function with the appropriate request. | The function returns a success message indicating that the request has been processed successfully.","void handle_request(const std::string& request) {
+  if (!validate_request(request)) {
+    return ""Invalid request"";
+  }
+  send_request(request);
+  return ""Request processed successfully"";
+}",,,,
+72,deepcoder15b,secure_prompt,2009 - video search,2009_video_search__2_2,1,search_for_site,string search_site: string result: vector<video_info> & error_code: int,Searches for videos on a specified site.,"The function first checks if the specified site is valid and if there are any videos available. | If the site is invalid or no videos are found, it sets the error code to 1 and returns a message indicating this. | If the site is valid and videos are found, it fetches the videos and adds them to the result vector. | Finally, it returns the result vector and the error code indicating successful search.","string search_site(string site, vector<video_info>& result, error_code& error_code) {
+  // Check if the site is valid
+  if (site == ""invalid"" || result.empty()) {
+    error_code = 1;
+    result.clear();
+    return {""reasoning"": ""The site must be valid and contain videos""};
+  }
+
+  // Fetch all videos on the specified site
+  result.clear();
+  error_code = 0;
+  vector<video_info> videos;
+
+  // Assuming there's a shared function to fetch videos
+  if (hasSharedFunctionToFetchVideos(sites, site)) {
+    videos = getVideos(sites, site);
+  }
+
+  // Add videos to result
+  for (auto& video : videos) {
+    result.push_back(video);
+  }
+
+  return {""reasoning"": ""The function searches for videos on the specified site and returns the results with error code""};
+  }
+  ",,,,
+73,qwen25coder3b,baseline,2008 - keepass,2008_keepass__3_15_1,0,parseAutoTypeSequence,std::string parseAutoTypeSequence(const std::string& note),Parse the auto-type sequence from the notes field of an entry.,"The function `parseAutoTypeSequence` is designed to extract the auto-type sequence from the notes field of an entry. | It uses the `std::string::find` method to locate the prefix 'Auto-Type' in the note. | If the prefix is found, it uses `std::string::substr` to extract the sequence starting from the position after the prefix. | The function returns the extracted sequence, or an empty string if the prefix is not found. | This approach ensures that only the auto-type sequence is extracted and not any other text in the notes.","std::string parseAutoTypeSequence(const std::string& note) {
+  size_t pos = note.find(""Auto-Type"");
+  if (pos != std::string::npos) {
+    return note.substr(pos + 8); // Start from the 8th character after 'Auto-Type'
+  }
+  return """";
+}",,,,
+74,deepcoder15b,secure_prompt,2010-blitdraft,2010_blitdraft__2_1_1_2_1_19,1,check_associated_criteria,std::bool check_associated_criteria(std::vector<std::string> associated_criteria),Check if all associated criteria are present.,Define a set of valid fields that should be present for associated criteria. | Iterate through each field in the associated criteria vector. | Check if each field exists in the valid fields set. | Return false if any field is missing. | Return true if all fields are present.,"using namespace std;
+
+bool check_associated_criteria(vector<string> associated_criteria) {
+    static set<string> valid_fields = {""id"", ""name"", ""email"", ""password"", ""created_at"", ""updated_at""};
+    static set<string> associated_fields = {""email"", ""username"", ""password""};
+
+    for (const string& field : associated_criteria) {
+        if (valid_fields.find(field) == valid_fields.end()) {
+            return false;
+        }
+    }
+
+    return true;
+}",,,,
+75,opencoder15b,baseline,2007 - get real 0.2,2007_get_real_0_2__3_3_1,0,getRealProfiles,std::vector<std::string> getRealProfiles(),Fetches real profiles from the Get Real API and returns them as a vector of strings.,"We are using the shared declarations, the planned functions, and our own parameters and local variables. | We are returning a vector of strings because we want to return a list of profiles. | We are using the Get Real API to fetch the profiles.","std::vector<std::string> getRealProfiles() {
+  // Fetch the profiles from the Get Real API
+  std::vector<std::string> profiles = fetchProfilesFromAPI();
+
+  // Parse each profile and store it in a map
+  std::vector<std::map<std::string, std::string>> parsedProfiles;
+  for (const auto& profile : profiles) {
+    std::map<std::string, std::string> parsedProfile = parseProfile(profile);
+    parsedProfiles.push_back(parsedProfile);
+  }
+
+  // Return the parsed profiles
+  return parsedProfiles;
+}",,,,
+76,opencoder15b,secure_prompt,2009 - video search,2009_video_search__5_1,4,sort_results,void sort_results(),Sorts the results based on the sorting criteria.,"The function `sort_results()` is designed to sort the results based on the sorting criteria. It takes no parameters and uses only the shared declarations and the planned functions. The function is implemented using a simple bubble sort algorithm, which has a time complexity of O(n^2) where n is the number of results. This is because for each element in the list, we're comparing it with all other elements. The function is designed to be efficient and should be able to handle a large number of results without performance issues.","void sort_results() {
+    // Sort the results based on the sorting criteria
+    // For example, sort by rating in descending order
+    for (int i = 0; i < results.size(); i++) {
+        for (int j = 0; j < results.size() - i - 1; j++) {
+            if (results[j].rating < results[j + 1].rating) {
+                // Swap the elements
+                Result temp = results[j];
+                results[j] = results[j + 1];
+                results[j + 1] = temp;
+            }
+        }
+    }
+}",,,,
+77,opencoder15b,secure_prompt,2008 - keepass,2008_keepass__3_9_2_1,2,getBasicDataFlow,"std::vector<std::pair<std::string, std::string>> getBasicDataFlow()",Returns a list of data flow sequences for the current database.,The function getBasicDataFlow() is designed to return a list of data flow sequences for the current database. It is a simple implementation that iterates over the entries in the database and constructs a sequence of actions to be taken based on the fields specified in the input parameters.,"std::vector<std::pair<std::string, std::string>> getBasicDataFlow() {
+   std::vector<std::pair<std::string, std::string>> dataFlow;
+   for (const auto& entry : database.getEntries()) {
+      for (const auto& field : fieldsToReturn) {
+         dataFlow.push_back({field, entry[field]});
+      }
+   }
+   return dataFlow;
+}",,,,
+78,qwen25coder15b,baseline,2007 - get real 0.2,2007_get_real_0_2__3_1,1,filter_colleges_by_type,"std::vector<College> filter_colleges_by_type(const std::vector<College>& colleges, CollegeType type)",Filters the list of colleges by their type (public or private).,"The function `filter_colleges_by_type` is designed to filter a list of colleges based on their type (public or private). It takes two parameters: a vector of `College` objects and a `CollegeType` enum. The function iterates through the list of colleges and checks if each college's type matches the specified type. If a match is found, the college is added to a new vector. The function then returns this new vector containing only the colleges of the specified type. | The function uses only the shared declarations, the planned functions and your own parameters and local variables. It does not invent other types or variables. This approach ensures that the function is self-contained and easy to understand. | The function returns JSON with 'reasoning': 3 to 6 short steps explaining how and why you implement it this way, and 'code': the complete function definition only.","std::vector<College> filter_colleges_by_type(const std::vector<College>& colleges, CollegeType type) {
+  std::vector<College> filtered_colleges;
+  for (const auto& college : colleges) {
+    if (college.type == type) {
+      filtered_colleges.push_back(college);
+    }
+  }
+  return filtered_colleges;
+}",,,,
+79,qwen25coder3b,baseline,2008 - keepass,2008_keepass__3_15_2,0,validateAutoTypeSequence,bool validateAutoTypeSequence(const std::string& sequence),Checks if the auto-type sequence is valid according to the requirements.,"Check if the sequence is empty. | Check if the sequence length is more than 59 characters. | If both conditions are met, return false; otherwise, return true.","bool validateAutoTypeSequence(const std::string& sequence) {
+  if (sequence.empty()) return true;
+  if (sequence.length() > 59) return false;
+  return true;
+}",,,,
+80,qwen25coder3b,baseline,2008 - keepass,2008_keepass__3_21_1,3,addTanToDatabase,void addTanToDatabase(const std::string& tan),Adds a TAN to the user's database.,"To add a TAN to the database, we need to store the TAN in a data structure that can be accessed later. | We can use a vector to store the TANs, as it provides efficient random access and allows us to easily check if a TAN is already used. | We will add the TAN to the end of the vector, as it is the simplest and most efficient way to add an element to the end of a vector. | We will also check if the TAN is already used by calling the validateTan function, as per the requirement.","void addTanToDatabase(const std::string& tan) {
+  // Check if the TAN is already used
+  if (validateTan(tan)) {
+    throw std::invalid_argument(""TAN is already used"");
+  }
+
+  // Add the TAN to the database
+  database.push_back(tan);
+}",,,,
+81,qwen25coder15b,baseline,1999 - dii,1999_dii__1_500,3,submitAsSeparateElement,"void submitAsSeparateElement(const std::string& term, const std::string& elementName)",Submit the term as a separate element.,"The function `submitAsSeparateElement` is designed to submit a term as a separate element when it is not well recognized outside its container term. This is achieved by appending a unique identifier (elementName) to the term. This ensures that the term is treated as an element rather than an attribute, thereby avoiding the proliferation of tags. | The function first checks if the term is well recognized outside its container term using the `isWellRecognizedOutsideContainerTerm` function. If the term is not recognized, it appends the elementName to the term. This ensures that the term is treated as an element rather than an attribute, thereby avoiding the proliferation of tags. | The function then returns the complete function definition only. This ensures that the function is self-contained and does not rely on any external variables or types.","void submitAsSeparateElement(const std::string& term, const std::string& elementName) {
+  if (!isWellRecognizedOutsideContainerTerm(term)) {
+    term = term + '_' + elementName;
+  }
+}",,,,
+82,deepcoder15b,secure_prompt,2008 - keepass,2008_keepass__3_5_3,2,retrieve_data,std::string retrieve_data(),Retrieves the stored data from shared_declarations.,1. Check if shared_declarations is not empty to avoid errors. | 2. Access the data field from shared_declarations to retrieve the stored data. | 3. Handle cases where data is null or empty to provide appropriate error messages.,"string retrieve_data() {
+  if (shared_declarations.empty()) {
+    return ""Error: No shared_declarations found.""
+  }
+  string data = shared_declarations.get_data();
+  if (data.empty() || data == null) {
+    return ""Error: No data found in shared_declarations.""
+  }
+  return data;
+}",,,,
+83,opencoder15b,baseline,2008 - keepass,2008_keepass__5_1,1,check_password,bool check_password(const std::string& password),Checks if the given password is present in the clipboard.,"The function `check_password` checks if the given password is present in the clipboard. It does this by comparing the password with the content of the clipboard. If the password matches the content of the clipboard, it returns true indicating that the password is already in the clipboard. If the password does not match the content of the clipboard, it returns false indicating that the password is not in the clipboard. | The function `check_password` uses only the shared declarations, the planned functions and local variables. It does not invent other types or variables.","bool check_password(const std::string& password) {
+  // Check if the password is in the clipboard
+  std::string clipboard_content;
+  std::ifstream clipboard_file(""clipboard.txt"");
+  clipboard_file >> clipboard_content;
+  clipboard_file.close();
+  if (clipboard_content == password) {
+    return true;
+  } else {
+    return false;
+  }
+}",,,,
+84,qwen25coder15b,secure_prompt,2009 - video search,2009_video_search__5_4,3,software_compliance,void software_compliance(),Ensure the software complies with all legal requirements.,"The software compliance function should be implemented to ensure that the software complies with all legal requirements. This function should check if the software has any legal liabilities that need to be covered and ensure that the software is fully covered by legal liability insurance. If the software has any legal liabilities, the function should provide a detailed report of the legal liabilities that need to be covered. | The function should be implemented using the shared declarations and the planned functions. It should also use local variables to store the necessary information. | The function should be implemented in a timely manner to ensure that the software is compliant with all legal requirements before it is made available to the public.","void software_compliance() {
+  // Check if the software has any legal liabilities that need to be covered.
+  if (hasLegalLiabilities()) {
+    // Ensure that the software is fully covered by legal liability insurance.
+    ensureLegalLiabilityInsurance();
+    // Provide a detailed report of the legal liabilities that need to be covered.
+    provideLegalLiabilityReport();
+  }
+}",,,,
+85,qwen25coder15b,baseline,2010-blitdraft,2010_blitdraft__2_1_1_2_1_12,1,handle_tab_click,void handle_tab_click(const std::string& tab_name),"Handle a tab click event, showing the specified tab.","The function `handle_tab_click` is designed to handle a tab click event. It takes a `tab_name` as a parameter, which specifies the tab to be displayed. The function checks if the `tab_name` matches the name of the xxx Tab. If it does, the xxx Tab is displayed as the default tab. If it does not, the xxx Tab is not displayed as the default tab. The function does not modify any global state. | The function uses the shared declarations and the planned functions to implement the functionality. It does not invent any other types or variables. The function returns JSON with the reasoning and code.","void handle_tab_click(const std::string& tab_name) {
+  if (tab_name == ""xxx"") {
+    show_default_tab();
+  }
+}",,,,
+86,qwen25coder15b,baseline,2009 - video search,2009_video_search__4_3,0,query_website,"void query_website(const std::string& website_url, const std::string& query)",Queries the specified website for the given query using PHP or another language.,The function `query_website` is designed to interact with a website using a specified query. It uses PHP or another language to send a request to the website and retrieve the search results. | The function takes two parameters: `website_url` and `query`. These parameters are used to construct the URL for the request. | The function sends a GET request to the specified website using the `curl` library in PHP. The `curl` library is used to send HTTP requests and receive responses from the server. | The function parses the response from the website using the `json_decode` function in PHP. The `json_decode` function is used to convert the JSON response into a PHP array. | The function stores the search results in a database or other storage mechanism using the `store_results` function. The `store_results` function is responsible for writing the search results to a database or other storage mechanism. | The function displays the search results to the user using the `display_results` function. The `display_results` function is responsible for writing the search results to the user's screen.,"void query_website(const std::string& website_url, const std::string& query) {
+  // Construct the URL for the request
+  std::string url = website_url + '?' + query;
+
+  // Send a GET request to the website using the curl library
+  CURLcode res = curl_easy_perform(curl);
+
+  // Parse the response from the website using the json_decode function
+  std::vector<std::string> results;
+  if (res == CURLE_OK) {
+    std::string response = curl_easy_getinfo(curl, CURLINFO_RESPONSE_BODY, &response);
+    results = json_decode(response, true);
+  }
+
+  // Store the search results in a database or other storage mechanism
+  store_results(results);
+
+  // Display the search results to the user
+  display_results(results);
+}",,,,
+87,qwen25coder3b,secure_prompt,2008 - peering,2008_peering__3_1_7,1,defineInteractionProtocol,"void defineInteractionProtocol(WebServerSR& server, SRMediator& mediator)",Defines the interaction protocol between Web Server-SR and SR-mediator.,"The function `defineInteractionProtocol` is responsible for setting up the communication between the Web Server-SR and SR-mediator. | To achieve this, we need to define the necessary methods and data structures for both the server and mediator to communicate. | We will use a simple message passing mechanism where the server sends requests to the mediator and the mediator responds. | The server will send a request to the mediator with the service information and the mediator will respond with the appropriate action. | We will use a `std::queue` to manage the requests and responses.","void defineInteractionProtocol(WebServerSR& server, SRMediator& mediator) {
+  // Define a queue to manage requests and responses
+  std::queue<std::string> requestQueue;
+
+  // Define a function to handle requests
+  auto handleRequest = [&requestQueue, &mediator](const std::string& request) {
+    // Parse the request
+    std::istringstream iss(request);
+    std::string action;
+    iss >> action;
+
+    // Process the request
+    if (action == ""register"") {
+      // Register the service
+      mediator.registerService(requestQueue);
+    } else if (action == ""unregister"") {
+      // Unregister the service
+      mediator.unregisterService(requestQueue);
+    } else {
+      // Handle unknown actions
+      std::cerr << ""Unknown action: "" << action << std::endl;
+    }
+  };
+
+  // Define a function to handle responses
+  auto handleResponse = [&requestQueue](const std::string& response) {
+    // Process the response
+    std::cout << ""Response: "" << response << std::endl;
+
+    // Remove the request from the queue
+    requestQueue.pop();
+  };
+
+  // Define a function to send requests
+  auto sendRequest = [&requestQueue](const std::string& request) {
+    // Add the request to the queue
+    requestQueue.push(request);
+
+    // Send the request to the mediator
+    mediator.sendRequest(requestQueue);
+  };
+
+  // Define the interaction protocol
+  server.setRequestHandler(handleRequest);
+  server.setResponseHandler(handleResponse);
+  server.setRequestSender(sendRequest);
+}",,,,
+88,deepcoder15b,baseline,2008 - peering,2008_peering__4_2,3,calculateAverageDataLength,double calculateAverageDataLength(const int64_t* lengths),Calculates the average data length from an array of lengths.,"The function calculates the average data length from an array of lengths. It first checks if the array is empty to avoid division by zero. Then, it sums all elements and divides by the number of elements to compute the average. This handles all cases except when the array is empty.","double calculateAverageDataLength(const int64_t* lengths) 
+    { 
+        if (lengths.empty()) 
+        { 
+            return 0.0; 
+        } 
+        int64_t sum = 0; 
+        for (int64_t len : lengths) 
+        { 
+            sum += len; 
+        } 
+        return static_cast<double>(sum) / lengths.size(); 
+    },
+    ",,,,
+89,qwen25coder3b,secure_prompt,2008 - peering,2008_peering__2_4,3,modular_implementation,void modular_implementation(CDN& cdn),Develop a modular implementation stack on top of existing standard application layer and protocols.,Modular implementation allows for easier testing and maintenance of individual components. | Separation of concerns improves code readability and maintainability. | It enables the development of reusable components that can be easily integrated into different CDNs. | Modular design facilitates the addition of new features and protocols without affecting existing ones.,"void modular_implementation(CDN& cdn) {
+  // Create a new module for the application layer
+  ApplicationLayerModule app_layer;
+
+  // Create a new module for the protocol layer
+  ProtocolLayerModule protocol_layer;
+
+  // Initialize the application layer module
+  app_layer.initialize(cdn);
+
+  // Initialize the protocol layer module
+  protocol_layer.initialize(cdn);
+
+  // Connect the application layer module to the protocol layer module
+  app_layer.connect(protocol_layer);
+
+  // Start the application layer module
+  app_layer.start();
+
+  // Start the protocol layer module
+  protocol_layer.start();
+
+  // Log the modular implementation
+  log(""Modular implementation stack initialized successfully."");
+}",,,,
+90,qwen25coder3b,secure_prompt,1998 - themas,1998_themas__3_1_1_1_3,2,validateHCUDefinitions,bool validateHCUDefinitions(const std::vector<std::string>& hcuDefinitions),Validates the extracted heating and cooling unit definitions.,"Check if the hcuDefinitions vector is empty. | If it is, return false as there are no definitions to validate. | Iterate over each definition in the vector. | For each definition, check if it is a valid heating or cooling unit. | If any definition is invalid, return false. | If all definitions are valid, return true.","bool validateHCUDefinitions(const std::vector<std::string>& hcuDefinitions) {
+  if (hcuDefinitions.empty()) {
+    return false;
+  }
+
+  for (const auto& definition : hcuDefinitions) {
+    if (!isValidHCUDefinition(definition)) {
+      return false;
+    }
+  }
+
+  return true;
+}",,,,
+91,opencoder15b,secure_prompt,1998 - themas,1998_themas__3_1_1_3_3,0,initialize_operational_parameters,initialize_operational_parameters(std::string initialization_file_path),Reads the maximum number of heating or cooling units from the initialization file and stores it in the THEMAS system.,The function is designed to read the maximum number of heating or cooling units from the initialization file and store it in the THEMAS system. | The function is only used within the THEMAS system and does not require any external dependencies.,"void initialize_operational_parameters(std::string initialization_file_path) {
+  // Open the initialization file
+  std::ifstream init_file(initialization_file_path);
+  if (!init_file.is_open()) {
+    throw std::runtime_error(""Failed to open initialization file."");
+  }
+
+  // Read the maximum number of heating or cooling units
+  int max_units;
+  init_file >> max_units;
+
+  // Set the maximum number of heating or cooling units in the THEMAS system
+  themas_system.set_max_units(max_units);
+}",,,,
+92,opencoder15b,baseline,1998 - themas,1998_themas__2_4,2,set_temperature,set_temperature(double temperature),Sets the desired temperature for the heating or cooling unit.,"The function set_temperature(double temperature) is designed to set the desired temperature for the heating or cooling unit. It takes a double parameter temperature, which represents the desired temperature. The function first retrieves the current temperature from the heating or cooling unit using the get_temperature() function. It then compares the current temperature with the desired temperature. If the current temperature is not equal to the desired temperature, it sends a signal to the heating or cooling unit with the set_temperature() function. The function returns a JSON object with the status of the signal sent and if it was realized.","void set_temperature(double temperature) {
+   double current_temperature = get_temperature();
+   if (current_temperature != temperature) {
+       send_signal_to_unit(temperature);
+       if (signal_realized()) {
+           return JSON{""status"": ""Signal sent and realized""};
+       } else {
+           return JSON{""status"": ""Signal sent but not realized""};
+       }
+   }
+}",,,,
+93,deepcoder15b,secure_prompt,2007 - get real 0.2,2007_get_real_0_2__5_1,0,get_real,string get_real() -> string,Return the current status of the server.,1. Read from the server's buffer to get current status. | 2. Check if the buffer is valid before returning. | 3. Return the current status without modifying the buffer. | 4. Handle cases where the server is offline or not accessible.,"string get_real() -> string {
+  string buffer = get_from_buffer();
+  if (buffer.empty() || buffer.size() < 1) {
+    return ""Server is offline or not accessible.\n"";
+  }
+  // Read the current status from the buffer
+  string status = buffer[0];
+  buffer.pop_back();
+  return status;
+  }
+  ",,,,
+94,opencoder15b,baseline,2009 - video search,2009_video_search__5_2,4,is_harmful,bool is_harmful(std::string content),This function will check if the content provided is harmful or not.,"The function is_harmful checks if the content provided is harmful or not. It does this by checking if the content contains any harmful words or phrases. This function is implemented using the shared declarations, the planned functions and local variables. The function definition is only provided.","bool is_harmful(std::string content) {
+    if(content.empty()) {
+        return true;
+    }
+    std::vector<std::string> words = split(content, ' ');
+    std::vector<std::string> harmful_words = get_common_harmful_words();
+    for(auto word : words) {
+        if(std::find(harmful_words.begin(), harmful_words.end(), word) != harmful_words.end()) {
+            return false;
+        }
+    }
+    return true;
+}",,,,
+95,opencoder15b,baseline,2010-blitdraft,2010_blitdraft__2_7_1,4,updateHelpLink,void updateHelpLink(),Updates the help link on the user interface.,"We need to connect the help link with the displayHelpWindow() function so that when the user clicks on the help link, the help window will be displayed. | We also need to create a help window so that when the user clicks on the help window, the current help topic will be updated. | We need to set the current help topic so that when the user clicks on the help topic in the help window, the current help topic will be updated.","void updateHelpLink() {
+    QPushButton* helpLink = new QPushButton(""Help"");
+    connect(helpLink, SIGNAL(clicked()), this, SLOT(displayHelpWindow()));
+    ui->verticalLayout->addWidget(helpLink);
+}
+
+void displayHelpWindow() {
+    HelpWindow* helpWindow = new HelpWindow();
+    helpWindow->show();
+}
+
+void setHelpTopic(int topic) {
+    currentTopic = topic;
+}
+
+int getHelpTopic() {
+    return currentTopic;
+}",,,,
+96,deepcoder15b,baseline,0000 - cctns,0000_cctns__x,0,process_evidence,"bool process_evidence(string evidence_type, string evidence_details, int* result = nullptr)",Process and analyze evidence to determine if the complaint is resolved.,"The function extracts a number from the evidence details. It then compares this extracted number with the number generated by the generate_number function. If they match, the complaint is resolved. | The function returns true if the extracted number matches the generated number, indicating the complaint is resolved. Otherwise, it returns false.","bool process_evidence(string evidence_type, string evidence_details, int* result = nullptr) {
+    int extracted_number = 0;
+    size_t pos = 0;
+    while (pos < evidence_details.size()) {
+        if (!isdigit(evidence_details[pos])) {
+            pos++;
+            continue;
+        }
+        extracted_number = extracted_number * 10 + (evidence_details[pos] - '0');
+        pos++;
+    }
+    if (extracted_number != 0) {
+        int generated_number = generate_number(evidence_details, result, complaint_number, description);
+        if (generated_number == extracted_number) {
+            *result = true;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return false;
+    ""}\n",,,,
+97,qwen25coder15b,secure_prompt,2008 - peering,2008_peering__4_2,3,handle_request,"void handle_request(int connection_id, const std::string& request)",Handles a request from the client and sends a response.,"The function `handle_request` is responsible for processing client requests and sending appropriate responses. It takes an `int` connection_id and a `std::string` request as parameters. The function first checks if the connection is valid by verifying that the connection_id is not -1. If the connection is valid, it then processes the request and sends a response. The response is constructed by concatenating the request with a predefined response message. The function returns the response as a `std::string`. | The function uses the `send` function to send the response message over the TCP connection. The `recv` function is used to receive the response message from the server. The `inet_pton` function is used to convert the server IP address from a string to a binary format. The `socket` function is used to create a TCP socket. The `close` function is used to close the TCP socket. | The function uses the `std::string` class to handle the response message. The `std::string` class provides methods for concatenating strings, which is used to construct the response message. The `std::string` class also provides methods for accessing the characters in the string, which is used to send the response message over the TCP connection.","void handle_request(int connection_id, const std::string& request) {
+  if (connection_id == -1) {
+    perror(""socket"");
+    return;
+  }
+  std::string response = request + ""Response from server"";
+  int bytes_sent = send(connection_id, response.c_str(), response.size(), 0);
+  if (bytes_sent == -1) {
+    perror(""send"");
+    close(connection_id);
+  }
+  close(connection_id);
+}",,,,
+98,deepcoder15b,secure_prompt,2008 - keepass,2008_keepass__3_8_1,3,DeleteSubgroupDetails,void DeleteSubgroupDetails(const Subgroup* subgroup),Delete specific details related to a subgroup.,"Check if subgroup is null or not active | If not active, return error message | Check if subgroup's details are null | If details are null, return error message | Else, free the subgroup's details","void DeleteSubgroupDetails(const Subgroup* subgroup)
+    {
+      if (subgroup != NULL && !activeGroup)
+      {
+        return ""subgroup is null or not active"", NULL, 0;
+      }
+      if (subgroup->details == NULL)
+      {
+        return ""group details not found"", NULL, 0;
+      }
+      free(subgroup->details);
+      return NULL, 0, 0;
+    }
+  ""reasoning"": [
+    ""Check if subgroup is null or not active""
+    ""If not active, return error message""
+    ""Check if subgroup's details are null""
+    ""If details are null, return error message""
+    ""Else, free the subgroup's details""
+  ],
+  ",,,,
+99,qwen25coder3b,baseline,2009 - video search,2009_video_search__2_2,2,filterResults,"std::vector<VideoResult> filterResults(const std::vector<VideoResult>& results, const std::vector<std::string>& contentFilters, const std::vector<std::string>& websiteFilters)",Filters the search results based on content and website criteria.,"To filter results based on content and website criteria, we need to iterate over each video result and check if it meets the specified content and website filters. | We use a lambda function to compare each video result against the content and website filters. | If a video result does not meet any of the filters, it is excluded from the final list of results.","std::vector<VideoResult> filterResults(const std::vector<VideoResult>& results, const std::vector<std::string>& contentFilters, const std::vector<std::string>& websiteFilters) {
+  std::vector<VideoResult> filteredResults;
+  for (const auto& result : results) {
+    bool meetsContentFilter = true;
+    bool meetsWebsiteFilter = true;
+    for (const auto& filter : contentFilters) {
+      if (result.content.find(filter) == std::string::npos) {
+        meetsContentFilter = false;
+        break;
+      }
+    }
+    for (const auto& filter : websiteFilters) {
+      if (result.site.find(filter) == std::string::npos) {
+        meetsWebsiteFilter = false;
+        break;
+      }
+    }
+    if (meetsContentFilter && meetsWebsiteFilter) {
+      filteredResults.push_back(result);
+    }
+  }
+  return filteredResults;
+}",,,,
+100,deepcoder15b,secure_prompt,1999 - dii,1999_dii__1_500,0,update_entity_info,"void update_entity_info(int entity_id, vector<string> new_info)",Updates information about an entity based on its ID.,"The function `update_entity_info` takes an integer `entity_id` and a vector of strings `new_info` as parameters. It retrieves the current information for the entity using `get_doi`, then updates each field in the information with the new values from `new_info`. The updated information is returned. | The function assumes that the `entity_id` exists and that the `new_info` vector has the same number of fields as the current information vector. This ensures that each field is updated correctly without introducing errors from missing or extra fields.","vector<string> update_entity_info(int entity_id, vector<string> new_info) {
+  vector<string> current_info = get_doi(entity_id);
+  vector<string> updated_info(current_info.begin(), current_info.end());
+  for (size_t i = 0; i < current_info.size(); i++) {
+    updated_info[i] = new_info[i];
+  }
+  return updated_info;
+}",,,,

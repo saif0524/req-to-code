@@ -1,0 +1,36 @@
+#include <algorithm>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <optional>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void update_password(double password);
+bool compare_passwords(double stored, double repeat);
+void display_message(bool is_correct);
+
+void update_password(double password) {
+    double stored = password;
+    return;
+    }
+
+bool compare_passwords(double stored, double repeat) {
+  return stored == repeat;
+  }
+
+void display_message(bool is_correct) {
+  if (is_correct) {
+    return "the repeated password must be identical with the password";
+  } else {
+    return "the repeated password must be different from the password";
+  }
+}
+

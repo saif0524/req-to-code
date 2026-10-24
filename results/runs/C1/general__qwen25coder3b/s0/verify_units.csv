@@ -1,0 +1,167 @@
+round,arm,model,sample,unit_id,status,has_code,n_planned,n_records,n_bodies,compiles,n_compile_errors,first_error,usable,loc,cppcheck_findings,cppcheck_unmapped,cppcheck_parse_error,cppcheck_classes,secure
+C1,general,qwen25coder3b,0,0000_cctns__5,ok,1,5,4,4,0,4,‘configure_service’ was not declared in this scope; did you mean ‘core_services’?,0,45,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_cctns__x,ok,1,5,5,5,0,11,‘complaints’ was not declared in this scope; did you mean ‘complaintId’?,0,73,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_cctns__x_11,ok,1,5,5,5,1,0,,1,62,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_cctns__x_12,ok,1,5,5,5,0,15,conversion from ‘void’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested,0,44,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_cctns__x_13,ok,1,5,5,5,0,1,expected ‘;’ before ‘json’,0,110,1,0,0,"{""invalidContainerLoop"": 1}",0
+C1,general,qwen25coder3b,0,0000_cctns__x_14,ok,1,5,5,5,0,35,variable or field ‘setAccessControl’ declared void,0,32,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_cctns__x_16,ok,1,5,5,5,0,23,variable or field ‘applyUserInterfaceRules’ declared void,0,40,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_cctns__x_18,ok,1,5,5,5,1,0,,1,74,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_cctns__x_19,ok,1,5,5,5,0,48,‘Case’ was not declared in this scope,0,70,0,0,1,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__2_1,ok,1,5,4,4,1,0,,0,47,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__2_3,ok,1,5,5,5,0,50,"no matching function for call to ‘create_account(std::string, std::string, std::string, std::string)::User::User(std::string&, std::string&, std::string&, std::",0,119,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__2_4,ok,1,5,5,5,1,0,,1,66,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_gamma_j__2_5,ok,1,5,3,3,0,2,expected ‘;’ at end of input,0,62,0,0,1,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__2_6,ok,1,4,4,4,1,0,,1,44,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_gamma_j__2_7,ok,1,2,0,0,1,0,,0,18,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_1_1,ok,1,5,5,5,0,16,ambiguating new declaration of ‘CustomerAccount getAccountDetails(const std::string&)’,0,126,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_1_3,ok,1,5,5,5,1,0,,1,84,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_gamma_j__3_2_3,ok,1,5,5,5,1,0,,1,89,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_gamma_j__3_3_3,ok,1,5,5,5,0,38,variable or field ‘addProductToCart’ declared void,0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_4_3,ok,1,5,5,5,0,30,variable or field ‘confirmOrder’ declared void,0,47,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_5_1,ok,1,5,5,5,0,13,"missing terminating "" character",0,101,0,0,1,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_5_3,ok,1,5,5,5,0,2,‘results’ was not declared in this scope,0,59,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_6_1,ok,1,5,5,5,0,19,‘Plugin’ does not name a type,0,35,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__3_6_3,ok,1,5,5,5,0,21,‘function’ in namespace ‘std’ does not name a template type,0,50,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__4_4,ok,1,2,2,2,0,3,‘format’ is not a member of ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’},0,22,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__5_1,ok,1,5,5,5,0,15,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,47,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__5_3,ok,1,5,4,4,0,1,redefinition of ‘struct thirdPartyService’,0,43,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__5_5,ok,1,4,4,4,0,7,‘queryDatabase’ was not declared in this scope,0,61,1,0,0,"{""missingReturn"": 1}",0
+C1,general,qwen25coder3b,0,0000_gamma_j__5_6,ok,1,4,4,4,1,0,,1,31,0,0,0,{},1
+C1,general,qwen25coder3b,0,0000_gamma_j__5_7,ok,1,4,4,4,0,18,variable or field ‘registerPlugin’ declared void,0,62,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__5_9,ok,1,4,4,4,0,19,‘json’ was not declared in this scope,0,131,0,0,1,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__6,ok,1,3,2,2,0,1,"expected ‘,’ or ‘;’ before ‘std’",0,40,0,0,0,{},0
+C1,general,qwen25coder3b,0,0000_gamma_j__x,ok,1,5,5,5,0,29,variable or field ‘connectToAccountSystem’ declared void,0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__2_3,ok,1,5,5,5,0,22,stray ‘\’ in program,0,83,0,0,1,{},0
+C1,general,qwen25coder3b,0,1998_themas__2_4,ok,1,5,5,5,0,1,"ambiguating new declaration of ‘bool sendSignalToHeatingUnit(int, int)’",0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__2_5_1,ok,1,5,5,5,0,3,‘OSVERSIONINFO’ was not declared in this scope,0,84,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__2_5_3,ok,1,5,5,5,0,5,"missing terminating "" character",0,44,0,0,1,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_10_3,ok,1,5,5,5,0,5,‘Event’ was not declared in this scope,0,72,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_1_1_3,ok,1,5,5,5,0,1,variable ‘std::ifstream file’ has initializer but incomplete type,0,65,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_1_2_3,ok,1,3,1,1,0,1,variable ‘std::ifstream file’ has initializer but incomplete type,0,38,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_1_3_3,ok,1,2,1,1,0,1,variable ‘std::ifstream file’ has initializer but incomplete type,0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_1_4_3,ok,1,3,3,3,0,3,variable ‘std::ifstream file’ has initializer but incomplete type,0,44,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_1_5_3,ok,1,3,3,3,0,2,variable ‘std::ifstream file’ has initializer but incomplete type,0,49,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_1_6_3,ok,1,5,4,4,0,1,variable ‘std::ifstream file’ has initializer but incomplete type,0,65,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_2_3,ok,1,5,5,5,0,39,‘json’ was not declared in this scope,0,61,0,0,1,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_3_3,ok,1,3,3,3,0,1,‘setThermostatTemperatureSetting’ was not declared in this scope,0,49,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_4_1_3,ok,1,2,2,2,1,0,,1,32,0,0,0,{},1
+C1,general,qwen25coder3b,0,1998_themas__3_1_4_2_3,ok,1,3,3,3,1,0,,1,50,0,0,0,{},1
+C1,general,qwen25coder3b,0,1998_themas__3_1_5_1_3,ok,1,5,4,4,0,26,expected unqualified-id before ‘<’ token,0,44,0,0,1,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_5_2_3,ok,1,5,5,5,1,0,,1,36,0,0,0,{},1
+C1,general,qwen25coder3b,0,1998_themas__3_1_5_3_3,ok,1,2,2,2,1,0,,1,34,0,0,0,{},1
+C1,general,qwen25coder3b,0,1998_themas__3_1_6_3,ok,1,3,3,3,0,21,‘HeatingOrCoolingUnit’ does not name a type,0,32,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_7_3,ok,1,3,3,3,0,4,‘beep’ was not declared in this scope,0,39,0,0,1,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_8_3,ok,1,5,5,5,0,11,no match for ‘operator+’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘int’),0,64,0,0,0,{},0
+C1,general,qwen25coder3b,0,1998_themas__3_1_9_4,ok,1,5,5,5,0,3,‘thermostats’ was not declared in this scope; did you mean ‘thermostatName’?,0,76,0,0,0,{},0
+C1,general,qwen25coder3b,0,1999_dii__1_500,ok,1,5,5,5,1,0,,1,76,0,0,0,{},1
+C1,general,qwen25coder3b,0,1999_dii__2_1,ok,1,2,2,2,1,0,,1,37,0,0,0,{},1
+C1,general,qwen25coder3b,0,1999_dii__4_14_2,ok,1,4,4,4,1,0,,1,61,0,0,0,{},1
+C1,general,qwen25coder3b,0,1999_dii__4_14_7_1_1,ok,1,2,2,2,1,0,,1,22,0,0,0,{},1
+C1,general,qwen25coder3b,0,1999_dii__4_14_7_3_1,ok,1,2,2,2,0,2,‘mutable’ specifier conflicts with ‘static’,0,39,0,0,0,{},0
+C1,general,qwen25coder3b,0,1999_dii__include_descriptive_definitions_and_synonyms_for_the_information_resource_definition,ok,1,3,3,3,0,11,‘unordered_set’ is not a member of ‘std’,0,82,0,0,0,{},0
+C1,general,qwen25coder3b,0,2003_qheadache__3_1,ok,1,5,5,5,0,3,a function-definition is not allowed here before ‘{’ token,0,60,0,0,1,{},0
+C1,general,qwen25coder3b,0,2003_qheadache__3_2_4_3_3,ok,1,5,5,5,0,5,variable ‘std::ofstream file’ has initializer but incomplete type,0,57,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__1,ok,1,5,5,5,1,0,,1,49,0,0,0,{},1
+C1,general,qwen25coder3b,0,2005_microcare__1_3_2,ok,1,5,5,5,1,0,,1,81,0,0,0,{},1
+C1,general,qwen25coder3b,0,2005_microcare__2_1,ok,1,5,5,5,0,4,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,37,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__2_1_1,ok,1,5,5,5,0,21,‘SalesDetail’ was not declared in this scope,0,51,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__3,ok,1,5,5,5,0,7,‘regex’ is not a member of ‘std’,0,123,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__4,ok,1,5,5,5,0,13,‘nlohmann’ has not been declared,0,92,0,0,1,{},0
+C1,general,qwen25coder3b,0,2005_microcare__5,ok,1,2,1,1,1,0,,0,35,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__6,ok,1,5,5,5,0,37,‘Claim’ was not declared in this scope,0,94,0,0,1,{},0
+C1,general,qwen25coder3b,0,2005_microcare__assumptions,ok,1,3,3,3,1,0,,1,71,0,0,0,{},1
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints,ok,1,4,4,4,0,6,‘isAuthorizedToCreateVouchers’ was not declared in this scope,0,60,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_804,ok,1,5,5,5,0,6,‘Distributor’ does not name a type,0,98,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_806,ok,1,5,5,5,0,3,binding reference of type ‘std::string&’ {aka ‘std::__cxx11::basic_string<char>&’} to ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} discard,0,66,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_808,ok,1,5,5,5,0,3,‘std::chrono’ has not been declared,0,34,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_815,ok,1,5,5,5,0,5,‘std::chrono’ has not been declared,0,53,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_824,ok,1,3,3,3,0,12,‘DistributorMaster’ was not declared in this scope; did you mean ‘distributorName’?,0,56,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_826,ok,1,5,5,5,0,14,‘ClientDetails’ has not been declared,0,58,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_constraints_830,ok,1,5,4,4,0,1,‘users’ was not declared in this scope; did you mean ‘user’?,0,66,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__design_contraints,ok,1,5,5,5,0,4,‘staffNameExists’ was not declared in this scope,0,66,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__details_about_masters_information_required_for_claim_processing,ok,1,5,5,5,0,10,‘GenericMaster’ does not name a type,0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__for_second_follow_up,ok,1,5,5,5,0,1,‘VoucherManager’ has not been declared,0,33,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__i,ok,1,5,5,5,0,23,‘Distributor’ does not name a type,0,65,0,0,1,{},0
+C1,general,qwen25coder3b,0,2005_microcare__i_810,ok,1,5,5,5,0,5,"expected constructor, destructor, or type conversion before ‘;’ token",0,48,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__ii,ok,1,5,5,5,0,21,variable or field ‘captureSalesmanDetails’ declared void,0,31,2,0,0,"{""uninitStructMember"": 1, ""uninitvar"": 1}",0
+C1,general,qwen25coder3b,0,2005_microcare__ii_812,ok,1,1,0,0,1,0,,0,17,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__iii,ok,1,4,4,4,0,9,stray ‘\’ in program,0,61,0,0,1,{},0
+C1,general,qwen25coder3b,0,2005_microcare__iii_814,ok,1,5,5,5,1,0,,1,88,0,0,0,{},1
+C1,general,qwen25coder3b,0,2005_microcare__iv,ok,1,3,3,3,0,3,‘json’ was not declared in this scope,0,53,0,0,0,{},0
+C1,general,qwen25coder3b,0,2005_microcare__the_concept_of_output_based_aid_oba,ok,1,5,5,5,1,0,,1,45,0,0,0,{},1
+C1,general,qwen25coder3b,0,2007_get_real_0_2__2_1,ok,1,5,5,5,1,0,,1,31,0,0,0,{},1
+C1,general,qwen25coder3b,0,2007_get_real_0_2__2_2,ok,1,5,5,5,0,3,expected ‘;’ before ‘void’,0,87,0,0,1,{},0
+C1,general,qwen25coder3b,0,2007_get_real_0_2__2_4,ok,1,5,5,5,1,0,,1,31,0,0,0,{},1
+C1,general,qwen25coder3b,0,2007_get_real_0_2__3_1,ok,1,3,3,3,1,0,,1,51,0,0,0,{},1
+C1,general,qwen25coder3b,0,2007_get_real_0_2__3_10,ok,1,5,5,5,1,0,,1,41,0,0,0,{},1
+C1,general,qwen25coder3b,0,2007_get_real_0_2__3_3_1,ok,1,5,5,5,0,15,stray ‘\’ in program,0,71,0,0,1,{},0
+C1,general,qwen25coder3b,0,2007_get_real_0_2__3_8,ok,1,5,5,5,1,0,,1,54,0,0,0,{},1
+C1,general,qwen25coder3b,0,2007_get_real_0_2__5_1,ok,1,3,3,3,0,6,‘chrono’ is not a namespace-name,0,39,0,0,0,{},0
+C1,general,qwen25coder3b,0,2007_get_real_0_2__5_3,ok,1,3,3,3,0,16,‘std::chrono’ has not been declared,0,54,0,0,0,{},0
+C1,general,qwen25coder3b,0,2007_get_real_0_2__5_3_1,ok,1,5,5,5,0,1,"cannot bind non-const lvalue reference of type ‘std::map<std::__cxx11::basic_string<char>, int>&’ to an rvalue of type ‘std::map<std::__cxx11::basic_string<char",0,62,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__2_4,ok,1,5,5,5,1,0,,1,65,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_keepass__3_10_1,ok,1,5,4,4,0,13,‘form’ was not declared in this scope,0,71,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_10_2_2_1,ok,1,2,2,2,1,0,,1,24,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_keepass__3_10_3,ok,1,2,1,1,1,0,,0,20,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_11_1,ok,1,5,5,5,0,30,variable or field ‘selectEntry’ declared void,0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_11_2_2_1,ok,1,2,2,2,1,0,,1,22,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_keepass__3_11_3,ok,1,3,3,3,0,13,variable or field ‘selectEntry’ declared void,0,25,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_14_1,ok,1,5,4,4,1,0,,0,46,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_14_2_1,ok,1,5,5,5,0,7,‘setLanguageSettings’ was not declared in this scope,0,56,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_14_3,ok,1,5,5,5,0,19,stray ‘\’ in program,0,103,0,0,1,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_15_1,ok,1,5,5,5,0,18,empty character constant,0,69,1,0,0,"{""internalError"": 1}",0
+C1,general,qwen25coder3b,0,2008_keepass__3_15_2,ok,1,3,3,3,1,0,,1,37,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_keepass__3_16_2,ok,1,2,2,2,0,2,"no matching function for call to ‘std::__cxx11::basic_string<char>::replace(size_t, int, std::__cxx11::basic_string<char>) const’",0,50,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_17_1,ok,1,5,5,5,0,8,‘generateRandomString’ was not declared in this scope,0,81,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_17_2,ok,1,5,5,5,0,2,expected unqualified-id before ‘<’ token,0,33,0,0,1,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_1_1,ok,1,5,5,5,0,3,‘isPasswordCorrect’ was not declared in this scope,0,51,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_1_3,ok,1,2,2,2,0,1,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,22,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_21_1,ok,1,5,5,5,0,35,unterminated raw string,0,90,0,0,1,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_21_2,ok,1,5,5,5,0,12,‘chrono’ is not a member of ‘std’,0,51,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_2_1,ok,1,5,5,5,0,10,expected unqualified-id before ‘<’ token,0,99,0,0,1,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_5_1,ok,1,5,5,5,1,0,,1,54,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_keepass__3_5_3,ok,1,4,4,4,0,1,‘database’ was not declared in this scope,0,45,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_6_1,ok,1,3,3,3,0,19,‘Group’ has not been declared,0,32,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_8_1,ok,1,5,5,5,0,27,‘unique_ptr’ is not a member of ‘std’,0,56,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__3_9_2_1,ok,1,5,5,5,0,2,redefinition of ‘struct Group’,0,57,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_keepass__5_1,ok,1,5,5,5,0,20,‘atomic’ is not a member of ‘std’,0,71,1,0,0,"{""localMutex"": 1}",0
+C1,general,qwen25coder3b,0,2008_keepass__5_3,ok,1,5,4,4,1,0,,0,41,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__2_3,ok,1,5,5,5,1,0,,1,78,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_peering__2_4,ok,1,5,5,5,0,36,variable or field ‘loadInformation’ declared void,0,31,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__2_5,ok,1,5,5,5,0,29,‘CDNProvider’ was not declared in this scope,0,100,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__3_1_2,ok,1,5,5,5,0,26,variable or field ‘register_service’ declared void,0,46,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__3_1_7,ok,1,5,5,5,1,0,,1,31,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_peering__3_2_7,ok,1,5,5,5,0,1,‘isMalicious’ was not declared in this scope,0,62,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__3_4_7,ok,1,4,4,4,0,10,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,68,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__3_5_7,ok,1,5,5,5,0,36,variable or field ‘establishNegotiation’ declared void,0,53,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__3_6,ok,1,5,5,5,0,17,variable or field ‘disbandPeering’ declared void,0,39,0,0,1,{},0
+C1,general,qwen25coder3b,0,2008_peering__3_6_7,ok,1,2,2,2,1,0,,1,55,0,0,0,{},1
+C1,general,qwen25coder3b,0,2008_peering__4_1,ok,1,5,5,5,0,5,‘function’ is not a member of ‘std’,0,57,0,0,0,{},0
+C1,general,qwen25coder3b,0,2008_peering__4_2,ok,1,5,5,5,0,15,‘unique_ptr’ in namespace ‘std’ does not name a template type,0,92,1,0,0,"{""dangerousTypeCast"": 1}",0
+C1,general,qwen25coder3b,0,2009_video_search__2_1,ok,1,5,5,5,0,1,‘urlContainsQuery’ was not declared in this scope,0,61,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__2_2,ok,1,5,5,5,0,31,‘VideoResult’ was not declared in this scope,0,53,0,0,1,{},0
+C1,general,qwen25coder3b,0,2009_video_search__2_3,ok,1,5,5,5,0,3,‘regex’ is not a member of ‘std’,0,39,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__2_4,ok,1,5,5,5,0,1,invalid initialization of reference of type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’} from expression of type ‘int’,0,45,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__3_1_1,ok,1,5,5,5,0,6,stray ‘\’ in program,0,54,0,0,1,{},0
+C1,general,qwen25coder3b,0,2009_video_search__3_1_2,ok,1,4,4,4,0,34,stray ‘\’ in program,0,36,0,0,1,{},0
+C1,general,qwen25coder3b,0,2009_video_search__3_1_3,ok,1,5,5,5,0,11,‘TorrentResult’ was not declared in this scope,0,56,0,0,1,{},0
+C1,general,qwen25coder3b,0,2009_video_search__3_2_2,ok,1,5,5,5,1,0,,1,54,0,0,0,{},1
+C1,general,qwen25coder3b,0,2009_video_search__3_2_3,ok,1,5,4,4,0,15,‘VideoResult’ was not declared in this scope,0,45,0,0,1,{},0
+C1,general,qwen25coder3b,0,2009_video_search__4_1,ok,1,5,5,5,0,1,redefinition of ‘class VideoSearchEngine’,0,193,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__4_3,ok,1,5,4,4,0,1,‘sendRequest’ was not declared in this scope,0,43,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__5_1,ok,1,5,5,5,0,9,‘TorrentResult’ was not declared in this scope,0,39,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__5_2,ok,1,5,4,4,0,1,‘std::chrono’ has not been declared,0,47,0,0,0,{},0
+C1,general,qwen25coder3b,0,2009_video_search__5_4,ok,1,5,5,5,0,1,"return-statement with a value, in function returning ‘void’ [-fpermissive]",0,47,0,0,0,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_1_1_2_1_10,ok,1,3,3,3,0,6,no match for ‘operator==’ (operand types are ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} and ‘int’),0,54,0,0,0,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_1_1_2_1_12,ok,1,5,5,5,0,5,‘User’ does not name a type,0,37,0,0,1,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_1_1_2_1_19,ok,1,5,5,5,0,7,‘username’ was not declared in this scope; did you mean ‘rename’?,0,87,0,0,0,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_1_1_2_1_9,ok,1,2,2,2,0,4,‘User’ was not declared in this scope,0,22,0,0,0,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_4_1_2,ok,1,5,5,5,0,13,‘uatSchedules’ was not declared in this scope,0,31,0,0,1,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_5_2_2,ok,1,5,5,5,0,7,stray ‘\’ in program,0,63,0,0,1,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_6_3_4,ok,1,5,5,5,1,0,,1,31,0,0,0,{},1
+C1,general,qwen25coder3b,0,2010_blitdraft__2_7_1,ok,1,5,5,5,0,3,conversion from ‘int’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested,0,38,0,0,0,{},0
+C1,general,qwen25coder3b,0,2010_blitdraft__2_7_1_1,ok,1,5,5,5,1,0,,1,46,0,0,0,{},1
+C1,general,qwen25coder3b,0,2010_blitdraft__2_7_1_2,ok,1,5,5,5,1,0,,1,31,0,0,0,{},1
+C1,general,qwen25coder3b,0,2010_blitdraft__2_7_1_3,ok,1,5,5,5,1,0,,1,65,0,0,0,{},1
+C1,general,qwen25coder3b,0,2010_blitdraft__2_7_1_8,ok,1,5,5,5,1,0,,1,56,0,0,0,{},1
